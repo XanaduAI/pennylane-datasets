@@ -1,4 +1,3 @@
-import hashlib
 import typing
 from collections.abc import Callable
 from pathlib import Path, PurePosixPath
@@ -6,6 +5,7 @@ from typing import ClassVar
 
 import botocore.exceptions
 
+from .file_hash import file_sha1_hash
 from .time import compact_isoformat, utcnow
 
 if typing.TYPE_CHECKING:
@@ -57,7 +57,7 @@ class S3DatasetRepo:
         self.s3_bucket = s3_bucket
         self.s3_prefix = s3_prefix or S3Path()
 
-    def s3_key_from_file_hash(self, file_sha1: bytes) -> S3Path | None:
+    def get_obj_with_hash(self, file_sha1: bytes) -> S3Path | None:
         """Returns the S3 path for an object in the S3 repo with the given hash,
         if one exists.
 
@@ -102,16 +102,9 @@ class S3DatasetRepo:
         Returns:
             S3 key of the newly uploaded file
         """
-        with open(path, mode="rb") as f:
-            digest = hashlib.sha1()
-            while chunk := f.read(2**22):
-                digest.update(chunk)
-                if hash_progress_cb:
-                    hash_progress_cb(len(chunk))
+        file_sha1 = file_sha1_hash(path, progress_cb=hash_progress_cb)
 
-            file_sha1 = digest.digest()
-
-        if existing_key := self.s3_key_from_file_hash(file_sha1):
+        if existing_key := self.get_obj_with_hash(file_sha1):
             raise FileExistsError(
                 f"Object with identical hash ({file_sha1.hex()}) already exists at path '{existing_key}'"
             )

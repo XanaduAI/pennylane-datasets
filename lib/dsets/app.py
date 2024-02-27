@@ -5,7 +5,6 @@ import typer
 
 from dsets.lib import progress, s3
 from dsets.lib.context import Context
-from dsets.lib.dataset import check_file_is_dataset
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -28,7 +27,6 @@ def upload(
     """
     ctx = Context()
     src_file = src_file.expanduser()
-    check_file_is_dataset(src_file)
 
     repo = s3.S3DatasetRepo(
         ctx.data_dir,
