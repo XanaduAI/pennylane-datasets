@@ -40,6 +40,7 @@ fmt:
 .PHONY: lint
 lint:
 	$(.POETRY) run ruff check lib/ tests/
+	$(.POETRY) run ruff format --check lib/ tests/
 
 
 .PHONY: clean

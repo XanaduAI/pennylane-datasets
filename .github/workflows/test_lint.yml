@@ -1,0 +1,39 @@
+name: "Test and format code"
+on:
+  pull_request:
+    paths:
+        - 'lib/**'
+        - 'tests/**'
+        - 'pyproject.toml'
+        - 'poetry.lock'
+  push:
+    branches:
+    - main
+
+jobs:
+  test_and_lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Poetry
+        run: pip install "poetry==1.4.0"
+
+      - name: Install build dependencies
+        run: poetry install --with dev
+
+      - name: Check poetry.lock
+        run: poetry lock --check
+
+      - name: Run formatters
+        run: |
+            poetry run ruff --check lib/ tests/
+            poetry run ruff format --check lib/ tests/
+
+      - name: Run tests
+        run: pytest tests/
