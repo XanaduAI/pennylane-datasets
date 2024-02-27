@@ -36,4 +36,4 @@ jobs:
             poetry run ruff format --check lib/ tests/
 
       - name: Run tests
-        run: pytest tests/
+        run: poetry run pytest tests/
