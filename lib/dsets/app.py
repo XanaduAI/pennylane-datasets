@@ -23,7 +23,7 @@ def upload(
     ],
 ) -> None:
     """Upload a new dataset file to the data bucket, and create an upload
-    receipt in pennylande-datasets/data.
+    receipt in pennylane-datasets/data.
     """
     ctx = Context()
     src_file = src_file.expanduser()

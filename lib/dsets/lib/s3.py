@@ -39,7 +39,7 @@ class S3DatasetRepo:
             the receipt files for uploaded datasets
         s3_client: S3 client
         s3_bucket: Name of S3 bucket
-        s3_prefix: Prefix of the data rpo in the
+        s3_prefix: Prefix of the data repo in the
             S3 bucket
     """
 
@@ -64,7 +64,7 @@ class S3DatasetRepo:
         Args:
             file_sha1: File SHA1 digest
             relative: If True, the returned key will be relative to ``s3_prefix``.
-                Otherwise, it will be an relative to the bucket root.
+                Otherwise, it will be relative to the bucket root.
 
         Returns:
             S3Path: Path to f with hash, if it exists
