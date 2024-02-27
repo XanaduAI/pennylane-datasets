@@ -32,7 +32,7 @@ jobs:
 
       - name: Run formatters
         run: |
-            poetry run ruff --check lib/ tests/
+            poetry run ruff check lib/ tests/
             poetry run ruff format --check lib/ tests/
 
       - name: Run tests
