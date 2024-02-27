@@ -7,9 +7,9 @@ def utcnow() -> datetime:
     return datetime.now(timezone.utc)
 
 
-def compact_isoformat(dt: datetime) -> str:
+def urlsafe_isoformat(dt: datetime) -> str:
     """Return ``dt`` as an ISO-formatted UTC timestamp
-    string in the compact form without '-' or ':'
+    string in the url-safe compact form without '-' or ':'
     characters:
 
     'YYYY-MM-DDTHHMMSSZ'

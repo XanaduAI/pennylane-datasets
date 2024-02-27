@@ -6,7 +6,7 @@ from typing import ClassVar
 import botocore.exceptions
 
 from .file_hash import file_sha1_hash
-from .time import compact_isoformat, utcnow
+from .time import urlsafe_isoformat, utcnow
 
 if typing.TYPE_CHECKING:
     from mypy_boto3_s3 import S3Client
@@ -111,7 +111,7 @@ class S3DatasetRepo:
 
         timestamp = utcnow()
         file_key = S3Path(
-            path.name, f"{compact_isoformat(timestamp)}-{file_sha1.hex()}"
+            path.name, f"{urlsafe_isoformat(timestamp)}-{file_sha1.hex()}"
         )
         s3_key = self.s3_prefix / file_key
 
