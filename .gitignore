@@ -1,0 +1,8 @@
+*.h5
+# Don't ignore directories with .h5
+!*.h5/
+
+
+__pycache__
+*.pyc
+*.ruff_cache
