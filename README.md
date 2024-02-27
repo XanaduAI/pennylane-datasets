@@ -1,3 +1,4 @@
 # Pennylane Datasets
 
-Repository for Pennylane datasets content
+Repository for managing Pennylane Dataset HDF5 files and metadata for the datasets
+service.
