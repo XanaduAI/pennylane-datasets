@@ -1,6 +1,11 @@
 name: "Test and format code"
 on:
   pull_request:
+    paths:
+      - 'lib/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'poetry.lock'
   push:
     branches:
     - main
