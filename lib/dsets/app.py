@@ -41,7 +41,7 @@ def upload(
     with progress.IOProgressBarManager() as pbars:
         key = repo.upload_file(
             src_file,
-            hash_progress_cb=pbars.add_bar(file_size, "Generating SHA1 hash.."),
+            hash_progress_cb=pbars.add_bar(file_size, "Generating SHA1 hash..."),
             upload_progress_cb=pbars.add_bar(file_size, "Uploading..."),
         )
 
