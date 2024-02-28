@@ -1,5 +1,4 @@
 .DEFAULT_GOAL=help
-.VENV:=.venv
 .POETRY=python3.11 -m poetry
 
 define HELP_BODY
