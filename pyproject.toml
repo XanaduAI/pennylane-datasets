@@ -24,6 +24,7 @@ fsspec = "^2024.2.0"
 mypy-boto3-s3 = "^1.34.14"
 ruff = "^0.2.2"
 pytest = "^8.0.2"
+moto = {extras = ["s3"], version = "^5.0.2"}
 
 [tool.poetry.scripts]
 dsets = "dsets.app:app"
