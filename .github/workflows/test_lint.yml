@@ -1,4 +1,4 @@
-name: "Test and format code"
+name: "Test and lint lib"
 on:
   pull_request:
     paths:
