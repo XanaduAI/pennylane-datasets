@@ -35,7 +35,7 @@ class S3DatasetRepo:
     mirror.
 
     Attributes:
-        local_mirror: Path to the directory that contains
+        local_mirror: Path to directory in the pennylane-datasets repo that contains
             the receipt files for uploaded datasets
         s3_client: S3 client
         s3_bucket: Name of S3 bucket
@@ -58,16 +58,14 @@ class S3DatasetRepo:
         self.s3_prefix = s3_prefix or S3Path()
 
     def get_obj_with_hash(self, file_sha1: bytes) -> S3Path | None:
-        """Returns the S3 path for an object in the S3 repo with the given hash,
+        """Returns the S3 key for an object in the S3 repo with the given hash,
         if one exists.
 
         Args:
             file_sha1: File SHA1 digest
-            relative: If True, the returned key will be relative to ``s3_prefix``.
-                Otherwise, it will be relative to the bucket root.
 
         Returns:
-            S3Path: Path to f with hash, if it exists
+            S3Path: Key of object with hash, if it exists
             None: If no object exists with the given hash
         """
         try:
@@ -87,7 +85,7 @@ class S3DatasetRepo:
         hash_progress_cb: Callable[[int], None] | None = None,
         upload_progress_cb: Callable[[int], None] | None = None,
     ) -> S3Path:
-        """Upload file at ``path`` to the S3 repo, and write a receipt for its
+        """Upload file at `path` to the S3 repo, and write a receipt for its
         upload to the local mirror.
 
         Args:
