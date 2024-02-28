@@ -3,8 +3,10 @@ from pathlib import Path
 import pytest
 from dsets.lib.file_hash import file_sha1_hash
 
+
 def test_fail():
     raise ValueError
+
 
 @pytest.mark.parametrize("chunk_size", [1, 16])
 def test_file_sha1_hash(tmp_path: Path, chunk_size):
