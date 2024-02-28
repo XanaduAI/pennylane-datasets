@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "pennylane-datasets"
+version = "0.1.0"
+description = "Tools for managing datasets"
+authors = ["Jack Brown <jack@xanadu.ai>"]
+readme = "README.md"
+packages = [{include = "dsets", from = "lib"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = "^0.9.0"
+rich = "^13.7.0"
+shellingham = "^1.5.4"
+boto3 = "^1.34.48"
+pydantic = "^2.6.1"
+pydantic-settings = "^2.2.1"
+dulwich = "^0.21.7"
+pennylane = "^0.34.0"
+h5py = "^3.10.0"
+aiohttp = "^3.9.3"
+fsspec = "^2024.2.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy-boto3-s3 = "^1.34.14"
+ruff = "^0.2.2"
+pytest = "^8.0.2"
+moto = {extras = ["s3"], version = "^5.0.2"}
+
+[tool.poetry.scripts]
+dsets = "dsets.app:app"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
