@@ -37,7 +37,7 @@ For example, the dataset file `H2_STO-3G_0.742.h5`, uploaded on midnight, will h
 This ensures that data files are uniquely identified by their content, as well as sorted
 by upload date.
 
-The upload will create an 'receipt' file in the [data/](data) directory, in the same path
+The upload will create a 'receipt' file in the [data/](data) directory, in the same path
 as the file was uploaded. These are used to track the contents of the data bucket with
 git, so create a new branch before uploading:
 
