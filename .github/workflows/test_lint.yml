@@ -41,12 +41,12 @@ jobs:
             .venv/bin/poetry install --with dev --no-root
 
       - name: Check poetry.lock
-        run: poetry lock --check
+        run: .venv/bin/poetry lock --check
 
       - name: Run formatters
         run: |
-            poetry run ruff check lib/ tests/
-            poetry run ruff format --check lib/ tests/
+            .venv/bin/poetry run ruff check lib/ tests/
+            .venv/bin/poetry run ruff format --check lib/ tests/
 
       - name: Run tests
-        run: poetry run pytest tests/
+        run: .venv/bin/poetry run pytest tests/
