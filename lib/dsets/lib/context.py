@@ -26,6 +26,12 @@ class Context:
         current working directory."""
         return self.repo_root / "data"
 
+    @property
+    def datasets_dir(self) -> Path:
+        """Path to the datasets dir, relative to the current
+        working directory."""
+        return self.repo_root / "datasets"
+
     @cached_property
     def repo(self) -> Repo:
         """dulwich ``Repo`` object for the pennylane-datasets
