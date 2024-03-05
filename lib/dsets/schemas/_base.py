@@ -3,27 +3,25 @@ import typing
 import warnings
 from collections.abc import Mapping
 from dataclasses import dataclass
-from logging import getLogger
 from pathlib import Path, PurePosixPath
-from typing import Annotated, Any, Generic, Self, TypeVar
-import typing
+from typing import Annotated, Any, Self, TypeVar
 
+import pydantic.fields
 from pydantic import (
     BaseModel,
+    ConfigDict,
+    Discriminator,
     Field,
     SerializationInfo,
     SerializerFunctionWrapHandler,
+    Tag,
     TypeAdapter,
     ValidationInfo,
     ValidatorFunctionWrapHandler,
-    WrapValidator,
-    model_serializer,
     model_validator,
 )
 
 from ._pydantic_util import get_model_alias_mapping
-
-logger = getLogger(__name__)
 
 
 @dataclass
@@ -66,7 +64,7 @@ class DocumentContext:
 ResolveType = TypeVar("ResolveType")
 
 
-class DocumentRef(BaseModel, Generic[ResolveType]):
+class DocumentRef(BaseModel):
     """Model used to define fields that can reference another document in a
     document tree.
 
@@ -79,39 +77,30 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
     See `DocumentTreeModel` for example usage.
     """
 
+    model_config = ConfigDict(populate_by_name=True)
+
     ref: Annotated[PurePosixPath, Field(alias="$ref")]
 
-    @classmethod
-    def resolve_type(cls) -> type[ResolveType] | None:
-        """Returns the resolve type for this class from the type
-        argument.
-        
-        Returns `None` if the type cannot be determined.
-        """
-        # Pydantic stores the generic type argument in this attribute.
-        # We use it to determine how to deserialize the referenced
-        # document
-        try:
-            return cls.__pydantic_generic_metadata__["args"][0]
-        except (IndexError, KeyError):
-            return None
-        
 
+def _reference_discriminator(v: Any) -> str:
+    if isinstance(v, DocumentRef):
+        return "ref"
 
-def _document_ref_field_validator(
-    val: Any, handler: ValidatorFunctionWrapHandler
-) -> Any:
-    """Validator for `Reference` fields. If the `val` has already been
-    serialized as a `DocumentRef`, does nothing. Otherwise it calls the
-    default validator."""
-    if isinstance(val, DocumentRef):
-        return val
+    try:
+        if v.keys() == {"$ref"}:
+            return "ref"
+    except AttributeError:
+        pass
 
-    return handler(val)
+    return "value"
 
 
 """Pydantic field type for fields that may contain document refs."""
-Reference = Annotated[DocumentRef[ResolveType] | ResolveType, WrapValidator(_document_ref_field_validator)]
+Reference = Annotated[
+    Annotated[DocumentRef, Tag("ref")] | Annotated[ResolveType, Tag("value")],
+    Discriminator(_reference_discriminator),
+]
+
 
 class DocumentTreeModel(BaseModel):
     """Base class for Pydantic models in a document tree, that
@@ -152,7 +141,7 @@ class DocumentTreeModel(BaseModel):
                 {
                     "name": "referenced",
                     "user_list": {"$ref": "/users/userlist.json"}, # Absolute path
-                    "$meta": {"$ref": "meta.json"}
+                    "meta": {"$ref": "meta.json"}
                 }, f)
 
         with open("data/models/about.txt", "w") as f:
@@ -186,7 +175,7 @@ class DocumentTreeModel(BaseModel):
         return ctx
 
     @property
-    def document_refs(self) -> Mapping[str, DocumentRef[Any]]:
+    def document_refs(self) -> Mapping[str, DocumentRef]:
         """Mapping of attributes with unresolved document refs."""
         return {
             field_name: ref
@@ -240,7 +229,7 @@ class DocumentTreeModel(BaseModel):
 
         return self
 
-    @model_validator(mode="wrap")
+    # @model_validator(mode="wrap")
     @classmethod
     def _validate_document_refs(
         cls: type[Self],
@@ -263,11 +252,13 @@ class DocumentTreeModel(BaseModel):
                 field_name = field_aliases.get(key, key)
 
                 try:
-                    ref_type = DocumentRef[typing.get_args(cls.model_fields[field_name].annotation)[0]]
-                except (KeyError, IndexError):
+                    field_info = cls.model_fields[field_name]
+                    ref_type = DocumentRef[_resolve_type_from_field_info(field_info)]
+                except (KeyError, TypeError) as exc:
                     warnings.warn(
-                        f"Could not determine resolve type for field '{cls.__name__}.{field_name}'."
-                        " Defaulting to 'str'."    
+                        f"Could not determine resolve type for field '{cls.__name__}.{field_name}'. "
+                        " Defaulting to 'str'.",
+                        source=exc,
                     )
                     ref_type = DocumentRef[str]
 
@@ -287,7 +278,7 @@ class DocumentTreeModel(BaseModel):
 
         return self
 
-    @model_serializer(mode="wrap", when_used="json")
+    # @model_serializer(mode="wrap", when_used="json")
     def _serialize_document_refs(
         self: Self, handler: SerializerFunctionWrapHandler, info: SerializationInfo
     ) -> Any:
@@ -312,8 +303,8 @@ class DocumentTreeModel(BaseModel):
 
 
 def _resolve_document_ref(
-    ref: DocumentRef[ResolveType], parent: DocumentTreeModel, field_name: str
-) -> ResolveType:
+    ref: DocumentRef, parent: DocumentTreeModel, field_name: str
+) -> Any:
     """Resolve a document reference.
 
     Args:
@@ -337,11 +328,13 @@ def _resolve_document_ref(
         else:
             data = f.read()
 
-    if (resolve_type := ref.resolve_type()) is None:
+    try:
+        resolve_type = _resolve_type_from_field_info(parent.model_fields[field_name])
+    except (KeyError, TypeError) as exc:
         warnings.warn(
             "Could not determine resolve type for document ref"
-            f" '{type(parent).__name__}.{field_name}'."
-            " Please add a generic type argument to the field."
+            f" '{type(parent).__name__}.{field_name}'.",
+            source=exc,
         )
         return data
 
@@ -353,6 +346,22 @@ def _resolve_document_ref(
     )
 
     if isinstance(resolved, DocumentTreeModel):
-        return typing.cast(ResolveType, resolved.resolve_document_refs())
+        resolved.resolve_document_refs()
 
     return resolved
+
+
+def _resolve_type_from_field_info(info: pydantic.fields.FieldInfo) -> type:
+    """Attempt to derive the `ResolveType` argument to a pydantic field annotated
+    with `Reference`.
+
+    Raises:
+        TypeError: if the annotation is not compatible with `Reference`.
+    """
+    try:
+        return typing.get_args(info.annotation)[1]
+    except IndexError as exc:
+        raise TypeError(
+            "Field annotation is not compatible with `Reference[ResolveType]`:"
+            f" {repr(info.annotation)}"
+        ) from exc
