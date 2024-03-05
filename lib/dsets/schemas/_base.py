@@ -12,16 +12,11 @@ from pydantic import (
     ConfigDict,
     Discriminator,
     Field,
-    SerializationInfo,
-    SerializerFunctionWrapHandler,
     Tag,
     TypeAdapter,
     ValidationInfo,
-    ValidatorFunctionWrapHandler,
     model_validator,
 )
-
-from ._pydantic_util import get_model_alias_mapping
 
 
 @dataclass
@@ -83,6 +78,12 @@ class DocumentRef(BaseModel):
 
 
 def _reference_discriminator(v: Any) -> str:
+    """Pydantic discriminator for determining whether a reference field
+    is a reference or a value.
+
+    See:
+    https://docs.pydantic.dev/latest/concepts/unions/#discriminated-unions-with-callable-discriminator
+    """
     if isinstance(v, DocumentRef):
         return "ref"
 
@@ -229,45 +230,6 @@ class DocumentTreeModel(BaseModel):
 
         return self
 
-    # @model_validator(mode="wrap")
-    @classmethod
-    def _validate_document_refs(
-        cls: type[Self],
-        data_in: Any,
-        handler: ValidatorFunctionWrapHandler,
-    ) -> Any:
-        """Model validator for loading documents with references. Wraps the default
-        pydantic validator.
-        """
-        if not isinstance(data_in, Mapping):
-            return handler(data_in)
-
-        field_aliases = get_model_alias_mapping(cls)
-
-        data: dict[str, Any] = {}
-
-        for key, val in data_in.items():
-            if key.startswith("$"):
-                key = key.lstrip("$")
-                field_name = field_aliases.get(key, key)
-
-                try:
-                    field_info = cls.model_fields[field_name]
-                    ref_type = DocumentRef[_resolve_type_from_field_info(field_info)]
-                except (KeyError, TypeError) as exc:
-                    warnings.warn(
-                        f"Could not determine resolve type for field '{cls.__name__}.{field_name}'. "
-                        " Defaulting to 'str'.",
-                        source=exc,
-                    )
-                    ref_type = DocumentRef[str]
-
-                data[key] = ref_type.model_validate(val)
-            else:
-                data[key] = val
-
-        return handler(data)
-
     @model_validator(mode="after")
     def _set_document_context(self: Self, info: ValidationInfo) -> Self:
         """Model validator called after `_validate_document_refs`. Sets the document
@@ -277,29 +239,6 @@ class DocumentTreeModel(BaseModel):
             self._document_context = ctx
 
         return self
-
-    # @model_serializer(mode="wrap", when_used="json")
-    def _serialize_document_refs(
-        self: Self, handler: SerializerFunctionWrapHandler, info: SerializationInfo
-    ) -> Any:
-        """Model serializer wrapping the default Pydantic serializer. Prefixes
-        any fields containing document refs with '$' in the serialized doc."""
-        ref_fields = [
-            field_name
-            for field_name in self.model_fields
-            if isinstance(getattr(self, field_name), DocumentRef)
-        ]
-        jsonable = handler(self)
-
-        for field_name in ref_fields:
-            if info.by_alias:
-                ser_key = self.model_fields[field_name].alias or field_name
-            else:
-                ser_key = field_name
-
-            jsonable[f"${ser_key}"] = jsonable.pop(ser_key)
-
-        return jsonable
 
 
 def _resolve_document_ref(
