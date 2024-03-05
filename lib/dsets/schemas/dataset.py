@@ -1,90 +1,29 @@
-from typing import Annotated, Any, Self
+from typing import Annotated, Self
 
 from pydantic import (
     AwareDatetime,
-    BeforeValidator,
+    BaseModel,
     Field,
-    PlainSerializer,
-    SerializationInfo,
-    TypeAdapter,
     ValidationError,
-    ValidationInfo,
     model_validator,
 )
 
-from ._base import CamelCaseModel, DocumentRef, DocumetRefMixin
-
-_ParameterDefaultsAdapter = TypeAdapter(list[tuple[tuple[str, ...], str]])
-
-
-def _validate_parameter_defaults(
-    val: Any, info: ValidationInfo
-) -> dict[tuple[str, ...], str]:
-    if info.mode == "json":
-        val_parsed = _ParameterDefaultsAdapter.validate_json(val)
-    else:
-        val_parsed = _ParameterDefaultsAdapter.validate_python(val)
-
-    labels: list[str] = info.data["labels"]
-    defaults: dict[tuple[str, ...], str] = {}
-
-    for parameter_match, default_ in val_parsed:
-        if len(parameter_match) >= len(labels):
-            raise ValidationError(
-                "Length of matched parameter values must be"
-                " less than number of parameters."
-            )
-
-        if existing_match := defaults.get(parameter_match):
-            raise ValidationError(
-                f"Duplicate default for parameters {repr(parameter_match)}:"
-                f" {repr(existing_match)}"
-            )
-
-        defaults[parameter_match] = default_
-
-    return defaults
+from ._base import DocumentTreeModel, Reference
+from ._fields import ParameterDefaults
+from ._pydantic_util import CamelCaseMixin
 
 
-def _serialize_parameter_defaults(
-    val: dict[tuple[str, ...], str], info: SerializationInfo
-):
-    val_list = [[match, default_] for match, default_ in val.items()]
-
-    if info.mode_is_json():
-        return _ParameterDefaultsAdapter.serializer.to_json(val_list)
-
-    return _ParameterDefaultsAdapter.serializer.to_python(val_list)
-
-
-class DatasetParameters(CamelCaseModel):
-    labels: list[str]
-    defaults: Annotated[
-        dict[tuple[str, ...], str],
-        Field(default_factory=dict),
-        BeforeValidator(_validate_parameter_defaults),
-        PlainSerializer(_serialize_parameter_defaults),
-    ]
-
-
-class DatasetData(CamelCaseModel):
-    data_url: str
-    parameter_values: dict[str, str] | None = None
-    variables: dict[str, str] | None = None
-
-
-class DatasetAttribute(CamelCaseModel):
+class DatasetAttribute(BaseModel, CamelCaseMixin):
     name: str
     python_type: str
     doc: str
     optional: bool = False
 
 
-class DatasetType(CamelCaseModel, DocumetRefMixin):
+class DatasetType(DocumentTreeModel, CamelCaseMixin):
     name: str
     attribute_list: list[DatasetAttribute]
     doc: str | None = None
-    extra: DocumentRef[dict[str, str]] | dict[str, str]
 
     @property
     def attributes(self) -> dict[str, DatasetAttribute]:
@@ -100,22 +39,29 @@ class DatasetType(CamelCaseModel, DocumetRefMixin):
         return self
 
 
-class Dataset(CamelCaseModel, DocumetRefMixin):
+class DatasetData(BaseModel, CamelCaseMixin):
+    data_url: str
+    parameter_values: dict[str, str] | None = None
+    variables: dict[str, str] | None = None
+
+
+class Dataset(DocumentTreeModel, CamelCaseMixin):
     """Model for dataset.json file."""
 
-    title: str
     slug: str
+    title: str
+    type_: Annotated[Reference[DatasetType] | None, Field(alias="type")]
+
     authors: list[str]
     tags: Annotated[list[str], Field(default_factory=list)]
 
-    citation: DocumentRef[str] | str
-    about: DocumentRef[str] | str
-    type_: Annotated[
-        DocumentRef[DatasetType] | DatasetType | None, Field(alias="type")
-    ] = None
+    citation: Reference[str]
+    about: Reference[str]
 
     date_of_publication: AwareDatetime
     date_of_last_modification: AwareDatetime
 
-    parameters: DatasetParameters | None = None
-    data: list[DatasetData]
+    parameter_labels: Annotated[list[str], Field(default_factory=list)]
+    parameter_defaults: ParameterDefaults
+    variable_names: Annotated[list[str], Field(default_factory=list)]
+    data: Annotated[list[DatasetData], Field(default_factory=list)]
