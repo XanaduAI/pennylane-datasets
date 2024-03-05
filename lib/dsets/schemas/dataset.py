@@ -1,4 +1,4 @@
-from typing import Annotated, Any
+from typing import Annotated, Any, Self
 
 from pydantic import (
     AwareDatetime,
@@ -9,6 +9,7 @@ from pydantic import (
     TypeAdapter,
     ValidationError,
     ValidationInfo,
+    model_validator,
 )
 
 from ._base import CamelCaseModel, DocumentRef, DocumetRefMixin
@@ -72,18 +73,46 @@ class DatasetData(CamelCaseModel):
     variables: dict[str, str] | None = None
 
 
+class DatasetAttribute(CamelCaseModel):
+    name: str
+    python_type: str
+    doc: str
+    optional: bool = False
+
+
+class DatasetType(CamelCaseModel, DocumetRefMixin):
+    name: str
+    attribute_list: list[DatasetAttribute]
+    doc: str | None = None
+    extra: DocumentRef[dict[str, str]] | dict[str, str]
+
+    @property
+    def attributes(self) -> dict[str, DatasetAttribute]:
+        return {attribute.name: attribute for attribute in self.attribute_list}
+
+    @model_validator(mode="after")
+    def _validate_attribute_list(self: Self) -> Self:
+        attr_names = set()
+        for attr in self.attribute_list:
+            if attr.name in attr_names:
+                raise ValidationError(f"Duplicate attribute name: {attr.name}")
+
+        return self
+
+
 class Dataset(CamelCaseModel, DocumetRefMixin):
-    """Model for dataset family metadata."""
+    """Model for dataset.json file."""
 
     title: str
     slug: str
     authors: list[str]
     tags: Annotated[list[str], Field(default_factory=list)]
 
-    citation: str | DocumentRef[str]
-    about: str | DocumentRef[str]
-    meta: DocumentRef[dict[str, Any]] | dict[str, Any] | None = None
-    type_: Annotated[str | None, Field(alias="type")]
+    citation: DocumentRef[str] | str
+    about: DocumentRef[str] | str
+    type_: Annotated[
+        DocumentRef[DatasetType] | DatasetType | None, Field(alias="type")
+    ] = None
 
     date_of_publication: AwareDatetime
     date_of_last_modification: AwareDatetime
