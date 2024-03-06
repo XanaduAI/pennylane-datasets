@@ -27,7 +27,8 @@ class RootModel(DocumentTreeModel):
     name: str
     citation: Reference[str]
     about: Reference[str]
-    reference: Reference[ReferencedModel]
+    referenced: Reference[ReferencedModel]
+    inline_referenced: ReferencedModel
     user_list: Reference[UserList]
     maybe_null: Reference[dict[str, Any]] | None
 
@@ -78,7 +79,12 @@ def setup_test_docs(docpath_root: Path):
                 "name": "model",
                 "citation": "Me, September",
                 "about": {"$ref": "text/about.txt"},
-                "reference": {"$ref": "referenced_model.json"},
+                "referenced": {"$ref": "referenced_model.json"},
+                "inline_referenced": {
+                    "name": "inline",
+                    "user_list": {"$ref": "/users/userlist.json"},
+                    "meta": {"$ref": "meta.json"},
+                },
                 "user_list": {"$ref": "../users/userlist.json"},
                 "maybe_null": None,
             },
@@ -97,16 +103,21 @@ def test_load_from_path(docpath_root: Path):
 
     # Check that types are preserved
     assert isinstance(model, RootModel)
-    assert isinstance(model.reference, ReferencedModel)
+    assert isinstance(model.referenced, ReferencedModel)
     assert isinstance(model.user_list, UserList)
-    assert isinstance(model.reference.user_list, UserList)
+    assert isinstance(model.referenced.user_list, UserList)
 
     assert model.model_dump() == {
         "name": "model",
         "citation": "Me, September",
         "about": "This is a model!",
-        "reference": {
+        "referenced": {
             "name": "referenced",
+            "user_list": {"users": ["A. User", "Foo"]},
+            "meta": {"created_at": "2024-03-05T14:02:01.604165Z"},
+        },
+        "inline_referenced": {
+            "name": "inline",
             "user_list": {"users": ["A. User", "Foo"]},
             "meta": {"created_at": "2024-03-05T14:02:01.604165Z"},
         },

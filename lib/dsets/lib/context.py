@@ -27,10 +27,10 @@ class Context:
         return self.repo_root / "data"
 
     @property
-    def datasets_dir(self) -> Path:
-        """Path to the datasets dir, relative to the current
+    def content_dir(self) -> Path:
+        """Path to the content dir, relative to the current
         working directory."""
-        return self.repo_root / "datasets"
+        return self.repo_root / "content"
 
     @cached_property
     def repo(self) -> Repo:

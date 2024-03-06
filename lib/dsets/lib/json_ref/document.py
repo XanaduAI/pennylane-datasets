@@ -144,8 +144,13 @@ class DocumentTreeModel(BaseModel):
 
         If any of the referenced also contain document references,
         they will be recursively resolved."""
-        for field_name, ref in self.document_refs.items():
-            setattr(self, field_name, _resolve_document_ref(ref, self, field_name))
+        for field_name in self.model_fields:
+            attr = getattr(self, field_name)
+
+            if isinstance(attr, DocumentTreeModel):
+                attr.resolve_document_refs()
+            elif isinstance(attr, DocumentRef):
+                setattr(self, field_name, _resolve_document_ref(attr, self, field_name))
 
         return self
 
@@ -157,7 +162,18 @@ class DocumentTreeModel(BaseModel):
         if ctx := DocumentContext.from_pydantic_info(info):
             self._document_context = ctx
 
+        # for field_name in self.model_fields:
+        #    attr = getattr(self, field_name)
+
         return self
+
+
+def get_document_context(doc: DocumentTreeModel) -> DocumentContext | None:
+    """Get document context from `doc`, if it has one."""
+    try:
+        return doc.document_context
+    except RuntimeError:
+        return None
 
 
 def _resolve_document_ref(

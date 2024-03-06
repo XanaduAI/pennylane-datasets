@@ -6,6 +6,8 @@ import typer
 from dsets.lib import progress, s3
 from dsets.lib.context import Context
 
+from .content import DatasetContentBuilder
+
 app = typer.Typer(name="dsets", add_completion=True)
 
 
@@ -55,3 +57,19 @@ def upload(
         )
 
     print(f"File uploaded to '{key}'. Be sure to commit upload receipt!")
+
+
+@app.command(name="build")
+def build():
+    """Compile 'datasets-build.json' from content directory."""
+
+    ctx = Context()
+    build_dir = ctx.repo_root / "_build"
+    build_dir.mkdir(exist_ok=True)
+    build_file = build_dir / "datasets-build.json"
+
+    builder = DatasetContentBuilder.load_content(ctx.content_dir)
+
+    builder.datasets_build(build_file)
+
+    print(f"Created build in '{build_file}'")
