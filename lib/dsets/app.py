@@ -21,14 +21,20 @@ def upload(
         Path,
         typer.Argument(help="Path to dataset .h5 file", file_okay=True, dir_okay=False),
     ],
-    prefix: Annotated[str, typer.Argument(help="Prefix for data bucket")],
+    prefix_: Annotated[
+        str,
+        typer.Option(
+            "--prefix",
+            help="Prefix for file in data bucket",
+        ),
+    ] = "",
 ) -> None:
     """Upload a new dataset file to the data bucket, and create an upload
     receipt in pennylane-datasets/data.
     """
     ctx = Context()
     src_file = src_file.expanduser()
-    prefix = s3.S3Path(prefix)
+    prefix = s3.S3Path(prefix_)
 
     repo = s3.S3DatasetRepo(
         ctx.data_dir,
