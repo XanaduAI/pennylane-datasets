@@ -1,12 +1,12 @@
 import json
 
+from dsets.lib.json_ref import DocumentRef
 from dsets.lib.time import utcnow
-from dsets.schemas import DocumentRef
-from dsets.schemas.dataset import Dataset, DatasetType
+from dsets.schemas import DatasetFamily, DatasetType
 
 
-class TestDataset:
-    """Tests for `Dataset`."""
+class TestDatasetFamily:
+    """Tests for `DatasetFamily`."""
 
     JSON = """
     {
@@ -37,19 +37,19 @@ class TestDataset:
     """
 
     def test_validate_json(self):
-        dataset = Dataset.model_validate_json(self.JSON)
+        dataset = DatasetFamily.model_validate_json(self.JSON)
 
         assert dataset.about == DocumentRef(ref="about.md")
         assert dataset.citation == DocumentRef(ref="citation.txt")
 
     def test_init(self):
-        Dataset(
+        DatasetFamily(
             title="title",
             slug="slug",
             authors=["author"],
             tags=["tag"],
-            citation=DocumentRef(ref="citatation.txt"),
-            about=DocumentRef(ref="about.md"),
+            citation=DocumentRef[str](ref="citatation.txt"),
+            about=DocumentRef[str](ref="about.md"),
             type_=DatasetType(name="type", attribute_list=[]),
             date_of_publication=utcnow(),
             date_of_last_modification=utcnow(),
@@ -59,6 +59,6 @@ class TestDataset:
         )
 
     def test_model_dump(self):
-        assert Dataset.model_validate_json(self.JSON).model_dump(
+        assert DatasetFamily.model_validate_json(self.JSON).model_dump(
             mode="json", exclude_unset=True, by_alias=True
         ) == json.loads(self.JSON)

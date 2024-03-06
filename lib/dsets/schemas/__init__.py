@@ -1,4 +1,3 @@
-from ._base import DocumentRef, DocumentTreeModel, Reference
-from .dataset import Dataset
+from .dataset import DatasetAttribute, DatasetData, DatasetFamily, DatasetType
 
-__all__ = ["Dataset", "DocumentRef", "DocumentTreeModel", "Reference"]
+__all__ = ["DatasetFamily", "DatasetType", "DatasetData", "DatasetAttribute"]

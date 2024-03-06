@@ -19,7 +19,7 @@ pennylane = "^0.34.0"
 h5py = "^3.10.0"
 aiohttp = "^3.9.3"
 fsspec = "^2024.2.0"
-inflection = "^0.5.1"
+typing-extensions = "^4.10.0"
 
 [tool.poetry.group.dev.dependencies]
 mypy-boto3-s3 = "^1.34.14"
