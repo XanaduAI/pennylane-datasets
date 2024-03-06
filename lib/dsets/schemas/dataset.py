@@ -103,5 +103,4 @@ class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
     parameter_labels: Annotated[list[str], Field(default_factory=list)]
     parameter_defaults: ParameterDefaults
 
-    variables: Annotated[dict[str, str], Field(default_factory=dict)]
     data: Annotated[list[DatasetData], Field(default_factory=list)]
