@@ -1,71 +1,38 @@
-from typing import Annotated, Self
+from typing import Annotated
 
 from pydantic import (
     AwareDatetime,
     BaseModel,
     Field,
-    ValidationError,
-    model_validator,
 )
 
 from dsets.lib.json_ref import DocumentTreeModel, Reference
 from dsets.lib.pydantic_util import CamelCaseMixin
 
 from ._fields import ParameterDefaults
-
-
-class DatasetAttribute(BaseModel, CamelCaseMixin):
-    """Model for a `DatasetType.attribute_list`.
-
-    Attributes:
-        name: Name of the attribute
-        python_type: Python type for this attribute. May
-            contain markdown
-        doc: Docstring for this attribute
-        optional: Whether this attribute may not exist
-            on the dataset instance
-    """
-
-    name: str
-    python_type: str
-    doc: str
-    optional: bool = False
-
-
-class DatasetType(DocumentTreeModel, CamelCaseMixin):
-    """Model for a dataset type, e.g `qchem` or `qspin`.
-
-    Attributes:
-        name: Unique name for this type
-        attribute_list: List of expected attributes on
-            a dataset instance
-        doc: A doc string for this type
-    """
-
-    name: str
-    attribute_list: list[DatasetAttribute]
-    doc: str | None = None
-
-    @property
-    def attributes(self) -> dict[str, DatasetAttribute]:
-        return {attribute.name: attribute for attribute in self.attribute_list}
-
-    @model_validator(mode="after")
-    def _validate_attribute_list(self: Self) -> Self:
-        attr_names = set()
-        for attr in self.attribute_list:
-            if attr.name in attr_names:
-                raise ValidationError(f"Duplicate attribute name: {attr.name}")
-
-        return self
+from .dataset_type import DatasetType
 
 
 class DatasetData(BaseModel, CamelCaseMixin):
-    """Model for dataset data files."""
+    """Model for dataset family data files."""
 
     data_url: str
     parameter_values: dict[str, str] | None = None
     variables: dict[str, str] | None = None
+
+
+class DatasetFeature(BaseModel, CamelCaseMixin):
+    """Model for dataset family features.
+
+    Attributes:
+        slug: Unique name for feature
+        title: Human-readable name for feature
+        content: Feature content
+    """
+
+    slug: str
+    title: str
+    content: Reference[str]
 
 
 class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
