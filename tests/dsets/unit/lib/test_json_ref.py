@@ -27,8 +27,7 @@ class RootModel(DocumentTreeModel):
     name: str
     citation: Reference[str]
     about: Reference[str]
-    referenced: Reference[ReferencedModel]
-    inline_referenced: ReferencedModel
+    references: dict[str, Reference[ReferencedModel]]
     user_list: Reference[UserList]
     maybe_null: Reference[dict[str, Any]] | None
 
@@ -79,11 +78,13 @@ def setup_test_docs(docpath_root: Path):
                 "name": "model",
                 "citation": "Me, September",
                 "about": {"$ref": "text/about.txt"},
-                "referenced": {"$ref": "referenced_model.json"},
-                "inline_referenced": {
-                    "name": "inline",
-                    "user_list": {"$ref": "/users/userlist.json"},
-                    "meta": {"$ref": "meta.json"},
+                "references": {
+                    "full_ref": {"$ref": "referenced_model.json"},
+                    "inline": {
+                        "name": "inline",
+                        "user_list": {"$ref": "/users/userlist.json"},
+                        "meta": {"$ref": "meta.json"},
+                    },
                 },
                 "user_list": {"$ref": "../users/userlist.json"},
                 "maybe_null": None,
@@ -103,25 +104,62 @@ def test_load_from_path(docpath_root: Path):
 
     # Check that types are preserved
     assert isinstance(model, RootModel)
-    assert isinstance(model.referenced, ReferencedModel)
+    assert isinstance(model.references["full_ref"], ReferencedModel)
+    assert isinstance(model.references["full_ref"].user_list, UserList)
+    assert isinstance(model.references["inline"], ReferencedModel)
+    assert isinstance(model.references["inline"].user_list, UserList)
     assert isinstance(model.user_list, UserList)
-    assert isinstance(model.referenced.user_list, UserList)
 
     assert model.model_dump() == {
         "name": "model",
         "citation": "Me, September",
         "about": "This is a model!",
-        "referenced": {
-            "name": "referenced",
-            "user_list": {"users": ["A. User", "Foo"]},
-            "meta": {"created_at": "2024-03-05T14:02:01.604165Z"},
-        },
-        "inline_referenced": {
-            "name": "inline",
-            "user_list": {"users": ["A. User", "Foo"]},
-            "meta": {"created_at": "2024-03-05T14:02:01.604165Z"},
+        "references": {
+            "full_ref": {
+                "name": "referenced",
+                "user_list": {"users": ["A. User", "Foo"]},
+                "meta": {"created_at": "2024-03-05T14:02:01.604165Z"},
+            },
+            "inline": {
+                "name": "inline",
+                "user_list": {"users": ["A. User", "Foo"]},
+                "meta": {"created_at": "2024-03-05T14:02:01.604165Z"},
+            },
         },
         "user_list": {"users": ["A. User", "Foo"]},
+        "maybe_null": None,
+    }
+
+
+@pytest.mark.usefixtures("setup_test_docs")
+def test_load_from_path_no_resolve_refs(docpath_root: Path):
+    """Test that `load_from_path` can load documents without
+    resolving references."""
+
+    model = RootModel.load_from_path(
+        docpath_root, docpath_root / "models" / "root_model.json", resolve_refs=False
+    )
+
+    # Check that types are preserved
+    assert isinstance(model, RootModel)
+    assert isinstance(model.references["full_ref"], DocumentRef)
+    assert isinstance(model.references["inline"], ReferencedModel)
+    assert isinstance(model.references["inline"].user_list, DocumentRef)
+    assert isinstance(model.user_list, DocumentRef)
+
+    assert model.model_dump(mode="json", by_alias=True) == {
+        "name": "model",
+        "citation": "Me, September",
+        "about": {"$ref": "text/about.txt"},
+        "references": {
+            "full_ref": {"$ref": "referenced_model.json"},
+            "inline": {
+                "name": "inline",
+                "user_list": {"$ref": "/users/userlist.json"},
+                "meta": {"$ref": "meta.json"},
+            },
+        },
+        "user_list": {"$ref": "../users/userlist.json"},
         "maybe_null": None,
     }
 

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
-from typing import Any, Self
+from typing import Any, Self, TypedDict
 
 from pydantic import (
     ValidationInfo,
@@ -53,20 +53,32 @@ class DocumentContext:
 
         return cls(ref_ctx.docpath_root, path)
 
-    @property
-    def pydantic_context(self: Self) -> dict[str, Any]:
-        """Return Pydantic validation context containing
-        this context."""
-        return {"document_context": self}
 
-    @classmethod
-    def from_pydantic_info(cls: type[Self], info: ValidationInfo) -> Self | None:
-        """Get document context from Pydantic validation info.
+class ReferenceValidationContext(TypedDict):
+    """Pydantic context for reference validation."""
 
-        Returns `None` if the validation info does not contain a document
-        context.
-        """
-        if info.context:
-            return info.context.get("document_context")
+    document_context: DocumentContext
+    resolve_refs: bool
 
-        return None
+
+def reference_validation_pydantic_context(
+    document_context: DocumentContext, resolve_refs: bool
+) -> dict[str, Any]:
+    """Create a Pydantic context for reference validation and resolution."""
+    return {
+        "reference_context": {
+            "document_context": document_context,
+            "resolve_refs": resolve_refs,
+        }
+    }
+
+
+def get_reference_validation_context(
+    info: ValidationInfo,
+) -> ReferenceValidationContext | None:
+    """Get reference validation context from Pydantic context,
+    if it was set."""
+    if info.context:
+        return info.context.get("reference_context")
+
+    return None

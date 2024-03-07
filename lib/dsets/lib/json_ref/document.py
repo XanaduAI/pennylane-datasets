@@ -1,20 +1,21 @@
-import json
 import typing
-import warnings
-from collections.abc import Hashable, Mapping
+from collections.abc import Mapping
 from pathlib import Path
-from typing import Annotated, Any, Self
+from typing import Annotated, Self
 
 from pydantic import (
     BaseModel,
     PrivateAttr,
-    TypeAdapter,
     ValidationInfo,
     model_validator,
 )
 
-from .context import DocumentContext
-from .reference import DocumentRef, ResolveType
+from .context import (
+    DocumentContext,
+    get_reference_validation_context,
+    reference_validation_pydantic_context,
+)
+from .reference import DocumentRef
 
 
 class DocumentTreeModel(BaseModel):
@@ -131,39 +132,21 @@ class DocumentTreeModel(BaseModel):
         with open(path, "r", encoding="utf-8") as f:
             ret = typing.cast(
                 Self,
-                cls.model_validate_json(f.read(), context=ctx.pydantic_context),
+                cls.model_validate_json(
+                    f.read(),
+                    context=reference_validation_pydantic_context(ctx, resolve_refs),
+                ),
             )
 
-        if resolve_refs:
-            ret.resolve_document_refs()
-
         return ret
-
-    def resolve_document_refs(self: Self) -> Self:
-        """Resolve all unresolved document refs on this instance.
-
-        If any of the referenced also contain document references,
-        they will be recursively resolved."""
-        for field_name in self.model_fields:
-            attr = getattr(self, field_name)
-
-            if isinstance(attr, DocumentTreeModel):
-                attr.resolve_document_refs()
-            elif isinstance(attr, DocumentRef):
-                setattr(self, field_name, _resolve_document_ref(attr, self, field_name))
-
-        return self
 
     @model_validator(mode="after")
     def _set_document_context(self: Self, info: ValidationInfo) -> Self:
         """Model validator called after `_validate_document_refs`. Sets the document
         context.
         """
-        if ctx := DocumentContext.from_pydantic_info(info):
-            self._document_context = ctx
-
-        # for field_name in self.model_fields:
-        #    attr = getattr(self, field_name)
+        if ctx := get_reference_validation_context(info):
+            self._document_context = ctx["document_context"]
 
         return self
 
@@ -174,64 +157,3 @@ def get_document_context(doc: DocumentTreeModel) -> DocumentContext | None:
         return doc.document_context
     except RuntimeError:
         return None
-
-
-def _resolve_document_ref(
-    ref: DocumentRef[ResolveType], parent: DocumentTreeModel, field_name: str
-) -> Any:
-    """Resolve a document reference.
-
-    Args:
-        ref: The document reference
-        parent: Model containing the document reference
-        field_name: Name of the field the document reference is assigned to.
-    """
-    ctx = DocumentContext.from_referencing_context(parent.document_context, ref.ref)
-    try:
-        resolve_type = ref.resolve_type()
-    except TypeError as exc:
-        warnings.warn(
-            "Could not determine resolve type for document ref"
-            f" '{type(parent).__name__}.{field_name}'.",
-            source=exc,
-        )
-        resolve_type = Any
-
-    if existing := _document_cache_get(ctx, resolve_type):
-        return existing
-
-    with open(ctx.path, "r", encoding="utf-8") as f:
-        if ctx.path.suffix == ".json":
-            data = json.load(f)
-        else:
-            data = f.read()
-
-    resolved = TypeAdapter(resolve_type).validate_python(
-        data, context=ctx.pydantic_context
-    )
-
-    _document_cache_update(ctx, resolve_type, resolved)
-    if isinstance(resolved, DocumentTreeModel):
-        resolved.resolve_document_refs()
-
-    return resolved
-
-
-_DOCUMENT_CACHE = {}
-
-
-def _document_cache_get(
-    ctx: DocumentContext, resolve_type: type | Hashable
-) -> Any | None:
-    """Returns a global cache of resolved documents."""
-    global _DOCUMENT_CACHE
-
-    return _DOCUMENT_CACHE.get((ctx, resolve_type))
-
-
-def _document_cache_update(
-    ctx: DocumentContext, resolve_type: type | Hashable, resolved: Any
-) -> None:
-    global _DOCUMENT_CACHE
-
-    _DOCUMENT_CACHE[(ctx, resolve_type)] = resolved

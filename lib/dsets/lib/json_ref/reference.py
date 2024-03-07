@@ -1,3 +1,6 @@
+import json
+import warnings
+from collections.abc import Hashable
 from pathlib import PurePosixPath
 from typing import Annotated, Any, Generic, TypeVar, Union
 
@@ -7,8 +10,18 @@ from pydantic import (
     Discriminator,
     Field,
     Tag,
+    TypeAdapter,
+    ValidationInfo,
+    ValidatorFunctionWrapHandler,
+    WrapValidator,
 )
 from typing_extensions import TypeAliasType
+
+from .context import (
+    DocumentContext,
+    get_reference_validation_context,
+    reference_validation_pydantic_context,
+)
 
 ResolveType = TypeVar("ResolveType")
 
@@ -41,6 +54,23 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
             ) from exc
 
 
+def _docref_validator(
+    val: Any, handler: ValidatorFunctionWrapHandler, info: ValidationInfo
+):
+    ref: DocumentRef = handler(val)
+
+    ctx = get_reference_validation_context(info)
+    if ctx is None:
+        return ref
+
+    if ctx["resolve_refs"]:
+        return _resolve_document_ref(
+            ref, ctx["document_context"], field_name=info.field_name
+        )
+
+    return ref
+
+
 def _reference_discriminator(v: Any) -> str:
     """Pydantic discriminator for determining whether a reference field
     is a reference or a value.
@@ -68,10 +98,74 @@ Reference = TypeAliasType(
     "Reference",
     Annotated[
         Union[
-            Annotated[DocumentRef[ResolveType], Tag("ref")],
+            Annotated[
+                Annotated[DocumentRef[ResolveType], WrapValidator(_docref_validator)],
+                Tag("ref"),
+            ],
             Annotated[ResolveType, Tag("value")],
         ],
         Discriminator(_reference_discriminator),
     ],
     type_params=(ResolveType,),
 )
+
+
+def _resolve_document_ref(
+    ref: DocumentRef[ResolveType],
+    referencing_context: DocumentContext,
+    field_name: str | None = None,
+) -> Any:
+    """Resolve a document reference.
+
+    Args:
+        ref: The document reference
+        parent: Model containing the document reference
+        field_name: Name of the field the document reference is assigned to.
+    """
+    try:
+        resolve_type = ref.resolve_type()
+    except TypeError as exc:
+        warnings.warn(
+            "Could not determine resolve type for document ref"
+            f" on field '{field_name}'.",
+            source=exc,
+        )
+        resolve_type = Any
+
+    ctx = DocumentContext.from_referencing_context(referencing_context, ref.ref)
+    if existing := _document_cache_get(ctx, resolve_type):
+        return existing
+
+    with open(ctx.path, "r", encoding="utf-8") as f:
+        if ctx.path.suffix == ".json":
+            data = json.load(f)
+        else:
+            data = f.read()
+
+    resolved = TypeAdapter(resolve_type).validate_python(
+        data, context=reference_validation_pydantic_context(ctx, resolve_refs=True)
+    )
+
+    _document_cache_update(ctx, resolve_type, resolved)
+
+    return resolved
+
+
+_DOCUMENT_CACHE = {}
+
+
+def _document_cache_get(
+    ctx: DocumentContext, resolve_type: type | Hashable
+) -> Any | None:
+    """Returns a global cache of resolved documents."""
+    global _DOCUMENT_CACHE
+
+    return _DOCUMENT_CACHE.get((ctx, resolve_type))
+
+
+def _document_cache_update(
+    ctx: DocumentContext, resolve_type: type | Hashable, resolved: Any
+) -> None:
+    global _DOCUMENT_CACHE
+
+    _DOCUMENT_CACHE[(ctx, resolve_type)] = resolved
