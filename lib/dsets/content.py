@@ -2,11 +2,27 @@ import typing
 from pathlib import Path
 from typing import Self
 
+import jinja2
 from pydantic import BaseModel
 
 from dsets.lib.json_ref import get_document_context
 
-from .schemas import DatasetFamily, DatasetType
+from .schemas import DatasetFamily, DatasetFeature, DatasetType
+
+
+def compile_feature_templates(family: DatasetFamily) -> None:
+    while family.feature_templates:
+        feature_template = family.feature_templates.pop()
+        content_template = jinja2.Template(feature_template.template)
+
+        family.features.append(
+            DatasetFeature(
+                slug=feature_template.slug,
+                type_=feature_template.type_,
+                title=feature_template.title,
+                content=content_template.render(**feature_template.variables),
+            )
+        )
 
 
 class DatasetContentBuilder(BaseModel):
@@ -51,5 +67,8 @@ class DatasetContentBuilder(BaseModel):
 
     def datasets_build(self, out_path: Path | str) -> None:
         """Compile all datasets content into a JSON file."""
+        for dataset_family in self.dataset_families.values():
+            compile_feature_templates(dataset_family)
+
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(self.model_dump_json(indent=2, by_alias=True))

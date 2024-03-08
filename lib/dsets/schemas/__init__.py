@@ -1,4 +1,11 @@
-from .dataset import DatasetData, DatasetFamily
+from .dataset import Dataset, DatasetFamily, DatasetFeature, DatasetFeatureTemplate
 from .dataset_type import DatasetAttribute, DatasetType
 
-__all__ = ["DatasetFamily", "DatasetType", "DatasetData", "DatasetAttribute"]
+__all__ = [
+    "DatasetFamily",
+    "DatasetType",
+    "Dataset",
+    "DatasetAttribute",
+    "DatasetFeature",
+    "DatasetFeatureTemplate",
+]

@@ -10,12 +10,12 @@ from pydantic import (
     ValidationInfo,
 )
 
-_ParameterDefaultsAdapter = TypeAdapter(list[tuple[tuple[str, ...], str]])
+_ParameterDefaultsAdapter = TypeAdapter(list[tuple[tuple[str | None, ...], str]])
 
 
 def _validate_parameter_defaults(
     val: Any, info: ValidationInfo
-) -> dict[tuple[str, ...], str]:
+) -> dict[tuple[str | None, ...], str]:
     if info.mode == "json":
         val_parsed = _ParameterDefaultsAdapter.validate_json(val)
     else:
@@ -43,7 +43,7 @@ def _validate_parameter_defaults(
 
 
 def _serialize_parameter_defaults(
-    val: dict[tuple[str, ...], str], info: SerializationInfo
+    val: dict[tuple[str | None, ...], str], info: SerializationInfo
 ):
     val_list = [[match, default_] for match, default_ in val.items()]
 

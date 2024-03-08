@@ -35,12 +35,13 @@ class DatasetType(DocumentTreeModel, CamelCaseMixin):
         name: Unique name for this type
         attribute_list: List of expected attributes on
             a dataset instance
-        doc: A doc string for this type
+        parameter_labels: List of parameter labels for
+            a dataset instance
     """
 
     name: str
     attribute_list: list[DatasetAttribute]
-    doc: str | None = None
+    parameter_labels: list[str]
 
     @property
     def attributes(self) -> dict[str, DatasetAttribute]:

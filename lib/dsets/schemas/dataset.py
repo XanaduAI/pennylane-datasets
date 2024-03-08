@@ -1,4 +1,4 @@
-from typing import Annotated
+from typing import Annotated, Literal
 
 from pydantic import (
     AwareDatetime,
@@ -9,16 +9,16 @@ from pydantic import (
 from dsets.lib.json_ref import DocumentTreeModel, Reference
 from dsets.lib.pydantic_util import CamelCaseMixin
 
-from ._fields import ParameterDefaults
 from .dataset_type import DatasetType
 
 
-class DatasetData(BaseModel, CamelCaseMixin):
+class Dataset(BaseModel, CamelCaseMixin):
     """Model for dataset family data files."""
 
+    slug: str
     data_url: str
-    parameter_values: dict[str, str] | None = None
-    variables: dict[str, str] | None = None
+    parameter_values: dict[str, str | None] | None = None
+    parameter_search_priority: Annotated[int | None, Field(ge=0)] = None
 
 
 class DatasetFeature(BaseModel, CamelCaseMixin):
@@ -31,8 +31,35 @@ class DatasetFeature(BaseModel, CamelCaseMixin):
     """
 
     slug: str
+    type_: Literal["DATA", "SAMPLES"] = "DATA"
     title: str
     content: Reference[str]
+
+
+class DatasetFeatureTemplate(BaseModel, CamelCaseMixin):
+    slug: str
+    type_: Literal["DATA", "SAMPLES"] = "DATA"
+    title: str
+    variables: dict[str, str]
+    template: Reference[str]
+
+
+class DatasetFamilyMeta(DocumentTreeModel, CamelCaseMixin):
+    """
+    Metadata for a dataset family. Consumed by pennylane.ai/datasets
+
+    Attributes:
+        title: Title for this dataset family
+        authors: List of authors
+        tags: List of tags
+        citation: Citation
+        about: Markdown document describing the dataset
+            family
+        hero_image_url: URL to a hero image
+        thumbnail_url: URL to a thumbnail image
+        date_of_publication: Date created
+        date_of_last_modification: Date last modified
+    """
 
 
 class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
@@ -41,33 +68,35 @@ class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
 
     Attributes:
         slug: Unique identifier for this dataset family
-        title: Title for this dataset family
         type_: `DatasetType` for this family, or a reference
             a document containing one
-        authors: List of authors
-        tags: List of tags
-        citation: Citation
-        about: Markdown document describing the dataset
+        meta: `DatasetFamilyMeta` for this family
+        download_name: Suggested instance name for this dataset
             family
-        date_of_publication: Date created
-        date_of_last_modification: Date last modified
-
+        data: `Datasets` belonging to this family
+        features: Data features for this family
     """
 
     slug: str
-    title: str
     type_: Annotated[Reference[DatasetType], Field(alias="type")]
 
+    title: str
     authors: list[str]
     tags: Annotated[list[str], Field(default_factory=list)]
-
     citation: Reference[str]
     about: Reference[str]
+
+    hero_image_url: str | None = None
+    thumbnail_url: str | None = None
 
     date_of_publication: AwareDatetime
     date_of_last_modification: AwareDatetime
 
-    parameter_labels: Annotated[list[str], Field(default_factory=list)]
-    parameter_defaults: ParameterDefaults
+    download_name: str = "dataset"
 
-    data: Annotated[list[DatasetData], Field(default_factory=list)]
+    features: Annotated[list[DatasetFeature], Field(default_factory=list)]
+    feature_templates: Annotated[
+        list[DatasetFeatureTemplate], Field(default_factory=list)
+    ]
+
+    data: Annotated[list[Dataset], Field(default_factory=list)]

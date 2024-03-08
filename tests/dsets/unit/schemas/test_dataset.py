@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 from dsets.lib.json_ref import DocumentRef
 from dsets.lib.time import utcnow
@@ -16,7 +17,7 @@ class TestDatasetFamily:
         "qchem"
       ],
       "authors": [
-        "Utkarsh Azad"
+        "Author 1"
       ],
       "dateOfPublication": "2024-02-29T16:54:15.783903Z",
       "dateOfLastModification": "2024-02-29T16:54:15.783903Z",
@@ -32,6 +33,10 @@ class TestDatasetFamily:
         "basis",
         "bondlength"
       ],
+      "parameterDefaults": {
+        "h2": "sto-3g",
+        "h2,sto-3g": "1.53"
+      },
       "data": []
     }
     """
@@ -39,8 +44,22 @@ class TestDatasetFamily:
     def test_validate_json(self):
         dataset = DatasetFamily.model_validate_json(self.JSON)
 
+        assert dataset.title == "H2 Molecule"
+        assert dataset.slug == "h2-molecule"
+        assert dataset.authors == ["Author 1"]
+        assert dataset.date_of_publication == datetime.fromisoformat(
+            "2024-02-29T16:54:15.783903Z"
+        )
+        assert dataset.date_of_last_modification == datetime.fromisoformat(
+            "2024-02-29T16:54:15.783903Z"
+        )
         assert dataset.about == DocumentRef(ref="about.md")
         assert dataset.citation == DocumentRef(ref="citation.txt")
+        assert dataset.parameter_defaults == {
+            ("h2",): "sto-3g",
+            ("h2", "sto-3g"): "1.53",
+        }
+        assert dataset.data == []
 
     def test_init(self):
         DatasetFamily(
@@ -53,8 +72,8 @@ class TestDatasetFamily:
             type_=DatasetType(name="type", attribute_list=[]),
             date_of_publication=utcnow(),
             date_of_last_modification=utcnow(),
-            parameter_labels=["param"],
-            variable_names=["variable"],
+            parameter_labels=["param1", "param2", "param3"],
+            parameter_defaults={"val1": "val2", "val1,val2": "val3"},
             data=[],
         )
 
