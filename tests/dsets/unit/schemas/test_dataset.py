@@ -30,7 +30,7 @@ class TestDatasetFamily:
       "type": {
         "name": "qchem",
         "attributeList": [],
-        "parameterLabels": ["molname", "basis", "bondlength"]},
+        "parameterList": []},
       "data": []
     }
     """
