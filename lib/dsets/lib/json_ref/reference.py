@@ -48,7 +48,7 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
 
     @property
     def document_context(self) -> DocumentContext:
-        """The context from which this document was loaded."""
+        """The context from which this reference was loaded."""
         if (ctx := self._document_context) is None:
             raise RuntimeError(f"'{repr(self)}' does not have a document context")
 
@@ -64,6 +64,25 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
                 f"Could not determine resolve type for {repr(cls)}"
             ) from exc
 
+    def resolve(
+        self, *, document_context: DocumentContext | None = None
+    ) -> ResolveType:
+        """Resolve this reference.
+
+        Args:
+            document_context: Context to use for resolving this reference. If
+                unset, `self.document_context` will be used
+
+        Returns:
+            ResolveType: Resolved reference
+
+        Raises:
+            FileNotFoundError: if the referenced document could not be found
+            RuntimeError: if `document_context` is `None` and `self.document_context`
+                is unset.
+        """
+        return _resolve_document_ref(self, document_context=document_context)
+
 
 def _docref_validator(
     val: Any, handler: ValidatorFunctionWrapHandler, info: ValidationInfo
@@ -74,12 +93,12 @@ def _docref_validator(
     if ctx is None:
         return ref
 
-    ref._document_context = ctx["document_context"]
+    ref._document_context = DocumentContext.from_referencing_context(
+        ctx["document_context"], ref.ref
+    )
 
     if ctx["resolve_refs"]:
-        return _resolve_document_ref(
-            ref, ctx["document_context"], field_name=info.field_name
-        )
+        return _resolve_document_ref(ref, field_name=info.field_name)
 
     return ref
 
@@ -125,14 +144,14 @@ Reference = TypeAliasType(
 
 def _resolve_document_ref(
     ref: DocumentRef[ResolveType],
-    referencing_context: DocumentContext,
+    document_context: DocumentContext | None = None,
     field_name: str | None = None,
 ) -> Any:
     """Resolve a document reference.
 
     Args:
         ref: The document reference
-        parent: Model containing the document reference
+        document_context: Alternative context
         field_name: Name of the field the document reference is assigned to.
     """
     try:
@@ -145,7 +164,7 @@ def _resolve_document_ref(
         )
         resolve_type = Any
 
-    ctx = DocumentContext.from_referencing_context(referencing_context, ref.ref)
+    ctx = document_context or ref.document_context
     if existing := _document_cache_get(ctx, resolve_type):
         return existing
 
