@@ -17,7 +17,7 @@ class Dataset(BaseModel, CamelCaseMixin):
 
     slug: str
     data_url: str
-    parameter_values: dict[str, str | None] | None = None
+    parameters: dict[str, str | None] = {}
     parameter_search_priority: Annotated[int | None, Field(ge=0)] = None
 
 

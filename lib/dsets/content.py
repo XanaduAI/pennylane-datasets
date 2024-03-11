@@ -71,4 +71,6 @@ class DatasetContentBuilder(BaseModel):
             compile_feature_templates(dataset_family)
 
         with open(out_path, "w", encoding="utf-8") as f:
-            f.write(self.model_dump_json(indent=2, by_alias=True))
+            f.write(
+                self.model_dump_json(indent=2, by_alias=True, exclude_defaults=True)
+            )
