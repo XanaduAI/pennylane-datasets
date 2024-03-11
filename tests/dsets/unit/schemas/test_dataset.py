@@ -27,16 +27,10 @@ class TestDatasetFamily:
       "about": {
         "$ref": "about.md"
       },
-      "type": {"name": "qchem", "attributeList": []},
-      "parameterLabels": [
-        "molname",
-        "basis",
-        "bondlength"
-      ],
-      "parameterDefaults": {
-        "h2": "sto-3g",
-        "h2,sto-3g": "1.53"
-      },
+      "type": {
+        "name": "qchem",
+        "attributeList": [],
+        "parameterLabels": ["molname", "basis", "bondlength"]},
       "data": []
     }
     """
@@ -55,10 +49,6 @@ class TestDatasetFamily:
         )
         assert dataset.about == DocumentRef(ref="about.md")
         assert dataset.citation == DocumentRef(ref="citation.txt")
-        assert dataset.parameter_defaults == {
-            ("h2",): "sto-3g",
-            ("h2", "sto-3g"): "1.53",
-        }
         assert dataset.data == []
 
     def test_init(self):

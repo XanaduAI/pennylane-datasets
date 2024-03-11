@@ -40,8 +40,8 @@ class DatasetType(DocumentTreeModel, CamelCaseMixin):
     """
 
     name: str
-    attribute_list: list[DatasetAttribute]
-    parameter_labels: list[str]
+    attribute_list: list[DatasetAttribute] = []
+    parameter_labels: list[str] = []
 
     @property
     def attributes(self) -> dict[str, DatasetAttribute]:

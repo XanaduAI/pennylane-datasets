@@ -95,7 +95,9 @@ class DocumentTreeModel(BaseModel):
     def document_context(self) -> DocumentContext:
         """The context from which this document was loaded."""
         if (ctx := self._document_context) is None:
-            raise RuntimeError("Instance does not have a document context")
+            raise RuntimeError(
+                f"'{type(self).__name__}' instance does not have a" " document context"
+            )
 
         return ctx
 

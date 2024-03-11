@@ -81,8 +81,8 @@ class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
     type_: Annotated[Reference[DatasetType], Field(alias="type")]
 
     title: str
-    authors: list[str]
-    tags: Annotated[list[str], Field(default_factory=list)]
+    authors: list[str] = []
+    tags: list[str] = []
     citation: Reference[str]
     about: Reference[str]
 
@@ -94,9 +94,7 @@ class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
 
     download_name: str = "dataset"
 
-    features: Annotated[list[DatasetFeature], Field(default_factory=list)]
-    feature_templates: Annotated[
-        list[DatasetFeatureTemplate], Field(default_factory=list)
-    ]
+    features: list[DatasetFeature] = []
+    feature_templates: list[DatasetFeatureTemplate] = []
 
-    data: Annotated[list[Dataset], Field(default_factory=list)]
+    data: list[Dataset] = []

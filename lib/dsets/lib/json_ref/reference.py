@@ -9,6 +9,7 @@ from pydantic import (
     ConfigDict,
     Discriminator,
     Field,
+    PrivateAttr,
     Tag,
     TypeAdapter,
     ValidationInfo,
@@ -41,7 +42,17 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
 
     model_config = ConfigDict(populate_by_name=True)
 
-    ref: Annotated[PurePosixPath, Field(alias="$ref", serialization_alias="$ref")]
+    ref: Annotated[PurePosixPath, Field(alias="$ref")]
+
+    _document_context: Annotated[DocumentContext | None, PrivateAttr()] = None
+
+    @property
+    def document_context(self) -> DocumentContext:
+        """The context from which this document was loaded."""
+        if (ctx := self._document_context) is None:
+            raise RuntimeError(f"'{repr(self)}' does not have a document context")
+
+        return ctx
 
     @classmethod
     def resolve_type(cls) -> type[ResolveType]:
@@ -62,6 +73,8 @@ def _docref_validator(
     ctx = get_reference_validation_context(info)
     if ctx is None:
         return ref
+
+    ref._document_context = ctx["document_context"]
 
     if ctx["resolve_refs"]:
         return _resolve_document_ref(
