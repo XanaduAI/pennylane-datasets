@@ -1,3 +1,4 @@
+import json
 import typing
 from pathlib import Path
 from typing import Self
@@ -7,21 +8,21 @@ from pydantic import BaseModel
 
 from dsets.lib.json_ref import get_document_context
 
-from .schemas import DatasetFamily, DatasetFeature, DatasetType
+from .schemas import DatasetFamily, DatasetFeature, DatasetFeatureTemplate, DatasetType
 
 
 def compile_feature_templates(family: DatasetFamily) -> None:
-    while family.feature_templates:
-        feature_template = family.feature_templates.pop()
-        content_template = jinja2.Template(feature_template.template)
+    for i, feature in enumerate(family.features):
+        if not isinstance(feature, DatasetFeatureTemplate):
+            continue
 
-        family.features.append(
-            DatasetFeature(
-                slug=feature_template.slug,
-                type_=feature_template.type_,
-                title=feature_template.title,
-                content=content_template.render(**feature_template.variables),
-            )
+        content_template = jinja2.Template(feature.template)
+
+        family.features[i] = DatasetFeature(
+            slug=feature.slug,
+            type_=feature.type_,
+            title=feature.title,
+            content=content_template.render(**feature.variables),
         )
 
 
@@ -71,6 +72,9 @@ class DatasetContentBuilder(BaseModel):
             compile_feature_templates(dataset_family)
 
         with open(out_path, "w", encoding="utf-8") as f:
-            f.write(
-                self.model_dump_json(indent=2, by_alias=True, exclude_defaults=True)
+            json.dump(
+                self.model_dump(mode="json", exclude_defaults=True, by_alias=True),
+                f,
+                indent=2,
+                sort_keys=True,
             )

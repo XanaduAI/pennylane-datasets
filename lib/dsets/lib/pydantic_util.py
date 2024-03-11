@@ -1,8 +1,9 @@
-from collections.abc import Mapping
-from functools import cache
+from collections.abc import Callable, Mapping, MutableSequence
+from functools import cache, partial
+from typing import Any
 
 import pydantic.alias_generators
-from pydantic import BaseModel, ConfigDict
+from pydantic import AfterValidator, BaseModel, ConfigDict
 
 
 class CamelCaseMixin:
@@ -23,3 +24,24 @@ def get_model_alias_mapping(model_cls: type[BaseModel]) -> Mapping[str, str]:
         for name, info in model_cls.model_fields.items()
         if info.alias is not None
     }
+
+
+def _sortedfield_validator(
+    key: Callable[[Any], Any] | None, val: list[Any]
+) -> MutableSequence[Any]:
+    """Validator function for `SortedField`."""
+    val.sort(key=key)
+
+    return val
+
+
+class SortedField(AfterValidator):
+    """Pydantic validator for sorting a list field."""
+
+    def __init__(self, key: Callable[[Any], Any] | None = None) -> None:
+        """Pydantic validator for sorting a list field.
+
+        Args:
+            key: Key used for sort
+        """
+        super().__init__(partial(_sortedfield_validator, key))

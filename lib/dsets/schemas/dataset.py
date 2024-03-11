@@ -7,7 +7,7 @@ from pydantic import (
 )
 
 from dsets.lib.json_ref import DocumentTreeModel, Reference
-from dsets.lib.pydantic_util import CamelCaseMixin
+from dsets.lib.pydantic_util import CamelCaseMixin, SortedField
 
 from .dataset_type import DatasetType
 
@@ -94,7 +94,8 @@ class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
 
     download_name: str = "dataset"
 
-    features: list[DatasetFeature] = []
-    feature_templates: list[DatasetFeatureTemplate] = []
+    features: list[DatasetFeature | DatasetFeatureTemplate] = []
 
-    data: list[Dataset] = []
+    data: Annotated[
+        list[Dataset], SortedField(lambda d: tuple(d.parameters.values()))
+    ] = []
