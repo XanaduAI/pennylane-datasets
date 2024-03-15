@@ -1,6 +1,7 @@
 *.h5
 # Don't ignore directories with .h5
 !*.h5/
+_build/*
 
 
 __pycache__
