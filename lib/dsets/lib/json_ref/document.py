@@ -11,6 +11,7 @@ from pydantic import (
 )
 
 from .context import (
+    DoctreeContext,
     DocumentContext,
     get_reference_validation_context,
     reference_validation_pydantic_context,
@@ -89,17 +90,11 @@ class DocumentTreeModel(BaseModel):
         )
     """
 
-    _document_context: Annotated[DocumentContext | None, PrivateAttr()] = None
+    _document_context: Annotated[DocumentContext, PrivateAttr()]
 
     @property
     def document_context(self) -> DocumentContext:
-        """The context from which this document was loaded."""
-        if (ctx := self._document_context) is None:
-            raise RuntimeError(
-                f"'{type(self).__name__}' instance does not have a" " document context"
-            )
-
-        return ctx
+        return self._document_context
 
     @property
     def document_refs(self) -> Mapping[str, DocumentRef]:
@@ -114,29 +109,31 @@ class DocumentTreeModel(BaseModel):
         }
 
     @classmethod
-    def load_from_path(
+    def from_os_path(
         cls: type[Self],
-        docpath_root: Path | str,
+        doctree_ctx: DoctreeContext,
         path: Path | str,
         resolve_refs: bool = False,
     ) -> Self:
         """Validate a document from a document tree.
 
         Args:
-            docpath_root: Root path for resolving document references
-            path: Path to the document
+            doctree_ctx: Document tree context
+            path: Real path to the document
             resolve_refs: Whether document refs should be resolved.
 
         Returns: Model instance
         """
-        ctx = DocumentContext.create(docpath_root, path)
+        document_ctx = DocumentContext.from_os_path(doctree_ctx, path)
 
         with open(path, "r", encoding="utf-8") as f:
             ret = typing.cast(
                 Self,
                 cls.model_validate_json(
                     f.read(),
-                    context=reference_validation_pydantic_context(ctx, resolve_refs),
+                    context=reference_validation_pydantic_context(
+                        document_ctx, resolve_refs
+                    ),
                 ),
             )
 

@@ -1,6 +1,5 @@
 import json
 import warnings
-from collections.abc import Hashable
 from pathlib import PurePosixPath
 from typing import Annotated, Any, Generic, TypeVar, Union
 
@@ -44,7 +43,7 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
 
     ref: Annotated[PurePosixPath, Field(alias="$ref")]
 
-    _document_context: Annotated[DocumentContext | None, PrivateAttr()] = None
+    _document_context: Annotated[DocumentContext, PrivateAttr()] = None
 
     @property
     def document_context(self) -> DocumentContext:
@@ -65,7 +64,7 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
             ) from exc
 
     def resolve(
-        self, *, document_context: DocumentContext | None = None
+        self,
     ) -> ResolveType:
         """Resolve this reference.
 
@@ -81,7 +80,7 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
             RuntimeError: if `document_context` is `None` and `self.document_context`
                 is unset.
         """
-        return _resolve_document_ref(self, document_context=document_context)
+        return _resolve_document_ref(self)
 
 
 def _docref_validator(
@@ -93,9 +92,8 @@ def _docref_validator(
     if ctx is None:
         return ref
 
-    ref._document_context = DocumentContext.from_referencing_context(
-        ctx["document_context"], ref.ref
-    )
+    doc_ctx = ctx["document_context"]
+    ref._document_context = doc_ctx.make_reference_context(ref.ref)
 
     if ctx["resolve_refs"]:
         return _resolve_document_ref(ref, field_name=info.field_name)
@@ -144,14 +142,12 @@ Reference = TypeAliasType(
 
 def _resolve_document_ref(
     ref: DocumentRef[ResolveType],
-    document_context: DocumentContext | None = None,
     field_name: str | None = None,
 ) -> Any:
     """Resolve a document reference.
 
     Args:
         ref: The document reference
-        document_context: Alternative context
         field_name: Name of the field the document reference is assigned to.
     """
     try:
@@ -164,11 +160,11 @@ def _resolve_document_ref(
         )
         resolve_type = Any
 
-    ctx = document_context or ref.document_context
-    if existing := _document_cache_get(ctx, resolve_type):
+    ctx = ref.document_context
+    if existing := ctx.doctree_ctx.document_cache_get(ctx.os_path, resolve_type):
         return existing
 
-    with open(ctx.path, "r", encoding="utf-8") as f:
+    with open(ctx.os_path, "r", encoding="utf-8") as f:
         if ctx.path.suffix == ".json":
             data = json.load(f)
         else:
@@ -178,26 +174,6 @@ def _resolve_document_ref(
         data, context=reference_validation_pydantic_context(ctx, resolve_refs=True)
     )
 
-    _document_cache_update(ctx, resolve_type, resolved)
+    ctx.doctree_ctx.document_cache_update(ctx.os_path, resolve_type, resolved)
 
     return resolved
-
-
-_DOCUMENT_CACHE = {}
-
-
-def _document_cache_get(
-    ctx: DocumentContext, resolve_type: type | Hashable
-) -> Any | None:
-    """Returns a global cache of resolved documents."""
-    global _DOCUMENT_CACHE
-
-    return _DOCUMENT_CACHE.get((ctx, resolve_type))
-
-
-def _document_cache_update(
-    ctx: DocumentContext, resolve_type: type | Hashable, resolved: Any
-) -> None:
-    global _DOCUMENT_CACHE
-
-    _DOCUMENT_CACHE[(ctx, resolve_type)] = resolved

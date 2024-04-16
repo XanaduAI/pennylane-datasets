@@ -44,24 +44,6 @@ class DatasetFeatureTemplate(BaseModel, CamelCaseMixin):
     template: Reference[str]
 
 
-class DatasetFamilyMeta(DocumentTreeModel, CamelCaseMixin):
-    """
-    Metadata for a dataset family. Consumed by pennylane.ai/datasets
-
-    Attributes:
-        title: Title for this dataset family
-        authors: List of authors
-        tags: List of tags
-        citation: Citation
-        about: Markdown document describing the dataset
-            family
-        hero_image_url: URL to a hero image
-        thumbnail_url: URL to a thumbnail image
-        date_of_publication: Date created
-        date_of_last_modification: Date last modified
-    """
-
-
 class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
     """Model for dataset family, which may include one or more
     Pennylane dataset files.

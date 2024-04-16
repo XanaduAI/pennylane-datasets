@@ -1,13 +1,34 @@
 from dataclasses import dataclass
+from functools import cached_property
 from pathlib import Path, PurePosixPath
-from typing import Any, Self, TypedDict
+from typing import Any, Hashable, Self, TypedDict
 
 from pydantic import (
     ValidationInfo,
 )
 
 
-@dataclass(frozen=True)
+class DoctreeContext:
+    docpath_root: Path
+
+    def __init__(self, docpath_root: Path | str) -> None:
+        self.docpath_root = Path(docpath_root).absolute().resolve()
+
+        self._document_cache = {}
+
+    def document_cache_get(
+        self, os_path: Path, resolve_type: type | Hashable
+    ) -> Any | None:
+        return self._document_cache.get((os_path, resolve_type))
+
+    def document_cache_update(self, os_path, resolve_type: type | Hashable, data: Any):
+        if (os_path, resolve_type) in self._document_cache:
+            raise RuntimeError(f"Duplicate cache key: {repr((os_path, resolve_type))}")
+
+        self._document_cache[(os_path, resolve_type)] = data
+
+
+@dataclass
 class DocumentContext:
     """Contains context for a model loaded from a document
     tree. Used to resolve `DocumentRef` fields in models.
@@ -20,38 +41,39 @@ class DocumentContext:
         path: Path of a document within a document tree
     """
 
-    docpath_root: Path
-    path: Path
+    doctree_ctx: DoctreeContext
+    path: PurePosixPath
+
+    @cached_property
+    def os_path(self) -> Path:
+        return (self.doctree_ctx.docpath_root / self.path).absolute().resolve()
 
     @classmethod
-    def create(cls: type[Self], docpath_root: Path | str, path: Path | str) -> Self:
-        """Create a document context. Ensures that `docpath_root` is absolute,
+    def from_os_path(
+        cls: type[Self], doctree_ctx: DoctreeContext, os_path: Path | str
+    ) -> Self:
+        """Create a root document context. Ensures that `docpath_root` is absolute,
         and that `path` is relative to `docpath_root`."""
 
-        docpath_root = Path(docpath_root).absolute().resolve()
-        path = Path(path).absolute().resolve()
+        path = Path(os_path).absolute().resolve()
 
-        if not path.is_relative_to(docpath_root):
+        try:
+            doctree_path = PurePosixPath(path.relative_to(doctree_ctx.docpath_root))
+        except ValueError as exc:
             raise ValueError(
-                f"Document path '{path}' is not relative to document"
-                f" root path '{docpath_root}'"
-            )
+                f"Document path '{path}' is not relative to document tree root path"
+                f" '{doctree_ctx.docpath_root}'"
+            ) from exc
 
-        return cls(docpath_root, path)
+        return cls(doctree_ctx, doctree_path)
 
-    @classmethod
-    def from_referencing_context(
-        cls: type[Self], ref_ctx: Self, ref_path: PurePosixPath
-    ) -> Self:
-        """Create a document context from the context of a referencing document."""
+    def make_reference_context(self, ref_path: PurePosixPath) -> "DocumentContext":
         if ref_path.is_absolute():
-            path = ref_ctx.docpath_root / ref_path.relative_to("/")
+            doctree_path = ref_path.relative_to("/")
         else:
-            path = ref_ctx.path.parent / ref_path
+            doctree_path = self.path.parent / ref_path
 
-        path = path.resolve()
-
-        return cls(ref_ctx.docpath_root, path)
+        return DocumentContext(self.doctree_ctx, doctree_path)
 
 
 class ReferenceValidationContext(TypedDict):
