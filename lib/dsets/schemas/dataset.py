@@ -2,17 +2,16 @@ from typing import Annotated, Literal
 
 from pydantic import (
     AwareDatetime,
-    BaseModel,
     Field,
 )
 
-from dsets.lib.json_ref import DocumentTreeModel, Reference
+from dsets.lib.json_ref import Asset, Document, Reference
 from dsets.lib.pydantic_util import CamelCaseMixin, SortedField
 
 from .dataset_type import DatasetType
 
 
-class Dataset(BaseModel, CamelCaseMixin):
+class Dataset(Document, CamelCaseMixin):
     """Model for dataset family data files."""
 
     slug: str
@@ -21,7 +20,7 @@ class Dataset(BaseModel, CamelCaseMixin):
     parameter_search_priority: Annotated[int | None, Field(ge=0)] = None
 
 
-class DatasetFeature(BaseModel, CamelCaseMixin):
+class DatasetFeature(Document, CamelCaseMixin):
     """Model for dataset family features.
 
     Attributes:
@@ -36,7 +35,7 @@ class DatasetFeature(BaseModel, CamelCaseMixin):
     content: Reference[str]
 
 
-class DatasetFeatureTemplate(BaseModel, CamelCaseMixin):
+class DatasetFeatureTemplate(Document, CamelCaseMixin):
     slug: str
     type_: Literal["DATA", "SAMPLES"] = "DATA"
     title: str
@@ -44,15 +43,14 @@ class DatasetFeatureTemplate(BaseModel, CamelCaseMixin):
     template: Reference[str]
 
 
-class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
+class DatasetFamily(Document, CamelCaseMixin):
     """Model for dataset family, which may include one or more
     Pennylane dataset files.
 
     Attributes:
         slug: Unique identifier for this dataset family
         type_: `DatasetType` for this family, or a reference
-            a document containing one
-        meta: `DatasetFamilyMeta` for this family
+            to a document containing one
         download_name: Suggested instance name for this dataset
             family
         data: `Datasets` belonging to this family
@@ -68,8 +66,8 @@ class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
     citation: Reference[str]
     about: Reference[str]
 
-    hero_image_url: str | None = None
-    thumbnail_url: str | None = None
+    hero_image: Asset | None = None
+    thumbnail: Asset | None = None
 
     date_of_publication: AwareDatetime
     date_of_last_modification: AwareDatetime

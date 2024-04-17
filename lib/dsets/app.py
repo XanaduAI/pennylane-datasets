@@ -6,7 +6,8 @@ import typer
 from dsets.lib import progress, s3
 from dsets.lib.context import Context
 
-from .content import DatasetContentBuilder
+from .content import build as builder
+from .content import make_asset_uploader
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -68,8 +69,13 @@ def build():
     build_dir.mkdir(exist_ok=True)
     build_file = build_dir / "datasets-build.json"
 
-    builder = DatasetContentBuilder.load_content(ctx.content_dir)
-
-    builder.datasets_build(build_file)
+    builder(
+        ctx.content_dir,
+        make_asset_uploader(
+            ctx.settings.data_bucket_name,
+            ctx.settings.data_bucket_assets_prefix,
+            ctx.settings.assert_url_prefix,
+        ),
+    )
 
     print(f"Created build in '{build_file}'")

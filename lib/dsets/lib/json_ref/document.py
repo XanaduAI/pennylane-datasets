@@ -1,25 +1,21 @@
 import typing
 from collections.abc import Mapping
 from pathlib import Path
-from typing import Annotated, Self
+from typing import Self
 
-from pydantic import (
-    BaseModel,
-    PrivateAttr,
-    ValidationInfo,
-    model_validator,
-)
+from pydantic import BaseModel
 
-from .context import (
+from .doctree import (
+    Doctree,
     DoctreeContext,
-    DocumentContext,
-    get_reference_validation_context,
-    reference_validation_pydantic_context,
+    DoctreeObj,
+    get_doctree_context,
+    make_doctree_context,
 )
 from .reference import DocumentRef
 
 
-class DocumentTreeModel(BaseModel):
+class Document(BaseModel, DoctreeObj):
     """Base class for Pydantic models in a document tree, that
     can contain `Reference` fields referencing other documents.
 
@@ -32,13 +28,13 @@ class DocumentTreeModel(BaseModel):
 
             users: list[str]
 
-        class ReferencedModel(DocumentTreeModel):
+        class ReferencedModel(Document):
 
             name: str
             user_list: Reference[UserList]
             meta: Reference[dict[str, Any]]
 
-        class Model(DocumentTreeModel):
+        class Model(Document):
 
             name: str
             citation: Reference[str]
@@ -90,12 +86,6 @@ class DocumentTreeModel(BaseModel):
         )
     """
 
-    _document_context: Annotated[DocumentContext, PrivateAttr()]
-
-    @property
-    def document_context(self) -> DocumentContext:
-        return self._document_context
-
     @property
     def document_refs(self) -> Mapping[str, DocumentRef]:
         """Mapping of attributes with unresolved document refs."""
@@ -111,48 +101,36 @@ class DocumentTreeModel(BaseModel):
     @classmethod
     def from_os_path(
         cls: type[Self],
-        doctree_ctx: DoctreeContext,
+        doctree: Doctree,
         path: Path | str,
         resolve_refs: bool = False,
     ) -> Self:
         """Validate a document from a document tree.
 
         Args:
-            doctree_ctx: Document tree context
+            doctree: Document tree context
             path: Real path to the document
             resolve_refs: Whether document refs should be resolved.
 
         Returns: Model instance
         """
-        document_ctx = DocumentContext.from_os_path(doctree_ctx, path)
+        document_ctx = DoctreeContext.from_os_path(doctree, path)
 
         with open(path, "r", encoding="utf-8") as f:
             ret = typing.cast(
                 Self,
                 cls.model_validate_json(
                     f.read(),
-                    context=reference_validation_pydantic_context(
-                        document_ctx, resolve_refs
-                    ),
+                    context=make_doctree_context(document_ctx, resolve_refs),
                 ),
             )
 
         return ret
 
-    @model_validator(mode="after")
-    def _set_document_context(self: Self, info: ValidationInfo) -> Self:
-        """Model validator called after `_validate_document_refs`. Sets the document
-        context.
-        """
-        if ctx := get_reference_validation_context(info):
+    def model_post_init(self, __context: typing.Any) -> None:
+        if ctx := get_doctree_context(__context):
             self._document_context = ctx["document_context"]
+            ctx["document_context"].doctree._objects[type(self)].append(self)
+            ctx["document_context"].doctree._documents[type(self)].append(self)
 
-        return self
-
-
-def get_document_context(doc: DocumentTreeModel) -> DocumentContext | None:
-    """Get document context from `doc`, if it has one."""
-    try:
-        return doc.document_context
-    except RuntimeError:
-        return None
+        return super().model_post_init(__context)

@@ -17,10 +17,10 @@ from pydantic import (
 )
 from typing_extensions import TypeAliasType
 
-from .context import (
-    DocumentContext,
-    get_reference_validation_context,
-    reference_validation_pydantic_context,
+from .doctree import (
+    DoctreeContext,
+    get_doctree_context,
+    make_doctree_context,
 )
 
 ResolveType = TypeVar("ResolveType")
@@ -34,19 +34,19 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
         ref: Path to referenced document. If the path is relative (no leading '/')
             it will be resolved relative to the referencing document. If the path
             is absolute, it will be resolved relative to the root of the document
-            tree (`DocumentContext.root`)
+            tree.
 
-    See `DocumentTreeModel` for example usage.
+    See `Document` for example usage.
     """
 
     model_config = ConfigDict(populate_by_name=True)
 
     ref: Annotated[PurePosixPath, Field(alias="$ref")]
 
-    _document_context: Annotated[DocumentContext, PrivateAttr()] = None
+    _document_context: Annotated[DoctreeContext, PrivateAttr()]
 
     @property
-    def document_context(self) -> DocumentContext:
+    def document_context(self) -> DoctreeContext:
         """The context from which this reference was loaded."""
         if (ctx := self._document_context) is None:
             raise RuntimeError(f"'{repr(self)}' does not have a document context")
@@ -88,7 +88,7 @@ def _docref_validator(
 ):
     ref: DocumentRef = handler(val)
 
-    ctx = get_reference_validation_context(info)
+    ctx = get_doctree_context(info.context)
     if ctx is None:
         return ref
 
@@ -161,7 +161,7 @@ def _resolve_document_ref(
         resolve_type = Any
 
     ctx = ref.document_context
-    if existing := ctx.doctree_ctx.document_cache_get(ctx.os_path, resolve_type):
+    if existing := ctx.doctree.document_cache_get(ctx.os_path, resolve_type):
         return existing
 
     with open(ctx.os_path, "r", encoding="utf-8") as f:
@@ -171,9 +171,9 @@ def _resolve_document_ref(
             data = f.read()
 
     resolved = TypeAdapter(resolve_type).validate_python(
-        data, context=reference_validation_pydantic_context(ctx, resolve_refs=True)
+        data, context=make_doctree_context(ctx, resolve_refs=True)
     )
 
-    ctx.doctree_ctx.document_cache_update(ctx.os_path, resolve_type, resolved)
+    ctx.doctree.document_cache_update(ctx.os_path, resolve_type, resolved)
 
     return resolved
