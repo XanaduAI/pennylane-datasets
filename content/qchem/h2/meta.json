@@ -1,0 +1,16 @@
+{
+  "title": "H2",
+  "tags": [
+    "qchem",
+    "Samples Available",
+    ">16 Qubits"
+  ],
+  "citation": {
+    "$ref": "./citation.txt"
+  },
+  "about": {
+    "$ref": "./about.md"
+  },
+  "heroImage": "Datasets_ChemHero_H2.png",
+  "thumbnail": "Dataset_ChemThumb_H2.png"
+}

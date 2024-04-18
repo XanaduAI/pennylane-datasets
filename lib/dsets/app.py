@@ -6,6 +6,7 @@ import typer
 
 from dsets.lib import progress, s3
 from dsets.settings import CLIContext
+from .builder import build_dataset_site
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -56,6 +57,22 @@ def upload(
         )
 
     print(f"File uploaded to '{key}'. Be sure to commit upload receipt!")
+
+
+@app.command(name="build")
+def build():
+    """Compile 'datasets-build.json' from content directory."""
+
+    ctx = CLIContext()
+    build_dir = ctx.repo_root / "_build"
+    build_dir.mkdir(exist_ok=True)
+    build_file = build_dir / "datasets-build.json"
+
+    site_build = build_dataset_site(ctx)
+    with open(build_file, "w", encoding="utf-8") as f:
+        f.write(site_build.model_dump_json(indent=2))
+
+    print(f"Created build in '{build_file}'")
 
 
 def configure_logging(level=logging.INFO):
