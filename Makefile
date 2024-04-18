@@ -24,10 +24,9 @@ setup:
 	$(.POETRY) install --with dev
 
 
-args=lib/tests/
 .PHONY: test
 test:
-	$(.POETRY) run pytest $(args)
+	$(.POETRY) run pytest lib/tests $(args)
 	
 
 .PHONY: fmt

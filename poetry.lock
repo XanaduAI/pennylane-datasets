@@ -188,6 +188,26 @@ docs = ["astroid (<3)", "furo", "ipython (!=8.7.0)", "myst-nb", "setuptools-scm"
 tests = ["coverage", "numpy", "pytest", "pytest-cov"]
 
 [[package]]
+name = "bibtexparser"
+version = "2.0.0b7"
+description = "Bibtex parser for python 3"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "bibtexparser-2.0.0b7-py3-none-any.whl", hash = "sha256:1f4ac78cc6fbfdcc7ce432105fef127688c78ce60324363955fc11feb32964cd"},
+    {file = "bibtexparser-2.0.0b7.tar.gz", hash = "sha256:9e0034dd16e1961fbc895b108f49bdef6f988b5d48782b62c9492ee8a281efad"},
+]
+
+[package.dependencies]
+pylatexenc = ">=2.10"
+
+[package.extras]
+docs = ["sphinx"]
+lint = ["black (==23.3.0)", "docstr-coverage (==2.2.0)", "isort (==5.12.0)"]
+test = ["jupyter", "pytest", "pytest-cov", "pytest-xdist"]
+
+[[package]]
 name = "boto3"
 version = "1.34.48"
 description = "The AWS SDK for Python"
@@ -1422,6 +1442,17 @@ plugins = ["importlib-metadata"]
 windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
+name = "pylatexenc"
+version = "2.10"
+description = "Simple LaTeX parser providing latex-to-unicode and unicode-to-latex conversion"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pylatexenc-2.10.tar.gz", hash = "sha256:3dd8fd84eb46dc30bee1e23eaab8d8fb5a7f507347b23e5f38ad9675c84f40d3"},
+]
+
+[[package]]
 name = "pytest"
 version = "8.0.2"
 description = "pytest: simple powerful testing with Python"
@@ -1985,4 +2016,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "2d99da93b653048dce8712f3f0fdc02da94d0ca729ebcfb6f3b13b97289026d7"
+content-hash = "71792d0e66b55c08929e801c3243ee707f8fb7d1852e101b9e07962d9842b09a"
