@@ -21,12 +21,14 @@
   "type": {
     "$ref": "/_meta/types/qchem.json"
   },
+  "heroImage": "/_meta/Datasets_Hero_2024-01-11.png",
+  "thumbnail": "Dataset_ChemHero_BH3.png",
   "features": [
     {
       "slug": "hamiltonian-data",
       "title": "Hamiltonian data",
       "variables": {
-        "hamiltonian": "x^2"
+        "hamiltonian_equation": "x^2"
       },
       "template": {
         "$ref": "/_meta/features/qchem/templates/hamiltonian-data.md"
