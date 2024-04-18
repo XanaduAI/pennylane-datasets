@@ -22,7 +22,7 @@
     "$ref": "/_meta/types/qchem.json"
   },
   "heroImage": "/_meta/Datasets_Hero_2024-01-11.png",
-  "thumbnail": "Dataset_ChemHero_BH3.png",
+  "thumbnail": "Dataset_ChemHero_H2.png",
   "features": [
     {
       "slug": "hamiltonian-data",
