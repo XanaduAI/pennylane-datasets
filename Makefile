@@ -24,7 +24,7 @@ setup:
 	$(.POETRY) install --with dev
 
 
-args=tests/
+args=lib/tests/
 .PHONY: test
 test:
 	$(.POETRY) run pytest $(args)
@@ -32,14 +32,14 @@ test:
 
 .PHONY: fmt
 fmt:
-	$(.POETRY) run ruff --fix lib/ tests/
-	$(.POETRY) run ruff format lib/ tests/
+	$(.POETRY) run ruff --fix lib
+	$(.POETRY) run ruff format lib
 
 
 .PHONY: lint
 lint:
-	$(.POETRY) run ruff check lib/ tests/
-	$(.POETRY) run ruff format --check lib/ tests/
+	$(.POETRY) run ruff check lib
+	$(.POETRY) run ruff format --check lib
 
 
 .PHONY: clean
