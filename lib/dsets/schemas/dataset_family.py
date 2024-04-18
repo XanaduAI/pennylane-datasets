@@ -33,7 +33,7 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     Attributes:
         abstract: Short, 1-paragraph description of the dataset
         authors: List of authors
-        citation: Citation, in Nibtex format
+        citation: Citation, in Bibtex format
         source_code_url: Link to source code for reproducing the
             dataset
         tags: List of tags
