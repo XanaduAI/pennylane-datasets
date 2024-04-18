@@ -3,7 +3,6 @@ on:
   pull_request:
     paths:
       - 'lib/**'
-      - 'tests/**'
       - 'pyproject.toml'
       - 'poetry.lock'
   push:
@@ -50,8 +49,8 @@ jobs:
 
       - name: Run formatters
         run: |
-            .venv/bin/poetry run ruff check lib/ tests/
-            .venv/bin/poetry run ruff format --check lib/ tests/
+            .venv/bin/poetry run ruff check lib/
+            .venv/bin/poetry run ruff format --check lib/
 
       - name: Run tests
-        run: .venv/bin/poetry run pytest tests/
+        run: .venv/bin/poetry run pytest lib/tests/
