@@ -1,12 +1,13 @@
+import logging
 from pathlib import Path
 from typing import Annotated
 
 import typer
 
 from dsets.lib import progress, s3
-from dsets.lib.context import Context
+from dsets.settings import CLIContext
 
-from .content import DatasetContentBuilder
+from .builder import build_dataset_site
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -34,15 +35,15 @@ def upload(
     """Upload a new dataset file to the data bucket, and create an upload
     receipt in pennylane-datasets/data.
     """
-    ctx = Context()
+    ctx = CLIContext()
     src_file = src_file.expanduser()
     prefix = s3.S3Path(prefix_)
 
     repo = s3.S3DatasetRepo(
         ctx.data_dir,
         ctx.s3_client,
-        ctx.settings.data_bucket_name,
-        ctx.settings.data_bucket_key_prefix,
+        ctx.settings.bucket_name,
+        ctx.settings.bucket_data_key_prefix,
     )
 
     print(f"Uploading '{src_file.absolute()}'")
@@ -63,13 +64,22 @@ def upload(
 def build():
     """Compile 'datasets-build.json' from content directory."""
 
-    ctx = Context()
+    ctx = CLIContext()
     build_dir = ctx.repo_root / "_build"
     build_dir.mkdir(exist_ok=True)
     build_file = build_dir / "datasets-build.json"
 
-    builder = DatasetContentBuilder.load_content(ctx.content_dir)
-
-    builder.datasets_build(build_file)
+    site_build = build_dataset_site(ctx)
+    with open(build_file, "w", encoding="utf-8") as f:
+        f.write(site_build.model_dump_json(indent=2))
 
     print(f"Created build in '{build_file}'")
+
+
+def configure_logging(level=logging.INFO):
+    logging.basicConfig(level=level)
+
+
+def main():
+    configure_logging()
+    app()

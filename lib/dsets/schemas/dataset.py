@@ -2,17 +2,16 @@ from typing import Annotated, Literal
 
 from pydantic import (
     AwareDatetime,
-    BaseModel,
     Field,
 )
 
-from dsets.lib.json_ref import DocumentTreeModel, Reference
+from dsets.lib.doctree import Asset, Document, Ref
 from dsets.lib.pydantic_util import CamelCaseMixin, SortedField
 
 from .dataset_type import DatasetType
 
 
-class Dataset(BaseModel, CamelCaseMixin):
+class Dataset(Document, CamelCaseMixin):
     """Model for dataset family data files."""
 
     slug: str
@@ -21,7 +20,7 @@ class Dataset(BaseModel, CamelCaseMixin):
     parameter_search_priority: Annotated[int | None, Field(ge=0)] = None
 
 
-class DatasetFeature(BaseModel, CamelCaseMixin):
+class DatasetFeature(Document, CamelCaseMixin):
     """Model for dataset family features.
 
     Attributes:
@@ -33,44 +32,25 @@ class DatasetFeature(BaseModel, CamelCaseMixin):
     slug: str
     type_: Literal["DATA", "SAMPLES"] = "DATA"
     title: str
-    content: Reference[str]
+    content: Ref[str]
 
 
-class DatasetFeatureTemplate(BaseModel, CamelCaseMixin):
+class DatasetFeatureTemplate(Document, CamelCaseMixin):
     slug: str
     type_: Literal["DATA", "SAMPLES"] = "DATA"
     title: str
     variables: dict[str, str]
-    template: Reference[str]
+    template: Ref[str]
 
 
-class DatasetFamilyMeta(DocumentTreeModel, CamelCaseMixin):
-    """
-    Metadata for a dataset family. Consumed by pennylane.ai/datasets
-
-    Attributes:
-        title: Title for this dataset family
-        authors: List of authors
-        tags: List of tags
-        citation: Citation
-        about: Markdown document describing the dataset
-            family
-        hero_image_url: URL to a hero image
-        thumbnail_url: URL to a thumbnail image
-        date_of_publication: Date created
-        date_of_last_modification: Date last modified
-    """
-
-
-class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
+class DatasetFamily(Document, CamelCaseMixin):
     """Model for dataset family, which may include one or more
     Pennylane dataset files.
 
     Attributes:
         slug: Unique identifier for this dataset family
         type_: `DatasetType` for this family, or a reference
-            a document containing one
-        meta: `DatasetFamilyMeta` for this family
+            to a document containing one
         download_name: Suggested instance name for this dataset
             family
         data: `Datasets` belonging to this family
@@ -78,16 +58,16 @@ class DatasetFamily(DocumentTreeModel, CamelCaseMixin):
     """
 
     slug: str
-    type_: Annotated[Reference[DatasetType], Field(alias="type")]
+    type_: Annotated[Ref[DatasetType], Field(alias="type")]
 
     title: str
     authors: list[str] = []
     tags: list[str] = []
-    citation: Reference[str]
-    about: Reference[str]
+    citation: Ref[str]
+    about: Ref[str]
 
-    hero_image_url: str | None = None
-    thumbnail_url: str | None = None
+    hero_image: Asset | None = None
+    thumbnail: Asset | None = None
 
     date_of_publication: AwareDatetime
     date_of_last_modification: AwareDatetime

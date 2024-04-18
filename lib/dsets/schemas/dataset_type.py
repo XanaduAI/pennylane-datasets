@@ -6,7 +6,7 @@ from pydantic import (
     model_validator,
 )
 
-from dsets.lib.json_ref import DocumentTreeModel
+from dsets.lib.doctree import Document
 from dsets.lib.pydantic_util import CamelCaseMixin
 
 
@@ -45,7 +45,7 @@ class DatasetParameter(BaseModel, CamelCaseMixin):
     nullable: bool = False
 
 
-class DatasetType(DocumentTreeModel, CamelCaseMixin):
+class DatasetType(Document, CamelCaseMixin):
     """Model for a dataset type, e.g `qchem` or `qspin`.
 
     Attributes:
@@ -59,6 +59,10 @@ class DatasetType(DocumentTreeModel, CamelCaseMixin):
     name: str
     attribute_list: list[DatasetAttribute] = []
     parameter_list: list[DatasetParameter] = []
+
+    @property
+    def identity(self) -> str:
+        return self.name
 
     @property
     def attributes(self) -> dict[str, DatasetAttribute]:

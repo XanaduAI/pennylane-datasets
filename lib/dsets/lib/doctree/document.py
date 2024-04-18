@@ -1,26 +1,23 @@
 import typing
 from collections.abc import Mapping
 from pathlib import Path
-from typing import Annotated, Self
+from typing import Self
 
-from pydantic import (
-    BaseModel,
-    PrivateAttr,
-    ValidationInfo,
-    model_validator,
+from pydantic import BaseModel
+
+from .doctree import (
+    Doctree,
+    DoctreeContext,
+    DoctreeObj,
+    make_doctree_context,
+    set_document_context,
 )
-
-from .context import (
-    DocumentContext,
-    get_reference_validation_context,
-    reference_validation_pydantic_context,
-)
-from .reference import DocumentRef
+from .reference import Reference
 
 
-class DocumentTreeModel(BaseModel):
+class Document(BaseModel, DoctreeObj):
     """Base class for Pydantic models in a document tree, that
-    can contain `Reference` fields referencing other documents.
+    can contain `Ref` fields referencing other documents.
 
     Example:
 
@@ -31,18 +28,18 @@ class DocumentTreeModel(BaseModel):
 
             users: list[str]
 
-        class ReferencedModel(DocumentTreeModel):
+        class ReferencedModel(Document):
 
             name: str
-            user_list: Reference[UserList]
-            meta: Reference[dict[str, Any]]
+            user_list: Ref[UserList]
+            meta: Ref[dict[str, Any]]
 
-        class Model(DocumentTreeModel):
+        class Model(Document):
 
             name: str
-            citation: Reference[str]
-            about: Reference[str]
-            reference: Reference[ReferencedModel]
+            citation: Ref[str]
+            about: Ref[str]
+            reference: Ref[ReferencedModel]
 
 
         with open("data/users/userlist.json", "w") as f:
@@ -89,20 +86,8 @@ class DocumentTreeModel(BaseModel):
         )
     """
 
-    _document_context: Annotated[DocumentContext | None, PrivateAttr()] = None
-
     @property
-    def document_context(self) -> DocumentContext:
-        """The context from which this document was loaded."""
-        if (ctx := self._document_context) is None:
-            raise RuntimeError(
-                f"'{type(self).__name__}' instance does not have a" " document context"
-            )
-
-        return ctx
-
-    @property
-    def document_refs(self) -> Mapping[str, DocumentRef]:
+    def document_refs(self) -> Mapping[str, Reference]:
         """Mapping of attributes with unresolved document refs."""
         return {
             field_name: ref
@@ -110,52 +95,39 @@ class DocumentTreeModel(BaseModel):
                 (field_name, getattr(self, field_name))
                 for field_name in self.model_fields_set
             )
-            if isinstance(ref, DocumentRef)
+            if isinstance(ref, Reference)
         }
 
     @classmethod
-    def load_from_path(
+    def from_os_path(
         cls: type[Self],
-        docpath_root: Path | str,
+        doctree: Doctree,
         path: Path | str,
         resolve_refs: bool = False,
     ) -> Self:
         """Validate a document from a document tree.
 
         Args:
-            docpath_root: Root path for resolving document references
-            path: Path to the document
+            doctree: Document tree context
+            path: Real path to the document
             resolve_refs: Whether document refs should be resolved.
 
         Returns: Model instance
         """
-        ctx = DocumentContext.create(docpath_root, path)
+        document_ctx = DoctreeContext.from_os_path(doctree, path)
 
         with open(path, "r", encoding="utf-8") as f:
             ret = typing.cast(
                 Self,
                 cls.model_validate_json(
                     f.read(),
-                    context=reference_validation_pydantic_context(ctx, resolve_refs),
+                    context=make_doctree_context(document_ctx, resolve_refs),
                 ),
             )
 
         return ret
 
-    @model_validator(mode="after")
-    def _set_document_context(self: Self, info: ValidationInfo) -> Self:
-        """Model validator called after `_validate_document_refs`. Sets the document
-        context.
-        """
-        if ctx := get_reference_validation_context(info):
-            self._document_context = ctx["document_context"]
+    def model_post_init(self, __context: typing.Any) -> None:
+        set_document_context(self, __context)
 
-        return self
-
-
-def get_document_context(doc: DocumentTreeModel) -> DocumentContext | None:
-    """Get document context from `doc`, if it has one."""
-    try:
-        return doc.document_context
-    except RuntimeError:
-        return None
+        return super().model_post_init(__context)

@@ -17,7 +17,7 @@ else:
 S3Path = PurePosixPath
 
 
-def object_exists(s3_client: S3Client, bucket: str, key: S3Path) -> bool:
+def object_exists(s3_client: S3Client, bucket: str, key: S3Path | str) -> bool:
     """Return ``True`` iff object with ``key`` exists in ``bucket``."""
     try:
         s3_client.head_object(Bucket=bucket, Key=str(key))
