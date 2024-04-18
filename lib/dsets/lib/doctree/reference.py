@@ -1,6 +1,5 @@
 import json
 import warnings
-from pathlib import PurePosixPath
 from typing import Annotated, Any, Generic, TypeVar, Union
 
 from pydantic import (
@@ -8,7 +7,6 @@ from pydantic import (
     ConfigDict,
     Discriminator,
     Field,
-    PrivateAttr,
     Tag,
     TypeAdapter,
     ValidationInfo,
@@ -18,40 +16,33 @@ from pydantic import (
 from typing_extensions import TypeAliasType
 
 from .doctree import (
+    DocPathAbsolute,
+    DocPathRelative,
     DoctreeContext,
+    DoctreeObj,
     get_doctree_context,
     make_doctree_context,
+    set_document_context,
 )
 
 ResolveType = TypeVar("ResolveType")
 
 
-class DocumentRef(BaseModel, Generic[ResolveType]):
-    """Model used to define fields that can reference another document in a
+class Reference(BaseModel, DoctreeObj, Generic[ResolveType]):
+    """Model used to define fields that may reference another file in a
     document tree.
 
     Attributes:
-        ref: Path to referenced document. If the path is relative (no leading '/')
-            it will be resolved relative to the referencing document. If the path
-            is absolute, it will be resolved relative to the root of the document
-            tree.
+        ref: Docpath to referenced file. If the path is relative it will be resolved
+            relative to the referencing document. If the path is absolute, it will be
+            resolved relative to the root of the document tree.
 
     See `Document` for example usage.
     """
 
     model_config = ConfigDict(populate_by_name=True)
 
-    ref: Annotated[PurePosixPath, Field(alias="$ref")]
-
-    _document_context: Annotated[DoctreeContext, PrivateAttr()]
-
-    @property
-    def document_context(self) -> DoctreeContext:
-        """The context from which this reference was loaded."""
-        if (ctx := self._document_context) is None:
-            raise RuntimeError(f"'{repr(self)}' does not have a document context")
-
-        return ctx
+    ref: Annotated[DocPathAbsolute | DocPathRelative, Field(alias="$ref")]
 
     @classmethod
     def resolve_type(cls) -> type[ResolveType]:
@@ -68,35 +59,31 @@ class DocumentRef(BaseModel, Generic[ResolveType]):
     ) -> ResolveType:
         """Resolve this reference.
 
-        Args:
-            document_context: Context to use for resolving this reference. If
-                unset, `self.document_context` will be used
-
         Returns:
             ResolveType: Resolved reference
 
         Raises:
             FileNotFoundError: if the referenced document could not be found
-            RuntimeError: if `document_context` is `None` and `self.document_context`
-                is unset.
+            RuntimeError: if `self.document_context` is unset.
         """
-        return _resolve_document_ref(self)
+        return _resolve_reference(self)
+
+    def model_post_init(self, __context: Any) -> None:
+        set_document_context(self, __context)
+        return super().model_post_init(__context)
 
 
-def _docref_validator(
+def _reference_validator(
     val: Any, handler: ValidatorFunctionWrapHandler, info: ValidationInfo
 ):
-    ref: DocumentRef = handler(val)
+    ref: Reference = handler(val)
 
     ctx = get_doctree_context(info.context)
     if ctx is None:
         return ref
 
-    doc_ctx = ctx["document_context"]
-    ref._document_context = doc_ctx.make_reference_context(ref.ref)
-
     if ctx["resolve_refs"]:
-        return _resolve_document_ref(ref, field_name=info.field_name)
+        return _resolve_reference(ref, field_name=info.field_name)
 
     return ref
 
@@ -108,7 +95,7 @@ def _reference_discriminator(v: Any) -> str:
     See:
     https://docs.pydantic.dev/latest/concepts/unions/#discriminated-unions-with-callable-discriminator
     """
-    if isinstance(v, DocumentRef):
+    if isinstance(v, Reference):
         return "ref"
 
     try:
@@ -120,16 +107,16 @@ def _reference_discriminator(v: Any) -> str:
     return "value"
 
 
-"""Pydantic field type for fields that may contain document refs.
+"""Pydantic field type for fields that may contain refs.
 Uses `TypeAliasType` from typing extensions. See:
 https://docs.pydantic.dev/latest/concepts/types/#named-type-aliases
 """
-Reference = TypeAliasType(
-    "Reference",
+Ref = TypeAliasType(
+    "Ref",
     Annotated[
         Union[
             Annotated[
-                Annotated[DocumentRef[ResolveType], WrapValidator(_docref_validator)],
+                Annotated[Reference[ResolveType], WrapValidator(_reference_validator)],
                 Tag("ref"),
             ],
             Annotated[ResolveType, Tag("value")],
@@ -140,8 +127,8 @@ Reference = TypeAliasType(
 )
 
 
-def _resolve_document_ref(
-    ref: DocumentRef[ResolveType],
+def _resolve_reference(
+    ref: Reference[ResolveType],
     field_name: str | None = None,
 ) -> Any:
     """Resolve a document reference.
@@ -160,20 +147,28 @@ def _resolve_document_ref(
         )
         resolve_type = Any
 
-    ctx = ref.document_context
-    if existing := ctx.doctree.document_cache_get(ctx.os_path, resolve_type):
+    referencing_ctx = ref.document_context
+    doctree = referencing_ctx.doctree
+
+    docpath = referencing_ctx.resolve_reference_path(ref.ref)
+    os_path = doctree.get_os_path(docpath)
+
+    if existing := doctree.object_cache_get(os_path, resolve_type):
         return existing
 
-    with open(ctx.os_path, "r", encoding="utf-8") as f:
-        if ctx.path.suffix == ".json":
+    with open(os_path, "r", encoding="utf-8") as f:
+        if os_path.suffix == ".json":
             data = json.load(f)
         else:
             data = f.read()
 
     resolved = TypeAdapter(resolve_type).validate_python(
-        data, context=make_doctree_context(ctx, resolve_refs=True)
+        data,
+        context=make_doctree_context(
+            DoctreeContext.from_os_path(doctree, os_path), resolve_refs=True
+        ),
     )
 
-    ctx.doctree.document_cache_update(ctx.os_path, resolve_type, resolved)
+    doctree.object_cache_update(os_path, resolve_type, resolved)
 
     return resolved

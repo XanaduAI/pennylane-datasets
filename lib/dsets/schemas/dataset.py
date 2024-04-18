@@ -5,7 +5,7 @@ from pydantic import (
     Field,
 )
 
-from dsets.lib.json_ref import Asset, Document, Reference
+from dsets.lib.doctree import Asset, Document, Ref
 from dsets.lib.pydantic_util import CamelCaseMixin, SortedField
 
 from .dataset_type import DatasetType
@@ -32,7 +32,7 @@ class DatasetFeature(Document, CamelCaseMixin):
     slug: str
     type_: Literal["DATA", "SAMPLES"] = "DATA"
     title: str
-    content: Reference[str]
+    content: Ref[str]
 
 
 class DatasetFeatureTemplate(Document, CamelCaseMixin):
@@ -40,7 +40,7 @@ class DatasetFeatureTemplate(Document, CamelCaseMixin):
     type_: Literal["DATA", "SAMPLES"] = "DATA"
     title: str
     variables: dict[str, str]
-    template: Reference[str]
+    template: Ref[str]
 
 
 class DatasetFamily(Document, CamelCaseMixin):
@@ -58,13 +58,13 @@ class DatasetFamily(Document, CamelCaseMixin):
     """
 
     slug: str
-    type_: Annotated[Reference[DatasetType], Field(alias="type")]
+    type_: Annotated[Ref[DatasetType], Field(alias="type")]
 
     title: str
     authors: list[str] = []
     tags: list[str] = []
-    citation: Reference[str]
-    about: Reference[str]
+    citation: Ref[str]
+    about: Ref[str]
 
     hero_image: Asset | None = None
     thumbnail: Asset | None = None

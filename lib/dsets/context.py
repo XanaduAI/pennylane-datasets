@@ -6,7 +6,7 @@ from dulwich.repo import Repo
 
 from dsets.settings import Settings
 
-from .s3 import S3Client
+from .lib.s3 import S3Client
 
 
 class Context:

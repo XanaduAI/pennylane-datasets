@@ -6,7 +6,7 @@ from pydantic import (
     model_validator,
 )
 
-from dsets.lib.json_ref import Document
+from dsets.lib.doctree import Document
 from dsets.lib.pydantic_util import CamelCaseMixin
 
 
@@ -59,6 +59,10 @@ class DatasetType(Document, CamelCaseMixin):
     name: str
     attribute_list: list[DatasetAttribute] = []
     parameter_list: list[DatasetParameter] = []
+
+    @property
+    def identity(self) -> str:
+        return self.name
 
     @property
     def attributes(self) -> dict[str, DatasetAttribute]:

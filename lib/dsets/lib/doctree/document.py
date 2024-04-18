@@ -9,15 +9,15 @@ from .doctree import (
     Doctree,
     DoctreeContext,
     DoctreeObj,
-    get_doctree_context,
     make_doctree_context,
+    set_document_context,
 )
-from .reference import DocumentRef
+from .reference import Reference
 
 
 class Document(BaseModel, DoctreeObj):
     """Base class for Pydantic models in a document tree, that
-    can contain `Reference` fields referencing other documents.
+    can contain `Ref` fields referencing other documents.
 
     Example:
 
@@ -31,15 +31,15 @@ class Document(BaseModel, DoctreeObj):
         class ReferencedModel(Document):
 
             name: str
-            user_list: Reference[UserList]
-            meta: Reference[dict[str, Any]]
+            user_list: Ref[UserList]
+            meta: Ref[dict[str, Any]]
 
         class Model(Document):
 
             name: str
-            citation: Reference[str]
-            about: Reference[str]
-            reference: Reference[ReferencedModel]
+            citation: Ref[str]
+            about: Ref[str]
+            reference: Ref[ReferencedModel]
 
 
         with open("data/users/userlist.json", "w") as f:
@@ -87,7 +87,7 @@ class Document(BaseModel, DoctreeObj):
     """
 
     @property
-    def document_refs(self) -> Mapping[str, DocumentRef]:
+    def document_refs(self) -> Mapping[str, Reference]:
         """Mapping of attributes with unresolved document refs."""
         return {
             field_name: ref
@@ -95,7 +95,7 @@ class Document(BaseModel, DoctreeObj):
                 (field_name, getattr(self, field_name))
                 for field_name in self.model_fields_set
             )
-            if isinstance(ref, DocumentRef)
+            if isinstance(ref, Reference)
         }
 
     @classmethod
@@ -128,9 +128,6 @@ class Document(BaseModel, DoctreeObj):
         return ret
 
     def model_post_init(self, __context: typing.Any) -> None:
-        if ctx := get_doctree_context(__context):
-            self._document_context = ctx["document_context"]
-            ctx["document_context"].doctree._objects[type(self)].append(self)
-            ctx["document_context"].doctree._documents[type(self)].append(self)
+        set_document_context(self, __context)
 
         return super().model_post_init(__context)

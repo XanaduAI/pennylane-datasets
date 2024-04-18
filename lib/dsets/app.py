@@ -3,11 +3,10 @@ from typing import Annotated
 
 import typer
 
+from dsets.context import Context
 from dsets.lib import progress, s3
-from dsets.lib.context import Context
 
-from .content import build as builder
-from .content import make_asset_uploader
+from .content import build_dataset_site
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -42,8 +41,8 @@ def upload(
     repo = s3.S3DatasetRepo(
         ctx.data_dir,
         ctx.s3_client,
-        ctx.settings.data_bucket_name,
-        ctx.settings.data_bucket_key_prefix,
+        ctx.settings.bucket_name,
+        ctx.settings.bucket_data_key_prefix,
     )
 
     print(f"Uploading '{src_file.absolute()}'")
@@ -69,13 +68,8 @@ def build():
     build_dir.mkdir(exist_ok=True)
     build_file = build_dir / "datasets-build.json"
 
-    builder(
-        ctx.content_dir,
-        make_asset_uploader(
-            ctx.settings.data_bucket_name,
-            ctx.settings.data_bucket_assets_prefix,
-            ctx.settings.assert_url_prefix,
-        ),
-    )
+    site_build = build_dataset_site(ctx)
+    with open(build_file, "w", encoding="utf-8") as f:
+        f.write(site_build.model_dump_json(indent=2))
 
     print(f"Created build in '{build_file}'")

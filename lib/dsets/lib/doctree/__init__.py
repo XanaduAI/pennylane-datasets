@@ -1,13 +1,13 @@
 from .asset import Asset
 from .doctree import Doctree, get_doctree_context
 from .document import Document
-from .reference import DocumentRef, Reference
+from .reference import Ref, Reference
 
 __all__ = [
     "Asset",
-    "DocumentRef",
+    "Reference",
     "Doctree",
     "Document",
-    "Reference",
+    "Ref",
     "get_doctree_context",
 ]

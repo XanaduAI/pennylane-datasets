@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 
-from dsets.lib.json_ref import DocumentRef
+from dsets.lib.doctree import Reference
 from dsets.lib.time import utcnow
 from dsets.schemas import DatasetFamily, DatasetType
 
@@ -47,8 +47,8 @@ class TestDatasetFamily:
         assert dataset.date_of_last_modification == datetime.fromisoformat(
             "2024-02-29T16:54:15.783903Z"
         )
-        assert dataset.about == DocumentRef(ref="about.md")
-        assert dataset.citation == DocumentRef(ref="citation.txt")
+        assert dataset.about == Reference(ref="about.md")
+        assert dataset.citation == Reference(ref="citation.txt")
         assert dataset.data == []
 
     def test_init(self):
@@ -57,8 +57,8 @@ class TestDatasetFamily:
             slug="slug",
             authors=["author"],
             tags=["tag"],
-            citation=DocumentRef[str](ref="citatation.txt"),
-            about=DocumentRef[str](ref="about.md"),
+            citation=Reference[str](ref="citatation.txt"),
+            about=Reference[str](ref="about.md"),
             type_=DatasetType(name="type", attribute_list=[]),
             date_of_publication=utcnow(),
             date_of_last_modification=utcnow(),

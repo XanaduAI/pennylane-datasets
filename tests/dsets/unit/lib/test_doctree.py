@@ -3,7 +3,12 @@ from pathlib import Path
 from typing import Any
 
 import pytest
-from dsets.lib.json_ref import DocumentRef, DocumentTreeModel, Reference
+from dsets.lib.doctree import (
+    Doctree,
+    Document,
+    Ref,
+    Reference,
+)
 from pydantic import BaseModel
 
 
@@ -13,23 +18,23 @@ class UserList(BaseModel):
     users: list[str]
 
 
-class ReferencedModel(DocumentTreeModel):
+class ReferencedModel(Document):
     """A referenced model."""
 
     name: str
-    user_list: Reference[UserList]
-    meta: Reference[dict[str, Any]]
+    user_list: Ref[UserList]
+    meta: Ref[dict[str, Any]]
 
 
-class RootModel(DocumentTreeModel):
+class RootModel(Document):
     """A referencing model."""
 
     name: str
-    citation: Reference[str]
-    about: Reference[str]
-    references: dict[str, Reference[ReferencedModel]]
-    user_list: Reference[UserList]
-    maybe_null: Reference[dict[str, Any]] | None
+    citation: Ref[str]
+    about: Ref[str]
+    references: dict[str, Ref[ReferencedModel]]
+    user_list: Ref[UserList]
+    maybe_null: Ref[dict[str, Any]] | None
 
 
 @pytest.fixture
@@ -40,6 +45,11 @@ def docpath_root(tmpdir):
     root.mkdir()
 
     return root
+
+
+@pytest.fixture
+def doctree(docpath_root):
+    return Doctree(docpath_root)
 
 
 @pytest.fixture
@@ -94,12 +104,14 @@ def setup_test_docs(docpath_root: Path):
 
 
 @pytest.mark.usefixtures("setup_test_docs")
-def test_load_from_path(docpath_root: Path):
+def test_load_from_path(doctree: Doctree):
     """Test that `load_from_path` can resolve a mix of absolute
     and relative document references."""
 
-    model = RootModel.load_from_path(
-        docpath_root, docpath_root / "models" / "root_model.json", resolve_refs=True
+    model = RootModel.from_os_path(
+        doctree,
+        doctree.docpath_root / "models" / "root_model.json",
+        resolve_refs=True,
     )
 
     # Check that types are preserved
@@ -132,20 +144,22 @@ def test_load_from_path(docpath_root: Path):
 
 
 @pytest.mark.usefixtures("setup_test_docs")
-def test_load_from_path_no_resolve_refs(docpath_root: Path):
+def test_load_from_path_no_resolve_refs(doctree: Doctree):
     """Test that `load_from_path` can load documents without
     resolving references."""
 
-    model = RootModel.load_from_path(
-        docpath_root, docpath_root / "models" / "root_model.json", resolve_refs=False
+    model = RootModel.from_os_path(
+        doctree,
+        doctree.docpath_root / "models" / "root_model.json",
+        resolve_refs=False,
     )
 
     # Check that types are preserved
     assert isinstance(model, RootModel)
-    assert isinstance(model.references["full_ref"], DocumentRef)
+    assert isinstance(model.references["full_ref"], Reference)
     assert isinstance(model.references["inline"], ReferencedModel)
-    assert isinstance(model.references["inline"].user_list, DocumentRef)
-    assert isinstance(model.user_list, DocumentRef)
+    assert isinstance(model.references["inline"].user_list, Reference)
+    assert isinstance(model.user_list, Reference)
 
     assert model.model_dump(mode="json", by_alias=True) == {
         "name": "model",
@@ -169,8 +183,8 @@ def test_model_dump_reference():
 
     assert ReferencedModel(
         name="test",
-        user_list=DocumentRef[UserList](ref="/a/b/c"),
-        meta=DocumentRef[dict[str, Any]](ref="x"),
+        user_list=Reference[UserList](ref="/a/b/c"),
+        meta=Reference[dict[str, Any]](ref="x"),
     ).model_dump(mode="json", by_alias=True) == {
         "name": "test",
         "user_list": {"$ref": "/a/b/c"},
