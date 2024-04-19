@@ -10,4 +10,4 @@ class Dataset(Document, CamelCaseMixin):
     """Model for dataset family data files."""
 
     data_url: HttpUrl
-    parameters: dict[PythonIdentifier, str] = {}
+    parameters: dict[PythonIdentifier, str | None] = {}
