@@ -33,13 +33,11 @@ def build_dataset_site(cli_context: CLIContext) -> dict[str, typing.Any]:
     Returns:
         A JSON-able dict containing all dataset content
     """
-    settings = cli_context.settings
-    asset_uploader = AssetUploader(
-        destination_url_prefix=settings.asset_url_prefix,
-        s3_client=cli_context.s3_client,
-        bucket=settings.bucket_name,
-        prefix=settings.bucket_asset_key_prefix,
-    )
+    build_dir = cli_context.repo_root / "_build"
+    asset_dir = build_dir / "assets"
+    asset_dir.mkdir(parents=True, exist_ok=True)
+
+    asset_uploader = AssetUploader(asset_dir)
 
     doctree = Doctree(cli_context.content_dir)
 
@@ -69,9 +67,7 @@ def build_dataset_site(cli_context: CLIContext) -> dict[str, typing.Any]:
 
     for asset in doctree.get_objects(Asset):
         if asset.is_local:
-            url = asset_uploader.add_asset(asset)
-            asset.root = url
-            assets.add(asset)
+            asset_uploader.add_asset(asset)
 
     return DatasetBuild(
         assets=assets,
