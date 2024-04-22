@@ -74,9 +74,13 @@ class DatasetClass(Document, CamelCaseMixin):
             if attr.name in attr_names:
                 raise ValueError(f"Duplicate attribute name: {attr.name}")
 
+            attr_names.add(attr.name)
+
         parameter_names = set()
         for parameter in self.parameter_list:
             if parameter.name in parameter_names:
                 raise ValueError(f"Duplicate parameter name: {parameter.name}")
+
+            parameter_names.add(parameter.name)
 
         return self
