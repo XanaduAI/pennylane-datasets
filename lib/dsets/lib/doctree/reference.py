@@ -1,7 +1,7 @@
-import json
 import warnings
 from typing import Annotated, Any, Generic, TypeVar, Union
 
+import jsonref
 from pydantic import (
     BaseModel,
     ConfigDict,
@@ -42,7 +42,7 @@ class Reference(BaseModel, DoctreeObj, Generic[ResolveType]):
 
     model_config = ConfigDict(populate_by_name=True)
 
-    ref: Annotated[DocPathAbsolute | DocPathRelative, Field(alias="$ref")]
+    path: Annotated[DocPathAbsolute | DocPathRelative, Field(alias="$path")]
 
     @classmethod
     def resolve_type(cls) -> type[ResolveType]:
@@ -99,7 +99,7 @@ def _reference_discriminator(v: Any) -> str:
         return "ref"
 
     try:
-        if v.keys() == {"$ref"}:
+        if v.keys() == {"$path"}:
             return "ref"
     except AttributeError:
         pass
@@ -150,7 +150,7 @@ def _resolve_reference(
     referencing_ctx = ref.document_context
     doctree = referencing_ctx.doctree
 
-    docpath = referencing_ctx.resolve_reference_path(ref.ref)
+    docpath = referencing_ctx.resolve_reference_path(ref.path)
     os_path = doctree.get_os_path(docpath)
 
     if existing := doctree.object_cache_get(os_path, resolve_type):
@@ -158,7 +158,7 @@ def _resolve_reference(
 
     with open(os_path, "r", encoding="utf-8") as f:
         if os_path.suffix == ".json":
-            data = json.load(f)
+            data = jsonref.load(f, proxies=False)
         else:
             data = f.read()
 

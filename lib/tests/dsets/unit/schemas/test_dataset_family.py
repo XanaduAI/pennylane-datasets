@@ -26,10 +26,10 @@ class TestDatasetFamily:
         ],
         "abstract": "Abstract...",
         "citation": {
-          "$ref": "citation.txt"
+          "$path": "citation.txt"
         },
         "usingThisDataset": {
-          "$ref": "about.md"
+          "$path": "about.md"
         }
       },
       "class": {
@@ -120,8 +120,8 @@ class TestDatasetFamily:
         assert meta.title == "H2 Molecule"
         assert meta.authors == ["Author 1"]
         assert meta.abstract == "Abstract..."
-        assert meta.using_this_dataset == Reference(ref="about.md")
-        assert meta.citation == Reference(ref="citation.txt")
+        assert meta.using_this_dataset == Reference(path="about.md")
+        assert meta.citation == Reference(path="citation.txt")
 
     def test_model_dump_round_trip(self):
         """Test that data is preserved when loading and dumping from
