@@ -21,8 +21,10 @@ PythonIdentifier = Annotated[str, AfterValidator(_python_identifier_validator)]
 
 
 def _bibtex_str_validator(val: str) -> str:
-    """Validator for ``BibtexStr``. Checks that the entire string validates
-    correctly and that it contains at least one '@entry`."""
+    """Validator for ``BibtexStr``. The BibTex parser is very permissive,
+    and will parse almost any string as a "comment block". This validator
+    checks that at least one 'entry' (@article, @misc) is defined.
+    """
     parsed = bibtexparser.parse_string(val)
 
     if parsed.failed_blocks:
@@ -35,5 +37,6 @@ def _bibtex_str_validator(val: str) -> str:
     return val
 
 
-"""Field type for a Bibtex citation string."""
+"""Field type for a Bibtex citation string. Requires a valid Bibtex string
+with at least one entry."""
 BibtexStr = Annotated[str, AfterValidator(_bibtex_str_validator)]
