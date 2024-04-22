@@ -74,7 +74,7 @@ class TestDatasetFamily:
     """
 
     def test_validate_json(self):
-        """Test that a family correclty validates from JSON."""
+        """Test that a family correctly validates from JSON."""
         family = DatasetFamily.model_validate_json(self.JSON)
 
         assert family.slug == "h2-molecule"
@@ -124,7 +124,7 @@ class TestDatasetFamily:
         assert meta.citation == Reference(ref="citation.txt")
 
     def test_model_dump_round_trip(self):
-        """Teset that data is preserved when loading and dumping from
+        """Test that data is preserved when loading and dumping from
         json."""
         assert DatasetFamily.model_validate_json(self.JSON).model_dump(
             mode="json", exclude_unset=True, by_alias=True
