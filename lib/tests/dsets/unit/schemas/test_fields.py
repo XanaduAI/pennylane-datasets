@@ -2,7 +2,7 @@ import inspect
 import re
 
 import pytest
-from dsets.schemas.fields import BibtexStr, PythonIdentifier
+from dsets.schemas.fields import BibtexStr, PythonIdentifier, Slug
 from pydantic import TypeAdapter, ValidationError
 
 
@@ -56,3 +56,19 @@ def test_bibtex_str_invalid(val):
 
     with pytest.raises(ValidationError, match=r".*Bibtex citation has no entries.*"):
         TypeAdapter(BibtexStr).validate_python(val)
+
+
+@pytest.mark.parametrize("val", ["x", "1slug", "1x", "x-y", "z-1y-x", "my-slug"])
+def test_slug_valid(val):
+    """Test that a valid slug passes validation."""
+    assert TypeAdapter(Slug).validate_python(val) == val
+
+
+@pytest.mark.parametrize(
+    "val", ["a_z", "A_z", "az-", "-az-x", "A-Z", " x-y", " x", "x ", "x-yand "]
+)
+def test_slug_invalid(val):
+    """Check that an invalid slug fails validation."""
+
+    with pytest.raises(ValidationError, match=r".*String should match pattern.*"):
+        TypeAdapter(Slug).validate_python(val)

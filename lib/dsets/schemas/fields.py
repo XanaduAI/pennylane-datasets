@@ -1,7 +1,7 @@
 from typing import Annotated
 
 import bibtexparser
-from pydantic import AfterValidator
+from pydantic import AfterValidator, Field
 
 
 def _python_identifier_validator(val: str) -> str:
@@ -40,3 +40,8 @@ def _bibtex_str_validator(val: str) -> str:
 """Field type for a Bibtex citation string. Requires a valid Bibtex string
 with at least one entry."""
 BibtexStr = Annotated[str, AfterValidator(_bibtex_str_validator)]
+
+
+"""Field type for a 'slug'. Must be 'kabob-case', and contain only
+lowercase ASCII letters and numbers."""
+Slug = Annotated[str, Field(pattern=r"^[a-z0-9]+(-[a-z0-9]+)*$")]
