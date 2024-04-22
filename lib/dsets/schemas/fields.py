@@ -22,7 +22,7 @@ PythonIdentifier = Annotated[str, AfterValidator(_python_identifier_validator)]
 
 def _bibtex_str_validator(val: str) -> str:
     """Validator for ``BibtexStr``. The BibTex parser is very permissive,
-    and will parse almost any string as a "comment block". This validator
+    and will parse almost any string as an "implicit comment block". This validator
     checks that at least one 'entry' (@article, @misc) is defined.
     """
     parsed = bibtexparser.parse_string(val)
