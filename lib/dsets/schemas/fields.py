@@ -1,12 +1,23 @@
 from typing import Annotated
 
 import bibtexparser
-from pydantic import AfterValidator, Field
+from pydantic import AfterValidator
+
+
+def _python_identifier_validator(val: str) -> str:
+    """Validator for ``PythonIdentifier``. Raises a ``ValueError`` if
+    ``val.isidentifier()`` returns false."""
+
+    if not val.isidentifier():
+        raise ValueError(f"Not a valid Python identifier: {repr(val)}")
+
+    return val
+
 
 """
 Field type for a legal Python identifier (name for a variable, class etc.)
 """
-PythonIdentifier = Annotated[str, Field(pattern=r"^[a-zA-Z_][a-zA-Z0-9_]*$")]
+PythonIdentifier = Annotated[str, AfterValidator(_python_identifier_validator)]
 
 
 def _bibtex_str_validator(val: str) -> str:
@@ -19,7 +30,7 @@ def _bibtex_str_validator(val: str) -> str:
             f"Failed to parse Bibtex citation blocks: {repr(parsed.failed_blocks)}"
         )
     if not parsed.entries:
-        raise ValueError("Bibtex citation has no entries.")
+        raise ValueError("Bibtex citation has no entries")
 
     return val
 
