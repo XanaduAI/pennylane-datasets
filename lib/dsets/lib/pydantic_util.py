@@ -3,7 +3,7 @@ from pydantic import ConfigDict
 
 
 class CamelCaseMixin:
-    """Mixin class for pydantic models that automatically aliases
+    """Mixin class for pydantic models that automatically alias
     field names to 'camelCase'."""
 
     model_config = ConfigDict(

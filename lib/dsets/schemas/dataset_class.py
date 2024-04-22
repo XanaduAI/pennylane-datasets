@@ -17,8 +17,8 @@ class DatasetAttribute(BaseModel, CamelCaseMixin):
         python_type: Python type for this attribute. May
             contain markdown
         doc: Docstring for this attribute
-        optional: Whether this attribute may not exist
-            on the dataset instance
+        optional: Whether this attribute can be omitted
+            from the dataset instance
     """
 
     name: PythonIdentifier
@@ -33,6 +33,7 @@ class DatasetParameter(BaseModel, CamelCaseMixin):
         name: Short name for the parameter. Must be a legal
             python variable name
         title: Optional human-readable name for the parameter
+        description: Text describing the parameter
         optional: Whether this parameter may be undefined
             for a dataset
     """
