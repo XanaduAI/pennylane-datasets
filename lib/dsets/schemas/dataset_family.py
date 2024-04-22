@@ -7,7 +7,7 @@ from dsets.lib.pydantic_util import CamelCaseMixin
 
 from .dataset import Dataset
 from .dataset_class import DatasetClass
-from .fields import BibtexStr
+from .fields import BibtexStr, PythonIdentifier, Slug
 
 
 class DatasetFeature(Document, CamelCaseMixin):
@@ -20,7 +20,7 @@ class DatasetFeature(Document, CamelCaseMixin):
         content: Feature content. May use Markdown
     """
 
-    slug: str
+    slug: Slug
     title: str
     type_: Literal["DATA", "SAMPLES"] = "DATA"
     content: Ref[str]
@@ -71,11 +71,11 @@ class DatasetFamily(Document, CamelCaseMixin):
         meta: Extended metadata
     """
 
-    slug: str
+    slug: Slug
 
     class_: Annotated[Ref[DatasetClass], Field(alias="class")]
     data: list[Dataset] = []
-    download_name: str = "dataset"
+    download_name: PythonIdentifier = "dataset"
     features: list[DatasetFeature] = []
 
     meta: Ref[DatasetFamilyMeta]
