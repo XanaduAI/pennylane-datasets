@@ -1,0 +1,6 @@
+@misc{Utkarsh2023Chemistry,
+  title = {PennyLane Quantum Chemistry Datasets},  
+  author = {Utkarsh Azad}, 
+  howpublished = {\url{https://pennylane.ai/datasets/qchem/h2-molecule}}, 
+  year = {2023}
+}

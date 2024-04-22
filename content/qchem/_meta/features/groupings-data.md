@@ -1,0 +1,7 @@
+Groupings of the Hamiltonian terms for facilitating simultaneous measurements of all observables within a group.
+
+| Name            | Type              | Description                                                    |
+|-----------------|-------------------|----------------------------------------------------------------|
+| `qwc_groupings`     | tuple(list[`tensor_like`], list[list[ [`Operation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[`tensor_like`]]) | List of grouped qubit-wise commuting Hamiltonian terms obtained using [`qml.pauli.optimize_measurements`](https://docs.pennylane.ai/en/stable/code/api/pennylane.pauli.optimize_measurements.html) |
+| `basis_rot_groupings` | tuple(list[`tensor_like`], list[list[ [`Operation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[`tensor_like`]]) | List of grouped Hamiltonian terms obtained using [`qml.qchem.basis_rotation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.qchem.basis_rotation.html) |
+| `meas_groupings`   | list[list[list[`Operation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)]], list[`tensor_like`]]     | List of grouped qubit-wise commuting Hamiltonian terms. This attribute is being replaced with `qwc_groupings`.|
