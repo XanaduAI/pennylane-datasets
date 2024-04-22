@@ -1,11 +1,13 @@
+import json
 import logging
 from pathlib import Path
 from typing import Annotated
 
 import typer
 
-from dsets.lib import progress, s3
+from dsets.lib import json_fmt, progress, s3
 from dsets.settings import CLIContext
+
 from .builder import build_dataset_site
 
 app = typer.Typer(name="dsets", add_completion=True)
@@ -70,9 +72,31 @@ def build():
 
     site_build = build_dataset_site(ctx)
     with open(build_file, "w", encoding="utf-8") as f:
-        f.write(site_build.model_dump_json(indent=2))
+        json.dump(site_build, f, indent=2)
 
     print(f"Created build in '{build_file}'")
+
+
+@app.command(name="format")
+def format(check: bool = False):
+    """Format dataset metadata files in the content directory."""
+    ctx = CLIContext()
+
+    formatter = json_fmt.JSONFormatter()
+    changed = 0
+    unchanged = 0
+    for json_file in ctx.content_dir.rglob("**/*.json"):
+        if formatter.format(json_file, check=check):
+            changed += 1
+        else:
+            unchanged += 1
+
+    if check and changed:
+        print(f"{changed} file(s) would be reformatted.")
+        raise typer.Exit(1)
+
+    if changed:
+        print(f"{changed} file(s) reformatted.")
 
 
 def configure_logging(level=logging.INFO):

@@ -1,22 +1,24 @@
 {
   "slug": "qchem-h2",
-  "type": {
-    "$ref": "/_meta/types/qchem.json"
+  "class": {
+    "$ref": "../_meta/class.json"
   },
-  "meta": {"$ref": "meta.json"},
+  "meta": {
+    "$ref": "meta.json"
+  },
   "features": [
     {
       "slug": "groupings-data",
       "title": "Groupings data",
       "content": {
-        "$ref": "/_meta/features/qchem/groupings-data.md"
+        "$ref": "../_meta/features/groupings-data.md"
       }
     },
     {
       "slug": "molecular-data",
       "title": "Molecular data",
       "content": {
-        "$ref": "/_meta/features/qchem/molecular-data.md"
+        "$ref": "../_meta/features/molecular-data.md"
       }
     },
     {
@@ -24,28 +26,28 @@
       "title": "Samples data",
       "type": "SAMPLES",
       "content": {
-        "$ref": "/_meta/features/qchem/samples-data.md"
+        "$ref": "../_meta/features/samples-data.md"
       }
     },
     {
       "slug": "tapering-data",
       "title": "Tapering data",
       "content": {
-        "$ref": "/_meta/features/qchem/tapering-data.md"
+        "$ref": "../_meta/features/tapering-data.md"
       }
     },
     {
       "slug": "tapering-observables-data",
       "title": "Tapering observables data",
       "content": {
-        "$ref": "/_meta/features/qchem/tapering-observables-data.md"
+        "$ref": "../_meta/features/tapering-observables-data.md"
       }
     },
     {
       "slug": "vqe-data",
       "title": "VQE data",
       "content": {
-        "$ref": "/_meta/features/qchem/vqe-data.md"
+        "$ref": "../_meta/features/vqe-data.md"
       }
     }
   ],

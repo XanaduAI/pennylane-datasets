@@ -1,23 +1,38 @@
 import typing
+
 from pydantic import BaseModel
 
 from dsets.lib.doctree import Asset, Doctree
-from dsets.schemas import (
-    DatasetFamily,
-    DatasetClass
-)
+from dsets.lib.pydantic_util import CamelCaseMixin
+from dsets.schemas import DatasetClass, DatasetFamily
 from dsets.settings import CLIContext
 
 from .asset import AssetUploader
 
 
-class DatasetSite(BaseModel):
+class DatasetBuild(BaseModel, CamelCaseMixin):
+    """
+    Model for the 'datasets-buid.json' file. Contains all dataset families
+    and types defined in the `content/` directory, and an inventory of
+    every asset used.
+    """
+
     assets: set[Asset]
     dataset_classes: dict[str, DatasetClass]
     dataset_families: dict[str, DatasetFamily]
 
 
-def build_dataset_site(cli_context: CLIContext) -> DatasetSite:
+def build_dataset_site(cli_context: CLIContext) -> dict[str, typing.Any]:
+    """Compiles all `dataset.json` files in the `content/` directory into
+    a single JSON document. All referenced documents will be included,
+    and local assets will be uploaded to the assets directory in the datasets bucket.
+
+    Args:
+        cli_context: The CLI context
+
+    Returns:
+        A JSON-able dict containing all dataset content
+    """
     settings = cli_context.settings
     asset_uploader = AssetUploader(
         destination_url_prefix=settings.asset_url_prefix,
@@ -58,8 +73,11 @@ def build_dataset_site(cli_context: CLIContext) -> DatasetSite:
             asset.root = url
             assets.add(asset)
 
-    return DatasetSite(
-        assets=assets, dataset_classes=dataset_classes, dataset_families=dataset_families
+    return DatasetBuild(
+        assets=assets,
+        dataset_classes=dataset_classes,
+        dataset_families=dataset_families,
+    ).model_dump(
+        mode="json",
+        by_alias=True,
     )
-
-

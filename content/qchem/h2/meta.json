@@ -5,12 +5,13 @@
     "Samples Available",
     ">16 Qubits"
   ],
+  "abstract": "A Quantum Chemistry dataset.",
   "citation": {
     "$ref": "./citation.txt"
   },
-  "about": {
-    "$ref": "./about.md"
+  "usingThisDataset": {
+    "$ref": "./using_this_dataset.md"
   },
-  "heroImage": "Datasets_ChemHero_H2.png",
+  "heroImage": "Dataset_ChemHero_H2.png",
   "thumbnail": "Dataset_ChemThumb_H2.png"
 }
