@@ -9,7 +9,7 @@ from dsets.lib.doctree import Asset, Doctree
 from dsets.lib.pydantic_util import CamelCaseMixin
 from dsets.schemas import DatasetClass, DatasetFamily
 
-from .asset import AssetLoader
+from .assets import AssetLoader
 
 
 class DatasetBuild(BaseModel, CamelCaseMixin):

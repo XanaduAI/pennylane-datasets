@@ -13,8 +13,18 @@ logger = getLogger(__name__)
 
 
 class AssetLoader:
+    """Manages `Asset` objects (e.g images) used by datasets content. Local
+    assets added will be copied into `asset_dir` under a unique name that
+    includes the file hash of the asset.
+
+    Attributes:
+        build_dir: The content build directory
+        asset_destination_url_prefix: The public URL under which assets
+            will be accessible after upload.
+    """
+
     def __init__(self, build_dir: Path, asset_destination_url_prefix: str):
-        self.build_dir = build_dir
+        self.build_dir = Path(build_dir)
         self.asset_destination_url_prefix = asset_destination_url_prefix.strip("/")
         self.copied_asset_names: dict[Path, str] = {}
 
@@ -22,16 +32,34 @@ class AssetLoader:
 
     @property
     def asset_dir(self) -> Path:
+        """The asset directory in the build directory."""
         return self.build_dir / "assets"
 
     @property
     def assets(self) -> Iterator[Path]:
+        """Yields the paths to all assets in the asset directory."""
         yield from self.asset_dir.iterdir()
 
     def asset_destination_url(self, asset_name: str) -> HttpUrl:
+        """Returns the URL under `asset_destination_url_prefix` of the
+        asset with the given name.
+
+        >>> loader = AssetLoader("_build", "https://datasets.cloud.pennylane.ai/assets")
+        >>> loader.asset_destination_url("qchem_hero-e98e34a7d58e039da35f793cb6d9bd0da78847f9.jpg")
+        'https://datasets.cloud.pennylane.ai/assets/qchem_hero-e98e34a7d58e039da35f793cb6d9bd0da78847f9.jpg'
+        """
         return f"{self.asset_destination_url_prefix}/{asset_name}"
 
     def add_asset(self, asset: Asset) -> HttpUrl:
+        """
+        Add an asset to the build and return its destination url.
+
+        If `asset` is not a local asset, e.g it is an HTTP URL, return the
+        URL.
+
+        If `asset` is a local asset, copy it to the asset directory under a unique
+        name and return its destination URL.
+        """
         if not asset.is_local:
             return asset.root
 
@@ -52,6 +80,8 @@ class AssetLoader:
     def upload_assets(
         self, s3_client: s3.S3Client, bucket: str, prefix: s3.S3Path
     ) -> int:
+        """Upload all assets in the asset directory to the given bucket, under
+        the given prefix. Return the number of assets uploaded."""
         prefix = s3.S3Path(prefix)
         uploaded_count = 0
 
