@@ -7,10 +7,10 @@
   ],
   "abstract": "A Quantum Chemistry dataset.",
   "citation": {
-    "$ref": "./citation.txt"
+    "$path": "./citation.txt"
   },
   "usingThisDataset": {
-    "$ref": "./using_this_dataset.md"
+    "$path": "./using_this_dataset.md"
   },
   "heroImage": "Dataset_ChemHero_H2.png",
   "thumbnail": "Dataset_ChemThumb_H2.png"
