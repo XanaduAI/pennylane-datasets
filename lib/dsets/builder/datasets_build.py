@@ -7,7 +7,7 @@ from dsets.lib.pydantic_util import CamelCaseMixin
 from dsets.schemas import DatasetClass, DatasetFamily
 from dsets.settings import CLIContext
 
-from .asset import AssetUploader
+from .asset import AssetLoader
 
 
 class DatasetBuild(BaseModel, CamelCaseMixin):
@@ -34,14 +34,10 @@ def build_dataset_site(cli_context: CLIContext) -> dict[str, typing.Any]:
         A JSON-able dict containing all dataset content
     """
     build_dir = cli_context.repo_root / "_build"
-    asset_dir = build_dir / "assets"
-    asset_dir.mkdir(parents=True, exist_ok=True)
-
-    asset_uploader = AssetUploader(asset_dir)
+    build_dir.mkdir(exist_ok=True)
 
     doctree = Doctree(cli_context.content_dir)
 
-    assets: set[Asset] = set()
     dataset_classes: dict[str, DatasetClass] = {}
     dataset_families: dict[str, DatasetFamily] = {}
 
@@ -65,12 +61,14 @@ def build_dataset_site(cli_context: CLIContext) -> dict[str, typing.Any]:
 
         dataset_families[family.slug] = family
 
+    asset_loader = AssetLoader(
+        cli_context.build_dir, cli_context.settings.asset_url_prefix
+    )
     for asset in doctree.get_objects(Asset):
-        if asset.is_local:
-            asset_uploader.add_asset(asset)
+        asset.root = asset_loader.add_asset(asset)
 
     return DatasetBuild(
-        assets=assets,
+        assets=doctree.get_objects(Asset),
         dataset_classes=dataset_classes,
         dataset_families=dataset_families,
     ).model_dump(
