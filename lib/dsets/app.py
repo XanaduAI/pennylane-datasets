@@ -8,7 +8,7 @@ import typer
 from dsets.lib import json_fmt, progress, s3
 from dsets.settings import CLIContext
 
-from .builder import build_dataset_site
+from .builder import AssetLoader, build_dataset_site
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -66,15 +66,30 @@ def build():
     """Compile 'datasets-build.json' from content directory."""
 
     ctx = CLIContext()
-    build_dir = ctx.repo_root / "_build"
+    build_dir = ctx.build_dir
     build_dir.mkdir(exist_ok=True)
     build_file = build_dir / "datasets-build.json"
 
-    site_build = build_dataset_site(ctx)
+    site_build = build_dataset_site(
+        build_dir, ctx.content_dir, ctx.settings.asset_url_prefix
+    )
     with open(build_file, "w", encoding="utf-8") as f:
         json.dump(site_build, f, indent=2)
 
     print(f"Created build in '{build_file}'")
+
+
+@app.command(name="upload-assets")
+def upload_assets():
+    """Upload assets from the build directory."""
+    ctx = CLIContext()
+
+    asset_loader = AssetLoader(ctx.build_dir, ctx.settings.asset_url_prefix)
+
+    uploaded = asset_loader.upload_assets(
+        ctx.s3_client, ctx.settings.bucket_name, ctx.settings.bucket_asset_key_prefix
+    )
+    print(f"Uploaded {uploaded} assets")
 
 
 @app.command(name="format")

@@ -5,7 +5,7 @@ import boto3
 from dulwich.repo import Repo
 from pydantic_settings import BaseSettings
 
-from .lib.s3 import S3Client
+from .lib.s3 import S3Client, S3Path
 
 
 class Settings(BaseSettings):
@@ -14,8 +14,8 @@ class Settings(BaseSettings):
     asset_url_prefix: str = "https://datasets.cloud.pennylane.ai/assets"
 
     bucket_name: str = "swc-prod-pennylane-datasets"
-    bucket_data_key_prefix: str = "data"
-    bucket_asset_key_prefix: str = "assets"
+    bucket_data_key_prefix: S3Path = S3Path("data")
+    bucket_asset_key_prefix: S3Path = S3Path("assets")
 
 
 class CLIContext:

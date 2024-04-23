@@ -1,11 +1,13 @@
+import shutil
 import typing
+from pathlib import Path
+from typing import Any
 
 from pydantic import BaseModel
 
 from dsets.lib.doctree import Asset, Doctree
 from dsets.lib.pydantic_util import CamelCaseMixin
 from dsets.schemas import DatasetClass, DatasetFamily
-from dsets.settings import CLIContext
 
 from .asset import AssetLoader
 
@@ -22,26 +24,32 @@ class DatasetBuild(BaseModel, CamelCaseMixin):
     dataset_families: dict[str, DatasetFamily]
 
 
-def build_dataset_site(cli_context: CLIContext) -> dict[str, typing.Any]:
+def build_dataset_site(
+    build_dir: Path, content_dir: Path, asset_destination_url_prefix: str
+) -> dict[str, Any]:
     """Compiles all `dataset.json` files in the `content/` directory into
     a single JSON document. All referenced documents will be included,
     and local assets will be uploaded to the assets directory in the datasets bucket.
 
     Args:
-        cli_context: The CLI context
+        build_dir: The build directory
+        content_dir: The content directory
+        asset_destination_url_prefix: The URL prefix where uploaded assets (images, etc)
+            can be accessed.
 
     Returns:
         A JSON-able dict containing all dataset content
     """
-    build_dir = cli_context.repo_root / "_build"
-    build_dir.mkdir(exist_ok=True)
+    if build_dir.exists():
+        shutil.rmtree(build_dir)
 
-    doctree = Doctree(cli_context.content_dir)
+    build_dir.mkdir()
+    doctree = Doctree(content_dir)
 
     dataset_classes: dict[str, DatasetClass] = {}
     dataset_families: dict[str, DatasetFamily] = {}
 
-    for dataset_json_path in cli_context.content_dir.rglob("**/dataset.json"):
+    for dataset_json_path in content_dir.rglob("**/dataset.json"):
         family = DatasetFamily.from_os_path(
             doctree, dataset_json_path, resolve_refs=True
         )
@@ -61,9 +69,7 @@ def build_dataset_site(cli_context: CLIContext) -> dict[str, typing.Any]:
 
         dataset_families[family.slug] = family
 
-    asset_loader = AssetLoader(
-        cli_context.build_dir, cli_context.settings.asset_url_prefix
-    )
+    asset_loader = AssetLoader(build_dir, asset_destination_url_prefix)
     for asset in doctree.get_objects(Asset):
         asset.root = asset_loader.add_asset(asset)
 
