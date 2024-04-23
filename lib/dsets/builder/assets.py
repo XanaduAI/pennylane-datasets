@@ -64,7 +64,7 @@ class AssetLoader:
             return asset.root
 
         os_path = asset.os_path
-        if not (name := self.copied_asset_names[os_path]):
+        if not (name := self.copied_asset_names.get(os_path)):
             with open(os_path, "rb") as f:
                 digest = hashlib.file_digest(f, "sha1").hexdigest()
 
