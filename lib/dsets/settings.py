@@ -41,6 +41,10 @@ class CLIContext:
         working directory."""
         return self.repo_root / "content"
 
+    @property
+    def build_dir(self) -> Path:
+        return self.repo_root / "_build"
+
     @cached_property
     def repo(self) -> Repo:
         """dulwich ``Repo`` object for the pennylane-datasets
