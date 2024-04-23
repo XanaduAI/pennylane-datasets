@@ -14,7 +14,7 @@ def test_python_identifier(val):
 
 
 @pytest.mark.parametrize(
-    "val", ["1", "1a", "kabob-case", "'string?", '"string?', "'string'"]
+    "val", ["1", "1a", "kabob-case", "'string?", '"string?', "'string'", "if", "return"]
 )
 def test_python_identifier_invalid(val):
     """Check that invalid Python identifiers fail validation."""
