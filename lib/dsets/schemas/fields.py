@@ -10,7 +10,7 @@ def _python_identifier_validator(val: str) -> str:
     ``val.isidentifier()`` returns false or ``val`` is a
     keyword ('if', 'returns', etc)."""
 
-    if not val.isidentifier() or val in keyword.kwlist:
+    if not val.isidentifier() or keyword.iskeyword(val):
         raise ValueError(f"Not a valid Python identifier: {repr(val)}")
 
     return val
