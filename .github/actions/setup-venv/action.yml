@@ -1,0 +1,34 @@
+name: 'Setup virtualenv'
+description: 'Setup a cached virtualenv. Only installs dependencies, not the code'
+inputs:
+  venv-path:
+    description: Path of venv
+    type: string
+    required: true
+    
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-python@v4
+      with:
+      python-version: '3.11'
+    
+    - name: Get Cache Date
+      id: get-cache-date
+      run: |
+        echo "date=$(/bin/date -u "+%Y%U")" >> $GITHUB_OUTPUT
+      shell: bash
+
+    - name: Cache virtualenv
+      id: cache-venv
+      uses: actions/cache@v4
+      with:
+        path: ${{ inputs.venv-path }}
+        key: ${{ steps.get-cache-date.outputs.date }}-${{ hashfiles('pyproject.toml', 'poetry.lock') }}
+
+    - name: Setup venv
+      if: steps.cache-venv.outputs.cache-hit != 'true'
+      run: |
+        python3.11 -m venv .venv
+        .venv/bin/pip install "poetry==1.4.0"
+        .venv/bin/poetry install --with dev --no-root
