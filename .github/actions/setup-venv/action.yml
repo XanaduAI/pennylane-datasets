@@ -30,5 +30,6 @@ runs:
       shell: bash
       if: steps.cache-venv.outputs.cache-hit != 'true'
       run: |
-        .venv/bin/pip install "poetry==1.4.0"
+        python3 -m venv .venv
+        .venv/bin/pip install "poetry>=1.8.2<2"
         .venv/bin/poetry install --with dev --no-root

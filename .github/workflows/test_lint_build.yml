@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
         PYTHONPATH: "lib/:${PYTHONPATH}"
-        POETRY_VIRTUALENVS_CREATE: "false"
 
     steps:
       - name: Checkout code
@@ -27,12 +26,15 @@ jobs:
           venv-path: .venv
 
       - name: Check poetry.lock
-        run: .venv/bin/poetry lock --check
+        run: .venv/bin/python3 -m poetry lock --check
 
       - name: Run formatters
         run: |
-          .venv/bin/poetry run ruff check lib/
-          .venv/bin/poetry run ruff format --check lib/
+          .venv/bin/python3 -m ruff check lib/
+          .venv/bin/python3 -m ruff format --check lib/
 
       - name: Run tests
-        run: .venv/bin/poetry run pytest lib/tests/
+        run: .venv/bin/python3 -m pytest lib/tests/
+
+      - name: Run build
+        run: .venv/bin/python3 -m dsets build
