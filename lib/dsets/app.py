@@ -38,7 +38,7 @@ def upload(
     """
     ctx = CLIContext()
     src_file = src_file.expanduser()
-    prefix = s3.S3Path(prefix_)
+    prefix = s3.S3Path(prefix_) if prefix_ else None
 
     repo = s3.S3DatasetRepo(
         ctx.data_dir,

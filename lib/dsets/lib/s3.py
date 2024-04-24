@@ -81,6 +81,7 @@ class S3DatasetRepo:
     def upload_file(
         self,
         path: Path,
+        prefix: S3Path | None = None,
         *,
         hash_progress_cb: Callable[[int], None] | None = None,
         upload_progress_cb: Callable[[int], None] | None = None,
@@ -111,6 +112,10 @@ class S3DatasetRepo:
         file_key = S3Path(
             path.name, f"{urlsafe_isoformat(timestamp)}-{file_sha1.hex()}"
         )
+
+        if prefix:
+            file_key = prefix / file_key
+
         s3_key = self.s3_prefix / file_key
 
         self.s3_client.upload_file(
