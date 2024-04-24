@@ -92,6 +92,24 @@ def upload_assets():
     print(f"Uploaded {uploaded} assets")
 
 
+@app.command(name="push-build")
+def push_build(latest: bool = False):
+    ctx = CLIContext()
+
+    tags = [ctx.ref]
+    if latest:
+        tags.append("latest")
+
+    for tag in tags:
+        key = str(ctx.settings.bucket_build_key_prefix / ctx.branch / f"{tag}.json")
+        ctx.s3_client.upload_file(
+            Filename=str(ctx.build_dir / "datasets-build.json"),
+            Bucket=ctx.settings.bucket_name,
+            Key=key,
+        )
+        print(f"Pushed datasets build: bucket={ctx.settings.bucket_name}, key={key}")
+
+
 @app.command(name="format")
 def format(check: bool = False):
     """Format dataset metadata files in the content directory."""

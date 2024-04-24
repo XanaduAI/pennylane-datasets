@@ -2,6 +2,7 @@ from functools import cached_property
 from pathlib import Path
 
 import boto3
+from dulwich.porcelain import active_branch
 from dulwich.repo import Repo
 from pydantic_settings import BaseSettings
 
@@ -13,7 +14,8 @@ class Settings(BaseSettings):
 
     asset_url_prefix: str = "https://datasets.cloud.pennylane.ai/assets"
 
-    bucket_name: str = "swc-prod-pennylane-datasets"
+    bucket_name: str = "swc-staging-pennylane-datasets"
+    bucket_build_key_prefix: S3Path = S3Path("builds")
     bucket_data_key_prefix: S3Path = S3Path("data")
     bucket_asset_key_prefix: S3Path = S3Path("assets")
 
@@ -50,6 +52,14 @@ class CLIContext:
         """dulwich ``Repo`` object for the pennylane-datasets
         repo."""
         return Repo.discover()
+
+    @property
+    def branch(self) -> str:
+        return active_branch(self.repo).decode("utf-8")
+
+    @property
+    def ref(self) -> str:
+        return self.repo.head().hex()[:7]
 
     @cached_property
     def aws_client(self) -> boto3.Session:
