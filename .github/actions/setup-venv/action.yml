@@ -5,10 +5,6 @@ inputs:
     description: Path of venv
     type: string
     required: true
-  setup-cmd:
-    descriptions: Setup command
-    type: string
-    required: true
     
 runs:
   using: "composite"
@@ -22,24 +18,17 @@ runs:
       id: get-cache-date
       run: |
         echo "date=$(/bin/date -u "+%Y%U")" >> $GITHUB_OUTPUT
-    
-    - name: Hash setup command
-      shell: bash
-      id: hash-setup-cmd
-      run: |
-        echo "hash=$(echo ${{ inputs.setup-cmd }} | md5sum)"
 
     - name: Cache virtualenv
       id: cache-venv
       uses: actions/cache@v4
       with:
         path: ${{ inputs.venv-path }}
-        key: ${{ steps.get-cache-date.outputs.date }}-${{ steps.hash-setup-cmd.outputs.hash }}-${{ hashfiles('pyproject.toml', 'poetry.lock') }}
+        key: ${{ steps.get-cache-date.outputs.date }}-${{ hashfiles('pyproject.toml', 'poetry.lock') }}
 
     - name: Setup venv
       shell: bash
       if: steps.cache-venv.outputs.cache-hit != 'true'
       run: |
-        python3.11 -m venv .venv
         .venv/bin/pip install "poetry==1.4.0"
         .venv/bin/poetry install --with dev --no-root
