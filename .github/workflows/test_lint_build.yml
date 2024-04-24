@@ -54,7 +54,7 @@ jobs:
       matrix:
         env: [staging]
 
-    environment: ${{ matrix.environment }}
+    environment: ${{ matrix.env }}
 
     steps:
       - name: Checkout code
