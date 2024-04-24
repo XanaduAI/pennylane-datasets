@@ -14,10 +14,10 @@ runs:
         python-version: '3.11'
     
     - name: Get Cache Date
+      shell: bash
       id: get-cache-date
       run: |
         echo "date=$(/bin/date -u "+%Y%U")" >> $GITHUB_OUTPUT
-      shell: bash
 
     - name: Cache virtualenv
       id: cache-venv
@@ -27,6 +27,7 @@ runs:
         key: ${{ steps.get-cache-date.outputs.date }}-${{ hashfiles('pyproject.toml', 'poetry.lock') }}
 
     - name: Setup venv
+      shell: bash
       if: steps.cache-venv.outputs.cache-hit != 'true'
       run: |
         python3.11 -m venv .venv
