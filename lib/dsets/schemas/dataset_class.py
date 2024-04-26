@@ -1,3 +1,4 @@
+from collections import Counter
 from typing import Self
 
 from pydantic import BaseModel, model_validator
@@ -69,16 +70,20 @@ class DatasetClass(Document, CamelCaseMixin):
 
     @model_validator(mode="after")
     def _validate_attributes_parameters(self: Self) -> Self:
-        dupe_attr_names = Counter(self.attribute_list) - Counter(set(self.attribute_list))
+        dupe_attr_names = [
+            name
+            for name, ct in Counter(attr.name for attr in self.attribute_list).items()
+            if ct > 1
+        ]
         if dupe_attr_names:
-            dupe_name = next(iter(dupe_attr_names))
-            raise ValueError(f"Duplicate attribute names: {dupe_name}")
+            raise ValueError(f"Duplicate attribute names: {repr(dupe_attr_names)}")
 
-        parameter_names = set()
-        for parameter in self.parameter_list:
-            if parameter.name in parameter_names:
-                raise ValueError(f"Duplicate parameter name: {parameter.name}")
-
-            parameter_names.add(parameter.name)
+        dupe_parameter_names = [
+            name
+            for name, ct in Counter(param.name for param in self.parameter_list).items()
+            if ct > 1
+        ]
+        if dupe_parameter_names:
+            raise ValueError(f"Duplicate parameter names: {repr(dupe_attr_names)}")
 
         return self
