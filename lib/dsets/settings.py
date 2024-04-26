@@ -12,12 +12,18 @@ from .lib.s3 import S3Client, S3Path
 class Settings(BaseSettings):
     """Global settings for pennylane-datasets."""
 
-    asset_url_prefix: str = "https://datasets.cloud.pennylane.ai/assets"
-
+    bucket_public_domain_name: str = "datasets.cloud.pennylane.ai"
     bucket_name: str = "swc-staging-pennylane-datasets"
+
     bucket_build_key_prefix: S3Path = S3Path("builds")
     bucket_data_key_prefix: S3Path = S3Path("data")
     bucket_asset_key_prefix: S3Path = S3Path("assets")
+
+    @property
+    def public_url_root_assets(self) -> str:
+        return (
+            f"https://{self.bucket_public_domain_name}/{self.bucket_asset_key_prefix}"
+        )
 
 
 class CLIContext:

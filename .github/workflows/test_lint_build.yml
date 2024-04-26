@@ -2,6 +2,7 @@ name: "Test and Lint"
 on:
   pull_request:
     paths:
+      - 'content/**'
       - 'lib/**'
       - 'pyproject.toml'
       - 'poetry.lock'
@@ -48,13 +49,15 @@ jobs:
   push_build:
     needs: lint_test_build
     runs-on: ubuntu-latest
-    env:
-        PYTHONPATH: "lib/:${PYTHONPATH}"
     strategy:
       matrix:
-        env: [staging]
+        environment: [staging]
+    env:
+        PYTHONPATH: "lib/:${PYTHONPATH}"
+        BUCKET_NAME: ${{ secrets.CONTENT_BUCKET_NAME }}
+        BUCKET_PUBLIC_DOMAIN_NAME: ${{ secrets.BUCKET_PUBLIC_DOMAIN_NAME }}
 
-    environment: ${{ matrix.env }}
+    environment: ${{ matrix.environment }}
 
     steps:
       - name: Checkout code
