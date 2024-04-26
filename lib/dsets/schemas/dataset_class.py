@@ -69,12 +69,10 @@ class DatasetClass(Document, CamelCaseMixin):
 
     @model_validator(mode="after")
     def _validate_attributes_parameters(self: Self) -> Self:
-        attr_names = set()
-        for attr in self.attribute_list:
-            if attr.name in attr_names:
-                raise ValueError(f"Duplicate attribute name: {attr.name}")
-
-            attr_names.add(attr.name)
+        dupe_attr_names = Counter(self.attribute_list) - Counter(set(self.attribute_list))
+        if dupe_attr_names:
+            dupe_name = next(iter(dupe_attr_names))
+            raise ValueError(f"Duplicate attribute names: {dupe_name}")
 
         parameter_names = set()
         for parameter in self.parameter_list:
