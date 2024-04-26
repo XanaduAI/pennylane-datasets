@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        environment: [dev, staging]
+        environment: [dev, staging, prod]
     environment: ${{ matrix.environment }}
     env:
         PYTHONPATH: "lib/:${PYTHONPATH}"
