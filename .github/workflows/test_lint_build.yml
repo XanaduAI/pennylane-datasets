@@ -117,8 +117,8 @@ jobs:
       - name: Push build
         run: | 
           .venv/bin/python3 -m dsets push-build --latest \
-            --branch=${{ steps.get-branch.outputs.branch }} \
-            --ref=${{ steps.get-sha.outputs.sha }}
+            ${{ steps.get-branch.outputs.branch }} \
+            ${{ steps.get-sha.outputs.sha }}
       
       
 
