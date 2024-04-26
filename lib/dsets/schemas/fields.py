@@ -1,3 +1,4 @@
+import keyword
 from typing import Annotated
 
 import bibtexparser
@@ -6,9 +7,10 @@ from pydantic import AfterValidator, Field
 
 def _python_identifier_validator(val: str) -> str:
     """Validator for ``PythonIdentifier``. Raises a ``ValueError`` if
-    ``val.isidentifier()`` returns false."""
+    ``val.isidentifier()`` returns false or ``val`` is a
+    keyword ('if', 'returns', etc)."""
 
-    if not val.isidentifier():
+    if not val.isidentifier() or keyword.iskeyword(val):
         raise ValueError(f"Not a valid Python identifier: {repr(val)}")
 
     return val
