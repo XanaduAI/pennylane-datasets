@@ -94,15 +94,15 @@ def upload_assets():
 
 
 @app.command(name="push-build")
-def push_build(latest: bool = False):
+def push_build(branch: str, ref: str, latest: bool = False):
     ctx = CLIContext()
 
-    tags = [ctx.ref]
+    tags = [ref]
     if latest:
         tags.append("latest")
 
     for tag in tags:
-        key = str(ctx.settings.bucket_build_key_prefix / ctx.branch / f"{tag}.json")
+        key = str(ctx.settings.bucket_build_key_prefix / branch / f"{tag}.json")
         ctx.s3_client.upload_file(
             Filename=str(ctx.build_dir / "datasets-build.json"),
             Bucket=ctx.settings.bucket_name,

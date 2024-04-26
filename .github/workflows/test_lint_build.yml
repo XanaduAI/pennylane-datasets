@@ -11,6 +11,10 @@ on:
     branches:
     - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
 jobs:
   lint_test_build:
     runs-on: ubuntu-latest
@@ -52,12 +56,11 @@ jobs:
     strategy:
       matrix:
         environment: [dev, staging]
+    environment: ${{ matrix.environment }}
     env:
         PYTHONPATH: "lib/:${PYTHONPATH}"
         BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
         BUCKET_PUBLIC_DOMAIN: ${{ secrets.BUCKET_PUBLIC_DOMAIN }}
-
-    environment: ${{ matrix.environment }}
 
     steps:
       - name: Checkout code
@@ -81,12 +84,41 @@ jobs:
           aws-region: "us-east-1"
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Get Branch
+        id: get-branch
+        shell: bash
+        run: |
+          if [ "$GITHUB_EVENT_NAME" == "pull_request" ]
+          then
+            BRANCH=$GITHUB_HEAD_REF
+          elif [ "$GITHUB_EVENT_NAME" == "push" ] || [ "$GITHUB_EVENT_NAME" == "release" ]
+          then
+            BRANCH=${GITHUB_REF##*/}
+          else
+            printf 'Cannot determine tags: Workflow must be triggered by "push", "pull_request", or "release" event.' && exit 1
+          fi
+
+          echo "Branch is '$BRANCH'."
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+
+      - name: Get Commit SHA
+        id: get-sha
+        shell: bash
+        run: |
+          SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          SHA=${SHA:0:7}
+          echo "SHA is '$SHA'."
+          echo "sha=$SHA" >> $GITHUB_OUTPUT
       
       - name: Upload assets
         run: .venv/bin/python3 -m dsets upload-assets
 
       - name: Push build
-        run: .venv/bin/python3 -m dsets push-build --latest
+        run: | 
+          .venv/bin/python3 -m dsets push-build --latest
+            --branch=${{ steps.get-branch.outputs.branch }}
+            --ref=${{ steps.get-sha.outputs.sha }}
       
       
 
