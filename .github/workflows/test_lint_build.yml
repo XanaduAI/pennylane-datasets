@@ -51,11 +51,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        environment: [staging]
+        environment: [dev, staging]
     env:
         PYTHONPATH: "lib/:${PYTHONPATH}"
-        BUCKET_NAME: ${{ secrets.CONTENT_BUCKET_NAME }}
-        BUCKET_PUBLIC_DOMAIN_NAME: ${{ secrets.BUCKET_PUBLIC_DOMAIN_NAME }}
+        BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+        BUCKET_PUBLIC_DOMAIN: ${{ secrets.BUCKET_PUBLIC_DOMAIN }}
 
     environment: ${{ matrix.environment }}
 
@@ -81,6 +81,12 @@ jobs:
           aws-region: "us-east-1"
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
+      - name: Upload assets
+        run: .venv/bin/python3 -m dsets upload-assets
+
+      - name: Push build
+        run: .venv/bin/python3 -m dsets push-build --latest
       
       
 
