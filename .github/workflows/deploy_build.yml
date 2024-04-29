@@ -1,4 +1,4 @@
-name: "Deploy build"
+name: "Deploy datasets build"
 on:
   push:
   workflow_dispatch:
@@ -59,6 +59,8 @@ jobs:
                 aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
                 aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             
+            - name: Upload assets
+              run: .venv/bin/python3 -m dsets upload-assets
+
             - name: Deploy build
-              run: | 
-                  .venv/bin/python3 -m dsets deploy
+              run: .venv/bin/python3 -m dsets deploy
