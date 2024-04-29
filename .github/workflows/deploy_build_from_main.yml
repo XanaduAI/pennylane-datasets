@@ -23,4 +23,4 @@ jobs:
         uses: ./.github/workflows/deploy_build.yml
         with:
             environment: ${{ matrix.environment }}
-            ref: 'main'
+            ref: sc-58443-add-github-actions-to-build-and-push-dataset
