@@ -42,7 +42,6 @@ jobs:
               uses: actions/checkout@v2
               with:
                 ref: ${{ inputs.ref || github.sha }}
-                fetch-depth: 1
           
             - name: Setup virtualenv 
               uses: ./.github/actions/setup-venv
@@ -64,4 +63,4 @@ jobs:
               run: .venv/bin/python3 -m dsets upload-assets
 
             - name: Deploy build
-              run: .venv/bin/python3 -m dsets deploy
+              run: .venv/bin/python3 -m dsets deploy dev ${{ inputs.ref }}

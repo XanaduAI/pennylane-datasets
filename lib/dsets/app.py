@@ -152,7 +152,7 @@ def deploy_build(branch: str, ref: str = "latest"):
 
 
 @app.command(name="deploy")
-def deploy():
+def deploy(tags: list[str] = []):
     ctx = CLIContext()
 
     bucket = ctx.settings.bucket_name
@@ -168,7 +168,12 @@ def deploy():
     )
 
     build_info_file_key = build_key_prefix / ".datasets-build-info.json"
-    build_info_json = {"commit_sha": ctx.github_sha, "branch": ctx.branch}
+
+    tagset = set(tags)
+    if (short_sha := ctx.commit_sha[:7]) not in tagset:
+        tagset.add(short_sha)
+
+    build_info_json = {"commit_sha": ctx.commit_sha, "tags": list(tagset)}
     ctx.s3_client.put_object(
         Bucket=ctx.settings.bucket_name,
         Key=str(build_info_file_key),
@@ -176,7 +181,9 @@ def deploy():
         ContentType="application/json",
     )
 
-    msg.structured_print("Deployed build", bucket=bucket, key=build_file_key)
+    msg.structured_print(
+        "Deployed build", bucket=bucket, key=build_file_key, tags=tagset
+    )
 
 
 @app.command(name="format")

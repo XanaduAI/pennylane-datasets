@@ -2,7 +2,6 @@ from functools import cached_property
 from pathlib import Path
 
 import boto3
-from dulwich.porcelain import active_branch
 from dulwich.repo import Repo
 from pydantic_settings import BaseSettings
 
@@ -57,13 +56,11 @@ class CLIContext:
         repo."""
         return Repo.discover()
 
-    @property
-    def branch(self) -> str:
-        return active_branch(self.repo).decode("utf-8")
-
-    @property
-    def github_sha(self) -> str:
-        return self.repo.head().hex()[:7]
+    @cached_property
+    def commit_sha(self) -> str:
+        """Return full-length git SHA for currently checked out
+        ref."""
+        return self.repo.head().hex()
 
     @cached_property
     def aws_client(self) -> boto3.Session:
