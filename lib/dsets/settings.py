@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     bucket_public_domain: str = "datasets.cloud.pennylane.ai"
     bucket_name: str = "swc-staging-pennylane-datasets"
 
-    bucket_build_key_prefix: S3Path = S3Path("builds")
+    bucket_build_key_prefix: S3Path = S3Path("build")
     bucket_data_key_prefix: S3Path = S3Path("data")
     bucket_asset_key_prefix: S3Path = S3Path("assets")
 
@@ -62,7 +62,7 @@ class CLIContext:
         return active_branch(self.repo).decode("utf-8")
 
     @property
-    def ref(self) -> str:
+    def github_sha(self) -> str:
         return self.repo.head().hex()[:7]
 
     @cached_property

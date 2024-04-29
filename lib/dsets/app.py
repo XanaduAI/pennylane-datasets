@@ -166,6 +166,14 @@ def deploy():
         Filename=str(ctx.build_dir / "datasets-build.json"),
     )
 
+    build_info_file_key = build_key_prefix / ".datasets-build-info.json"
+    build_info_json = {"github_sha": ctx.github_sha}
+    ctx.s3_client.put_object(
+        Bucket=ctx.settings.bucket_name,
+        Key=str(build_info_file_key),
+        Body=json.dumps(build_info_json).encode("utf-8"),
+    )
+
     msg.structured_print("Deployed build", bucket=bucket, key=build_file_key)
 
 
