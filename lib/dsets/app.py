@@ -1,7 +1,7 @@
 import json
 import logging
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Optional
 
 import typer
 
@@ -152,8 +152,12 @@ def deploy_build(branch: str, ref: str = "latest"):
 
 
 @app.command(name="deploy")
-def deploy(tags: list[str] = []):
+def deploy(tags: Annotated[Optional[list[str]], typer.Argument()] = None):
     ctx = CLIContext()
+
+    tagset: set[str] = set(tags) if tags else set()
+    if (short_sha := ctx.commit_sha[:7]) not in tagset:
+        tagset.add(short_sha)
 
     bucket = ctx.settings.bucket_name
     build_key_prefix = ctx.settings.bucket_build_key_prefix
@@ -168,10 +172,6 @@ def deploy(tags: list[str] = []):
     )
 
     build_info_file_key = build_key_prefix / ".datasets-build-info.json"
-
-    tagset = set(tags)
-    if (short_sha := ctx.commit_sha[:7]) not in tagset:
-        tagset.add(short_sha)
 
     build_info_json = {"commit_sha": ctx.commit_sha, "tags": list(tagset)}
     ctx.s3_client.put_object(
