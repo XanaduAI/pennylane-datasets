@@ -7,7 +7,6 @@ on:
       - completed
     branches:
       - main
-  push:
 
 
 concurrency:
@@ -23,5 +22,5 @@ jobs:
         uses: ./.github/workflows/deploy_build.yml
         with:
             environment: ${{ matrix.environment }}
-            ref: sc-58443-add-github-actions-to-build-and-push-dataset
+            ref: main
         secrets: inherit
