@@ -1,5 +1,6 @@
 name: "Deploy build"
 on:
+  push:
   workflow_dispatch:
     inputs:
       environment:
@@ -14,7 +15,7 @@ on:
         description: Branch name, commit sha or tag to deploy
         required: true
         type: string
-        
+
   workflow_call:
       inputs:
         environment:
@@ -30,7 +31,7 @@ on:
 jobs:
     push_build:
         runs-on: ubuntu-latest
-        environment: ${{ inputs.environment }}
+        environment: ${{ inputs.environment || 'dev' }}
         env:
             PYTHONPATH: "lib/:${PYTHONPATH}"
             BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
@@ -40,7 +41,7 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v2
               with:
-                ref: ${{ inputs.ref }}
+                ref: ${{ inputs.ref || github.sha }}
           
             - name: Setup virtualenv 
               uses: ./.github/actions/setup-venv
