@@ -24,3 +24,4 @@ jobs:
         with:
             environment: ${{ matrix.environment }}
             ref: sc-58443-add-github-actions-to-build-and-push-dataset
+        secrets: inherit
