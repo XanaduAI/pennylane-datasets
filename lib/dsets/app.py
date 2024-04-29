@@ -105,8 +105,8 @@ def deploy_build(
         tags: Extra tags for deployment
     """
     ctx = CLIContext()
-
-    tagset: set[str] = set(tags) if tags else set()
+    env = env.strip()
+    tagset: set[str] = set(tag.strip() for tag in tags) if tags else set()
     tagset.add(ctx.commit_sha(short=True))
 
     if (short_sha := ctx.commit_sha(short=True)) not in tagset:
