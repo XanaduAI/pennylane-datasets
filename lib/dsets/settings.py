@@ -56,11 +56,14 @@ class CLIContext:
         repo."""
         return Repo.discover()
 
-    @cached_property
-    def commit_sha(self) -> str:
+    def commit_sha(self, short: bool = False) -> str:
         """Return full-length git SHA for currently checked out
         ref."""
-        return self.repo.head().hex()
+        sha = self.repo.head().hex()
+        if short:
+            return sha[:7]
+
+        return sha
 
     @cached_property
     def aws_client(self) -> boto3.Session:

@@ -93,91 +93,43 @@ def upload_assets():
     msg.structured_print("Uploaded assets", count=uploaded)
 
 
-@app.command(name="push-build")
-def push_build(branch: str, ref: str, latest: bool = False):
-    ctx = CLIContext()
-
-    name = f"{ref}.json"
-
-    key = str(ctx.settings.bucket_build_key_prefix / branch / name)
-    ctx.s3_client.upload_file(
-        Filename=str(ctx.build_dir / "datasets-build.json"),
-        Bucket=ctx.settings.bucket_name,
-        Key=key,
-    )
-
-    msg.structured_print(
-        "Pushed datasets build", bucket=ctx.settings.bucket_name, key=key
-    )
-    if latest:
-        ctx.s3_client.put_object(
-            Bucket=ctx.settings.bucket_name,
-            Key=str(ctx.settings.bucket_build_key_prefix / branch / ".latest"),
-            Body=ref.encode("utf-8"),
-        )
-        msg.structured_print("Tagged latest", branch=branch, ref=ref)
-
-
 @app.command(name="deploy-build")
-def deploy_build(branch: str, ref: str = "latest"):
+def deploy_build(
+    env: Annotated[str, typer.Argument("The targeted deployment environment")],
+    tags: Annotated[Optional[list[str]], typer.Argument(help="Extra tags")] = None,
+):
+    """Deploy datasets-build.json to S3."""
     ctx = CLIContext()
 
-    bucket = ctx.settings.bucket_name
-    build_key_prefix = ctx.settings.bucket_build_key_prefix
-
-    deploy_file_key = ctx.settings.bucket_build_key_prefix / ".deploy"
-
-    if ref == "latest":
-        ref = s3.object_text(
-            ctx.s3_client, bucket, build_key_prefix / branch / ".latest"
-        )
-
-    build_file_key = (build_key_prefix / branch / ref).with_suffix(".json")
-    if not s3.object_exists(
-        ctx.s3_client, bucket=ctx.settings.bucket_name, key=build_file_key
-    ):
-        raise RuntimeError(
-            msg.structured(
-                "Build not found", branch=branch, ref=ref, key=build_file_key
-            )
-        )
-
-    ctx.s3_client.put_object(
-        Bucket=ctx.settings.bucket_name,
-        Key=str(deploy_file_key),
-        Body=str(s3.S3Path(branch, ref).with_suffix(".json")).encode("utf-8"),
-    )
-
-    msg.structured_print("Deployed build", branch=branch, ref=ref, key=build_file_key)
-
-
-@app.command(name="deploy")
-def deploy(tags: Annotated[Optional[list[str]], typer.Argument()] = None):
-    ctx = CLIContext()
+    upload_assets()
 
     tagset: set[str] = set(tags) if tags else set()
-    if (short_sha := ctx.commit_sha[:7]) not in tagset:
+    tagset.add(f"env.{env}")
+    tagset.add(ctx.commit_sha(short=True))
+
+    if (short_sha := ctx.commit_sha(short=True)) not in tagset:
         tagset.add(short_sha)
 
     bucket = ctx.settings.bucket_name
     build_key_prefix = ctx.settings.bucket_build_key_prefix
-
-    build_file_key = build_key_prefix / "datasets-build.json"
+    build_file_key = str(build_key_prefix / "datasets-build.json")
 
     ctx.s3_client.upload_file(
-        Bucket=ctx.settings.bucket_name,
-        Key=str(build_file_key),
+        Bucket=bucket,
+        Key=build_file_key,
         Filename=str(ctx.build_dir / "datasets-build.json"),
         ExtraArgs={"ContentType": "application/json"},
     )
 
-    build_info_file_key = build_key_prefix / ".datasets-build-info.json"
+    build_info_file_key = str(build_key_prefix / ".datasets-build-info.json")
+    build_info_json = json.dumps(
+        {"commit_sha": ctx.commit_sha(), "tags": list(tagset)}
+    ).encode("utf-8")
 
-    build_info_json = {"commit_sha": ctx.commit_sha, "tags": list(tagset)}
     ctx.s3_client.put_object(
-        Bucket=ctx.settings.bucket_name,
-        Key=str(build_info_file_key),
-        Body=json.dumps(build_info_json).encode("utf-8"),
+        Bucket=bucket,
+        Key=build_info_file_key,
+        Body=build_info_json,
         ContentType="application/json",
     )
 
