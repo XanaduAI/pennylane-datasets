@@ -1,0 +1,26 @@
+name: Deploy to Dev and Staging
+on:
+  workflow_run:
+    workflows:
+      - "Test, Lint and Build"
+    types:
+      - completed
+    branches:
+      - main
+  push:
+
+
+concurrency:
+    group: ${{ github.workflow }}
+    cancel-in-progress: true
+
+jobs:
+    deploy:
+        name: Run deploy
+        strategy:
+            matrix:
+                environment: ['dev', 'staging']
+        uses: ./.github/workflows/deploy_build.yml
+        with:
+            environment: ${{ matrix.environment }}
+            ref: 'main'

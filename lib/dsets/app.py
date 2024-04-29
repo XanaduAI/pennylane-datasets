@@ -107,7 +107,6 @@ def deploy_build(
     ctx = CLIContext()
 
     tagset: set[str] = set(tags) if tags else set()
-    tagset.add(f"env.{env}")
     tagset.add(ctx.commit_sha(short=True))
 
     if (short_sha := ctx.commit_sha(short=True)) not in tagset:
@@ -126,7 +125,7 @@ def deploy_build(
 
     build_info_file_key = str(build_key_prefix / ".datasets-build-info.json")
     build_info_json = json.dumps(
-        {"commit_sha": ctx.commit_sha(), "tags": list(tagset)}
+        {"commit_sha": ctx.commit_sha(), "env": env, "tags": list(tagset)}
     ).encode("utf-8")
 
     ctx.s3_client.put_object(

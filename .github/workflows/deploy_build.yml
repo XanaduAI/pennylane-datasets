@@ -1,6 +1,5 @@
 name: "Deploy datasets build"
 on:
-  push:
   workflow_dispatch:
     inputs:
       environment:
@@ -13,12 +12,12 @@ on:
             - prod
       ref:
         description: Branch name, commit sha or tag to deploy
-        required: true
+        default: "main"
         type: string
 
   workflow_call:
       inputs:
-        env:
+        environment:
           description: Environment to deploy
           required: true
           type: string
@@ -27,11 +26,10 @@ on:
           required: true
           type: string
 
-
 jobs:
     push_build:
         runs-on: ubuntu-latest
-        environment: ${{ inputs.environment || 'dev' }}
+        environment: ${{ inputs.environment }}
         env:
             PYTHONPATH: "lib/:${PYTHONPATH}"
             BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
@@ -63,4 +61,5 @@ jobs:
               run: .venv/bin/python3 -m dsets upload-assets
 
             - name: Deploy build
-              run: .venv/bin/python3 -m dsets deploy-build ${{ inputs.environment || 'dev' }} ${{ inputs.ref }}
+              run: .venv/bin/python3 -m dsets deploy-build \
+                ${{ inputs.environment }} ${{ inputs.ref }}
