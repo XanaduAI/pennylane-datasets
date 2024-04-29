@@ -39,7 +39,7 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v2
               with:
-                ref: ${{ inputs.ref || github.sha }}
+                ref: ${{ inputs.ref }}
           
             - name: Setup virtualenv 
               uses: ./.github/actions/setup-venv
