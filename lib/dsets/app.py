@@ -164,6 +164,7 @@ def deploy():
         Bucket=ctx.settings.bucket_name,
         Key=str(build_file_key),
         Filename=str(ctx.build_dir / "datasets-build.json"),
+        ExtraArgs={"ContentType": "application/json"},
     )
 
     build_info_file_key = build_key_prefix / ".datasets-build-info.json"
@@ -172,6 +173,7 @@ def deploy():
         Bucket=ctx.settings.bucket_name,
         Key=str(build_info_file_key),
         Body=json.dumps(build_info_json).encode("utf-8"),
+        ContentType="application/json",
     )
 
     msg.structured_print("Deployed build", bucket=bucket, key=build_file_key)
