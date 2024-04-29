@@ -12,7 +12,7 @@ on:
             - prod
       ref:
         description: Branch name, commit sha or tag to deploy
-        default: "main"
+        default: main
         type: string
 
   workflow_call:
