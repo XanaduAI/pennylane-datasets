@@ -95,13 +95,16 @@ def upload_assets():
 
 @app.command(name="deploy-build")
 def deploy_build(
-    env: Annotated[str, typer.Argument("The targeted deployment environment")],
+    env: str,
     tags: Annotated[Optional[list[str]], typer.Argument(help="Extra tags")] = None,
 ):
-    """Deploy datasets-build.json to S3."""
-    ctx = CLIContext()
+    """Deploy datasets-build.json to S3.
 
-    upload_assets()
+    Args:
+        env: Targeted environment, e.g 'dev', 'staging', 'prod'.
+        tags: Extra tags for deployment
+    """
+    ctx = CLIContext()
 
     tagset: set[str] = set(tags) if tags else set()
     tagset.add(f"env.{env}")
