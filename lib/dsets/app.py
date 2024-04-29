@@ -168,7 +168,7 @@ def deploy():
     )
 
     build_info_file_key = build_key_prefix / ".datasets-build-info.json"
-    build_info_json = {"github_sha": ctx.github_sha}
+    build_info_json = {"commit_sha": ctx.github_sha, "branch": ctx.branch}
     ctx.s3_client.put_object(
         Bucket=ctx.settings.bucket_name,
         Key=str(build_info_file_key),
