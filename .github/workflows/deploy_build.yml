@@ -1,0 +1,63 @@
+name: "Deploy build"
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment to deploy
+        required: true
+        type: choice
+        options:
+            - dev
+            - staging
+            - prod
+      ref:
+        description: Branch name, commit sha or tag to deploy
+        required: true
+        type: string
+        
+  workflow_call:
+      inputs:
+        environment:
+          description: Environment to deploy
+          required: true
+          type: string
+        ref:
+          description: Branch name, commit sha or tag to deploy
+          required: true
+          type: string
+
+
+jobs:
+    push_build:
+        runs-on: ubuntu-latest
+        environment: ${{ inputs.environment }}
+        env:
+            PYTHONPATH: "lib/:${PYTHONPATH}"
+            BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+            BUCKET_PUBLIC_DOMAIN: ${{ secrets.BUCKET_PUBLIC_DOMAIN }}
+    
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+              with:
+                ref: ${{ inputs.ref }}
+          
+            - name: Setup virtualenv 
+              uses: ./.github/actions/setup-venv
+              with:
+                venv-path: .venv
+            
+            - name: Run build
+              shell: bash
+              run: .venv/bin/python3 -m dsets build
+            
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                aws-region: "us-east-1"
+                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            
+            - name: Deploy build
+              run: | 
+                  .venv/bin/python3 -m dsets deploy

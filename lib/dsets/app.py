@@ -5,7 +5,7 @@ from typing import Annotated
 
 import typer
 
-from dsets.lib import json_fmt, progress, s3
+from dsets.lib import json_fmt, msg, progress, s3
 from dsets.settings import CLIContext
 
 from .builder import AssetLoader, build_dataset_site
@@ -77,7 +77,7 @@ def build():
     with open(build_file, "w", encoding="utf-8") as f:
         json.dump(site_build, f, indent=2)
 
-    print(f"Created build in '{build_file}'")
+    msg.structured_print("Created build", file=build_file)
 
 
 @app.command(name="upload-assets")
@@ -90,25 +90,83 @@ def upload_assets():
     uploaded = asset_loader.upload_assets(
         ctx.s3_client, ctx.settings.bucket_name, ctx.settings.bucket_asset_key_prefix
     )
-    print(f"Uploaded {uploaded} assets")
+    msg.structured_print("Uploaded assets", count=uploaded)
 
 
 @app.command(name="push-build")
 def push_build(branch: str, ref: str, latest: bool = False):
     ctx = CLIContext()
 
-    tags = [ref]
-    if latest:
-        tags.append("latest")
+    name = f"{ref}.json"
 
-    for tag in tags:
-        key = str(ctx.settings.bucket_build_key_prefix / branch / f"{tag}.json")
-        ctx.s3_client.upload_file(
-            Filename=str(ctx.build_dir / "datasets-build.json"),
+    key = str(ctx.settings.bucket_build_key_prefix / branch / name)
+    ctx.s3_client.upload_file(
+        Filename=str(ctx.build_dir / "datasets-build.json"),
+        Bucket=ctx.settings.bucket_name,
+        Key=key,
+    )
+
+    msg.structured_print(
+        "Pushed datasets build", bucket=ctx.settings.bucket_name, key=key
+    )
+    if latest:
+        ctx.s3_client.put_object(
             Bucket=ctx.settings.bucket_name,
-            Key=key,
+            Key=str(ctx.settings.bucket_build_key_prefix / branch / ".latest"),
+            Body=ref.encode("utf-8"),
         )
-        print(f"Pushed datasets build: bucket={ctx.settings.bucket_name}, key={key}")
+        msg.structured_print("Tagged latest", branch=branch, ref=ref)
+
+
+@app.command(name="deploy-build")
+def deploy_build(branch: str, ref: str = "latest"):
+    ctx = CLIContext()
+
+    bucket = ctx.settings.bucket_name
+    build_key_prefix = ctx.settings.bucket_build_key_prefix
+
+    deploy_file_key = ctx.settings.bucket_build_key_prefix / ".deploy"
+
+    if ref == "latest":
+        ref = s3.object_text(
+            ctx.s3_client, bucket, build_key_prefix / branch / ".latest"
+        )
+
+    build_file_key = (build_key_prefix / branch / ref).with_suffix(".json")
+    if not s3.object_exists(
+        ctx.s3_client, bucket=ctx.settings.bucket_name, key=build_file_key
+    ):
+        raise RuntimeError(
+            msg.structured(
+                "Build not found", branch=branch, ref=ref, key=build_file_key
+            )
+        )
+
+    ctx.s3_client.put_object(
+        Bucket=ctx.settings.bucket_name,
+        Key=str(deploy_file_key),
+        Body=str(s3.S3Path(branch, ref).with_suffix(".json")).encode("utf-8"),
+    )
+
+    msg.structured_print("Deployed build", branch=branch, ref=ref, key=build_file_key)
+
+
+@app.command(name="deploy")
+def deploy():
+    ctx = CLIContext()
+
+    bucket = ctx.settings.bucket_name
+    build_key_prefix = ctx.settings.bucket_build_key_prefix
+
+    build_file_key = build_key_prefix / "datasets-build.json"
+
+    ctx.s3_client.upload_file(
+        Bucket=ctx.settings.bucket_name,
+        Key=str(build_file_key),
+        Filename=str(ctx.build_dir / "datasets-build.json"),
+    )
+
+    msg.structured_print("Deployed build", bucket=bucket, key=build_file_key)
 
 
 @app.command(name="format")

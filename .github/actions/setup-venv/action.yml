@@ -5,7 +5,7 @@ inputs:
     description: Path of venv
     type: string
     required: true
-    
+
 runs:
   using: "composite"
   steps:
