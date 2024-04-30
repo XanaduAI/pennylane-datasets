@@ -1,0 +1,21 @@
+{
+    "name": "foo",
+    "attributeList": [
+      {
+        "name": "list_thing",
+        "python_type": "list[str]",
+        "doc": "A list of things"
+      },
+      {
+        "name": "number",
+        "python_type": "int",
+        "doc": "A number",
+        "optional": true
+      }
+    ],
+    "parameterList": [{
+      "name": "number",
+      "title": "Number"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "assets": [
+    "https://test.datasets.com/assets/hero_image-b7b71997d36675a0c3fc760efa0d63b20b122e98.jpg",
+    "https://test.datasets.com/assets/thumbnail-7e1d89704a12580e4c592a473e1af7a96ed79503.png"
+  ],
+  "datasetClasses": {
+    "foo": {
+      "name": "foo",
+      "attributeList": [
+        {
+          "name": "list_thing",
+          "pythonType": "list[str]",
+          "doc": "A list of things",
+          "optional": false
+        },
+        {
+          "name": "number",
+          "pythonType": "int",
+          "doc": "A number",
+          "optional": true
+        }
+      ],
+      "parameterList": [
+        {
+          "name": "number",
+          "title": "Number",
+          "description": null,
+          "optional": false
+        }
+      ]
+    }
+  },
+  "datasetFamilies": {
+    "bar": {
+      "slug": "bar",
+      "class": {
+        "name": "foo",
+        "attributeList": [
+          {
+            "name": "list_thing",
+            "pythonType": "list[str]",
+            "doc": "A list of things",
+            "optional": false
+          },
+          {
+            "name": "number",
+            "pythonType": "int",
+            "doc": "A number",
+            "optional": true
+          }
+        ],
+        "parameterList": [
+          {
+            "name": "number",
+            "title": "Number",
+            "description": null,
+            "optional": false
+          }
+        ]
+      },
+      "data": [
+        {
+          "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/foo/thing.h5",
+          "parameters": {}
+        }
+      ],
+      "downloadName": "dataset",
+      "features": [
+        {
+          "slug": "look-at-my-data",
+          "title": "My Data!",
+          "type_": "DATA",
+          "content": "Big data"
+        },
+        {
+          "slug": "number",
+          "title": "Numbers, etc",
+          "type_": "DATA",
+          "content": "# A Number\n"
+        }
+      ],
+      "meta": {
+        "abstract": "Data",
+        "authors": [],
+        "citation": "@misc{FooData,\n  title = {Data!},  \n  author = {Author}, \n  howpublished = {\\url{https://pennylane.ai/datasets/foo/bar}}, \n  year = {2023}\n}\n",
+        "sourceCodeUrl": null,
+        "tags": [
+          "big_data",
+          "machine_learning",
+          "algorithms"
+        ],
+        "title": "Bar",
+        "usingThisDataset": "# Using this dataset\nThis data can be used for computations.\n",
+        "heroImage": "https://test.datasets.com/assets/hero_image-b7b71997d36675a0c3fc760efa0d63b20b122e98.jpg",
+        "thumbnail": "https://test.datasets.com/assets/thumbnail-7e1d89704a12580e4c592a473e1af7a96ed79503.png"
+      }
+    }
+  }
+}

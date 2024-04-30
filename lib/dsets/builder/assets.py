@@ -4,8 +4,6 @@ from collections.abc import Iterator
 from logging import getLogger
 from pathlib import Path
 
-from pydantic import HttpUrl
-
 from dsets.lib import s3
 from dsets.lib.doctree import Asset
 
@@ -40,7 +38,7 @@ class AssetLoader:
         """Yields the paths to all assets in the asset directory."""
         yield from self.asset_dir.iterdir()
 
-    def asset_destination_url(self, asset_name: str) -> HttpUrl:
+    def asset_destination_url(self, asset_name: str) -> str:
         """Returns the URL under `asset_destination_url_prefix` of the
         asset with the given name.
 
@@ -50,7 +48,7 @@ class AssetLoader:
         """
         return f"{self.asset_destination_url_prefix}/{asset_name}"
 
-    def add_asset(self, asset: Asset) -> HttpUrl:
+    def add_asset(self, asset: Asset) -> str:
         """
         Add an asset to the build and return its destination url.
 
@@ -61,7 +59,7 @@ class AssetLoader:
         name and return its destination URL.
         """
         if not asset.is_local:
-            return asset.root
+            return str(asset.root)
 
         os_path = asset.os_path
         if not (name := self.copied_asset_names.get(os_path)):
