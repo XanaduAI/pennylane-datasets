@@ -40,7 +40,7 @@ jobs:
                 printf "exists=%s" $exists >> $GITHUB_OUTPUT
             
             - name: Make tag
-              if: ${{ steps.check-tag-exists.outputs.exists }}
+              if: ${{ !steps.check-tag-exists.outputs.exists }}
               run: |
                 git config user.name '${{ github.actor }}'
                 git config user.email '<>'
