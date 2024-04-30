@@ -6,7 +6,7 @@ on:
       - 'lib/**'
       - 'pyproject.toml'
       - 'poetry.lock'
-      - '.github/worklows/test_lint.yml'
+      - '.github/worklows/test_lint_build.yml'
   push:
     branches:
     - main
