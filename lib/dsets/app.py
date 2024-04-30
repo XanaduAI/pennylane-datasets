@@ -95,14 +95,17 @@ def upload_assets():
 @app.command(name="format")
 def format(check: bool = False):
     """Format dataset metadata files in the content directory."""
+    changed_msg_template = (
+        "{path} would be reformatted" if check else "{path} reformatted"
+    )
     ctx = CLIContext()
 
-    formatter = json_fmt.JSONFormatter()
     changed = 0
     unchanged = 0
     for json_file in ctx.content_dir.rglob("**/*.json"):
-        if formatter.format(json_file, check=check):
+        if json_fmt.format(json_file, check=check):
             changed += 1
+            print(changed_msg_template.format(path=str(json_file)))
         else:
             unchanged += 1
 
