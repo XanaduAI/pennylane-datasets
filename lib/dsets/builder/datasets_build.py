@@ -14,7 +14,7 @@ from .assets import AssetLoader
 
 class DatasetBuild(BaseModel, CamelCaseMixin):
     """
-    Model for the 'datasets-buid.json' file. Contains all dataset families
+    Model for the 'datasets-build.json' file. Contains all dataset families
     and types defined in the `content/` directory, and an inventory of
     every asset used.
     """
@@ -24,7 +24,7 @@ class DatasetBuild(BaseModel, CamelCaseMixin):
     dataset_families: dict[str, DatasetFamily]
 
 
-def build_dataset_site(
+def compile_dataset_build(
     build_dir: Path, content_dir: Path, asset_destination_url_prefix: str
 ) -> dict[str, Any]:
     """Compiles all `dataset.json` files in the `content/` directory into

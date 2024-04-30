@@ -8,7 +8,7 @@ import typer
 from dsets.lib import json_fmt, msg, progress, s3
 from dsets.settings import CLIContext
 
-from .builder import AssetLoader, build_dataset_site
+from .builder import AssetLoader, compile_dataset_build
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -70,8 +70,9 @@ def build():
     build_dir.mkdir(exist_ok=True)
     build_file = build_dir / "datasets-build.json"
 
-    site_build = build_dataset_site(
-        build_dir, ctx.content_dir, ctx.settings.public_url_root_assets
+    site_build = compile_dataset_build(
+        build_dir, ctx.content_dir, ctx.settings.asset_url_prefix
+
     )
 
     with open(build_file, "w", encoding="utf-8") as f:
@@ -143,14 +144,17 @@ def deploy_build(
 @app.command(name="format")
 def format(check: bool = False):
     """Format dataset metadata files in the content directory."""
+    changed_msg_template = (
+        "{path} would be reformatted" if check else "{path} reformatted"
+    )
     ctx = CLIContext()
 
-    formatter = json_fmt.JSONFormatter()
     changed = 0
     unchanged = 0
     for json_file in ctx.content_dir.rglob("**/*.json"):
-        if formatter.format(json_file, check=check):
+        if json_fmt.format(json_file, check=check):
             changed += 1
+            print(changed_msg_template.format(path=str(json_file)))
         else:
             unchanged += 1
 
