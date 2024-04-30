@@ -8,7 +8,7 @@ import typer
 from dsets.lib import json_fmt, progress, s3
 from dsets.settings import CLIContext
 
-from .builder import AssetLoader, build_dataset_site
+from .builder import AssetLoader, compile_dataset_build
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -70,7 +70,7 @@ def build():
     build_dir.mkdir(exist_ok=True)
     build_file = build_dir / "datasets-build.json"
 
-    site_build = build_dataset_site(
+    site_build = compile_dataset_build(
         build_dir, ctx.content_dir, ctx.settings.asset_url_prefix
     )
     with open(build_file, "w", encoding="utf-8") as f:
