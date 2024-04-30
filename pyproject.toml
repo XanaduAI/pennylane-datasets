@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pennylane-datasets"
-version = "0.1.0"
+version = "0.2.0"
 description = "Tools for managing datasets"
 authors = ["Jack Brown <jack@xanadu.ai>"]
 readme = "README.md"
