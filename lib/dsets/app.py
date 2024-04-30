@@ -1,11 +1,11 @@
 import json
 import logging
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Optional
 
 import typer
 
-from dsets.lib import json_fmt, progress, s3
+from dsets.lib import json_fmt, msg, progress, s3
 from dsets.settings import CLIContext
 
 from .builder import AssetLoader, compile_dataset_build
@@ -38,13 +38,13 @@ def upload(
     """
     ctx = CLIContext()
     src_file = src_file.expanduser()
-    prefix = s3.S3Path(prefix_)
+    prefix = s3.S3Path(prefix_) if prefix_ else None
 
     repo = s3.S3DatasetRepo(
         ctx.data_dir,
         ctx.s3_client,
         ctx.settings.bucket_name,
-        ctx.settings.bucket_data_key_prefix,
+        ctx.settings.bucket_prefix_data,
     )
 
     print(f"Uploading '{src_file.absolute()}'")
@@ -87,9 +87,55 @@ def upload_assets():
     asset_loader = AssetLoader(ctx.build_dir, ctx.settings.asset_url_prefix)
 
     uploaded = asset_loader.upload_assets(
-        ctx.s3_client, ctx.settings.bucket_name, ctx.settings.bucket_asset_key_prefix
+        ctx.s3_client, ctx.settings.bucket_name, ctx.settings.bucket_prefix_assets
     )
     print(f"Uploaded {uploaded} assets")
+
+
+@app.command(name="deploy-build")
+def deploy_build(
+    env: str,
+    tags: Annotated[Optional[list[str]], typer.Argument(help="Extra tags")] = None,
+):
+    """Deploy datasets-build.json to S3.
+    Args:
+        env: Targeted environment, e.g 'dev', 'staging', 'prod'.
+        tags: Extra tags for deployment
+    """
+    ctx = CLIContext()
+    env = env.strip()
+    tagset: set[str] = set(tag.strip() for tag in tags) if tags else set()
+    tagset.add(ctx.commit_sha(short=True))
+
+    if (short_sha := ctx.commit_sha(short=True)) not in tagset:
+        tagset.add(short_sha)
+
+    bucket = ctx.settings.bucket_name
+    build_key_prefix = ctx.settings.bucket_prefix_build
+    build_file_key = str(build_key_prefix / "datasets-build.json")
+
+    ctx.s3_client.upload_file(
+        Bucket=bucket,
+        Key=build_file_key,
+        Filename=str(ctx.build_dir / "datasets-build.json"),
+        ExtraArgs={"ContentType": "application/json"},
+    )
+
+    build_info_file_key = str(build_key_prefix / ".datasets-build-info.json")
+    build_info_json = json.dumps(
+        {"commit_sha": ctx.commit_sha(), "env": env, "tags": list(tagset)}
+    ).encode("utf-8")
+
+    ctx.s3_client.put_object(
+        Bucket=bucket,
+        Key=build_info_file_key,
+        Body=build_info_json,
+        ContentType="application/json",
+    )
+
+    msg.structured_print(
+        "Deployed build", bucket=bucket, key=build_file_key, tags=tagset
+    )
 
 
 @app.command(name="format")

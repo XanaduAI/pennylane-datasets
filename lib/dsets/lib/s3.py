@@ -3,8 +3,6 @@ from collections.abc import Callable
 from pathlib import Path, PurePosixPath
 from typing import ClassVar
 
-import botocore.exceptions
-
 from .file_hash import file_sha1_hash
 from .time import urlsafe_isoformat, utcnow
 
@@ -21,7 +19,7 @@ def object_exists(s3_client: S3Client, bucket: str, key: S3Path) -> bool:
     """Return ``True`` iff object with ``key`` exists in ``bucket``."""
     try:
         s3_client.head_object(Bucket=bucket, Key=str(key))
-    except botocore.exceptions.ClientError as exc:
+    except s3_client.exceptions.ClientError as exc:
         if exc.response["Error"]["Code"] == "404":
             return False
 
@@ -81,6 +79,7 @@ class S3DatasetRepo:
     def upload_file(
         self,
         path: Path,
+        prefix: S3Path | None = None,
         *,
         hash_progress_cb: Callable[[int], None] | None = None,
         upload_progress_cb: Callable[[int], None] | None = None,
@@ -111,6 +110,10 @@ class S3DatasetRepo:
         file_key = S3Path(
             path.name, f"{urlsafe_isoformat(timestamp)}-{file_sha1.hex()}"
         )
+
+        if prefix:
+            file_key = prefix / file_key
+
         s3_key = self.s3_prefix / file_key
 
         self.s3_client.upload_file(
