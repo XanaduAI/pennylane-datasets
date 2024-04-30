@@ -1,3 +1,5 @@
+from typing import Any
+
 from pydantic import HttpUrl
 
 from dsets.lib.doctree import Document
@@ -11,3 +13,4 @@ class Dataset(Document, CamelCaseMixin):
 
     data_url: HttpUrl
     parameters: dict[PythonIdentifier, str | None] = {}
+    extra: dict[str, Any] = {}
