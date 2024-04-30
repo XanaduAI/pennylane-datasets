@@ -1,0 +1,49 @@
+name: "Tag version"
+on:
+  workflow_run:
+    workflows: ["Test, Lint and Build"]
+    branches: [main]
+    types: 
+      - completed
+
+jobs:
+    lint_test_build:
+        runs-on: ubuntu-latest
+        env:
+            PYTHONPATH: "lib/:${PYTHONPATH}"
+      
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                fetch-tags: true
+      
+            - name: Setup virtualenv 
+              uses: ./.github/actions/setup-venv
+              with:
+                venv-path: .venv
+            
+            - name: Get version tag
+              id: get-version-tag
+              run: printf "tag=v%s" \
+                $(.venv/bin/python3 -m poetry version --short) >> $GITHUB_OUPUT
+            
+            - name: Check if version tag exists
+              id: check-tag-exists
+              run: |
+                if [ $(git tag -l ${{ steps.get-version-tag.outputs.tag }}) ];
+                then
+                    exists="true";
+                else
+                    exists="false";
+                fi
+                printf "exists=%s" $exists >> $GITHUB_OUTPUT
+            
+            - name: Make tag
+              if: ${{ steps.check-tag-exists.outputs.exists }}
+              run: |
+                git config user.name '${{ github.actor }}'
+                git config user.email '<>'
+                git tag -a ${{ steps.get-version-tag.outputs.tag }} -m "${{ steps.get-version-tag.outputs.tag }} release tag"
+
+
