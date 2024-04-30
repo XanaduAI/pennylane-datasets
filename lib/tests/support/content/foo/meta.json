@@ -1,0 +1,17 @@
+{
+    "title": "Bar",
+    "tags": [
+      "big_data",
+      "machine_learning",
+      "algorithms"
+    ],
+    "abstract": "Data",
+    "citation": {
+      "$path": "./citation.txt"
+    },
+    "usingThisDataset": {
+      "$path": "./using_this_dataset.md"
+    },
+    "heroImage": "hero_image.jpg",
+    "thumbnail": "/images/thumbnail.png"
+  }

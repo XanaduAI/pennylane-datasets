@@ -70,8 +70,8 @@ def setup_test_docs(docpath_root: Path):
         json.dump(
             {
                 "name": "referenced",
-                "user_list": {"$ref": "/users/userlist.json"},  # Absolute path
-                "meta": {"$ref": "meta.json"},
+                "user_list": {"$path": "/users/userlist.json"},  # Absolute path
+                "meta": {"$path": "meta.json"},
             },
             f,
         )
@@ -87,16 +87,16 @@ def setup_test_docs(docpath_root: Path):
             {
                 "name": "model",
                 "citation": "Me, September",
-                "about": {"$ref": "text/about.txt"},
+                "about": {"$path": "text/about.txt"},
                 "references": {
-                    "full_ref": {"$ref": "referenced_model.json"},
+                    "full_ref": {"$path": "referenced_model.json"},
                     "inline": {
                         "name": "inline",
-                        "user_list": {"$ref": "/users/userlist.json"},
-                        "meta": {"$ref": "meta.json"},
+                        "user_list": {"$path": "/users/userlist.json"},
+                        "meta": {"$path": "meta.json"},
                     },
                 },
-                "user_list": {"$ref": "../users/userlist.json"},
+                "user_list": {"$path": "../users/userlist.json"},
                 "maybe_null": None,
             },
             f,
@@ -164,16 +164,16 @@ def test_load_from_path_no_resolve_refs(doctree: Doctree):
     assert model.model_dump(mode="json", by_alias=True) == {
         "name": "model",
         "citation": "Me, September",
-        "about": {"$ref": "text/about.txt"},
+        "about": {"$path": "text/about.txt"},
         "references": {
-            "full_ref": {"$ref": "referenced_model.json"},
+            "full_ref": {"$path": "referenced_model.json"},
             "inline": {
                 "name": "inline",
-                "user_list": {"$ref": "/users/userlist.json"},
-                "meta": {"$ref": "meta.json"},
+                "user_list": {"$path": "/users/userlist.json"},
+                "meta": {"$path": "meta.json"},
             },
         },
-        "user_list": {"$ref": "../users/userlist.json"},
+        "user_list": {"$path": "../users/userlist.json"},
         "maybe_null": None,
     }
 
@@ -183,10 +183,10 @@ def test_model_dump_reference():
 
     assert ReferencedModel(
         name="test",
-        user_list=Reference[UserList](ref="/a/b/c"),
-        meta=Reference[dict[str, Any]](ref="x"),
+        user_list=Reference[UserList](path="/a/b/c"),
+        meta=Reference[dict[str, Any]](path="x"),
     ).model_dump(mode="json", by_alias=True) == {
         "name": "test",
-        "user_list": {"$ref": "/a/b/c"},
-        "meta": {"$ref": "x"},
+        "user_list": {"$path": "/a/b/c"},
+        "meta": {"$path": "x"},
     }

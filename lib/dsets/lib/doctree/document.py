@@ -3,6 +3,7 @@ from collections.abc import Mapping
 from pathlib import Path
 from typing import Self
 
+import jsonref
 from pydantic import BaseModel
 
 from .doctree import (
@@ -52,8 +53,8 @@ class Document(BaseModel, DoctreeObj):
             json.dump(
                 {
                     "name": "referenced",
-                    "user_list": {"$ref": "/users/userlist.json"}, # Absolute path
-                    "meta": {"$ref": "meta.json"}
+                    "user_list": {"$path": "/users/userlist.json"}, # Absolute path
+                    "meta": {"$path": "meta.json"}
                 }, f)
 
         with open("data/models/about.txt", "w") as f:
@@ -64,8 +65,8 @@ class Document(BaseModel, DoctreeObj):
                 {
                     "name": "model",
                     "citation": "Me, September",
-                    "about": {"$ref": "about.txt"},
-                    "reference": {"$ref": "referenced_model.json"}
+                    "about": {"$path": "about.txt"},
+                    "reference": {"$path": "referenced_model.json"}
                 }
 
         model = Model.load_from_path(
@@ -117,10 +118,11 @@ class Document(BaseModel, DoctreeObj):
         document_ctx = DoctreeContext.from_os_path(doctree, path)
 
         with open(path, "r", encoding="utf-8") as f:
+            data = jsonref.load(f, proxies=False)
             ret = typing.cast(
                 Self,
-                cls.model_validate_json(
-                    f.read(),
+                cls.model_validate(
+                    data,
                     context=make_doctree_context(document_ctx, resolve_refs),
                 ),
             )

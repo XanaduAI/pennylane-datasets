@@ -1,0 +1,28 @@
+{
+    "slug": "bar",
+    "class": {
+      "$path": "class.json"
+    },
+    "meta": {
+      "$path": "meta.json"
+    },
+    "features": [
+      {
+        "slug": "look-at-my-data",
+        "title": "My Data!",
+        "content": "Big data"
+      },
+      {
+        "slug": "number",
+        "title": "Numbers, etc",
+        "content": {
+          "$path": "numbers.md"
+        }
+      }
+    ],
+    "data": [
+      {
+        "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/foo/thing.h5"
+      }
+    ]
+  }
