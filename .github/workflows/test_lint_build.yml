@@ -1,0 +1,46 @@
+name: "Test, Lint and Build"
+on:
+  pull_request:
+    paths:
+      - 'content/**'
+      - 'lib/**'
+      - 'pyproject.toml'
+      - 'poetry.lock'
+      - '.github/worklows/test_lint_build.yml'
+  push:
+    branches:
+    - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  lint_test_build:
+    runs-on: ubuntu-latest
+    env:
+        PYTHONPATH: "lib/:${PYTHONPATH}"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup virtualenv 
+        uses: ./.github/actions/setup-venv
+        with:
+          venv-path: .venv
+
+      - name: Check poetry.lock
+        run: .venv/bin/python3 -m poetry lock --check
+
+      - name: Run formatters
+        run: |
+          .venv/bin/python3 -m ruff check lib/
+          .venv/bin/python3 -m ruff format --check lib/
+
+      - name: Run tests
+        run: .venv/bin/python3 -m pytest lib/tests/
+
+      - name: Run build
+        run: .venv/bin/python3 -m dsets build
+

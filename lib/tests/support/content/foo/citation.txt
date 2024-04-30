@@ -1,0 +1,6 @@
+@misc{FooData,
+  title = {Data!},  
+  author = {Author}, 
+  howpublished = {\url{https://pennylane.ai/datasets/foo/bar}}, 
+  year = {2023}
+}

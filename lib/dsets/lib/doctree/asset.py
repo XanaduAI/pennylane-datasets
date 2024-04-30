@@ -1,13 +1,13 @@
 from pathlib import Path
-from typing import Any
+from typing import Annotated, Any
 
-from pydantic import HttpUrl, RootModel
+from pydantic import Field, HttpUrl, RootModel
 
 from .doctree import DocPath, DoctreeObj, set_document_context
 
 
 class Asset(RootModel, DoctreeObj):
-    root: DocPath | HttpUrl
+    root: Annotated[HttpUrl | DocPath, Field(union_mode="left_to_right")]
 
     @property
     def is_local(self) -> bool:
