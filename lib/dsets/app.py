@@ -73,7 +73,6 @@ def build():
     datasets_build = compile_dataset_build(
         build_dir, ctx.content_dir, ctx.settings.url_prefix_assets
     )
-
     with open(build_file, "w", encoding="utf-8") as f:
         json.dump(datasets_build, f, indent=2)
 
