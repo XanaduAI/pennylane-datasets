@@ -26,13 +26,13 @@ jobs:
                 venv-path: .venv
             
             - name: Get version tag
-              id: get-version-tag
+              id: get-tag
               run: printf "tag=v%s" $(.venv/bin/python3 -m poetry version --short) >> $GITHUB_OUTPUT
             
             - name: Check if version tag exists
               id: check-tag-exists
               run: |
-                if [ $(git tag -l ${{ steps.get-version-tag.outputs.tag }}) ];
+                if [ $(git tag -l ${{ steps.get-tag.outputs.tag }}) ];
                 then
                     exists="true";
                 else
@@ -46,7 +46,8 @@ jobs:
                 git config user.name '${{ github.actor }}'
                 git config user.email '<>'
                 git tag -a \
-                    -m '${{ steps.get-version-tag.outputs.tag }} release tag' \
-                    ${{ steps.get-version-tag.outputs.tag }} ${{ github.sha }}
+                    -m '${{ steps.get-tag.outputs.tag }} release tag' \
+                    ${{ steps.get-tag.outputs.tag }} ${{ github.sha }}
+                git push origin tag ${{ steps.get-tag.outputs.tag }}
 
 
