@@ -6,10 +6,10 @@ on:
     types: 
       - completed
   push:
-    
+
 
 jobs:
-    lint_test_build:
+    push_version_tag:
         runs-on: ubuntu-latest
         env:
             PYTHONPATH: "lib/:${PYTHONPATH}"
@@ -28,7 +28,7 @@ jobs:
             - name: Get version tag
               id: get-version-tag
               run: printf "tag=v%s" \
-                $(.venv/bin/python3 -m poetry version --short) >> $GITHUB_OUPUT
+                $(.venv/bin/python3 -m poetry version --short) >> $GITHUB_OUTPUT
             
             - name: Check if version tag exists
               id: check-tag-exists
