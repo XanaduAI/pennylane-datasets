@@ -72,7 +72,6 @@ def build():
 
     site_build = compile_dataset_build(
         build_dir, ctx.content_dir, ctx.settings.asset_url_prefix
-
     )
 
     with open(build_file, "w", encoding="utf-8") as f:
