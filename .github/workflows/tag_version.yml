@@ -15,8 +15,6 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
-              with:
-                fetch-tags: true
       
             - name: Setup virtualenv 
               uses: ./.github/actions/setup-venv
@@ -27,19 +25,13 @@ jobs:
               id: get-tag
               run: printf "tag=v%s" $(.venv/bin/python3 -m poetry version --short) >> $GITHUB_OUTPUT
             
-            - name: Check if version tag exists
+            - name: Check tag exists
+              continue-on-error: true
               id: check-tag-exists
-              run: |
-                if [ $(git tag -l ${{ steps.get-tag.outputs.tag }}) ];
-                then
-                    exists="true";
-                else
-                    exists="false";
-                fi
-                printf "exists=%s" $exists >> $GITHUB_OUTPUT
+              run: git ls-remote --exit-code origin refs/tags/${{ steps.get-tag.outputs.tag }}
             
             - name: Make tag
-              if: ${{ steps.check-tag-exists.outputs.exists }}
+              if: ${{ steps.check-tag-exists.outcome == 'failure' }}
               run: |
                 git config user.name '${{ github.actor }}'
                 git config user.email '<>'
