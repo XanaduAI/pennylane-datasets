@@ -5,6 +5,8 @@ on:
     branches: [main]
     types: 
       - completed
+  push:
+    
 
 jobs:
     lint_test_build:
