@@ -70,12 +70,12 @@ def build():
     build_dir.mkdir(exist_ok=True)
     build_file = build_dir / "datasets-build.json"
 
-    site_build = compile_dataset_build(
-        build_dir, ctx.content_dir, ctx.settings.asset_url_prefix
+    datasets_build = compile_dataset_build(
+        build_dir, ctx.content_dir, ctx.settings.url_prefix_assets
     )
 
     with open(build_file, "w", encoding="utf-8") as f:
-        json.dump(site_build, f, indent=2)
+        json.dump(datasets_build, f, indent=2)
 
     msg.structured_print("Created build", file=build_file)
 
@@ -85,7 +85,7 @@ def upload_assets():
     """Upload assets from the build directory."""
     ctx = CLIContext()
 
-    asset_loader = AssetLoader(ctx.build_dir, ctx.settings.public_url_root_assets)
+    asset_loader = AssetLoader(ctx.build_dir, ctx.settings.url_prefix_assets)
 
     uploaded = asset_loader.upload_assets(
         ctx.s3_client, ctx.settings.bucket_name, ctx.settings.bucket_prefix_assets
