@@ -27,8 +27,7 @@ jobs:
             
             - name: Get version tag
               id: get-version-tag
-              run: printf "tag=v%s" \
-                $(.venv/bin/python3 -m poetry version --short) >> $GITHUB_OUTPUT
+              run: printf "tag=v%s" $(.venv/bin/python3 -m poetry version --short) >> $GITHUB_OUTPUT
             
             - name: Check if version tag exists
               id: check-tag-exists
