@@ -33,9 +33,9 @@ jobs:
               run: |
                 if [ "$(git tag -l ${{ steps.get-tag.outputs.tag }})" = "" ];
                 then
-                    exists="false";
+                    exists=false;
                 else
-                    exists="true";
+                    exists=true;
                 fi
                 printf "exists=%s" $exists >> $GITHUB_OUTPUT
             
