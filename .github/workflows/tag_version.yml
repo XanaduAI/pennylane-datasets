@@ -6,6 +6,7 @@ on:
     types: 
       - completed
   push:
+    
 
 jobs:
     push_version_tag:
