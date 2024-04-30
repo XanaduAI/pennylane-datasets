@@ -31,13 +31,11 @@ jobs:
             - name: Check if version tag exists
               id: check-tag-exists
               run: |
-                if [ "$(git tag -l ${{ steps.get-tag.outputs.tag }})" = "" ];
+                if [ -n "$(git tag -l ${{ steps.get-tag.outputs.tag }})" ];
                 then
-                    exists=false;
-                else
-                    exists=true;
+                    printf "exists=true" >> $GITHUB_OUTPUT;
                 fi
-                printf "exists=%s" $exists >> $GITHUB_OUTPUT
+                
             
             - name: Make tag
               if: ${{ !steps.check-tag-exists.outputs.exists }}
