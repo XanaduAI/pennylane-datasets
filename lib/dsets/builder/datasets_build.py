@@ -73,7 +73,7 @@ def compile_dataset_build(
     for asset in doctree.get_objects(Asset):
         asset.root = asset_loader.add_asset(asset)
 
-    return DatasetBuild(
+    build = DatasetBuild(
         assets=doctree.get_objects(Asset),
         dataset_classes=dataset_classes,
         dataset_families=dataset_families,
@@ -81,3 +81,7 @@ def compile_dataset_build(
         mode="json",
         by_alias=True,
     )
+
+    build["assets"].sort()
+
+    return build
