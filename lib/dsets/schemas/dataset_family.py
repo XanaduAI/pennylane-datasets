@@ -1,4 +1,4 @@
-from typing import Annotated, Literal
+from typing import Annotated, Any, Literal
 
 from pydantic import Field
 
@@ -55,6 +55,8 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     hero_image: Asset | None = None
     thumbnail: Asset | None = None
 
+    extra: dict[str, Any] = {}
+
 
 class DatasetFamily(Document, CamelCaseMixin):
     """Model for dataset family, which may include one or more
@@ -77,5 +79,6 @@ class DatasetFamily(Document, CamelCaseMixin):
     data: list[Dataset] = []
     download_name: PythonIdentifier = "dataset"
     features: list[DatasetFeature] = []
-
     meta: Ref[DatasetFamilyMeta]
+
+    extra: dict[str, Any] = {}
