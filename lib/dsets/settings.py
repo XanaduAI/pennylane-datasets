@@ -1,5 +1,6 @@
 from functools import cached_property
 from pathlib import Path
+from typing import ClassVar
 
 import boto3
 from dulwich.repo import Repo
@@ -14,13 +15,13 @@ class Settings(BaseSettings):
     bucket_public_domain: str = "datasets.cloud.pennylane.ai"
     bucket_name: str = "swc-staging-pennylane-datasets"
 
-    bucket_build_key_prefix: S3Path = S3Path("build")
-    bucket_data_key_prefix: S3Path = S3Path("data")
-    bucket_asset_key_prefix: S3Path = S3Path("assets")
+    bucket_prefix_build: ClassVar[S3Path] = S3Path("build")
+    bucket_prefix_data: ClassVar[S3Path] = S3Path("data")
+    bucket_prefix_assets: ClassVar[S3Path] = S3Path("assets")
 
     @property
-    def public_url_root_assets(self) -> str:
-        return f"https://{self.bucket_public_domain}/{self.bucket_asset_key_prefix}"
+    def url_prefix_assets(self) -> str:
+        return f"https://{self.bucket_public_domain}/{self.bucket_prefix_assets}"
 
 
 class CLIContext:
@@ -56,15 +57,6 @@ class CLIContext:
         repo."""
         return Repo.discover()
 
-    def commit_sha(self, short: bool = False) -> str:
-        """Return full-length git SHA for currently checked out
-        ref."""
-        sha = self.repo.head().hex()
-        if short:
-            return sha[:7]
-
-        return sha
-
     @cached_property
     def aws_client(self) -> boto3.Session:
         """AWS client."""
@@ -74,6 +66,23 @@ class CLIContext:
     def s3_client(self) -> S3Client:
         """S3 Client."""
         return self.aws_client.client("s3")
+
+    def commit_sha(self, short: bool = False) -> str:
+        """Return git SHA for currently checked out
+        commit.
+
+        Args:
+            short: If True, only return the first 7
+                characters.
+
+        Returns:
+            Commit sha, in hex format
+        """
+        sha = self.repo.head().hex()
+        if short:
+            return sha[:7]
+
+        return sha
 
     def __init__(self, settings: Settings | None = None) -> None:
         self.settings = settings or Settings()

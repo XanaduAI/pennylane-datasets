@@ -44,7 +44,7 @@ def upload(
         ctx.data_dir,
         ctx.s3_client,
         ctx.settings.bucket_name,
-        ctx.settings.bucket_data_key_prefix,
+        ctx.settings.bucket_prefix_data,
     )
 
     print(f"Uploading '{src_file.absolute()}'")
@@ -88,7 +88,7 @@ def upload_assets():
     asset_loader = AssetLoader(ctx.build_dir, ctx.settings.public_url_root_assets)
 
     uploaded = asset_loader.upload_assets(
-        ctx.s3_client, ctx.settings.bucket_name, ctx.settings.bucket_asset_key_prefix
+        ctx.s3_client, ctx.settings.bucket_name, ctx.settings.bucket_prefix_assets
     )
     msg.structured_print("Uploaded assets", count=uploaded)
 
@@ -99,7 +99,6 @@ def deploy_build(
     tags: Annotated[Optional[list[str]], typer.Argument(help="Extra tags")] = None,
 ):
     """Deploy datasets-build.json to S3.
-
     Args:
         env: Targeted environment, e.g 'dev', 'staging', 'prod'.
         tags: Extra tags for deployment
@@ -113,7 +112,7 @@ def deploy_build(
         tagset.add(short_sha)
 
     bucket = ctx.settings.bucket_name
-    build_key_prefix = ctx.settings.bucket_build_key_prefix
+    build_key_prefix = ctx.settings.bucket_prefix_build
     build_file_key = str(build_key_prefix / "datasets-build.json")
 
     ctx.s3_client.upload_file(

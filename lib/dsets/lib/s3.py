@@ -3,8 +3,6 @@ from collections.abc import Callable
 from pathlib import Path, PurePosixPath
 from typing import ClassVar
 
-import botocore.exceptions
-
 from .file_hash import file_sha1_hash
 from .time import urlsafe_isoformat, utcnow
 
@@ -21,28 +19,13 @@ def object_exists(s3_client: S3Client, bucket: str, key: S3Path) -> bool:
     """Return ``True`` iff object with ``key`` exists in ``bucket``."""
     try:
         s3_client.head_object(Bucket=bucket, Key=str(key))
-    except botocore.exceptions.ClientError as exc:
+    except s3_client.exceptions.ClientError as exc:
         if exc.response["Error"]["Code"] == "404":
             return False
 
         raise exc
 
     return True
-
-
-def object_text(s3_client: S3Client, bucket: str, key: S3Path | str) -> str:
-    """Fetch an S3 object as plain text. Raises ``FileNotFoundError`` if
-    the key does not exist."""
-
-    try:
-        resp = s3_client.get_object(Bucket=bucket, Key=str(key))
-    except botocore.exceptions.ClientError as exc:
-        if exc.response["Error"]["Code"] == "404":
-            raise FileNotFoundError(f"{bucket}/{key}") from exc
-
-        raise exc
-
-    return resp["Body"].read().decode("utf-8")
 
 
 class S3DatasetRepo:
