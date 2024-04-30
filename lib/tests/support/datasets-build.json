@@ -61,7 +61,8 @@
       "data": [
         {
           "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/foo/thing.h5",
-          "parameters": {}
+          "parameters": {},
+          "extra": {}
         }
       ],
       "downloadName": "dataset",
@@ -92,7 +93,8 @@
         "title": "Bar",
         "usingThisDataset": "# Using this dataset\nThis data can be used for computations.\n",
         "heroImage": "https://test.datasets.com/assets/hero_image-b7b71997d36675a0c3fc760efa0d63b20b122e98.jpg",
-        "thumbnail": "https://test.datasets.com/assets/thumbnail-7e1d89704a12580e4c592a473e1af7a96ed79503.png"
+        "thumbnail": "https://test.datasets.com/assets/thumbnail-7e1d89704a12580e4c592a473e1af7a96ed79503.png",
+        "extra": {}
       }
     }
   }
