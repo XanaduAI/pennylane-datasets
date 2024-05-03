@@ -122,7 +122,9 @@ def deploy_build(
         Filename=str(ctx.build_dir / "datasets-build.json"),
         ExtraArgs={
             "ContentType": "application/json",
-            "Metadata": {"x-amz-meta-datasets": json.dumps(metadata)},
+            "Metadata": {
+                ctx.settings.datasets_build_s3_metadata_key: json.dumps(metadata)
+            },
         },
     )
 

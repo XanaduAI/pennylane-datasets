@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     bucket_prefix_data: ClassVar[S3Path] = S3Path("data")
     bucket_prefix_assets: ClassVar[S3Path] = S3Path("assets")
 
+    datasets_build_s3_metadata_key: ClassVar[str] = "x-amz-meta-datasets"
+
     @property
     def url_prefix_assets(self) -> str:
         return f"https://{self.bucket_public_domain}/{self.bucket_prefix_assets}"
