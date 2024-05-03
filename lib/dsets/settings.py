@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     """Global settings for pennylane-datasets."""
 
     bucket_public_domain: str = "datasets.cloud.pennylane.ai"
-    bucket_name: str = "swc-staging-pennylane-datasets"
+    bucket_name: str = "swc-dev-pennylane-datasets"
 
     bucket_prefix_build: ClassVar[S3Path] = S3Path("build")
     bucket_prefix_data: ClassVar[S3Path] = S3Path("data")
