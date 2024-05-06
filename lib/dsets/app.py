@@ -114,23 +114,18 @@ def deploy_build(
     build_key_prefix = ctx.settings.bucket_prefix_build
     build_file_key = str(build_key_prefix / "datasets-build.json")
 
+    metadata = {"commit_sha": ctx.commit_sha(), "env": "env", "tags": list(tagset)}
+
     ctx.s3_client.upload_file(
         Bucket=bucket,
         Key=build_file_key,
         Filename=str(ctx.build_dir / "datasets-build.json"),
-        ExtraArgs={"ContentType": "application/json"},
-    )
-
-    build_info_file_key = str(build_key_prefix / ".datasets-build-info.json")
-    build_info_json = json.dumps(
-        {"commit_sha": ctx.commit_sha(), "env": env, "tags": list(tagset)}
-    ).encode("utf-8")
-
-    ctx.s3_client.put_object(
-        Bucket=bucket,
-        Key=build_info_file_key,
-        Body=build_info_json,
-        ContentType="application/json",
+        ExtraArgs={
+            "ContentType": "application/json",
+            "Metadata": {
+                ctx.settings.datasets_build_s3_metadata_key: json.dumps(metadata)
+            },
+        },
     )
 
     msg.structured_print(
