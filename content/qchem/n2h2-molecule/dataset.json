@@ -52,14 +52,6 @@
       }
     },
     {
-      "slug": "samples-data",
-      "title": "Samples data",
-      "type": "DATA",
-      "content": {
-        "$path": "/qchem/_meta/features/samples-data.md"
-      }
-    },
-    {
       "slug": "tapering-data",
       "title": "Tapering data",
       "type": "DATA",
@@ -73,14 +65,6 @@
       "type": "DATA",
       "content": {
         "$path": "/qchem/_meta/features/tapering-observables-data.md"
-      }
-    },
-    {
-      "slug": "vqe-data",
-      "title": "VQE data",
-      "type": "DATA",
-      "content": {
-        "$path": "/qchem/_meta/features/vqe-data.md"
       }
     }
   ],

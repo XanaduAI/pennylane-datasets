@@ -3,86 +3,56 @@
   "attributeList": [
     {
       "name": "ground_energies",
-      "pythonType": "Any",
-      "doc": "",
+      "pythonType": "numpy.ndarray",
+      "doc": "Ground state energies of each configuration of the spin system",
       "optional": false
     },
     {
       "name": "ground_states",
-      "pythonType": "Any",
-      "doc": "",
+      "pythonType": "numpy.ndarray",
+      "doc": "Ground state of each configuration of the spin system",
       "optional": false
     },
     {
       "name": "hamiltonians",
-      "pythonType": "Any",
-      "doc": "",
-      "optional": false
-    },
-    {
-      "name": "lattice",
-      "pythonType": "Any",
-      "doc": "",
-      "optional": false
-    },
-    {
-      "name": "layout",
-      "pythonType": "Any",
-      "doc": "",
+      "pythonType": "list[[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)]",
+      "doc": "Hamiltonian of the system in the Pauli basis",
       "optional": false
     },
     {
       "name": "num_phases",
-      "pythonType": "Any",
-      "doc": "",
+      "pythonType": "int",
+      "doc": "Number of phases for the considered configurations",
       "optional": false
     },
     {
       "name": "order_params",
-      "pythonType": "Any",
-      "doc": "",
+      "pythonType": "numpy.ndarray",
+      "doc": "Value of order parameters for identifying phases",
       "optional": false
     },
     {
       "name": "parameters",
-      "pythonType": "Any",
-      "doc": "",
-      "optional": false
-    },
-    {
-      "name": "periodicity",
-      "pythonType": "Any",
-      "doc": "",
+      "pythonType": "numpy.ndarray",
+      "doc": "Tunable parameters that determine the spin system configuration",
       "optional": false
     },
     {
       "name": "shadow_basis",
-      "pythonType": "Any",
-      "doc": "",
+      "pythonType": "`numpy.ndarray`",
+      "doc": "Randomized Pauli basis for the classical shadow measurements",
       "optional": false
     },
     {
       "name": "shadow_meas",
-      "pythonType": "Any",
-      "doc": "",
+      "pythonType": "numpy.ndarray",
+      "doc": "Results from the classical shadow measurements",
       "optional": false
     },
     {
       "name": "spin_system",
-      "pythonType": "Any",
-      "doc": "",
-      "optional": false
-    },
-    {
-      "name": "sysname",
-      "pythonType": "Any",
-      "doc": "",
-      "optional": false
-    },
-    {
-      "name": "validate",
-      "pythonType": "Any",
-      "doc": "",
+      "pythonType": "dict",
+      "doc": "Basic description of the spin system including its name, Hamiltonian string, etc",
       "optional": false
     }
   ],

@@ -1,0 +1,243 @@
+{
+  "slug": "neh-cation",
+  "class": {
+    "$path": "/qchem/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "0.5",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-74.19778571909737) [I0]\n+ (1.3150849966842406) [Z10]\n+ (1.3150849966842408) [Z11]\n+ (2.823511457691575) [Z6]\n+ (2.823511457691576) [Z8]\n+ (2.823511457691576) [Z9]\n+ (2.8235114576915765) [Z7]\n+ (2.880524780247339) [Z4]\n+ (2.8805247802473395) [Z5]\n+ (3.385049560886082) [Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "0.7",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-76.00196356151503) [I0]\n+ (1.4033367671403483) [Z10]\n+ (1.4033367671403485) [Z11]\n+ (2.697934148832644) [Z4]\n+ (2.697934148832644) [Z5]\n+ (2.7512645591473572) [Z9]\n+ (2.7512645591473577) [Z8]\n+ (2.7512645591473603) [Z7]\n+ (2.751264559147361) [Z6]\n+ (3.228314952157826) [Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "0.991",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-76.97056082234498) [I0]\n+ (1.3732569569808477) [Z10]\n+ (1.3732569569808477) [Z11]\n+ (2.5274899462231586) [Z4]\n+ (2.527489946223159) [Z5]\n+ (2.710663267668462) [Z6]\n+ (2.710663267668462) [Z7]\n+ (2.710663267668462) [Z8]\n+ (2.710663267668462) [Z9]\n+ (3.1707456118128823) [Z3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "0.9",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-76.77345147542752) [I0]\n+ (1.3986973461388226) [Z10]\n+ (1.3986973461388228) [Z11]\n+ (2.56614776065547) [Z4]\n+ (2.56614776065547) [Z5]\n+ (2.718858494882178) [Z6]\n+ (2.7188584948821783) [Z7]\n+ (2.718858494882179) [Z8]\n+ (2.7188584948821797) [Z9]\n+ (3.1788896283550363) [Z3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "1.1",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-77.13235501091926) [I0]\n+ (1.329452309687558) [Z10]\n+ (1.329452309687558) [Z11]\n+ (2.4969496907261823) [Z4]\n+ (2.4969496907261823) [Z5]\n+ (2.70402396892328) [Z6]\n+ (2.704023968923281) [Z7]\n+ (2.7040239689232823) [Z8]\n+ (2.7040239689232823) [Z9]\n+ (3.16610523279189) [Z3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "1.3",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-77.30187853209449) [I0]\n+ (1.2246422574064706) [Z10]\n+ (1.2246422574064706) [Z11]\n+ (2.4758977013356636) [Z4]\n+ (2.4758977013356636) [Z5]\n+ (2.697286839494754) [Z6]\n+ (2.697286839494754) [Z8]\n+ (2.697286839494754) [Z9]\n+ (2.6972868394947542) [Z7]\n+ (3.1644034229466906) [Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "1.5",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-77.38214046776868) [I0]\n+ (1.105172588573685) [Z10]\n+ (1.1051725885736852) [Z11]\n+ (2.4867490665436924) [Z8]\n+ (2.4867490665436924) [Z9]\n+ (2.694286048537709) [Z4]\n+ (2.694286048537709) [Z6]\n+ (2.6942860485377094) [Z5]\n+ (2.69428604853771) [Z7]\n+ (3.165891128228698) [Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "1.7",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-77.42006999352921) [I0]\n+ (0.9844867802010345) [Z10]\n+ (0.9844867802010345) [Z11]\n+ (2.5159244264960283) [Z8]\n+ (2.5159244264960283) [Z9]\n+ (2.6929338895054187) [Z6]\n+ (2.6929338895054187) [Z7]\n+ (2.69293388950542) [Z5]\n+ (2.6929338895054205) [Z4]\n+ (3.167799215379587) [Z3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "1.9",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-77.43785353857066) [I0]\n+ (0.8716662841194733) [Z10]\n+ (0.8716662841194733) [Z11]\n+ (2.552268671904011) [Z8]\n+ (2.552268671904011) [Z9]\n+ (2.6923039705516807) [Z6]\n+ (2.6923039705516807) [Z7]\n+ (2.6923039705516825) [Z5]\n+ (2.692303970551683) [Z4]\n+ (3.169269898731718) [Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "2.1",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-77.44606900119933) [I0]\n+ (0.7717435181383054) [Z10]\n+ (0.7717435181383059) [Z11]\n+ (2.5882310535205098) [Z8]\n+ (2.5882310535205098) [Z9]\n+ (2.6920065022950284) [Z6]\n+ (2.692006502295029) [Z7]\n+ (2.6920065022950297) [Z4]\n+ (2.6920065022950297) [Z5]\n+ (3.170211930092926) [Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "2.3",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-77.44976836824102) [I0]\n+ (0.6863174303163215) [Z10]\n+ (0.6863174303163215) [Z11]\n+ (2.6198495215261346) [Z8]\n+ (2.6198495215261346) [Z9]\n+ (2.6918699792803364) [Z6]\n+ (2.691869979280337) [Z5]\n+ (2.691869979280337) [Z7]\n+ (2.6918699792803373) [Z4]\n+ (3.170763755829721) [Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "N/A",
+        "bond_length": "2.5",
+        "number_of_spin_orbitals": "12"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-77.45137199781514) [I0]\n+ (0.6150276460539948) [Z11]\n+ (0.6150276460539953) [Z10]\n+ (2.6454939347109305) [Z8]\n+ (2.6454939347109305) [Z9]\n+ (2.691811311590391) [Z4]\n+ (2.6918113115903926) [Z5]\n+ (2.691811311590394) [Z6]\n+ (2.6918113115903948) [Z7]\n+ (3.171074188768586) [Z3]"
+      }
+    }
+  ],
+  "downloadName": "neh_plus",
+  "features": [
+    {
+      "slug": "auxiliary-observables",
+      "title": "Auxiliary observables",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/auxiliary-observables.md"
+      }
+    },
+    {
+      "slug": "groupings-data",
+      "title": "Groupings data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/groupings-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-data",
+      "title": "Hamiltonian data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/hamiltonian-data.md"
+      }
+    },
+    {
+      "slug": "molecular-data",
+      "title": "Molecular data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/molecular-data.md"
+      }
+    },
+    {
+      "slug": "samples-data",
+      "title": "Samples data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/samples-data.md"
+      }
+    },
+    {
+      "slug": "tapering-data",
+      "title": "Tapering data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-data.md"
+      }
+    },
+    {
+      "slug": "tapering-observables-data",
+      "title": "Tapering observables data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-observables-data.md"
+      }
+    },
+    {
+      "slug": "vqe-data",
+      "title": "VQE data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/vqe-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Utkarsh Azad"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "license": null,
+    "sourceCodeUrl": null,
+    "tags": [
+      "Xanadu",
+      "Samples Available",
+      "Quantum Chemistry",
+      "VQE Data Available"
+    ],
+    "title": "NeH+ Molecule",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Dataset_ChemHero_NeH.png",
+    "thumbnail": "Dataset_ChemThumb_NeH.png",
+    "extra": {}
+  }
+}
