@@ -1,6 +1,5 @@
 Variational data obtained by using [`AdaptiveOptimizer`](https://docs.pennylane.ai/en/stable/code/api/pennylane.AdaptiveOptimizer.html#pennylane.AdaptiveOptimizer) to minimize ground state energy.
 
-> **Warning**: This data is not available for this dataset. It only exists for datasets with up to 20 spin orbitals.
 
 | Name            | Type              | Description                                                    |
 |-----------------|-------------------|----------------------------------------------------------------|
