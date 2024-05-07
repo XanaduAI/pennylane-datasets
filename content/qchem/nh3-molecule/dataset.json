@@ -8,7 +8,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.5",
         "number_of_spin_orbitals": "16"
       },
@@ -20,7 +20,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.53",
         "number_of_spin_orbitals": "16"
       },
@@ -32,7 +32,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.56",
         "number_of_spin_orbitals": "16"
       },
@@ -44,7 +44,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.59",
         "number_of_spin_orbitals": "16"
       },
@@ -56,7 +56,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.62",
         "number_of_spin_orbitals": "16"
       },
@@ -68,7 +68,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.65",
         "number_of_spin_orbitals": "16"
       },
@@ -80,7 +80,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.68",
         "number_of_spin_orbitals": "16"
       },
@@ -92,7 +92,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.71",
         "number_of_spin_orbitals": "16"
       },
@@ -104,7 +104,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.74",
         "number_of_spin_orbitals": "16"
       },
@@ -116,7 +116,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.77",
         "number_of_spin_orbitals": "16"
       },
@@ -128,7 +128,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.8",
         "number_of_spin_orbitals": "16"
       },
@@ -140,7 +140,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.83",
         "number_of_spin_orbitals": "16"
       },
@@ -152,7 +152,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.86",
         "number_of_spin_orbitals": "16"
       },
@@ -164,7 +164,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.89",
         "number_of_spin_orbitals": "16"
       },
@@ -176,7 +176,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.92",
         "number_of_spin_orbitals": "16"
       },
@@ -188,7 +188,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.95",
         "number_of_spin_orbitals": "16"
       },
@@ -200,7 +200,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "0.98",
         "number_of_spin_orbitals": "16"
       },
@@ -212,7 +212,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.01",
         "number_of_spin_orbitals": "16"
       },
@@ -224,7 +224,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.013",
         "number_of_spin_orbitals": "16"
       },
@@ -236,7 +236,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.04",
         "number_of_spin_orbitals": "16"
       },
@@ -248,7 +248,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.07",
         "number_of_spin_orbitals": "16"
       },
@@ -260,7 +260,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.1",
         "number_of_spin_orbitals": "16"
       },
@@ -272,7 +272,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.13",
         "number_of_spin_orbitals": "16"
       },
@@ -284,7 +284,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.16",
         "number_of_spin_orbitals": "16"
       },
@@ -296,7 +296,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.19",
         "number_of_spin_orbitals": "16"
       },
@@ -308,7 +308,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.22",
         "number_of_spin_orbitals": "16"
       },
@@ -320,7 +320,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.25",
         "number_of_spin_orbitals": "16"
       },
@@ -332,7 +332,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.28",
         "number_of_spin_orbitals": "16"
       },
@@ -344,7 +344,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.31",
         "number_of_spin_orbitals": "16"
       },
@@ -356,7 +356,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.34",
         "number_of_spin_orbitals": "16"
       },
@@ -368,7 +368,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.37",
         "number_of_spin_orbitals": "16"
       },
@@ -380,7 +380,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.4",
         "number_of_spin_orbitals": "16"
       },
@@ -392,7 +392,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.43",
         "number_of_spin_orbitals": "16"
       },
@@ -404,7 +404,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.46",
         "number_of_spin_orbitals": "16"
       },
@@ -416,7 +416,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.49",
         "number_of_spin_orbitals": "16"
       },
@@ -428,7 +428,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.52",
         "number_of_spin_orbitals": "16"
       },
@@ -440,7 +440,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.55",
         "number_of_spin_orbitals": "16"
       },
@@ -452,7 +452,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.58",
         "number_of_spin_orbitals": "16"
       },
@@ -464,7 +464,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.61",
         "number_of_spin_orbitals": "16"
       },
@@ -476,7 +476,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.64",
         "number_of_spin_orbitals": "16"
       },
@@ -488,7 +488,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.67",
         "number_of_spin_orbitals": "16"
       },
@@ -500,7 +500,7 @@
       "dataUrl": null,
       "parameters": {
         "basis": "STO-3G",
-        "bond_angle": "∡ HNH = 106.8°",
+        "bond_angle": "\u2221 HNH = 106.8\u00b0",
         "bond_length": "1.7",
         "number_of_spin_orbitals": "16"
       },
@@ -599,5 +599,14 @@
     "heroImage": "Dataset_ChemHero_NH3.png",
     "thumbnail": "Dataset_ChemThumb_NH3.png",
     "extra": {}
+  },
+  "extra": {
+    "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",
+    "defaultParameters": {
+      "Basis": "STO-3G",
+      "Bond angle": "\u2221 HNH = 106.8\u00b0",
+      "Bond length": "1.11",
+      "Number of spin orbitals": "16"
+    }
   }
 }

@@ -70,16 +70,17 @@
         {
           "slug": "look-at-my-data",
           "title": "My Data!",
-          "type_": "DATA",
+          "type": "DATA",
           "content": "Big data"
         },
         {
           "slug": "number",
           "title": "Numbers, etc",
-          "type_": "DATA",
+          "type": "DATA",
           "content": "# A Number\n"
         }
       ],
+      "extra": {},
       "meta": {
         "abstract": "Data",
         "authors": [],
@@ -90,6 +91,7 @@
           "machine_learning",
           "algorithms"
         ],
+        "license": null,
         "title": "Bar",
         "usingThisDataset": "# Using this dataset\nThis data can be used for computations.\n",
         "heroImage": "https://test.datasets.com/assets/hero_image-b7b71997d36675a0c3fc760efa0d63b20b122e98.jpg",

@@ -150,5 +150,13 @@
     "heroImage": "Datasets_SpinHero_BoseHubbard.png",
     "thumbnail": "Datasets_SpinThumb_BoseHubbard.png",
     "extra": {}
+  },
+  "extra": {
+    "hamiltonianEquation": "$-t(\\sum_{\\langle i,j\\rangle}b_i^\\dagger b_j + h.c.) + U\\sum_i n_i n_i$",
+    "defaultParameters": {
+      "Layout": "open",
+      "Lattice": "1x4",
+      "Periodicity": "chain"
+    }
   }
 }

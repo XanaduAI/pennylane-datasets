@@ -82,3 +82,5 @@ class DatasetFamily(Document, CamelCaseMixin):
     download_name: PythonIdentifier = "dataset"
     features: list[DatasetFeature] = []
     meta: Ref[DatasetFamilyMeta]
+
+    extra: dict[str, Any] = {}

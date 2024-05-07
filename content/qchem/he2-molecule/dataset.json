@@ -599,5 +599,14 @@
     "heroImage": "Dataset_ChemHero_He2.png",
     "thumbnail": "Dataset_ChemThumb_He2.png",
     "extra": {}
+  },
+  "extra": {
+    "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",
+    "defaultParameters": {
+      "Basis": "6-31G",
+      "Bond angle": "180",
+      "Bond length": "5.2",
+      "Number of spin orbitals": "8"
+    }
   }
 }
