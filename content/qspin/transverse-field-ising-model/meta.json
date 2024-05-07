@@ -1,0 +1,24 @@
+{
+  "abstract": null,
+  "authors": [
+    "Diego Guala",
+    "Utkarsh Azad"
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "license": null,
+  "sourceCodeUrl": null,
+  "tags": [
+    "Spin Systems",
+    "Xanadu",
+    "Samples Available"
+  ],
+  "title": "Transverse-field Ising model",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "Datasets_SpinHero_TransverseIsing.png",
+  "thumbnail": "Datasets_SpinThumb_TransverseIsing.png",
+  "extra": {}
+}

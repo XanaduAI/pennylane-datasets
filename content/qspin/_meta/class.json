@@ -1,0 +1,109 @@
+{
+  "name": "qspin",
+  "attributeList": [
+    {
+      "name": "ground_energies",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "ground_states",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "hamiltonians",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "lattice",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "layout",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "num_phases",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "order_params",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "parameters",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "periodicity",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "shadow_basis",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "shadow_meas",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "spin_system",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "sysname",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    },
+    {
+      "name": "validate",
+      "pythonType": "Any",
+      "doc": "",
+      "optional": false
+    }
+  ],
+  "parameterList": [
+    {
+      "name": "layout",
+      "title": "Layout",
+      "description": null,
+      "optional": false
+    },
+    {
+      "name": "periodicity",
+      "title": "Periodicity",
+      "description": null,
+      "optional": false
+    },
+    {
+      "name": "lattice",
+      "title": "Lattice",
+      "description": null,
+      "optional": false
+    }
+  ]
+}

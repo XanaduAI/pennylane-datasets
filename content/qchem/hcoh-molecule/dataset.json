@@ -1,0 +1,111 @@
+{
+  "slug": "hcoh-molecule",
+  "class": {
+    "$path": "/qchem/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ OCH = 102.3°",
+        "bond_length": "0.917",
+        "number_of_spin_orbitals": "24"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-69.10379780652418) [I0]\n+ (0.6634246185944177) [Z20]\n+ (0.6634246185944177) [Z21]\n+ (0.9174016367030576) [Z19]\n+ (0.9174016367030586) [Z18]\n+ (0.9892200062070812) [Z15]\n+ (0.9892200062070815) [Z14]\n+ (0.9945942997265497) [Z22]\n+ (0.9945942997265497) [Z23]\n+ (0.9962874251522069) [Z16]"
+      }
+    }
+  ],
+  "downloadName": "hcoh",
+  "features": [
+    {
+      "slug": "auxiliary-observables",
+      "title": "Auxiliary observables",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/auxiliary-observables.md"
+      }
+    },
+    {
+      "slug": "groupings-data",
+      "title": "Groupings data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/groupings-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-data",
+      "title": "Hamiltonian data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/hamiltonian-data.md"
+      }
+    },
+    {
+      "slug": "molecular-data",
+      "title": "Molecular data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/molecular-data.md"
+      }
+    },
+    {
+      "slug": "samples-data",
+      "title": "Samples data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/samples-data.md"
+      }
+    },
+    {
+      "slug": "tapering-data",
+      "title": "Tapering data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-data.md"
+      }
+    },
+    {
+      "slug": "tapering-observables-data",
+      "title": "Tapering observables data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-observables-data.md"
+      }
+    },
+    {
+      "slug": "vqe-data",
+      "title": "VQE data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/vqe-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Utkarsh Azad"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "license": null,
+    "sourceCodeUrl": null,
+    "tags": [
+      "Xanadu",
+      "Quantum Chemistry",
+      ">16 Qubits",
+      ">20 Qubits"
+    ],
+    "title": "HCOH Molecule",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Dataset_ChemHero_H2CO.png",
+    "thumbnail": "Dataset_ChemThumb_H2Co.png",
+    "extra": {}
+  }
+}

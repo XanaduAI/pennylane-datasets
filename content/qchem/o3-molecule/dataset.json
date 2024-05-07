@@ -1,0 +1,111 @@
+{
+  "slug": "o3-molecule",
+  "class": {
+    "$path": "/qchem/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ OOO = 116.8°",
+        "bond_length": "1.278",
+        "number_of_spin_orbitals": "30"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-130.5785742048541) [I0]\n+ (2.2769540564643873) [Z22]\n+ (2.2769540564643873) [Z23]\n+ (2.283900914759521) [Z19]\n+ (2.2839009147595215) [Z18]\n+ (2.2959057173931177) [Z21]\n+ (2.295905717393118) [Z20]\n+ (2.3024751125308485) [Z25]\n+ (2.302475112530849) [Z24]\n+ (2.3145624826415396) [Z29]"
+      }
+    }
+  ],
+  "downloadName": "o3",
+  "features": [
+    {
+      "slug": "auxiliary-observables",
+      "title": "Auxiliary observables",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/auxiliary-observables.md"
+      }
+    },
+    {
+      "slug": "groupings-data",
+      "title": "Groupings data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/groupings-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-data",
+      "title": "Hamiltonian data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/hamiltonian-data.md"
+      }
+    },
+    {
+      "slug": "molecular-data",
+      "title": "Molecular data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/molecular-data.md"
+      }
+    },
+    {
+      "slug": "samples-data",
+      "title": "Samples data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/samples-data.md"
+      }
+    },
+    {
+      "slug": "tapering-data",
+      "title": "Tapering data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-data.md"
+      }
+    },
+    {
+      "slug": "tapering-observables-data",
+      "title": "Tapering observables data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-observables-data.md"
+      }
+    },
+    {
+      "slug": "vqe-data",
+      "title": "VQE data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/vqe-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Utkarsh Azad"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "license": null,
+    "sourceCodeUrl": null,
+    "tags": [
+      "Xanadu",
+      "Quantum Chemistry",
+      ">16 Qubits",
+      ">20 Qubits"
+    ],
+    "title": "O3 Molecule",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Dataset_ChemHero_O3.png",
+    "thumbnail": "Dataset_ChemThumb_O3.png",
+    "extra": {}
+  }
+}

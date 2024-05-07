@@ -1,0 +1,231 @@
+{
+  "slug": "h7-molecule",
+  "class": {
+    "$path": "/qchem/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "0.5",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-2.2594101223649385) [Z12]\n+ (-2.2594101223649385) [Z13]\n+ (-1.276550165723201) [Z10]\n+ (-1.2765501657232008) [Z11]\n+ (-0.6209030779824632) [Z8]\n+ (-0.6209030779824632) [Z9]\n+ (-0.22346957222270392) [Z6]\n+ (-0.22346957222270392) [Z7]\n+ (0.046925238675969004) [Z5]\n+ (0.04692523867596901) [Z4]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "0.6",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-1.5052294785147167) [Z13]\n+ (-1.5052294785147164) [Z12]\n+ (-0.8704246314242932) [Z11]\n+ (-0.8704246314242929) [Z10]\n+ (-0.42510042827702743) [Z8]\n+ (-0.4251004282770273) [Z9]\n+ (-0.13211508577031872) [Z6]\n+ (-0.1321150857703187) [Z7]\n+ (0.07575660561088238) [Z5]\n+ (0.07575660561088252) [Z4]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "0.7",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-1.052065695294772) [Z13]\n+ (-1.0520656952947718) [Z12]\n+ (-0.6253351555791535) [Z10]\n+ (-0.6253351555791535) [Z11]\n+ (-0.3006806425222186) [Z8]\n+ (-0.30068064252221854) [Z9]\n+ (-0.07467350236027188) [Z6]\n+ (-0.07467350236027188) [Z7]\n+ (0.090000065289466) [Z4]\n+ (0.09000006528946601) [Z5]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "0.8",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-0.7694983102519628) [Z12]\n+ (-0.7694983102519628) [Z13]\n+ (-0.4673947064628429) [Z10]\n+ (-0.46739470646284287) [Z11]\n+ (-0.21823645061385766) [Z9]\n+ (-0.2182364506138576) [Z8]\n+ (-0.03764454103687015) [Z6]\n+ (-0.037644541036870066) [Z7]\n+ (0.09618647318075552) [Z4]\n+ (0.09618647318075575) [Z5]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "0.9",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-0.5813275344937969) [Z13]\n+ (-0.5813275344937968) [Z12]\n+ (-0.3584144808344113) [Z11]\n+ (-0.3584144808344112) [Z10]\n+ (-0.1614044801510582) [Z8]\n+ (-0.1614044801510581) [Z9]\n+ (-0.013339570906960765) [Z7]\n+ (-0.01333957090696071) [Z6]\n+ (0.09783356213789435) [Z4]\n+ (0.09783356213789436) [Z5]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "1.0",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-0.4480737674968368) [Z12]\n+ (-0.4480737674968368) [Z13]\n+ (-0.3214215846722674) [I0]\n+ (-0.27866390830776144) [Z10]\n+ (-0.2786639083077613) [Z11]\n+ (-0.12053940396793157) [Z9]\n+ (-0.12053940396793149) [Z8]\n+ (0.002846380992319014) [Z7]\n+ (0.0028463809923191113) [Z6]\n+ (0.0968251875410518) [Z4]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "1.1",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-0.7440607462782483) [I0]\n+ (-0.3492507069831707) [Z13]\n+ (-0.34925070698317057) [Z12]\n+ (-0.21775753552631824) [Z10]\n+ (-0.2177575355263181) [Z11]\n+ (-0.08995489021278918) [Z8]\n+ (-0.08995489021278916) [Z9]\n+ (0.0137737283763639) [Z7]\n+ (0.013773728376363994) [Z6]\n+ (0.09421809821594915) [Z4]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "1.2",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-1.050413161037833) [I0]\n+ (-0.2736742520841901) [Z12]\n+ (-0.2736742520841901) [Z13]\n+ (-0.1699488208317752) [Z11]\n+ (-0.16994882083177518) [Z10]\n+ (-0.06632358590912765) [Z9]\n+ (-0.06632358590912762) [Z8]\n+ (0.02126782404748568) [Z6]\n+ (0.021267824047485742) [Z7]\n+ (0.0906805913683651) [Z5]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "1.3",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-1.275202037782692) [I0]\n+ (-0.21473114273929966) [Z13]\n+ (-0.21473114273929964) [Z12]\n+ (-0.13175642095962958) [Z11]\n+ (-0.13175642095962953) [Z10]\n+ (-0.04765333481456075) [Z9]\n+ (-0.047653334814560695) [Z8]\n+ (0.026492491647471944) [Z6]\n+ (0.026492491647471986) [Z7]\n+ (0.08666709661308432) [Z5]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "1.4",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-1.4412015445028223) [I0]\n+ (-0.16814241779808173) [Z13]\n+ (-0.1681424177980817) [Z12]\n+ (-0.10087178208953532) [Z11]\n+ (-0.1008717820895353) [Z10]\n+ (-0.032680290412614506) [Z8]\n+ (-0.03268029041261448) [Z9]\n+ (0.0301822427207379) [Z7]\n+ (0.03018224272073794) [Z6]\n+ (0.08247812520699285) [Z4]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HHH = 180°",
+        "bond_length": "1.5",
+        "number_of_spin_orbitals": "14"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-1.564172292515583) [I0]\n+ (-0.13093588224254477) [Z12]\n+ (-0.13093588224254468) [Z13]\n+ (-0.07568644710465894) [Z11]\n+ (-0.07568644710465888) [Z10]\n+ (-0.020544924027431646) [Z9]\n+ (-0.02054492402743161) [Z8]\n+ (0.0328047772237281) [Z7]\n+ (0.03280477722372812) [Z6]\n+ (0.07830063329286116) [Z4]"
+      }
+    }
+  ],
+  "downloadName": "h7",
+  "features": [
+    {
+      "slug": "auxiliary-observables",
+      "title": "Auxiliary observables",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/auxiliary-observables.md"
+      }
+    },
+    {
+      "slug": "groupings-data",
+      "title": "Groupings data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/groupings-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-data",
+      "title": "Hamiltonian data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/hamiltonian-data.md"
+      }
+    },
+    {
+      "slug": "molecular-data",
+      "title": "Molecular data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/molecular-data.md"
+      }
+    },
+    {
+      "slug": "samples-data",
+      "title": "Samples data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/samples-data.md"
+      }
+    },
+    {
+      "slug": "tapering-data",
+      "title": "Tapering data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-data.md"
+      }
+    },
+    {
+      "slug": "tapering-observables-data",
+      "title": "Tapering observables data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-observables-data.md"
+      }
+    },
+    {
+      "slug": "vqe-data",
+      "title": "VQE data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/vqe-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Utkarsh Azad"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "license": null,
+    "sourceCodeUrl": null,
+    "tags": [
+      "Xanadu",
+      "Samples Available",
+      "Quantum Chemistry",
+      "VQE Data Available"
+    ],
+    "title": "H7 Molecule",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Dataset_ChemHero_H7.png",
+    "thumbnail": "Dataset_ChemThumb_H7.png",
+    "extra": {}
+  }
+}

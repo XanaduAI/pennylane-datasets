@@ -1,0 +1,95 @@
+{
+  "slug": "c2h6-molecule",
+  "class": {
+    "$path": "/qchem/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ CCH = 110.9°, ∡ HCH = 108.0°",
+        "bond_length": "1.535",
+        "number_of_spin_orbitals": "32"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-47.04652530725063) [I0]\n+ (0.20618785183305416) [Z27]\n+ (0.20618785183305421) [Z26]\n+ (0.21701983215823442) [Z25]\n+ (0.21701983215823445) [Z24]\n+ (0.24145980025882194) [Z30]\n+ (0.24145980025882205) [Z31]\n+ (0.24146000127792708) [Z28]\n+ (0.2414600012779273) [Z29]\n+ (0.25786314773179136) [Z21]"
+      }
+    }
+  ],
+  "downloadName": "c2h6",
+  "features": [
+    {
+      "slug": "auxiliary-observables",
+      "title": "Auxiliary observables",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/auxiliary-observables.md"
+      }
+    },
+    {
+      "slug": "groupings-data",
+      "title": "Groupings data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/groupings-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-data",
+      "title": "Hamiltonian data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/hamiltonian-data.md"
+      }
+    },
+    {
+      "slug": "molecular-data",
+      "title": "Molecular data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/molecular-data.md"
+      }
+    },
+    {
+      "slug": "tapering-data",
+      "title": "Tapering data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-data.md"
+      }
+    },
+    {
+      "slug": "tapering-observables-data",
+      "title": "Tapering observables data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-observables-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Utkarsh Azad"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "license": null,
+    "sourceCodeUrl": null,
+    "tags": [
+      "Xanadu",
+      "Quantum Chemistry",
+      ">16 Qubits",
+      ">20 Qubits"
+    ],
+    "title": "C2H6 Molecule",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Dataset_ChemHero_C2H6.png",
+    "thumbnail": "Dataset_ChemThumb_C2H6.png",
+    "extra": {}
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "abstract": null,
+  "authors": [
+    "Utkarsh Azad"
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "license": null,
+  "sourceCodeUrl": null,
+  "tags": [
+    "Spin Systems",
+    "Xanadu",
+    "Samples Available"
+  ],
+  "title": "Fermi Hubbard model",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "Datasets_SpinHero_FermiHubbard.png",
+  "thumbnail": "Datasets_SpinThumb_FermiHubbard.png",
+  "extra": {}
+}

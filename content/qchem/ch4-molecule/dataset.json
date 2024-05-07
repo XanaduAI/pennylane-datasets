@@ -1,0 +1,244 @@
+{
+  "slug": "ch4-molecule",
+  "class": {
+    "$path": "/qchem/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "0.5",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-11.89008287305803) [I0]\n+ (-1.0090244919695734) [Z17]\n+ (-1.0090244919695732) [Z16]\n+ (-0.19422583701825816) [Z14]\n+ (-0.1942258370182581) [Z15]\n+ (-0.19422583701824753) [Z10]\n+ (-0.1942258370182473) [Z11]\n+ (-0.19422583701822424) [Z12]\n+ (-0.194225837018224) [Z13]\n+ (0.7619601810217885) [Z6]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "0.7",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-19.19820543881875) [I0]\n+ (-0.284500266979404) [Z16]\n+ (-0.28450026697940356) [Z17]\n+ (-0.05596371968787925) [Z14]\n+ (-0.05596371968787908) [Z15]\n+ (-0.05596371968787726) [Z12]\n+ (-0.055963719687877035) [Z13]\n+ (-0.05596371968787334) [Z10]\n+ (-0.055963719687873226) [Z11]\n+ (0.627378689176045) [Z8]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "0.9",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-22.21982698151967) [I0]\n+ (-0.047505984817082084) [Z17]\n+ (-0.04750598481708182) [Z16]\n+ (0.04118373938953657) [Z12]\n+ (0.041183739389536705) [Z10]\n+ (0.04118373938953679) [Z13]\n+ (0.04118373938953687) [Z11]\n+ (0.04118373938953747) [Z14]\n+ (0.041183739389537774) [Z15]\n+ (0.5240706903441871) [Z8]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "1.086",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-23.626576446939104) [I0]\n+ (0.07312927482748455) [Z16]\n+ (0.07312927482748477) [Z17]\n+ (0.10357132197941303) [Z14]\n+ (0.10357132197941304) [Z15]\n+ (0.10357132197941399) [Z12]\n+ (0.10357132197941409) [Z10]\n+ (0.1035713219794141) [Z11]\n+ (0.10357132197941421) [Z13]\n+ (0.45549481664172436) [Z8]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "1.1",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-23.702580608676197) [I0]\n+ (0.07990562744715599) [Z16]\n+ (0.07990562744715643) [Z17]\n+ (0.10757896335176141) [Z15]\n+ (0.10757896335176154) [Z14]\n+ (0.10757896335176245) [Z13]\n+ (0.10757896335176247) [Z12]\n+ (0.10757896335176263) [Z11]\n+ (0.10757896335176273) [Z10]\n+ (0.45115691556944226) [Z8]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "1.3",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-24.504907152645444) [I0]\n+ (0.15079738302207882) [Z10]\n+ (0.150797383022079) [Z11]\n+ (0.15763375080145214) [Z16]\n+ (0.15763375080145225) [Z13]\n+ (0.1576337508014523) [Z12]\n+ (0.15763375080145237) [Z17]\n+ (0.15763375080145242) [Z14]\n+ (0.15763375080145292) [Z15]\n+ (0.39846713749663165) [Z6]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "1.5",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-24.956054520430126) [I0]\n+ (0.1850909670539059) [Z10]\n+ (0.1850909670539059) [Z11]\n+ (0.1968009355899767) [Z14]\n+ (0.1968009355899768) [Z15]\n+ (0.19680093558997763) [Z16]\n+ (0.19680093558997763) [Z17]\n+ (0.19680093558997855) [Z12]\n+ (0.19680093558997855) [Z13]\n+ (0.3581921275773898) [Z5]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "1.7",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-25.211044900490943) [I0]\n+ (0.19477309821421235) [Z10]\n+ (0.19477309821421251) [Z11]\n+ (0.22764765612168997) [Z15]\n+ (0.22764765612169016) [Z14]\n+ (0.22764765612169036) [Z16]\n+ (0.22764765612169047) [Z17]\n+ (0.2276476561216908) [Z13]\n+ (0.22764765612169102) [Z12]\n+ (0.3253359887291322) [Z9]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "1.9",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-25.35452465646978) [I0]\n+ (0.18877148297598095) [Z10]\n+ (0.188771482975981) [Z11]\n+ (0.2522250666306867) [Z15]\n+ (0.25222506663068706) [Z14]\n+ (0.2522250666306876) [Z13]\n+ (0.252225066630688) [Z12]\n+ (0.25222506663068833) [Z16]\n+ (0.25222506663068833) [Z17]\n+ (0.2971576693430113) [Z9]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "2.1",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-25.434404856871268) [I0]\n+ (0.1754583787483388) [Z11]\n+ (0.17545837874833883) [Z10]\n+ (0.2714941278714754) [Z12]\n+ (0.2714941278714754) [Z16]\n+ (0.2714941278714754) [Z17]\n+ (0.2714941278714755) [Z13]\n+ (0.27149412787147575) [Z15]\n+ (0.271494127871476) [Z14]\n+ (0.27288576065611836) [Z7]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "2.3",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-25.478095105685625) [I0]\n+ (0.16147684143467295) [Z10]\n+ (0.16147684143467297) [Z11]\n+ (0.252726845897849) [Z8]\n+ (0.2527268458978491) [Z9]\n+ (0.2527268458978497) [Z6]\n+ (0.25272684589785) [Z7]\n+ (0.2527268458978511) [Z4]\n+ (0.2527268458978515) [Z5]\n+ (0.28576688544291473) [Z12]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "∡ HCH = 109.5°",
+        "bond_length": "2.5",
+        "number_of_spin_orbitals": "18"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-25.50144194111171) [I0]\n+ (0.14967824501640084) [Z10]\n+ (0.1496782450164009) [Z11]\n+ (0.236584997568369) [Z7]\n+ (0.23658499756836915) [Z6]\n+ (0.23658499756836943) [Z4]\n+ (0.23658499756836968) [Z5]\n+ (0.23658499756836995) [Z8]\n+ (0.23658499756836995) [Z9]\n+ (0.2956810294181038) [Z12]"
+      }
+    }
+  ],
+  "downloadName": "ch4",
+  "features": [
+    {
+      "slug": "auxiliary-observables",
+      "title": "Auxiliary observables",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/auxiliary-observables.md"
+      }
+    },
+    {
+      "slug": "groupings-data",
+      "title": "Groupings data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/groupings-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-data",
+      "title": "Hamiltonian data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/hamiltonian-data.md"
+      }
+    },
+    {
+      "slug": "molecular-data",
+      "title": "Molecular data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/molecular-data.md"
+      }
+    },
+    {
+      "slug": "samples-data",
+      "title": "Samples data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/samples-data.md"
+      }
+    },
+    {
+      "slug": "tapering-data",
+      "title": "Tapering data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-data.md"
+      }
+    },
+    {
+      "slug": "tapering-observables-data",
+      "title": "Tapering observables data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-observables-data.md"
+      }
+    },
+    {
+      "slug": "vqe-data",
+      "title": "VQE data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/vqe-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Utkarsh Azad"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "license": null,
+    "sourceCodeUrl": null,
+    "tags": [
+      "Xanadu",
+      "Samples Available",
+      "Quantum Chemistry",
+      "VQE Data Available",
+      ">16 Qubits"
+    ],
+    "title": "CH4 Molecule",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Dataset_ChemHero_CH4.png",
+    "thumbnail": "Dataset_ChemThumb_CH4.png",
+    "extra": {}
+  }
+}

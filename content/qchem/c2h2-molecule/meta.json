@@ -1,0 +1,24 @@
+{
+  "abstract": null,
+  "authors": [
+    "Utkarsh Azad"
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "license": null,
+  "sourceCodeUrl": null,
+  "tags": [
+    "Xanadu",
+    "Quantum Chemistry",
+    ">16 Qubits",
+    ">20 Qubits"
+  ],
+  "title": "C2H2 Molecule",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "Dataset_ChemHero_C2H2.png",
+  "thumbnail": "Dataset_ChemThumb_C2H2.png",
+  "extra": {}
+}
