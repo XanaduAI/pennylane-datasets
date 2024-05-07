@@ -6,7 +6,7 @@
   "citation": {
     "$path": "citation.txt"
   },
-  "license": null,
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)",
   "sourceCodeUrl": null,
   "tags": [
     "Spin Systems",
