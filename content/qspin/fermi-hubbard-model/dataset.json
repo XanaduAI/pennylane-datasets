@@ -129,27 +129,7 @@
     }
   ],
   "meta": {
-    "abstract": null,
-    "authors": [
-      "Utkarsh Azad"
-    ],
-    "citation": {
-      "$path": "citation.txt"
-    },
-    "license": null,
-    "sourceCodeUrl": null,
-    "tags": [
-      "Spin Systems",
-      "Xanadu",
-      "Samples Available"
-    ],
-    "title": "Fermi Hubbard model",
-    "usingThisDataset": {
-      "$path": "using_this_dataset.md"
-    },
-    "heroImage": "Datasets_SpinHero_FermiHubbard.png",
-    "thumbnail": "Datasets_SpinThumb_FermiHubbard.png",
-    "extra": {}
+    "$path": "meta.json"
   },
   "extra": {
     "hamiltonianEquation": "$-t(\\sum_{\\langle i,j\\rangle,\\sigma}c_i^\\dagger c_j + h.c.) + U\\sum_i n_i^\\uparrow n_i^\\downarrow$",

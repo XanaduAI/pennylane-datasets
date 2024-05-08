@@ -217,29 +217,7 @@
     }
   ],
   "meta": {
-    "abstract": null,
-    "authors": [
-      "Utkarsh Azad"
-    ],
-    "citation": {
-      "$path": "citation.txt"
-    },
-    "license": null,
-    "sourceCodeUrl": null,
-    "tags": [
-      "Xanadu",
-      "Samples Available",
-      "Quantum Chemistry",
-      "VQE Data Available",
-      ">16 Qubits"
-    ],
-    "title": "C2 Molecule",
-    "usingThisDataset": {
-      "$path": "using_this_dataset.md"
-    },
-    "heroImage": "Dataset_ChemHero_C2.png",
-    "thumbnail": "Dataset_ChemThumb_C2.png",
-    "extra": {}
+    "$path": "meta.json"
   },
   "extra": {
     "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",

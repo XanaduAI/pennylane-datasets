@@ -129,27 +129,7 @@
     }
   ],
   "meta": {
-    "abstract": null,
-    "authors": [
-      "Utkarsh Azad"
-    ],
-    "citation": {
-      "$path": "citation.txt"
-    },
-    "license": null,
-    "sourceCodeUrl": null,
-    "tags": [
-      "Spin Systems",
-      "Xanadu",
-      "Samples Available"
-    ],
-    "title": "Bose Hubbard model",
-    "usingThisDataset": {
-      "$path": "using_this_dataset.md"
-    },
-    "heroImage": "Datasets_SpinHero_BoseHubbard.png",
-    "thumbnail": "Datasets_SpinThumb_BoseHubbard.png",
-    "extra": {}
+    "$path": "meta.json"
   },
   "extra": {
     "hamiltonianEquation": "$-t(\\sum_{\\langle i,j\\rangle}b_i^\\dagger b_j + h.c.) + U\\sum_i n_i n_i$",

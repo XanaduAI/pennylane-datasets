@@ -195,28 +195,7 @@
     }
   ],
   "meta": {
-    "abstract": null,
-    "authors": [
-      "Diego Guala",
-      "Utkarsh Azad"
-    ],
-    "citation": {
-      "$path": "citation.txt"
-    },
-    "license": null,
-    "sourceCodeUrl": null,
-    "tags": [
-      "Spin Systems",
-      "Xanadu",
-      "Samples Available"
-    ],
-    "title": "XXZ-Heisenberg model",
-    "usingThisDataset": {
-      "$path": "using_this_dataset.md"
-    },
-    "heroImage": "Datasets_SpinHero_Heisenberg.png",
-    "thumbnail": "Datasets_SpinThumb_Heisenberg.png",
-    "extra": {}
+    "$path": "meta.json"
   },
   "extra": {
     "hamiltonianEquation": "$H= J_{xy}\\sum_{\\langle i,j\\rangle}(\\sigma_i^x\\sigma_j^x+\\sigma_i^y\\sigma_j^y)+J_z\\sum_{\\langle i,j\\rangle}\\sigma_i^z\\sigma_j^z$",
