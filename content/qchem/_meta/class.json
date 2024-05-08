@@ -28,7 +28,7 @@
     {
       "name": "fci_spectrum",
       "pythonType": "numpy.ndarray",
-      "doc": "First `2 × #qubits` eigenvalues obtained from exact diagonalization",
+      "doc": "First `2 \u00d7 #qubits` eigenvalues obtained from exact diagonalization",
       "optional": false
     },
     {
@@ -52,7 +52,7 @@
     {
       "name": "number_op",
       "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
-      "doc": "Qubit operator for computing total spin 𝑆<sup>2</sup> for the chemical system",
+      "doc": "Qubit operator for computing total spin \ud835\udc46<sup>2</sup> for the chemical system",
       "optional": false
     },
     {
@@ -64,7 +64,7 @@
     {
       "name": "paulix_ops",
       "pythonType": "list[[PauliX](https://docs.pennylane.ai/en/stable/code/api/pennylane.PauliX.html#pennylane.PauliX)]",
-      "doc": "Supporting PauliX ops required to build Clifford 𝑈 for tapering",
+      "doc": "Supporting PauliX ops required to build Clifford \ud835\udc48 for tapering",
       "optional": false
     },
     {
@@ -88,13 +88,13 @@
     {
       "name": "spin2_op",
       "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
-      "doc": "Qubit operator for computing total spin 𝑆<sup>2</sup> for the chemical system",
+      "doc": "Qubit operator for computing total spin \ud835\udc46<sup>2</sup> for the chemical system",
       "optional": false
     },
     {
       "name": "spinz_op",
       "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
-      "doc": "Qubit operator for computing total spin’s projection in 𝑍 direction",
+      "doc": "Qubit operator for computing total spin\u2019s projection in \ud835\udc4d direction",
       "optional": false
     },
     {

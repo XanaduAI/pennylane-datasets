@@ -221,9 +221,9 @@
   "extra": {
     "hamiltonianEquation": "$H = J\\sum_{\\langle i,j\\rangle}\\sigma_i^z\\sigma_j^z + h\\sum_i\\sigma_i^x$",
     "defaultParameters": {
-      "Layout": "open",
-      "Lattice": "1x4",
-      "Periodicity": "chain"
+      "layout": "open",
+      "lattice": "1x4",
+      "periodicity": "chain"
     }
   }
 }

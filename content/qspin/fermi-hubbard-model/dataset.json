@@ -154,9 +154,9 @@
   "extra": {
     "hamiltonianEquation": "$-t(\\sum_{\\langle i,j\\rangle,\\sigma}c_i^\\dagger c_j + h.c.) + U\\sum_i n_i^\\uparrow n_i^\\downarrow$",
     "defaultParameters": {
-      "Layout": "open",
-      "Lattice": "1x4",
-      "Periodicity": "chain"
+      "layout": "open",
+      "lattice": "1x4",
+      "periodicity": "chain"
     }
   }
 }
