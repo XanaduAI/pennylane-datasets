@@ -1,0 +1,8 @@
+@misc{sawaya2023hamlib,
+  title={HamLib: A library of Hamiltonians for benchmarking quantum algorithms and hardware}, 
+  author={Nicolas PD Sawaya and Daniel Marti-Dafcik and Yang Ho and Daniel P Tabor and David Bernal and Alicia B Magann and Shavindra Premaratne and Pradeep Dubey and Anne Matsuura and Nathan Bishop and Wibe A de Jong and Simon Benjamin and Ojas D Parekh and Norm Tubman and Katherine Klymko and Daan Camps},
+  year={2023},
+  eprint={2306.13126},
+  archivePrefix={arXiv},
+  primaryClass={quant-ph}
+  doi={10.48550/arXiv.2306.13126}}

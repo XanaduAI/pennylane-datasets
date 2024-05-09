@@ -1,0 +1,53 @@
+{
+  "slug": "mqt-bench",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {},
+      "extra": {}
+    }
+  ],
+  "downloadName": "mqt_bench",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Nils Quetschlich",
+      "Lukas Burgholzer",
+      "Robert Wille"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "{\"version 0.1 : initial public release\"}"
+    ],
+    "license": "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
+    "sourceCodeUrl": null,
+    "tags": [
+      ">16 Qubits",
+      ">20 Qubits",
+      "Other"
+    ],
+    "title": "MQT Bench",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Datasets_GenericHero_MQTBench.png",
+    "thumbnail": "Dataset_Thumb_MQTBenchCircuits.png",
+    "extra": {}
+  },
+  "extra": {}
+}
