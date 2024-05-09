@@ -34,7 +34,7 @@
       "$path": "citation.txt"
     },
     "changelog": [
-      "{\"version 0.1 : initial public release\"}"
+      "version 0.1 : initial public release"
     ],
     "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
     "sourceCodeUrl": "https://github.com/XanaduAI/qml-benchmarks",
@@ -52,6 +52,28 @@
   "extra": {
     "defaultParameters": {
       "name": "hidden-manifold"
-    }
+    },
+    "extraAttributes": [
+      {
+        "name": "train",
+        "pythonType": "dict",
+        "doc": "Training sets. These are provided as a dictionary with form ``train[dimensions]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each number of dimensions between 2 and 20."
+      },
+      {
+        "name": "diff_train",
+        "pythonType": "dict",
+        "doc": "Diff training sets. These are provided as a dictionary with form ``diff_train[n_manifolds]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each number of manifolds (n_manifolds) between 2 and 20."
+      },
+      {
+        "name": "test",
+        "pythonType": "dict",
+        "doc": "Test sets. These are provided as a dictionary with form ``test[dimensions]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each number of dimensions between 2 and 20."
+      },
+      {
+        "name": "diff_test",
+        "pythonType": "dict",
+        "doc": "Diff test sets. These are provided as a dictionary with form ``diff_test[n_manifolds]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each number of manifolds (n_manifolds) between 2 and 20."
+      }
+    ]
   }
 }

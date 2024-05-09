@@ -67,6 +67,38 @@
   "extra": {
     "defaultParameters": {
       "name": "hamlib-max-3-sat"
-    }
+    },
+    "extraAttributes": [
+      {
+        "name": "clauses",
+        "pythonType": "list[tuple[int, int, int]]",
+        "doc": "Lists of clauses for each Max-3-SAT problem. Each clause is a list of three numbers. A value of n means that this refers to the nth variable. A positive value means that the variable must be true to satisfy the clause while a negative value means that variable must be false to satisfy the clause."
+      },
+      {
+        "name": "hamiltonians",
+        "pythonType": "list[Hamiltonian]",
+        "doc": "List of hamiltonians. Each Hamiltonian corresponds to one Max-3-SAT problem."
+      },
+      {
+        "name": "ns",
+        "pythonType": "list[int]",
+        "doc": "List containing the number of variables for each maxsat problem."
+      },
+      {
+        "name": "ids",
+        "pythonType": "list[int]",
+        "doc": "List containing the number of variables for each maxsat problem."
+      },
+      {
+        "name": "instanceids",
+        "pythonType": "list[int]",
+        "doc": "List containing numbers that identify a specific Max-3-SAT problem within a set of problems that have the same ratio and number of variables."
+      },
+      {
+        "name": "ratios",
+        "pythonType": "list[float]",
+        "doc": "List of clause ratios r = m/n, where m is the number of clauses and n is the number of variables."
+      }
+    ]
   }
 }

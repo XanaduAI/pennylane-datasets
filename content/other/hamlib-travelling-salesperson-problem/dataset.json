@@ -67,6 +67,28 @@
   "extra": {
     "defaultParameters": {
       "name": "hamlib-travelling-salesperson-problem"
-    }
+    },
+    "extraAttributes": [
+      {
+        "name": "num_cities",
+        "pythonType": "list[int]",
+        "doc": "The number of cities in each travelling salesperson problem."
+      },
+      {
+        "name": "ids",
+        "pythonType": "list[str]",
+        "doc": "Strings that identify the particular travelling salesperson problems."
+      },
+      {
+        "name": "hamiltonians",
+        "pythonType": "list[Hamiltonian]",
+        "doc": "Hamiltonians encoding the travelling salesperson problems."
+      },
+      {
+        "name": "distmats",
+        "pythonType": "list[numpy.ndarray]",
+        "doc": "Matrices defining the distances between cities. Matrix entry i,j contains the distance between cities i and j."
+      }
+    ]
   }
 }

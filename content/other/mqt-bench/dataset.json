@@ -34,7 +34,7 @@
       "$path": "citation.txt"
     },
     "changelog": [
-      "{\"version 0.1 : initial public release\"}"
+      "version 0.1 : initial public release"
     ],
     "license": "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
     "sourceCodeUrl": null,
@@ -54,6 +54,148 @@
   "extra": {
     "defaultParameters": {
       "name": "mqt-bench"
-    }
+    },
+    "extraAttributes": [
+      {
+        "name": "ae",
+        "pythonType": "dict",
+        "doc": "Amplitude Estimation (ae) circuits. The Amplitude Estimation algorithm aims to find an estimation for the amplitude of a certain quantum state. These circuits are given as a dictionary of form ae['n_qubits']."
+      },
+      {
+        "name": "dj",
+        "pythonType": "dict",
+        "doc": "Deutsch-Jozsa (dj) circuits. The Deutsch-Jozsa algorithm determines whether an unknown oracle mapping input values either to 0 or 1 is constant (always output 1 or always 0) or balanced (both outputs are equally likely). These circuits are given as a dictionary of form `dj['n_qubits']`."
+      },
+      {
+        "name": "ghz",
+        "pythonType": "dict",
+        "doc": "Greeenberger-Horne-Zeilinger (ghz) state preparation circuits. The Greenberger-Horne-Zeilinger state is an entangled quantum state with a certain type of entanglement. These circuits are given as a dictionary of form `ghz['n_qubits']`."
+      },
+      {
+        "name": "graphstate",
+        "pythonType": "dict",
+        "doc": "Graph state preparation circuits.  Graph states in quantum computing represent a graph with vertices and edges through a quantum circuit. These circuits are given as a dictionary of form `graphstate['n_qubits']`"
+      },
+      {
+        "name": "groundstate",
+        "pythonType": "dict",
+        "doc": "Ground state preparation circuits. A famous application of quantum computing, specifically of VQE algorithms is the ground state estimation of molecules. Here, we provide two different molecules, H2 (4 qubits) and LiH (12 qubits), and estimate their ground state using VQE with a TwoLocal ansatz. These circuits are given as a dictionary of form `groundstate['n_qubits']`."
+      },
+      {
+        "name": "grover-noancilla",
+        "pythonType": "dict",
+        "doc": "Grover's algorithm circuits without ancilla. One of the most famous quantum algorithms known so far, Grover's algorithm finds a certain goal quantum state determined by an oracle. In our case, the oracle is implemented by a multi-controlled Toffoli gate over all input qubits. In this no ancilla version, no ancilla qubits are used during its realization. These circuits are given as a dictionary of form `grover_noancilla['n_qubits']`."
+      },
+      {
+        "name": "grover-v-chain",
+        "pythonType": "dict",
+        "doc": "Grover's algorithm circuits with v-chain ancillary mode. These circuits are given as a dictionary of form `grover_v_chain['n_qubits']`."
+      },
+      {
+        "name": "portfolioqaoa",
+        "pythonType": "dict",
+        "doc": "QAOA circuits for portfolio optimization. This algorithm solves the mean-variance portfolio optimization problem for different assets. In this case, a QAOA algorithm instance is used. These circuits are given as a dictionary of form `portfolioqaoa['n_qubits']`."
+      },
+      {
+        "name": "portfoliovqe",
+        "pythonType": "dict",
+        "doc": "VQE circuits for portfolio optimization. This algorithm solves the mean-variance portfolio optimization problem for different assets. In this case, a VQE algorithm instance is used. These circuits are given as a dictionary of form `portfoliovqe['n_qubits']`."
+      },
+      {
+        "name": "pricingcall",
+        "pythonType": "dict",
+        "doc": "Pricing call option circuits. This algorithm estimates the fair price of a European call option using iterative amplitude estimation. These circuits are given as a dictionary of form `pricingcall['n_qubits']`."
+      },
+      {
+        "name": "pricingput",
+        "pythonType": "dict",
+        "doc": "Pricing put option circuits.   This algorithm estimates the fair price of a European put option using iterative amplitude estimation. These circuits are given as a dictionary of form `pricingput['n_qubits']`."
+      },
+      {
+        "name": "qaoa",
+        "pythonType": "dict",
+        "doc": "Quantum Approximate Optimization Algorithm (QAOA) circuits. One of the most famous algorithms from the algorithmic class of variational quantum algorithms. It is a parameterizable quantum algorithm to solve optimization problems. Here, it solves a max-cut problem instance. These circuits are given as a dictionary of form `qaoa['n_qubits']`."
+      },
+      {
+        "name": "qft",
+        "pythonType": "dict",
+        "doc": "Quantum Fourier Transform (QFT) circuits. QFT embodies the quantum equivalent of the discrete Fourier transform and is a very important building block in many quantum algorithms. These circuits are given as a dictionary of form `qft['n_qubits']`."
+      },
+      {
+        "name": "qftentangled",
+        "pythonType": "dict",
+        "doc": "Entangled QFT circuits. Applies regular QFT to entangled qubits. These circuits are given as a dictionary of form `qft['n_qubits']`."
+      },
+      {
+        "name": "qnn",
+        "pythonType": "dict",
+        "doc": "Quantum Neural Network (QNN) circuits. This algorithm class is the quantum equivalent of classical Neural Networks. These circuits are given as a dictionary of form `qnn['n_qubits']`."
+      },
+      {
+        "name": "qpeexact",
+        "pythonType": "dict",
+        "doc": "Quantum Phase Estimation (QPE) exact circuits. QPE estimates the phase of a quantum operation and is a very important building block in many quantum algorithms. In the exact case, the applied phase is exactly representable by the number of qubits. These circuits are given as a dictionary of form `qpeexact['n_qubits']`."
+      },
+      {
+        "name": "qpeinexact",
+        "pythonType": "dict",
+        "doc": "Quantum Phase Estimation (QPE) inexact circuits. Similar to QPE exact, with the difference that the applied phase is not exactly representable by the number of qubits. These circuits are given as a dictionary of form `qpeinexact['n_qubits']`."
+      },
+      {
+        "name": "qwalk-noancilla",
+        "pythonType": "dict",
+        "doc": "Quantum Walk (no ancilla) circuits. Quantum walks are the quantum equivalent of classical random walks. In this no ancilla version, no ancilla qubits are used during its realization. These circuits are given as a dictionary of form `qwalk_noancilla['n_qubits']`"
+      },
+      {
+        "name": "qwalk-v-chain",
+        "pythonType": "dict",
+        "doc": "Quantum Walk (v-chain) circuits. Similar to the Quantum Walk (no ancilla) algorithm, with the difference that the ancillary mode is a v-chain in this algorithm. These circuits are given as a dictionary of form `qwalk_v_chain['n_qubits']`."
+      },
+      {
+        "name": "random",
+        "pythonType": "dict",
+        "doc": "Random circuits. This benchmark represents a random circuit that is twice as deep as wide. It considers random quantum gates with up to four qubits. These circuits are given as a dictionary of form `random['n_qubits']`."
+      },
+      {
+        "name": "realamprandom",
+        "pythonType": "dict",
+        "doc": "Real amplitude ansatz circuits with random parameters. VQE ansatz with randomly initialized values. These circuits are given as a dictionary of form `realamprandom['n_qubits']`"
+      },
+      {
+        "name": "routing",
+        "pythonType": "dict",
+        "doc": "Routing circuits. This problem is similar to the travelling salesman problem with the difference, that more than one vehicle may be used to travel between those to be visited points, such that each point is visited at least once. These circuits are given as a dictionary of form `routing['n_qubits']`."
+      },
+      {
+        "name": "shor",
+        "pythonType": "dict",
+        "doc": "Shor's algorithm circuits. This algorithm is one of the most famous quantum algorithms and is used to find prime factors of integers. Here, we provide quantum algorithms for solving this problem for the integers 9 and 15 using a period of 4. These circuits are given as a dictionary of form `shor['n_factorized']`."
+      },
+      {
+        "name": "su2random",
+        "pythonType": "dict",
+        "doc": "Efficient SU2 ansatz circuits with random parameters. VQE ansatz with randomly initialized values. These circuits are given as a dictionary of form `su2random['n_qubits']`"
+      },
+      {
+        "name": "tsp",
+        "pythonType": "dict",
+        "doc": "Travelling Salesman circuits.  The travelling salesman problem is a very prominent optimization problem of calculating the shortest path through a number of points to be visited. Here, this is formulated as a quadratic problem and solved using VQE with a TwoLocal ansatz. These circuits are given as a dictionary of form `tsp['n_qubits']`."
+      },
+      {
+        "name": "twolocalrandom",
+        "pythonType": "dict",
+        "doc": "Two local ansatz circuits with random parameters. VQE ansatz with randomly initialized values. These circuits are given as a dictionary of form `twolocalrandom['n_qubits']`"
+      },
+      {
+        "name": "vqe",
+        "pythonType": "dict",
+        "doc": "Variational Quantum Eigensolver (VQE). VQE is also one of the most famous algorithms from the class of variational quantum algorithms. It is a parameterizable quantum algorithm with different possible choices of an ansatz function. Here, a TwoLocal ansatz is chosen and applied to the same max-cut problem instance as in QAOA. These circuits are given as a dictionary of form `vqe['n_qubits']`."
+      },
+      {
+        "name": "wstate",
+        "pythonType": "dict",
+        "doc": "W-State preparation circuits. The W state is an entangled quantum state with a certain type of entanglement. These circuits are given as a dictionary of form `wstate['n_qubits']`."
+      }
+    ]
   }
 }
