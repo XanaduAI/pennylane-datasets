@@ -64,5 +64,9 @@
     "thumbnail": "Dataset_Thumb_Generic_HamlibMax3SAT.png",
     "extra": {}
   },
-  "extra": {}
+  "extra": {
+    "defaultParameters": {
+      "name": "hamlib-max-3-sat"
+    }
+  }
 }

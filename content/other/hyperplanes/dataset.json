@@ -49,5 +49,9 @@
     "thumbnail": "Dataset_Thumb_IntersectingHyperplanes.png",
     "extra": {}
   },
-  "extra": {}
+  "extra": {
+    "defaultParameters": {
+      "name": "hyperplanes"
+    }
+  }
 }

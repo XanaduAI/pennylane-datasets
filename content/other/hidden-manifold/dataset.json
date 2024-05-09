@@ -49,5 +49,9 @@
     "thumbnail": "Dataset_Thumb_HiddenManifold.png",
     "extra": {}
   },
-  "extra": {}
+  "extra": {
+    "defaultParameters": {
+      "name": "hidden-manifold"
+    }
+  }
 }

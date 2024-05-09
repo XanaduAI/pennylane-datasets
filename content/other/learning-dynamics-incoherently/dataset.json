@@ -53,5 +53,9 @@
     "thumbnail": "Dataset_Thumb_LearningDynamicsIncoherently.png",
     "extra": {}
   },
-  "extra": {}
+  "extra": {
+    "defaultParameters": {
+      "name": "learning-dynamics-incoherently"
+    }
+  }
 }

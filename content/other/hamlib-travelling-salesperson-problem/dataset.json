@@ -64,5 +64,9 @@
     "thumbnail": "Dataset_Thumb_Generic_HamlibTravellingSalesman.png",
     "extra": {}
   },
-  "extra": {}
+  "extra": {
+    "defaultParameters": {
+      "name": "hamlib-travelling-salesperson-problem"
+    }
+  }
 }

@@ -64,5 +64,9 @@
     "thumbnail": "Dataset_Thumb_HamLibMaxCut.png",
     "extra": {}
   },
-  "extra": {}
+  "extra": {
+    "defaultParameters": {
+      "name": "hamlib-maxcut"
+    }
+  }
 }
