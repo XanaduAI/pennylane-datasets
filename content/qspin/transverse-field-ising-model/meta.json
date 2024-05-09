@@ -20,5 +20,8 @@
   },
   "heroImage": "Datasets_SpinHero_TransverseIsing.png",
   "thumbnail": "Datasets_SpinThumb_TransverseIsing.png",
-  "extra": {}
+  "extra": {},
+  "changelog": [
+    "version 0.1 : initial public release"
+  ]
 }

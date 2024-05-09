@@ -48,7 +48,8 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     abstract: Ref[str] | None = None
     authors: list[str] = []
     citation: Ref[BibtexStr] | None = None
-    license: str | None = None
+    changelog: list[str] = []
+    license: str
     source_code_url: str | None = None
     tags: list[str] = []
     title: str

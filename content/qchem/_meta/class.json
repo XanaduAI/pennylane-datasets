@@ -1,5 +1,6 @@
 {
-  "name": "qchem",
+  "slug": "qchem",
+  "name": "Qchem",
   "attributeList": [
     {
       "name": "basis_rot_samples",

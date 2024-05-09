@@ -1,5 +1,6 @@
 {
-  "name": "qspin",
+  "slug": "qspin",
+  "name": "Qspin",
   "attributeList": [
     {
       "name": "ground_energies",

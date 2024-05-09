@@ -21,5 +21,8 @@
   },
   "heroImage": "Dataset_ChemHero_O2.png",
   "thumbnail": "Dataset_ChemThumb_O2.png",
-  "extra": {}
+  "extra": {},
+  "changelog": [
+    "version 0.1 : initial public release"
+  ]
 }

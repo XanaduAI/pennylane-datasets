@@ -19,5 +19,8 @@
   },
   "heroImage": "Datasets_SpinHero_FermiHubbard.png",
   "thumbnail": "Datasets_SpinThumb_FermiHubbard.png",
-  "extra": {}
+  "extra": {},
+  "changelog": [
+    "version 0.1 : initial public release"
+  ]
 }
