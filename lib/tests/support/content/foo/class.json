@@ -1,5 +1,6 @@
 {
-    "name": "foo",
+    "slug": "foo",
+    "name": "Foo",
     "attributeList": [
       {
         "name": "list_thing",

@@ -46,14 +46,14 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     """
 
     abstract: Ref[str] | None = None
-    authors: list[str] = []
-    citation: Ref[BibtexStr] | None = None
+    authors: list[str]
+    citation: Ref[BibtexStr]
     changelog: list[str] = []
     license: str
     source_code_url: str | None = None
     tags: list[str] = []
     title: str
-    using_this_dataset: Ref[str] | None = None
+    using_this_dataset: Ref[str]
 
     hero_image: Asset | None = None
     thumbnail: Asset | None = None
