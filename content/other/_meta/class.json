@@ -2,5 +2,12 @@
   "slug": "other",
   "name": "Other",
   "attributeList": [],
-  "parameterList": []
+  "parameterList": [
+    {
+      "name": "name",
+      "title": "Name",
+      "description": "Name of the dataset",
+      "optional": false
+    }
+  ]
 }

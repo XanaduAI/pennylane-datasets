@@ -6,7 +6,9 @@
   "data": [
     {
       "dataUrl": null,
-      "parameters": {},
+      "parameters": {
+        "name": "learning-dynamics-incoherently"
+      },
       "extra": {}
     }
   ],
