@@ -6,7 +6,7 @@ from pydantic import BaseModel, model_validator
 from dsets.lib.doctree import Document
 from dsets.lib.pydantic_util import CamelCaseMixin
 
-from .fields import PythonIdentifier
+from .fields import PythonIdentifier, Slug
 
 
 class DatasetAttribute(BaseModel, CamelCaseMixin):
@@ -49,13 +49,15 @@ class DatasetClass(Document, CamelCaseMixin):
     """Model for a class of datasets, e.g 'Qchem', 'Qspin'.
 
     Attributes:
-        name: Unique name for this class
+        slug: Slug for this class
+        name: Python name for class
         attribute_list: List of expected attributes on
             a dataset instance that has this class
         parameter_list: List of expected parameters on
             a dataset instance that has this class
     """
 
+    slug: Slug
     name: PythonIdentifier
     attribute_list: list[DatasetAttribute] = []
     parameter_list: list[DatasetParameter] = []

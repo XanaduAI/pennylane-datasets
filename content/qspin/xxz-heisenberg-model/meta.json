@@ -1,0 +1,27 @@
+{
+  "abstract": null,
+  "authors": [
+    "Diego Guala",
+    "Utkarsh Azad"
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)",
+  "sourceCodeUrl": null,
+  "tags": [
+    "Spin Systems",
+    "Xanadu",
+    "Samples Available"
+  ],
+  "title": "XXZ-Heisenberg model",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "Datasets_SpinHero_Heisenberg.png",
+  "thumbnail": "Datasets_SpinThumb_Heisenberg.png",
+  "extra": {},
+  "changelog": [
+    "version 0.1 : initial public release"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "hyperplanes",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "name": "hyperplanes"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "hyperplanes",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Joseph Bowles",
+      "Shahnawaz Ahmed",
+      "Maria Schuld"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "{\"version 0.1 : initial public release\"}"
+    ],
+    "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+    "sourceCodeUrl": "https://github.com/XanaduAI/qml-benchmarks",
+    "tags": [
+      "Other"
+    ],
+    "title": "Hyperplanes",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
+    "thumbnail": "Dataset_Thumb_IntersectingHyperplanes.png",
+    "extra": {}
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "hyperplanes"
+    },
+    "extraAttributes": [
+      {
+        "name": "diff_train",
+        "pythonType": "dict",
+        "doc": "Diff training sets. These are provided as a dictionary with form ``diff_train[n_hyperplanes]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each number of hyperplanes (n_hyperplanes) between 2 and 20."
+      },
+      {
+        "name": "diff_test",
+        "pythonType": "dict",
+        "doc": "Diff test sets. These are provided as a dictionary with form ``diff_test[n_hyperplanes]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each number of hyperplanes (n_hyperplanes) between 2 and 20."
+      }
+    ]
+  }
+}

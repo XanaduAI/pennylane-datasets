@@ -1,0 +1,142 @@
+{
+  "slug": "bose-hubbard-model",
+  "class": {
+    "$path": "/qspin/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x4",
+        "lattice": "chain",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  ((0.9330127018922193+0j)) [X1 X3]\n+ ((0.9330127018922193+0j)) [Y1 Y3]\n+ ((0.9330127018922193+0j)) [X3 X5]\n+ ((0.9330127018922193+0j)) [Y3 Y5]\n+ ((0.9330127018922193+0j)) [X5 X7]\n+ ((0.9330127018922193+0j)) [Y5 Y7]\n+ ((0.9330127018922193+0j)) [X1 X7]\n+ ((0.9330127018922193+0j)) [Y1 Y7]\n+ ((-0.48296291314453416+0j)) [Y3 X0 Y1]\n+ ((-0.48296291314453416+0j)) [Y1 X2 Y3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x8",
+        "lattice": "chain",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  ((0.9330127018922193+0j)) [X1 X3]\n+ ((0.9330127018922193+0j)) [Y1 Y3]\n+ ((0.9330127018922193+0j)) [X3 X5]\n+ ((0.9330127018922193+0j)) [Y3 Y5]\n+ ((0.9330127018922193+0j)) [X5 X7]\n+ ((0.9330127018922193+0j)) [Y5 Y7]\n+ ((0.9330127018922193+0j)) [X7 X9]\n+ ((0.9330127018922193+0j)) [Y7 Y9]\n+ ((0.9330127018922193+0j)) [X9 X11]\n+ ((0.9330127018922193+0j)) [Y9 Y11]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x2",
+        "lattice": "rectangular",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  ((0.9330127018922193+0j)) [X1 X3]\n+ ((0.9330127018922193+0j)) [Y1 Y3]\n+ ((0.9330127018922193+0j)) [X3 X5]\n+ ((0.9330127018922193+0j)) [Y3 Y5]\n+ ((0.9330127018922193+0j)) [X5 X7]\n+ ((0.9330127018922193+0j)) [Y5 Y7]\n+ ((0.9330127018922193+0j)) [X1 X7]\n+ ((0.9330127018922193+0j)) [Y1 Y7]\n+ ((-0.48296291314453416+0j)) [Y3 X0 Y1]\n+ ((-0.48296291314453416+0j)) [Y1 X2 Y3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x4",
+        "lattice": "rectangular",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  ((0.9330127018922193+0j)) [X1 X3]\n+ ((0.9330127018922193+0j)) [Y1 Y3]\n+ ((0.9330127018922193+0j)) [X3 X5]\n+ ((0.9330127018922193+0j)) [Y3 Y5]\n+ ((0.9330127018922193+0j)) [X5 X7]\n+ ((0.9330127018922193+0j)) [Y5 Y7]\n+ ((0.9330127018922193+0j)) [X7 X9]\n+ ((0.9330127018922193+0j)) [Y7 Y9]\n+ ((0.9330127018922193+0j)) [X9 X11]\n+ ((0.9330127018922193+0j)) [Y9 Y11]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x4",
+        "lattice": "chain",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  ((0.9330127018922193+0j)) [X1 X3]\n+ ((0.9330127018922193+0j)) [Y1 Y3]\n+ ((0.9330127018922193+0j)) [X3 X5]\n+ ((0.9330127018922193+0j)) [Y3 Y5]\n+ ((0.9330127018922193+0j)) [X5 X7]\n+ ((0.9330127018922193+0j)) [Y5 Y7]\n+ ((-0.48296291314453416+0j)) [Y3 X0 Y1]\n+ ((-0.48296291314453416+0j)) [Y1 X2 Y3]\n+ ((-0.48296291314453416+0j)) [Y5 X2 Y3]\n+ ((-0.48296291314453416+0j)) [Y3 X4 Y5]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x8",
+        "lattice": "chain",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  ((0.9330127018922193+0j)) [X1 X3]\n+ ((0.9330127018922193+0j)) [Y1 Y3]\n+ ((0.9330127018922193+0j)) [X3 X5]\n+ ((0.9330127018922193+0j)) [Y3 Y5]\n+ ((0.9330127018922193+0j)) [X5 X7]\n+ ((0.9330127018922193+0j)) [Y5 Y7]\n+ ((0.9330127018922193+0j)) [X7 X9]\n+ ((0.9330127018922193+0j)) [Y7 Y9]\n+ ((0.9330127018922193+0j)) [X9 X11]\n+ ((0.9330127018922193+0j)) [Y9 Y11]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x2",
+        "lattice": "rectangular",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  ((0.9330127018922193+0j)) [X1 X3]\n+ ((0.9330127018922193+0j)) [Y1 Y3]\n+ ((0.9330127018922193+0j)) [X3 X5]\n+ ((0.9330127018922193+0j)) [Y3 Y5]\n+ ((0.9330127018922193+0j)) [X5 X7]\n+ ((0.9330127018922193+0j)) [Y5 Y7]\n+ ((-0.48296291314453416+0j)) [Y3 X0 Y1]\n+ ((-0.48296291314453416+0j)) [Y1 X2 Y3]\n+ ((-0.48296291314453416+0j)) [Y5 X2 Y3]\n+ ((-0.48296291314453416+0j)) [Y3 X4 Y5]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x4",
+        "lattice": "rectangular",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  ((0.9330127018922193+0j)) [X1 X3]\n+ ((0.9330127018922193+0j)) [Y1 Y3]\n+ ((0.9330127018922193+0j)) [X3 X5]\n+ ((0.9330127018922193+0j)) [Y3 Y5]\n+ ((0.9330127018922193+0j)) [X5 X7]\n+ ((0.9330127018922193+0j)) [Y5 Y7]\n+ ((0.9330127018922193+0j)) [X7 X9]\n+ ((0.9330127018922193+0j)) [Y7 Y9]\n+ ((0.9330127018922193+0j)) [X9 X11]\n+ ((0.9330127018922193+0j)) [Y9 Y11]"
+      }
+    }
+  ],
+  "downloadName": "bosehubbard",
+  "features": [
+    {
+      "slug": "classical-shadow-data",
+      "title": "Classical shadow data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/classical-shadow-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-and-ground-state-data",
+      "title": "Hamiltonian and ground-state data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/hamiltonian-and-ground-state-data.md"
+      }
+    },
+    {
+      "slug": "phase-transition-data",
+      "title": "Phase transition data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/phase-transition-data.md"
+      }
+    },
+    {
+      "slug": "spin-system-data",
+      "title": "Spin system data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/spin-system-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "hamiltonianEquation": "$-t(\\sum_{\\langle i,j\\rangle}b_i^\\dagger b_j + h.c.) + U\\sum_i n_i n_i$",
+    "defaultParameters": {
+      "layout": "open",
+      "lattice": "1x4",
+      "periodicity": "chain"
+    }
+  }
+}

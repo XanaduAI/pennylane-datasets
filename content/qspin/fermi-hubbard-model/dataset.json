@@ -1,0 +1,142 @@
+{
+  "slug": "fermi-hubbard-model",
+  "class": {
+    "$path": "/qspin/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x4",
+        "lattice": "chain",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0j) [Z0 Z4]\n+ (0j) [Z1 Z5]\n+ (0j) [Z2 Z6]\n+ (0j) [Z3 Z7]\n+ ((0.5+0j)) [Y0 Y1]\n+ ((0.5+0j)) [X0 X1]\n+ ((0.5+0j)) [Y2 Y1]\n+ ((0.5+0j)) [X2 X1]\n+ ((0.5+0j)) [Y3 Y2]\n+ ((0.5+0j)) [X3 X2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x8",
+        "lattice": "chain",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0j) [Z0 Z8]\n+ (0j) [Z1 Z9]\n+ (0j) [Z2 Z10]\n+ (0j) [Z3 Z11]\n+ (0j) [Z4 Z12]\n+ (0j) [Z5 Z13]\n+ (0j) [Z6 Z14]\n+ (0j) [Z7 Z15]\n+ ((0.5+0j)) [Y0 Y1]\n+ ((0.5+0j)) [X0 X1]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x2",
+        "lattice": "rectangular",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0j) [Z0 Z4]\n+ (0j) [Z1 Z5]\n+ (0j) [Z2 Z6]\n+ (0j) [Z3 Z7]\n+ ((0.5+0j)) [Y0 Y1]\n+ ((0.5+0j)) [X0 X1]\n+ ((0.5+0j)) [Y2 Y1]\n+ ((0.5+0j)) [X2 X1]\n+ ((0.5+0j)) [Y3 Y2]\n+ ((0.5+0j)) [X3 X2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x4",
+        "lattice": "rectangular",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0j) [Z0 Z8]\n+ (0j) [Z1 Z9]\n+ (0j) [Z2 Z10]\n+ (0j) [Z3 Z11]\n+ (0j) [Z4 Z12]\n+ (0j) [Z5 Z13]\n+ (0j) [Z6 Z14]\n+ (0j) [Z7 Z15]\n+ ((0.5+0j)) [Y0 Y1]\n+ ((0.5+0j)) [X0 X1]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x4",
+        "lattice": "chain",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0j) [Z0 Z4]\n+ (0j) [Z1 Z5]\n+ (0j) [Z2 Z6]\n+ (0j) [Z3 Z7]\n+ ((0.5+0j)) [Y0 Y1]\n+ ((0.5+0j)) [X0 X1]\n+ ((0.5+0j)) [Y2 Y1]\n+ ((0.5+0j)) [X2 X1]\n+ ((0.5+0j)) [Y3 Y2]\n+ ((0.5+0j)) [X3 X2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x8",
+        "lattice": "chain",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0j) [Z0 Z8]\n+ (0j) [Z1 Z9]\n+ (0j) [Z2 Z10]\n+ (0j) [Z3 Z11]\n+ (0j) [Z4 Z12]\n+ (0j) [Z5 Z13]\n+ (0j) [Z6 Z14]\n+ (0j) [Z7 Z15]\n+ ((0.5+0j)) [Y0 Y1]\n+ ((0.5+0j)) [X0 X1]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x2",
+        "lattice": "rectangular",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0j) [Z0 Z4]\n+ (0j) [Z1 Z5]\n+ (0j) [Z2 Z6]\n+ (0j) [Z3 Z7]\n+ ((0.5+0j)) [Y0 Y1]\n+ ((0.5+0j)) [X0 X1]\n+ ((0.5+0j)) [Y2 Y1]\n+ ((0.5+0j)) [X2 X1]\n+ ((0.5+0j)) [Y3 Y2]\n+ ((0.5+0j)) [X3 X2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x4",
+        "lattice": "rectangular",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0j) [Z0 Z8]\n+ (0j) [Z1 Z9]\n+ (0j) [Z2 Z10]\n+ (0j) [Z3 Z11]\n+ (0j) [Z4 Z12]\n+ (0j) [Z5 Z13]\n+ (0j) [Z6 Z14]\n+ (0j) [Z7 Z15]\n+ ((0.5+0j)) [Y0 Y1]\n+ ((0.5+0j)) [X0 X1]"
+      }
+    }
+  ],
+  "downloadName": "fermihubbard",
+  "features": [
+    {
+      "slug": "classical-shadow-data",
+      "title": "Classical shadow data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/classical-shadow-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-and-ground-state-data",
+      "title": "Hamiltonian and ground-state data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/hamiltonian-and-ground-state-data.md"
+      }
+    },
+    {
+      "slug": "phase-transition-data",
+      "title": "Phase transition data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/phase-transition-data.md"
+      }
+    },
+    {
+      "slug": "spin-system-data",
+      "title": "Spin system data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/spin-system-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "hamiltonianEquation": "$-t(\\sum_{\\langle i,j\\rangle,\\sigma}c_i^\\dagger c_j + h.c.) + U\\sum_i n_i^\\uparrow n_i^\\downarrow$",
+    "defaultParameters": {
+      "layout": "open",
+      "lattice": "1x4",
+      "periodicity": "chain"
+    }
+  }
+}

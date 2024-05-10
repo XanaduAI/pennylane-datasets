@@ -1,0 +1,94 @@
+{
+  "slug": "hamlib-maxcut",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "name": "hamlib-maxcut"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "hamlib_maxcut",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Nicolas PD Sawaya",
+      "Daniel Marti-Dafcik",
+      "Yang Ho",
+      "Daniel P Tabor",
+      "David E Bernal Neira",
+      "Alicia B Magann",
+      "Shavindra Premaratne",
+      "Pradeep Dubey",
+      "Anne Matsuura",
+      "Nathan Bishop",
+      "Wibe A de Jong",
+      "Simon Benjamin",
+      "Ojas D Parekh",
+      "Norm M. Tubman",
+      "Katherine Klymko",
+      "Daan Camps"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "{\"version 0.1 : initial public release\"}"
+    ],
+    "license": "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
+    "sourceCodeUrl": null,
+    "tags": [
+      ">16 Qubits",
+      ">20 Qubits",
+      "Other"
+    ],
+    "title": "HamLib: MaxCut",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Datasets_GenericHero_2.png",
+    "thumbnail": "Dataset_Thumb_HamLibMaxCut.png",
+    "extra": {}
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "hamlib-maxcut"
+    },
+    "extraAttributes": [
+      {
+        "name": "hamiltonians",
+        "pythonType": "list[Hamiltonian]",
+        "doc": "List of hamiltonians. Each Hamiltonian corresponds to one MaxCut instance."
+      },
+      {
+        "name": "ns",
+        "pythonType": "list[int]",
+        "doc": "List containing the number of nodes for each maxcut instance."
+      },
+      {
+        "name": "ids",
+        "pythonType": "list[Any]",
+        "doc": "Describes the graph type. For circulant graphs, these describe the offset in edge connections and have form `circ_offsets-{distance to first connection}-{distance to second connection}`. For complete bipartite graphs, these describe the number of nodes in each set and have form `complbipart_a-{number of nodes in set a}_b{number of nodes in set b}`. Star graphs do not contain extra information and are labeled `star`."
+      },
+      {
+        "name": "edges",
+        "pythonType": "list[Any]",
+        "doc": "The MaxCut edges provided as tuples of form (node1, node2)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "two-curves",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "name": "two-curves"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "two_curves",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Joseph Bowles",
+      "Shahnawaz Ahmed",
+      "Maria Schuld"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "{\"version 0.1 : initial public release\"}"
+    ],
+    "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+    "sourceCodeUrl": "https://github.com/XanaduAI/qml-benchmarks",
+    "tags": [
+      "Other"
+    ],
+    "title": "Two Curves",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
+    "thumbnail": "Dataset_Thumb_TwoCurves.png",
+    "extra": {}
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "two-curves"
+    },
+    "extraAttributes": [
+      {
+        "name": "train",
+        "pythonType": "dict",
+        "doc": "Training sets. These are provided as a dictionary with form ``train[dimension]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each dimension between 2 and 20."
+      },
+      {
+        "name": "diff_train",
+        "pythonType": "dict",
+        "doc": "Diff training sets. These are provided as a dictionary with form ``diff_train[polynomialdegree]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each polynomial degree between 2 and 20."
+      },
+      {
+        "name": "test",
+        "pythonType": "dict",
+        "doc": "Test sets. These are provided as a dictionary with form ``test[dimension]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each dimension between 2 and 20."
+      },
+      {
+        "name": "diff_test",
+        "pythonType": "dict",
+        "doc": "Diff test sets. These are provided as a dictionary with form ``diff_test[polynomialdegree]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each polynomial degree between 2 and 20."
+      }
+    ]
+  }
+}

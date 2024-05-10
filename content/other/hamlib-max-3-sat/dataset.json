@@ -1,0 +1,104 @@
+{
+  "slug": "hamlib-max-3-sat",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "name": "hamlib-max-3-sat"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "hamlib_max3sat",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Nicolas PD Sawaya",
+      "Daniel Marti-Dafcik",
+      "Yang Ho",
+      "Daniel P Tabor",
+      "David E Bernal Neira",
+      "Alicia B Magann",
+      "Shavindra Premaratne",
+      "Pradeep Dubey",
+      "Anne Matsuura",
+      "Nathan Bishop",
+      "Wibe A de Jong",
+      "Simon Benjamin",
+      "Ojas D Parekh",
+      "Norm M. Tubman",
+      "Katherine Klymko",
+      "Daan Camps"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "version 0.1 : initial public release"
+    ],
+    "license": "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
+    "sourceCodeUrl": null,
+    "tags": [
+      ">16 Qubits",
+      ">20 Qubits",
+      "Other"
+    ],
+    "title": "HamLib: Max-3-SAT",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Circuit_01.png",
+    "thumbnail": "Dataset_Thumb_Generic_HamlibMax3SAT.png",
+    "extra": {}
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "hamlib-max-3-sat"
+    },
+    "extraAttributes": [
+      {
+        "name": "clauses",
+        "pythonType": "list[tuple[int, int, int]]",
+        "doc": "Lists of clauses for each Max-3-SAT problem. Each clause is a list of three numbers. A value of n means that this refers to the nth variable. A positive value means that the variable must be true to satisfy the clause while a negative value means that variable must be false to satisfy the clause."
+      },
+      {
+        "name": "hamiltonians",
+        "pythonType": "list[Hamiltonian]",
+        "doc": "List of hamiltonians. Each Hamiltonian corresponds to one Max-3-SAT problem."
+      },
+      {
+        "name": "ns",
+        "pythonType": "list[int]",
+        "doc": "List containing the number of variables for each maxsat problem."
+      },
+      {
+        "name": "ids",
+        "pythonType": "list[int]",
+        "doc": "List containing the number of variables for each maxsat problem."
+      },
+      {
+        "name": "instanceids",
+        "pythonType": "list[int]",
+        "doc": "List containing numbers that identify a specific Max-3-SAT problem within a set of problems that have the same ratio and number of variables."
+      },
+      {
+        "name": "ratios",
+        "pythonType": "list[float]",
+        "doc": "List of clause ratios r = m/n, where m is the number of clauses and n is the number of variables."
+      }
+    ]
+  }
+}

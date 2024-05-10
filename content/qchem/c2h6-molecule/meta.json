@@ -1,0 +1,27 @@
+{
+  "abstract": null,
+  "authors": [
+    "Utkarsh Azad"
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)",
+  "sourceCodeUrl": null,
+  "tags": [
+    "Xanadu",
+    "Quantum Chemistry",
+    ">16 Qubits",
+    ">20 Qubits"
+  ],
+  "title": "C2H6 Molecule",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "Dataset_ChemHero_C2H6.png",
+  "thumbnail": "Dataset_ChemThumb_C2H6.png",
+  "extra": {},
+  "changelog": [
+    "version 0.1 : initial public release"
+  ]
+}

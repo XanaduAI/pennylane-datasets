@@ -1,0 +1,208 @@
+{
+  "slug": "transverse-field-ising-model",
+  "class": {
+    "$path": "/qspin/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x16",
+        "lattice": "chain",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (0.0) [X8]\n+ (0.0) [X9]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x4",
+        "lattice": "chain",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (-1.0) [Z0 Z1]\n+ (-1.0) [Z0 Z3]\n+ (-1.0) [Z1 Z2]\n+ (-1.0) [Z2 Z3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x8",
+        "lattice": "chain",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (-1.0) [Z0 Z1]\n+ (-1.0) [Z0 Z7]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x2",
+        "lattice": "rectangular",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (-1.0) [Z0 Z1]\n+ (-1.0) [Z0 Z2]\n+ (-1.0) [Z2 Z3]\n+ (-1.0) [Z1 Z3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x4",
+        "lattice": "rectangular",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (-1.0) [Z0 Z1]\n+ (-1.0) [Z0 Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x8",
+        "lattice": "rectangular",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (0.0) [X8]\n+ (0.0) [X9]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "4x4",
+        "lattice": "rectangular",
+        "periodicity": "closed"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (0.0) [X8]\n+ (0.0) [X9]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x16",
+        "lattice": "chain",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (0.0) [X8]\n+ (0.0) [X9]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x4",
+        "lattice": "chain",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (-1.0) [Z0 Z1]\n+ (-1.0) [Z1 Z2]\n+ (-1.0) [Z2 Z3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "1x8",
+        "lattice": "chain",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (-1.0) [Z0 Z1]\n+ (-1.0) [Z1 Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x2",
+        "lattice": "rectangular",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (-1.0) [Z0 Z1]\n+ (-1.0) [Z0 Z2]\n+ (-1.0) [Z2 Z3]\n+ (-1.0) [Z1 Z3]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x4",
+        "lattice": "rectangular",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (-1.0) [Z0 Z1]\n+ (-1.0) [Z0 Z2]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "2x8",
+        "lattice": "rectangular",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (0.0) [X8]\n+ (0.0) [X9]"
+      }
+    },
+    {
+      "dataUrl": null,
+      "parameters": {
+        "layout": "4x4",
+        "lattice": "rectangular",
+        "periodicity": "open"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (0.0) [X0]\n+ (0.0) [X1]\n+ (0.0) [X2]\n+ (0.0) [X3]\n+ (0.0) [X4]\n+ (0.0) [X5]\n+ (0.0) [X6]\n+ (0.0) [X7]\n+ (0.0) [X8]\n+ (0.0) [X9]"
+      }
+    }
+  ],
+  "downloadName": "ising",
+  "features": [
+    {
+      "slug": "classical-shadow-data",
+      "title": "Classical shadow data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/classical-shadow-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-and-ground-state-data",
+      "title": "Hamiltonian and ground-state data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/hamiltonian-and-ground-state-data.md"
+      }
+    },
+    {
+      "slug": "phase-transition-data",
+      "title": "Phase transition data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/phase-transition-data.md"
+      }
+    },
+    {
+      "slug": "spin-system-data",
+      "title": "Spin system data",
+      "type_": "DATA",
+      "content": {
+        "$path": "/qspin/_meta/features/spin-system-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "hamiltonianEquation": "$H = J\\sum_{\\langle i,j\\rangle}\\sigma_i^z\\sigma_j^z + h\\sum_i\\sigma_i^x$",
+    "defaultParameters": {
+      "layout": "open",
+      "lattice": "1x4",
+      "periodicity": "chain"
+    }
+  }
+}

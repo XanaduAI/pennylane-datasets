@@ -1,0 +1,28 @@
+{
+  "abstract": null,
+  "authors": [
+    "Utkarsh Azad"
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)",
+  "sourceCodeUrl": null,
+  "tags": [
+    "Xanadu",
+    "Samples Available",
+    "Quantum Chemistry",
+    "VQE Data Available",
+    ">16 Qubits"
+  ],
+  "title": "C2 Molecule",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "Dataset_ChemHero_C2.png",
+  "thumbnail": "Dataset_ChemThumb_C2.png",
+  "extra": {},
+  "changelog": [
+    "version 0.1 : initial public release"
+  ]
+}

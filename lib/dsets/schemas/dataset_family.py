@@ -22,7 +22,7 @@ class DatasetFeature(Document, CamelCaseMixin):
 
     slug: Slug
     title: str
-    type_: Literal["DATA", "SAMPLES"] = "DATA"
+    type_: Annotated[Literal["DATA", "SAMPLES"], Field(alias="type")] = "DATA"
     content: Ref[str]
 
 
@@ -34,6 +34,7 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
         abstract: Short, 1-paragraph description of the dataset
         authors: List of authors
         citation: Citation, in Bibtex format
+        license: License information
         source_code_url: Link to source code for reproducing the
             dataset
         tags: List of tags
@@ -45,12 +46,14 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     """
 
     abstract: Ref[str] | None = None
-    authors: list[str] = []
-    citation: Ref[BibtexStr] | None = None
+    authors: list[str]
+    citation: Ref[BibtexStr]
+    changelog: list[str] = []
+    license: str
     source_code_url: str | None = None
     tags: list[str] = []
     title: str
-    using_this_dataset: Ref[str] | None = None
+    using_this_dataset: Ref[str]
 
     hero_image: Asset | None = None
     thumbnail: Asset | None = None
@@ -80,3 +83,5 @@ class DatasetFamily(Document, CamelCaseMixin):
     download_name: PythonIdentifier = "dataset"
     features: list[DatasetFeature] = []
     meta: Ref[DatasetFamilyMeta]
+
+    extra: dict[str, Any] = {}

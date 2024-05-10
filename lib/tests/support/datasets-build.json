@@ -5,7 +5,8 @@
   ],
   "datasetClasses": {
     "foo": {
-      "name": "foo",
+      "name": "Foo",
+      "slug": "foo",
       "attributeList": [
         {
           "name": "list_thing",
@@ -34,7 +35,8 @@
     "bar": {
       "slug": "bar",
       "class": {
-        "name": "foo",
+        "name": "Foo",
+        "slug": "foo",
         "attributeList": [
           {
             "name": "list_thing",
@@ -70,19 +72,20 @@
         {
           "slug": "look-at-my-data",
           "title": "My Data!",
-          "type_": "DATA",
+          "type": "DATA",
           "content": "Big data"
         },
         {
           "slug": "number",
           "title": "Numbers, etc",
-          "type_": "DATA",
+          "type": "DATA",
           "content": "# A Number\n"
         }
       ],
+      "extra": {},
       "meta": {
         "abstract": "Data",
-        "authors": [],
+        "authors": ["Author 1"],
         "citation": "@misc{FooData,\n  title = {Data!},  \n  author = {Author}, \n  howpublished = {\\url{https://pennylane.ai/datasets/foo/bar}}, \n  year = {2023}\n}\n",
         "sourceCodeUrl": null,
         "tags": [
@@ -90,6 +93,8 @@
           "machine_learning",
           "algorithms"
         ],
+        "license": "GPL",
+        "changelog": ["Initial release"],
         "title": "Bar",
         "usingThisDataset": "# Using this dataset\nThis data can be used for computations.\n",
         "heroImage": "https://test.datasets.com/assets/hero_image-b7b71997d36675a0c3fc760efa0d63b20b122e98.jpg",

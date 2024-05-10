@@ -1,0 +1,94 @@
+{
+  "slug": "hamlib-travelling-salesperson-problem",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "name": "hamlib-travelling-salesperson-problem"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "hamlib_tsp",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Nicolas PD Sawaya",
+      "Daniel Marti-Dafcik",
+      "Yang Ho",
+      "Daniel P Tabor",
+      "David E Bernal Neira",
+      "Alicia B Magann",
+      "Shavindra Premaratne",
+      "Pradeep Dubey",
+      "Anne Matsuura",
+      "Nathan Bishop",
+      "Wibe A de Jong",
+      "Simon Benjamin",
+      "Ojas D Parekh",
+      "Norm M. Tubman",
+      "Katherine Klymko",
+      "Daan Camps"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "{\"version 0.1 : initial public release\"}"
+    ],
+    "license": "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
+    "sourceCodeUrl": null,
+    "tags": [
+      ">16 Qubits",
+      ">20 Qubits",
+      "Other"
+    ],
+    "title": "HamLib: Travelling Salesperson Problem",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Circuit_01.png",
+    "thumbnail": "Dataset_Thumb_Generic_HamlibTravellingSalesman.png",
+    "extra": {}
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "hamlib-travelling-salesperson-problem"
+    },
+    "extraAttributes": [
+      {
+        "name": "num_cities",
+        "pythonType": "list[int]",
+        "doc": "The number of cities in each travelling salesperson problem."
+      },
+      {
+        "name": "ids",
+        "pythonType": "list[str]",
+        "doc": "Strings that identify the particular travelling salesperson problems."
+      },
+      {
+        "name": "hamiltonians",
+        "pythonType": "list[Hamiltonian]",
+        "doc": "Hamiltonians encoding the travelling salesperson problems."
+      },
+      {
+        "name": "distmats",
+        "pythonType": "list[numpy.ndarray]",
+        "doc": "Matrices defining the distances between cities. Matrix entry i,j contains the distance between cities i and j."
+      }
+    ]
+  }
+}

@@ -24,16 +24,19 @@ class TestDatasetFamily:
         "authors": [
           "Author 1"
         ],
+        "changelog": ["Initial release"],
         "abstract": "Abstract...",
         "citation": {
           "$path": "citation.txt"
         },
         "usingThisDataset": {
           "$path": "about.md"
-        }
+        },
+        "license": "GPL"
       },
       "class": {
-        "name": "qchem",
+        "slug": "qchem",
+        "name": "Qchem",
         "attributeList": [
           {
             "name": "molecule",
@@ -79,7 +82,8 @@ class TestDatasetFamily:
 
         assert family.slug == "h2-molecule"
         assert family.class_ == DatasetClass(
-            name="qchem",
+            name="Qchem",
+            slug="qchem",
             attribute_list=[
                 DatasetAttribute(
                     name="molecule",

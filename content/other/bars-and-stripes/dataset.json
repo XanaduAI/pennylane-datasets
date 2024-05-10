@@ -1,0 +1,69 @@
+{
+  "slug": "bars-and-stripes",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "name": "bars-and-stripes"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "bars_and_stripes",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Joseph Bowles",
+      "Shahnawaz Ahmed",
+      "Maria Schuld"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "version 0.1 : initial public release"
+    ],
+    "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+    "sourceCodeUrl": "https://github.com/XanaduAI/qml-benchmarks",
+    "tags": [
+      "Other"
+    ],
+    "title": "Bars and Stripes",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
+    "thumbnail": "Dataset_Thumb_BarsAndStripes.png",
+    "extra": {}
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "bars-and-stripes"
+    },
+    "extraAttributes": [
+      {
+        "name": "train",
+        "pythonType": "dict",
+        "doc": "Training sets. These are provided as a dictionary with form ``train[image_size]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each image size: 4x4, 8x8, 16x16, and 32x32. The vectors can be reshaped to image_size x image_size arrays to reproduce the original image."
+      },
+      {
+        "name": "test",
+        "pythonType": "dict",
+        "doc": "Test sets. These are provided as a dictionary with form ``test[image_size]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each image size: 4x4, 8x8, 16x16, and 32x32. The vectors can be reshaped to image_size x image_size arrays to reproduce the original image."
+      }
+    ]
+  }
+}

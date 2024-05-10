@@ -1,0 +1,83 @@
+{
+  "slug": "n2h4-molecule",
+  "class": {
+    "$path": "/qchem/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "basis": "STO-3G",
+        "bond_angle": "\u2221 NNH = 108.9\u00b0, \u2221 HNH = 106.0\u00b0",
+        "bond_length": "1.446",
+        "number_of_spin_orbitals": "28"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-66.71687178200675) [I0]\n+ (0.7138026260642426) [Z21]\n+ (0.7138026260642427) [Z20]\n+ (0.7258421560158994) [Z25]\n+ (0.7258421560159001) [Z24]\n+ (0.7336096093157333) [Z22]\n+ (0.7336096093157335) [Z23]\n+ (0.7392096408690603) [Z26]\n+ (0.7392096408690605) [Z27]\n+ (1.0808723689940647) [Z18]"
+      }
+    }
+  ],
+  "downloadName": "n2h4",
+  "features": [
+    {
+      "slug": "auxiliary-observables",
+      "title": "Auxiliary observables",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/auxiliary-observables.md"
+      }
+    },
+    {
+      "slug": "groupings-data",
+      "title": "Groupings data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/groupings-data.md"
+      }
+    },
+    {
+      "slug": "hamiltonian-data",
+      "title": "Hamiltonian data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/hamiltonian-data.md"
+      }
+    },
+    {
+      "slug": "molecular-data",
+      "title": "Molecular data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/molecular-data.md"
+      }
+    },
+    {
+      "slug": "tapering-data",
+      "title": "Tapering data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-data.md"
+      }
+    },
+    {
+      "slug": "tapering-observables-data",
+      "title": "Tapering observables data",
+      "type": "DATA",
+      "content": {
+        "$path": "/qchem/_meta/features/tapering-observables-data.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",
+    "defaultParameters": {
+      "basis": "STO-3G",
+      "bond_angle": "\u2221 NNH = 108.9\u00b0, \u2221 HNH = 106.0\u00b0",
+      "bond_length": "1.446",
+      "number_of_spin_orbitals": "28"
+    }
+  }
+}

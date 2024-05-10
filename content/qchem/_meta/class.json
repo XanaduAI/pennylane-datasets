@@ -1,40 +1,188 @@
 {
-  "name": "qchem",
+  "slug": "qchem",
+  "name": "Qchem",
   "attributeList": [
     {
+      "name": "basis_rot_samples",
+      "pythonType": "list[dict]",
+      "doc": "List of samples for each grouping of the basis-rotated Hamiltonian terms",
+      "optional": true
+    },
+    {
+      "name": "basis_rot_groupings",
+      "pythonType": "tuple[list[tensor_like], list[list[[Operation](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[tensor_like]]]",
+      "doc": "List of grouped Hamiltonian terms obtained using [`qml.qchem.basis_rotation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.qchem.basis_rotation.html)",
+      "optional": false
+    },
+    {
+      "name": "dipole_op",
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Qubit dipole moment operators for the chemical system",
+      "optional": false
+    },
+    {
+      "name": "fci_energy",
+      "pythonType": "float",
+      "doc": "Ground state energy of the molecule obtained from exact diagonalization",
+      "optional": false
+    },
+    {
+      "name": "fci_spectrum",
+      "pythonType": "numpy.ndarray",
+      "doc": "First `2 \u00d7 #qubits` eigenvalues obtained from exact diagonalization",
+      "optional": false
+    },
+    {
       "name": "hamiltonian",
-      "python_type": "Hamiltonian",
-      "doc": "Hamiltonian of the system in the Pauli basis"
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Hamiltonian of the system in the Pauli basis",
+      "optional": false
+    },
+    {
+      "name": "hf_state",
+      "pythonType": "numpy.ndarray",
+      "doc": "Hartree-Fock state of the chemical system represented by a binary vector",
+      "optional": false
+    },
+    {
+      "name": "molecule",
+      "pythonType": "[Molecule](https://docs.pennylane.ai/en/stable/code/api/pennylane.qchem.Molecule.html)",
+      "doc": "PennyLane Molecule object containing description for the system and basis set",
+      "optional": false
+    },
+    {
+      "name": "number_op",
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Qubit operator for computing total spin \ud835\udc46<sup>2</sup> for the chemical system",
+      "optional": false
+    },
+    {
+      "name": "optimal_sector",
+      "pythonType": "numpy.ndarray",
+      "doc": "Eigensector of the tapered qubits that would contain the ground state",
+      "optional": false
+    },
+    {
+      "name": "paulix_ops",
+      "pythonType": "list[[PauliX](https://docs.pennylane.ai/en/stable/code/api/pennylane.PauliX.html#pennylane.PauliX)]",
+      "doc": "Supporting PauliX ops required to build Clifford \ud835\udc48 for tapering",
+      "optional": false
+    },
+    {
+      "name": "qwc_groupings",
+      "pythonType": "tuple[list[tensor_like], list[list[[Operation](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[tensor_like]]]",
+      "doc": "List of grouped qubit-wise commuting Hamiltonian terms obtained using [`qml.pauli.optimize_measurements`](https://docs.pennylane.ai/en/stable/code/api/pennylane.pauli.optimize_measurements.html)",
+      "optional": false
+    },
+    {
+      "name": "qwc_samples",
+      "pythonType": "list[dict]",
+      "doc": "List of samples for each grouping of the qubit-wise commuting Hamiltonian terms",
+      "optional": true
+    },
+    {
+      "name": "sparse_hamiltonian",
+      "pythonType": "scipy.sparse.csr_array",
+      "doc": "Sparse matrix representation of a Hamiltonian in the computational basis",
+      "optional": false
+    },
+    {
+      "name": "spin2_op",
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Qubit operator for computing total spin \ud835\udc46<sup>2</sup> for the chemical system",
+      "optional": false
+    },
+    {
+      "name": "spinz_op",
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Qubit operator for computing total spin\u2019s projection in \ud835\udc4d direction",
+      "optional": false
+    },
+    {
+      "name": "symmetries",
+      "pythonType": "list[[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)]",
+      "doc": "Symmetries required for tapering molecular Hamiltonian",
+      "optional": false
+    },
+    {
+      "name": "tapered_dipole_op",
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Tapered dipole moment operator",
+      "optional": false
+    },
+    {
+      "name": "tapered_hamiltonian",
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Tapered Hamiltonia",
+      "optional": false
+    },
+    {
+      "name": "tapered_hf_state",
+      "pythonType": "numpy.ndarray",
+      "doc": "Tapered Hartree-Fock state of the molecule",
+      "optional": false
+    },
+    {
+      "name": "tapered_num_op",
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Tapered number operator",
+      "optional": false
+    },
+    {
+      "name": "tapered_spin2_op",
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Tapered total spin operator",
+      "optional": false
+    },
+    {
+      "name": "tapered_spinz_op",
+      "pythonType": "[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)",
+      "doc": "Tapered spin projection operator",
+      "optional": false
+    },
+    {
+      "name": "vqe_energy",
+      "pythonType": "float",
+      "doc": "Energy obtained from the state prepared by the optimized circuit",
+      "optional": true
     },
     {
       "name": "vqe_gates",
-      "python_type": "list[Operation]",
-      "doc": "`SingleExcitation` and `DoubleExcitation` gates for the optimized circuit",
+      "pythonType": "list[[Operation](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)]",
+      "doc": "[`SingleExcitation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.SingleExcitation.html#pennylane.SingleExcitation) and [`DoubleExcitation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.DoubleExcitation.html#pennylane.DoubleExcitation) gates for the optimized circuit",
+      "optional": true
+    },
+    {
+      "name": "vqe_params",
+      "pythonType": "numpy.ndarray",
+      "doc": "Optimal parameters for the gates that prepares ground state",
       "optional": true
     }
   ],
   "parameterList": [
     {
-      "name": "molname",
-      "title": "Molecule name"
-    },
-    {
       "name": "basis",
-      "title": "Basis"
+      "title": "Basis",
+      "description": null,
+      "optional": false
     },
     {
       "name": "bond_length",
       "title": "Bond length",
+      "description": null,
       "optional": true
     },
     {
       "name": "bond_angle",
       "title": "Bond angle",
+      "description": null,
       "optional": true
     },
     {
-      "name": "n_orbitals",
-      "title": "Number of spin orbitals"
+      "name": "number_of_spin_orbitals",
+      "title": "Number of spin orbitals",
+      "description": null,
+      "optional": false
     }
   ]
 }

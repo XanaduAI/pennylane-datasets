@@ -60,8 +60,8 @@ def compile_dataset_build(
             )
 
         class_ = typing.cast(DatasetClass, family.class_)
-        if not (existing_type := dataset_classes.get(class_.name)):
-            dataset_classes[class_.name] = class_
+        if not (existing_type := dataset_classes.get(class_.slug)):
+            dataset_classes[class_.slug] = class_
         elif existing_type.document_context.os_path != class_.document_context.os_path:
             raise RuntimeError(
                 f"Duplicate 'DatasetType' definition on family '{family.slug}'"
