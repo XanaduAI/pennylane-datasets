@@ -3,9 +3,13 @@ import logging
 from pathlib import Path
 from typing import Annotated, Optional
 
+import inflection
 import typer
+from pennylane.data import Dataset
 
-from dsets.lib import json_fmt, msg, progress, s3
+from dsets import schemas
+from dsets.lib import bibtex, doctree, json_fmt, msg, progress, s3
+from dsets.schemas import fields
 from dsets.settings import CLIContext
 
 from .builder import AssetLoader, compile_dataset_build
@@ -77,6 +81,193 @@ def build():
         json.dump(datasets_build, f, indent=2)
 
     msg.structured_print("Created build", file=build_file)
+
+
+@app.command(name="add")
+def add(
+    dataset_file: Path,
+    class_slug: Annotated[str, typer.Option(prompt=True)],
+    family_slug: Annotated[str, typer.Option(prompt=True)],
+):
+    """
+    Add a new dataset to an existing family, or create a new one.
+    """
+    ctx = CLIContext()
+
+    content_doctree = doctree.Doctree(ctx.content_dir)
+
+    fields.validate(fields.Slug, class_slug)
+    fields.validate(fields.Slug, family_slug)
+
+    dataset = Dataset.open(dataset_file)
+
+    class_dir = ctx.content_dir / class_slug
+    class_doc = class_dir / "_meta" / "class.json"
+    if not class_doc.exists():
+        typer.confirm(
+            f"Class {repr(class_slug)} does not exist. Create it?",
+            abort=True,
+            default=True,
+        )
+
+        class_name = fields.validate(
+            fields.PythonIdentifier,
+            inflection.camelize(class_slug.replace("-", "_")),
+            err=False,
+        )
+
+        while True:
+            class_name = typer.prompt("Enter class name", default=class_name).strip()
+            if not fields.validate(fields.PythonIdentifier, class_name):
+                print(
+                    f"Invalid class name: {repr(class_name)} (must be a valid Python identifier)"
+                )
+            else:
+                break
+
+        params = []
+        define_params = typer.confirm(
+            f"Define parameters for class {repr(class_slug)}?", default=True
+        )
+
+        while define_params:
+            name = typer.prompt(
+                "Enter parameter name (leave blank to finish)",
+                default="",
+                show_default=False,
+            )
+            if not name:
+                break
+            if not fields.validate(fields.PythonIdentifier, name):
+                print(
+                    f"Invalid parameter name: {repr(name)} (must be a valid Python identifer)"
+                )
+                continue
+
+            title = inflection.titleize(name)
+            title = typer.prompt(
+                f"\tEnter title for parameter {repr(name)} ({repr(title)})",
+                default=title,
+            )
+
+            description = typer.prompt(
+                f"\tEnter description for parameter {repr(name)}",
+                default="",
+                show_default=False,
+            )
+
+            params.append(
+                schemas.DatasetParameter(
+                    name=name, title=title, description=description
+                )
+            )
+
+        attrs = [
+            schemas.DatasetAttribute(
+                name=name, python_type=str(info.py_type), doc=info.doc or ""
+            )
+            for name, info in dataset.attr_info.items()
+        ]
+
+        class_ = schemas.DatasetClass(
+            slug=class_slug,
+            name=class_name,
+            attribute_list=attrs,
+            parameter_list=params,
+        )
+
+        class_doc.parent.mkdir(parents=True, exist_ok=True)
+        with open(class_doc, "w", encoding="utf-8") as f:
+            f.write(class_.model_dump_json(indent=2, by_alias=True))
+            print(f"Created class file: {class_doc}")
+    else:
+        class_ = schemas.DatasetClass.from_os_path(content_doctree, class_doc)
+
+    family_doc = ctx.content_dir / class_slug / family_slug / "dataset.json"
+
+    if family_doc.exists():
+        family = schemas.DatasetFamily.from_os_path(content_doctree, family_doc)
+    else:
+        print(f"Creating new family with slug {repr(family_slug)}")
+        family_title = typer.prompt(
+            "Enter title", default=inflection.humanize(family_slug.replace("-", "_"))
+        )
+        download_name = typer.prompt("Enter download name", default="dataset")
+
+        family = schemas.DatasetFamily(
+            slug=family_slug,
+            class_=doctree.Reference[schemas.DatasetClass](
+                path=doctree.DocPath("/", class_doc.relative_to(ctx.content_dir))
+            ),
+            download_name=download_name,
+            features=[
+                schemas.DatasetFeature(
+                    slug="example-feature",
+                    title="Example Feature",
+                    content=doctree.Reference[str](path="features/example.md"),
+                )
+            ],
+            meta=doctree.Reference[schemas.DatasetFamilyMeta](path="meta.json"),
+        )
+
+        authors = [
+            author.strip()
+            for author in typer.prompt("Enter authors (author1,author2,...)")
+            .strip()
+            .split(",")
+        ]
+
+        meta = schemas.DatasetFamilyMeta(
+            title=family_title,
+            citation=doctree.Reference[fields.BibtexStr](path="citation.txt"),
+            using_this_dataset=doctree.Reference[str](path="using_this_dataset.md"),
+            license="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+            authors=authors,
+        )
+        family_doc.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(family_doc.parent / "meta.json", "w", encoding="utf-8") as f:
+            f.write(meta.model_dump_json(indent=2, by_alias=True))
+
+        with open(family_doc.parent / "citation.txt", "w", encoding="utf-8") as f:
+            f.write(
+                bibtex.generate_bibtex(
+                    family_slug,
+                    family_title,
+                    authors=authors,
+                    publication_url=f"https://pennylane.ai/datasets/{class_slug}/{family_slug}",
+                )
+            )
+
+        with open(
+            family_doc.parent / "using_this_dataset.md", "w", encoding="utf-8"
+        ) as f:
+            f.write("# Using this Dataset")
+
+        features_dir = family_doc.parent / "features"
+        features_dir.mkdir()
+
+        with open(features_dir / "example.md", "w", encoding="utf-8") as f:
+            f.write("# Example data feature")
+
+    param_values = {}
+    for param in class_.parameter_list:
+        if param.optional:
+            default = "N/A"
+        else:
+            default = None
+
+        value = typer.prompt(
+            f"Enter value for parameter {repr(param.name)}", default=default
+        ).strip()
+        param_values[param.name] = value
+
+    family.data.append(schemas.Dataset(parameters=param_values))
+
+    with open(family_doc, "w", encoding="utf-8") as f:
+        f.write(family.model_dump_json(indent=2, by_alias=True))
+
+    print(f"Wrote data to {family_doc}")
 
 
 @app.command(name="upload-assets")
