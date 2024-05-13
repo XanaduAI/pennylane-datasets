@@ -8,7 +8,7 @@ import typer
 from pennylane.data import Dataset
 
 from dsets import schemas
-from dsets.lib import bibtex, doctree, json_fmt, msg, progress, s3
+from dsets.lib import bibtex, doctree, json_fmt, markdown, msg, progress, s3
 from dsets.schemas import fields
 from dsets.settings import CLIContext
 
@@ -84,11 +84,7 @@ def build():
 
 
 @app.command(name="add")
-def add(
-    dataset_file: Path,
-    class_slug: Annotated[str, typer.Option(prompt=True)],
-    family_slug: Annotated[str, typer.Option(prompt=True)],
-):
+def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)]):
     """
     Add a new dataset to an existing family, or create a new one.
     """
@@ -97,7 +93,6 @@ def add(
     content_doctree = doctree.Doctree(ctx.content_dir)
 
     fields.validate(fields.Slug, class_slug)
-    fields.validate(fields.Slug, family_slug)
 
     dataset = Dataset.open(dataset_file)
 
@@ -183,6 +178,11 @@ def add(
     else:
         class_ = schemas.DatasetClass.from_os_path(content_doctree, class_doc)
 
+    family_slug = dataset_file.stem.split("_")[0]
+    family_slug = typer.prompt(
+        "Enter family slug", default=family_slug, show_default=True
+    )
+    fields.validate(fields.Slug, family_slug)
     family_doc = ctx.content_dir / class_slug / family_slug / "dataset.json"
 
     if family_doc.exists():
@@ -204,7 +204,9 @@ def add(
                 schemas.DatasetFeature(
                     slug="example-feature",
                     title="Example Feature",
-                    content=doctree.Reference[str](path="features/example.md"),
+                    content=doctree.Reference[str](
+                        path="features/dataset-attributes.md"
+                    ),
                 )
             ],
             meta=doctree.Reference[schemas.DatasetFamilyMeta](path="meta.json"),
@@ -247,8 +249,16 @@ def add(
         features_dir = family_doc.parent / "features"
         features_dir.mkdir()
 
-        with open(features_dir / "example.md", "w", encoding="utf-8") as f:
-            f.write("# Example data feature")
+        with open(features_dir / "dataset-attributes.md", "w", encoding="utf-8") as f:
+            f.write(
+                markdown.make_markdown_table(
+                    ("Name", "Type", "Description"),
+                    [
+                        (attribute.name, attribute.python_type, attribute.doc)
+                        for attribute in class_.attribute_list
+                    ],
+                )
+            )
 
     param_values = {}
     for param in class_.parameter_list:
