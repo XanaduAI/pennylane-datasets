@@ -22,9 +22,9 @@ on:
           required: true
           type: string
         ref:
-          description: Branch name, commit sha or tag to deploy
-          required: true
+          description: Branch name, commit sha or tag to deploy (defaults to source branch)
           type: string
+          default: ${{ github.ref_name }}
 
 jobs:
     push_build:

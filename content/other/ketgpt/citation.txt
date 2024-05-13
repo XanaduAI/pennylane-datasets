@@ -1,0 +1,6 @@
+  @article{apak2024ketgpt,
+    title={KetGPT--Dataset Augmentation of Quantum Circuits using Transformers},
+    author={Apak, Boran and Bandic, Medina and Sarkar, Aritra and Feld, Sebastian},
+    journal={arXiv preprint arXiv:2402.13352},
+    year={2024}
+}
