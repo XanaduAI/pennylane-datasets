@@ -9,10 +9,16 @@
   "citation": {
     "$path": "citation.txt"
   },
-  "changelog": ["version 0.1 : initial public release"],
+  "changelog": [
+    "version 0.1 : initial public release"
+  ],
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
   "sourceCodeUrl": null,
-  "tags": ["Other", ">16 Qubits", ">20 Qubits"],
+  "tags": [
+    "Other",
+    ">16 Qubits",
+    ">20 Qubits"
+  ],
   "title": "KetGPT",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
