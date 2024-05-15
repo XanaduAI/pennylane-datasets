@@ -34,6 +34,7 @@
   "datasetFamilies": {
     "bar": {
       "slug": "bar",
+      "downloadName": "foo",
       "class": {
         "name": "Foo",
         "slug": "foo",
@@ -67,7 +68,6 @@
           "extra": {}
         }
       ],
-      "downloadName": "dataset",
       "features": [
         {
           "slug": "look-at-my-data",

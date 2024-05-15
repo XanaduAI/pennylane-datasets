@@ -16,6 +16,7 @@ class TestDatasetFamily:
     JSON = """
     {
       "slug": "h2-molecule",
+      "downloadName": "H2",
       "meta": {
         "title": "H2 Molecule",
         "tags": [
