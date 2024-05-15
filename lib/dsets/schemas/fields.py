@@ -1,8 +1,9 @@
 import keyword
-from typing import Annotated
+from typing import Annotated, Any, TypeVar
 
 import bibtexparser
-from pydantic import AfterValidator, Field
+from pydantic import AfterValidator, Field, TypeAdapter, ValidationError
+from typing_extensions import TypeAliasType
 
 
 def _python_identifier_validator(val: str) -> str:
@@ -46,4 +47,17 @@ BibtexStr = Annotated[str, AfterValidator(_bibtex_str_validator)]
 
 """Field type for a 'slug'. Must be 'kabob-case', and contain only
 lowercase ASCII letters and numbers."""
-Slug = Annotated[str, Field(pattern=r"^[a-z0-9]+(-[a-z0-9]+)*$")]
+Slug = TypeAliasType("Slug", Annotated[str, Field(pattern=r"^[a-z0-9]+(-[a-z0-9]+)*$")])
+
+
+T = TypeVar("T")
+
+
+def validate(field_type_: Any, val: T, *, err: bool = True) -> T | None:
+    try:
+        return TypeAdapter(field_type_).validate_python(val)
+    except ValidationError as exc:
+        if err:
+            raise exc
+
+        return None

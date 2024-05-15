@@ -1,0 +1,29 @@
+{
+  "abstract": null,
+  "authors": [
+    "Boran Apak",
+    "Medina Bandic",
+    "Aritra Sarkar",
+    "Sebastian Feld"
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [
+    "version 0.1 : initial public release"
+  ],
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "sourceCodeUrl": null,
+  "tags": [
+    "Other",
+    ">16 Qubits",
+    ">20 Qubits"
+  ],
+  "title": "KetGPT",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_KetGPT.png",
+  "extra": {}
+}
