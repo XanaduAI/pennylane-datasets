@@ -12,7 +12,7 @@
       "extra": {}
     }
   ],
-  "downloadName": "mnist_pca",
+  "downloadName": "mnist-pca",
   "features": [
     {
       "slug": "dataset-attributes",

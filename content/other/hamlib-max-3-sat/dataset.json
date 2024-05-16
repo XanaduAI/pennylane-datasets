@@ -12,7 +12,7 @@
       "extra": {}
     }
   ],
-  "downloadName": "hamlib_max3sat",
+  "downloadName": "hamlib-max3sat",
   "features": [
     {
       "slug": "dataset-attributes",

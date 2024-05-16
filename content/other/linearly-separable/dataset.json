@@ -12,7 +12,7 @@
       "extra": {}
     }
   ],
-  "downloadName": "linearly_separable",
+  "downloadName": "linearly-separable",
   "features": [
     {
       "slug": "dataset-attributes",
