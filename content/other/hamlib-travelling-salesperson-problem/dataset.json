@@ -12,7 +12,7 @@
       "extra": {}
     }
   ],
-  "downloadName": "hamlib_tsp",
+  "downloadName": "hamlib-tsp",
   "features": [
     {
       "slug": "dataset-attributes",

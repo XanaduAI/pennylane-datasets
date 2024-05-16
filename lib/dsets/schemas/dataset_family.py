@@ -7,7 +7,7 @@ from dsets.lib.pydantic_util import CamelCaseMixin
 
 from .dataset import Dataset
 from .dataset_class import DatasetClass
-from .fields import BibtexStr, PythonIdentifier, Slug
+from .fields import BibtexStr, Slug
 
 
 class DatasetFeature(Document, CamelCaseMixin):
@@ -69,8 +69,7 @@ class DatasetFamily(Document, CamelCaseMixin):
         slug: Unique identifier for this dataset family
         class_: `DatasetClass` for this family, or a reference
             to a document containing one
-        download_name: Suggested instance name for this dataset
-            family
+        download_name: First parameter for download form
         data: `Datasets` belonging to this family
         features: Data features for this family
         meta: Extended metadata
@@ -80,7 +79,7 @@ class DatasetFamily(Document, CamelCaseMixin):
 
     class_: Annotated[Ref[DatasetClass], Field(alias="class")]
     data: list[Dataset] = []
-    download_name: PythonIdentifier = "dataset"
+    download_name: str
     features: list[DatasetFeature] = []
     meta: Ref[DatasetFamilyMeta]
 

@@ -12,7 +12,7 @@
       "extra": {}
     }
   ],
-  "downloadName": "mqt_bench",
+  "downloadName": "mqt-bench",
   "features": [
     {
       "slug": "dataset-attributes",

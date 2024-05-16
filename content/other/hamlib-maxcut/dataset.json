@@ -12,7 +12,7 @@
       "extra": {}
     }
   ],
-  "downloadName": "hamlib_maxcut",
+  "downloadName": "hamlib-maxcut",
   "features": [
     {
       "slug": "dataset-attributes",
