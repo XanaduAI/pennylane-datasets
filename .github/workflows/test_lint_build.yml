@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup virtualenv 
         uses: ./.github/actions/setup-venv
@@ -31,7 +31,7 @@ jobs:
           venv-path: .venv
 
       - name: Check poetry.lock
-        run: .venv/bin/python3 -m poetry lock --check
+        run: .venv/bin/python3 -m poetry check --lock
 
       - name: Run formatters
         run: |

@@ -5,15 +5,11 @@ on:
       environment:
         description: Environment to deploy
         required: true
-        type: choice
-        options:
-            - dev
-            - staging
-            - prod
+        type: environment
       ref:
-        description: Branch name, commit sha or tag to deploy
-        default: main
+        description: Specific ref to deploy (if different from workflow branch)
         type: string
+        required: false
 
   workflow_call:
       inputs:
@@ -30,6 +26,7 @@ jobs:
     push_build:
         runs-on: ubuntu-latest
         environment: ${{ inputs.environment }}
+        concurrency: ${{ inputs.environment }}
         env:
             PYTHONPATH: "lib/:${PYTHONPATH}"
             BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
@@ -37,9 +34,9 @@ jobs:
     
         steps:
             - name: Checkout code
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
               with:
-                ref: ${{ inputs.ref }}
+                ref: ${{ inputs.ref || github.ref_name }}
           
             - name: Setup virtualenv 
               uses: ./.github/actions/setup-venv
