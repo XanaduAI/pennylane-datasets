@@ -7,7 +7,7 @@ on:
         required: true
         type: environment
       ref:
-        description: Branch name, commit sha or tag to deploy (if different from workflow branch)
+        description: Specific ref to deploy (if different from workflow branch)
         type: string
         required: false
 
