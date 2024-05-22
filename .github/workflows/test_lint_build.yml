@@ -31,7 +31,7 @@ jobs:
           venv-path: .venv
 
       - name: Check poetry.lock
-        run: .venv/bin/python3 -m poetry lock --check
+        run: .venv/bin/python3 -m poetry check --lock
 
       - name: Run formatters
         run: |
