@@ -1,5 +1,5 @@
 {
-  "slug": "ketgpt",
+  "slug": "rydberggpt",
   "class": {
     "$path": "/other/_meta/class.json"
   },
@@ -7,12 +7,12 @@
     {
       "dataUrl": null,
       "parameters": {
-        "name": "ketgpt"
+        "name": "rydberggpt"
       },
       "extra": {}
     }
   ],
-  "downloadName": "ketgpt",
+  "downloadName": "rydberggpt",
   "features": [
     {
       "slug": "dataset-attributes",
@@ -29,21 +29,45 @@
   "extra": {
     "extraAttributes": [
       {
-        "name": "circuits",
-        "pythonType": "list",
-        "doc": "Circuits produced by applying KetGPT to existing circuits. No measurements included.",
+        "name": "Rbs",
+        "pythonType": "list[float]",
+        "doc": "Blockade radii in units of the lattice spacing.",
         "optional": false
       },
       {
-        "name": "n_gates",
-        "pythonType": "list[int]",
-        "doc": "Number of gates used in the circuits above.",
+        "name": "deltas",
+        "pythonType": "list[float]",
+        "doc": "Detuning from resonance.",
         "optional": false
       },
       {
-        "name": "n_qubits",
+        "name": "betas",
+        "pythonType": "list[float]",
+        "doc": "Inverse temperatures.",
+        "optional": false
+      },
+      {
+        "name": "Ls",
         "pythonType": "list[int]",
-        "doc": "Number of qubits used in the circuits above.",
+        "doc": "Linear system size, for a total number of atoms $N = L^2$.",
+        "optional": false
+      },
+      {
+        "name": "interaction_graphs",
+        "pythonType": "list[object]",
+        "doc": "The interaction graphs for the corresponding parameters.",
+        "optional": false
+      },
+      {
+        "name": "samples",
+        "pythonType": "list[array]",
+        "doc": "The QMC samples as a $N_s × L × L$ binary array, where $N_s$ is the number of uncorrelated samples and is fixed at $N_s = 100000$.",
+        "optional": false
+      },
+      {
+        "name": "observables",
+        "pythonType": "list[dict]",
+        "doc": "Observable values of the finite-size system computed from QMC data. The observables include energy, x-magnetization, and staggered magnetization, as well as the associated variances and standard errors.",
         "optional": false
       }
     ]
