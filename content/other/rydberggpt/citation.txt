@@ -1,0 +1,6 @@
+  @article{melko2024rydberggpt,
+    title={RydbergGPT -- A Title for this Paper},
+    author={Melko, Roger, and MacLellan, Benjamin, and Bershanska, Anastasiia, and Epstein, Collin},
+    journal={arXiv preprint arXiv:arxivnumber},
+    year={2024}
+}
