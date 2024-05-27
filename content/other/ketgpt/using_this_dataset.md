@@ -1,43 +1,39 @@
-This dataset contains the data used to train the RydbergGPT LLM model,
-developed and trained by the Perimeter Institute Quantum Intelligence Lab and
-collaborators. The full dataset on-disk, uncompressed, is about 25 GB.
-The model is a vanilla encoder-decoder transformer architecture, which
-generates projective measurement samples of a Rydberg atom array system,
-conditioned on the Hamiltonian parameters.
+Quantum algorithms, represented as quantum circuits, can be used as benchmarks for assessing the performance of quantum systems.
+Existing datasets, widely utilized in the field, suffer from limitations in size and versatility, leading researchers to employ randomly generated circuits.
+Random circuits are, however, not representative benchmarks as they lack the inherent properties of real quantum algorithms for which the quantum systems are manufactured.
+This shortage of 'useful' quantum benchmarks poses a challenge to advancing the development and comparison of quantum compilers and hardware.
+This research aims to enhance the existing quantum circuit datasets by generating what is referred to as 'realistic-looking' circuits by employing the Transformer machine learning architecture.
+For this purpose, KetGPT is introduced, which is a tool that generates synthetic circuits in OpenQASM language, whose structure is based on quantum circuits derived from existing quantum algorithms and follows the typical patterns of human-written algorithm-based code (e.g., order of gates and qubits).
+A three-fold verification process in the research involves manual inspection and Qiskit framework execution, transformer-based classification, and structural analysis.
+It demonstrates the efficacy of KetGPT in producing large amounts of additional circuits that closely align with algorithm-based structures.
+Beyond benchmarking, KetGPT is envisioned to contribute substantially to AI-driven quantum compilers and systems.
 
 **Description of the dataset**
 
-We produce QMC samples of the projective measurement outcomes at points in
-the parameter space, defined by the Hamiltonian parameter set
-x = {Ω, δ/Ω, R /Ω, β/Ω} . These points are all combinations of the following
-b
-values:
-R b ∈ [1.05, 1.15, 1.30]
-δ ∈ [−0.36, −0.13, 0.93, 1.05, 1.17, 1.29, 1.52, 1.76, 2.94, 3.17]
-β ∈ [0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0, 48.0, 64.0]
-QMC samples are generated for linear system sizes L ∈ [5, 6, 11, 12, 15, 16] .
-We fix Ω = 1.0 for all datasets.
-So, there are 1890 parameter points in total.
+This dataset contains 1000 output circuits generated in [KetGPT - Dataset Augmentation of Quantum Circuits using Transformers](https://arxiv.org/abs/2402.13352).
+They can be used for benchmarking or training AI-driven quantum compilers and systems.
+
+To generate this dataset, KetGPT was trained on 1112 real algorithms.
+Circuits for these algorithms come from [MQT Bench](https://www.cda.cit.tum.de/mqtbench/) and can be obtained via the [MQT Bench dataset](https://pennylane.ai/datasets/other/mqt-bench).
+Training algorithms include: Amplitude Estimation (AE); Deutsch-Jozsa; Graph State; GHZ State; Grover's (no ancilla); Grover's (v-chain);
+Portfolio Optimization with QAOA; Portfolio Optimization with VQE; Quantum Approximation Optimization Algorithm (QAOA);
+Quantum Fourier Transformation (QFT); QFT Entangled; Quantum Neural Network (QNN); Quantum Phase Estimation (QPE) exact;
+Quantum Phase Estimation (QPE) inexact; Quantum Walk (no ancilla); Quantum Walk (v-chain); Variational Quantum Eigensolver (VQE);
+W-State; Ground State; Pricing Call Option; Pricing Put Option.
+
+To generate more synthetic circuits using the pre-trained KetGPT model, or to view the KetGPT tokeniser, a pre-trained classifier model,
+KetGPT generated circuits in QASM format, random circuits, and the files used to train KetGPT,
+please view additional files on [Kaggle](https://www.kaggle.com/datasets/boranapak/ketgpt-data/).
 
 **Additional details**
 
-- The size of dataset.npy changes for different values of L ; ranging from
-2.5 MB for L = 5 (the smallest system size) to 25 MB for L = 16 (thelargest system size).
-- config.json is the same size for all parameter directories, at 100 bytes.
-- graph.json ranges from 18 kB to 2.1 MB across system sizes.
-- For all datapoints in L ∈ [5, 6, 11, 12, 15, 16] , the current total disk space
-required (uncompressed) is 23.1 GB.
-- The most natural way to partition the data is by system size, L . Total disk
-space for L = 5 (smallest system) is 679 MB, total disk space for L = 16 is
-7.5 GB.
-- Within that, we can also break down by the other three parameters, for
-more fine-tuned control over which parameter datasets are
-requested/downloaded.
+- The number of qubits per circuit ranges between 2 and 117 qubits.
+- The number of gates per circuit ranges between 6 and 903.
 
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="rydberggpt")
+[ds] = qml.data.load("other", name="ketgpt")
 
 @qml.qnode(qml.device('default.qubit'))
 def circuit(training_circuit):
