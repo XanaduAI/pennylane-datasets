@@ -178,7 +178,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
     else:
         class_ = schemas.DatasetClass.from_os_path(content_doctree, class_doc)
 
-    family_slug = dataset_file.stem.split("_")[0]
+    family_slug = dataset_file.stem.split("_")[0].lower()
     family_slug = typer.prompt(
         "Enter family slug", default=family_slug, show_default=True
     )
@@ -192,7 +192,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
         family_title = typer.prompt(
             "Enter title", default=inflection.humanize(family_slug.replace("-", "_"))
         )
-        download_name = typer.prompt("Enter download name", default="dataset")
+        download_name = typer.prompt("Enter download name", default="name")
 
         family = schemas.DatasetFamily(
             slug=family_slug,
