@@ -58,8 +58,8 @@ File uploaded to 'data/Max3Sat_Max3Sat.h5/2024-02-27T155839Z-4a06dbb748c8ae32cf6
 ## Adding new dataset content
 
 For datasets to appear on [pennylane.ai/datasets](https://pennylane.ai/datasets), a `dataset.json` file describing it must
-be added to the [content/](content) directory. This can be done using the `dsets add` command, which will derive some details
-of the dataset its `.h5` file.
+be added to the [content/](content) directory. This can be done using the `dsets add dataset.h5` command, which will derive some details
+of the dataset from its `.h5` file.
 
 Run the `dsets add` command. You will be prompted for the class slug of the dataset, i.e `qchem`, `qspin`, `other`. A class
 slug corresponds to the name of the directories directly under `content`.
@@ -105,7 +105,7 @@ Wrote data to content/qchem/h2-molecule/dataset.json
 ```
 
 This will automatically generate several metadata files in the family directory, including the `meta.json`, `using_this_dataset.md` and a `citation.txt`
-file containing the BibTex citation for the dataset. These files should be verified and manually adjusted before commiting.
+file containing the BibTex citation for the dataset. `using_this_dataset.md` should be completed with a description of the dataset and all files should be verified and manually adjusted before committing.
 
 ## Building
 
