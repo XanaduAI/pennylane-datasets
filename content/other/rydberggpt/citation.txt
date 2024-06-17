@@ -1,6 +1,6 @@
-  @article{melko2024rydberggpt,
-    title={RydbergGPT -- A Title for this Paper},
-    author={Melko, Roger, and MacLellan, Benjamin, and Bershanska, Anastasiia, and Epstein, Collin},
-    journal={arXiv preprint arXiv:arxivnumber},
+@article{fitzek2024rydberggpt,
+    title={RydbergGPT},
+    author={Fitzek, David and Teoh, Yi Hong and Fung, Hin Pok and Dagnew, Gebremedhin A and Merali, Ejaaz and Moss, M Schuyler and MacLellan, Benjamin and Melko, Roger G},
+    journal={arXiv preprint arXiv:2405.21052},
     year={2024}
 }

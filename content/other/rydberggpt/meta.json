@@ -1,10 +1,14 @@
 {
   "abstract": null,
   "authors": [
-    "Roger Melko",
+    "David Fitzek",
+    "Yi Hong Teoh",
+    "Hin Pok Fung",
+    "Gebremedhin A. Dagnew",
+    "Ejaaz Merali",
+    "M. Schuyler Moss",
     "Benjamin MacLellan",
-    "Anastasiia Bershanska",
-    "Collin Epstein"
+    "Roger G. Melko"
   ],
   "citation": {
     "$path": "citation.txt"
@@ -15,9 +19,7 @@
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
   "sourceCodeUrl": null,
   "tags": [
-    "Other",
-    ">16 Qubits",
-    ">20 Qubits"
+    "Other"
   ],
   "title": "RydbergGPT",
   "usingThisDataset": {

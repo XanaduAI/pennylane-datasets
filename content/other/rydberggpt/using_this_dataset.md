@@ -1,16 +1,18 @@
 This dataset contains the data used to train the RydbergGPT LLM model,
 developed and trained by the Perimeter Institute Quantum Intelligence Lab and
-collaborators. The full dataset on-disk, uncompressed, is about 25 GB.
-The model is a vanilla encoder-decoder transformer architecture, which
+collaborators. The full dataset is about 22 GB.
+The model trained on this data is a vanilla encoder-decoder transformer architecture, which
 generates projective measurement samples of a Rydberg atom array system,
 conditioned on the Hamiltonian parameters.
 
 **Description of the dataset**
+This dataset contains information about 1620 Rydberg atom arrays. These
+arrays are governed by the hamiltonian:
 
+$$\hat{H} = \sum_{i<j} \frac{C_6}{\lvert \mathbf{r}_i - \mathbf{r}_j \rvert^6} \hat{n}_i \hat{n}_j -\delta \sum_{i=1}^N \hat{n}_i - \frac{\Omega}{2} \sum_{i=1}^N \hat{\sigma}^x_i$$
 We produce QMC samples of the projective measurement outcomes at points in
 the parameter space, defined by the Hamiltonian parameter set
 x = {Ω, δ/Ω, R /Ω, β/Ω} . These points are all combinations of the following
-b
 values:
 R b ∈ [1.05, 1.15, 1.30]
 δ ∈ [−0.36, −0.13, 0.93, 1.05, 1.17, 1.29, 1.52, 1.76, 2.94, 3.17]
@@ -33,6 +35,10 @@ space for L = 5 (smallest system) is 679 MB, total disk space for L = 16 is
 - Within that, we can also break down by the other three parameters, for
 more fine-tuned control over which parameter datasets are
 requested/downloaded.
+
+- Since every Rydberg atom array is square, the number of atoms for an array is the linear system size (length on a side), squared: $L^2$
+- The Rabi frequency, $omega$ for all lattices is $1$.
+- 
 
 **Example usage**
 
