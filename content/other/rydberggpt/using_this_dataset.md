@@ -3,55 +3,49 @@ developed and trained by the Perimeter Institute Quantum Intelligence Lab and
 collaborators. The full dataset is about 22 GB.
 The model trained on this data is a vanilla encoder-decoder transformer architecture, which
 generates projective measurement samples of a Rydberg atom array system,
-conditioned on the Hamiltonian parameters.
+conditioned on the Hamiltonian parameters. For more details on the model and training, please see the [RydbergGPT paper](https://arxiv.org/abs/2405.21052) and the corresponding [GitHub Repository](https://github.com/PIQuIL/RydbergGPT).
 
 **Description of the dataset**
-This dataset contains information about 1620 Rydberg atom arrays. These
-arrays are governed by the hamiltonian:
+This dataset contains information for 1620 Rydberg atom arrays. These arrays
+are governed by the Hamiltonian:
 
 $$\hat{H} = \sum_{i<j} \frac{C_6}{\lvert \mathbf{r}_i - \mathbf{r}_j \rvert^6} \hat{n}_i \hat{n}_j -\delta \sum_{i=1}^N \hat{n}_i - \frac{\Omega}{2} \sum_{i=1}^N \hat{\sigma}^x_i$$
-We produce QMC samples of the projective measurement outcomes at points in
-the parameter space, defined by the Hamiltonian parameter set
-x = {Ω, δ/Ω, R /Ω, β/Ω} . These points are all combinations of the following
-values:
-R b ∈ [1.05, 1.15, 1.30]
-δ ∈ [−0.36, −0.13, 0.93, 1.05, 1.17, 1.29, 1.52, 1.76, 2.94, 3.17]
-β ∈ [0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0, 48.0, 64.0]
-QMC samples are generated for linear system sizes L ∈ [5, 6, 11, 12, 15, 16] .
-We fix Ω = 1.0 for all datasets.
-So, there are 1890 parameter points in total.
+
+where
+
+$$ C_6 = \Omega \left( \frac{R_b}{a} \right)^6 $$
+$$V_{ij} =  \frac{a^6}{\lvert \mathbf{r}_i - \mathbf{r}_j \rvert^6}$$
+
+with $\hat{\sigma}^{x}_{i} = \vert g \rangle_i \langle r\vert_i + \vert r \rangle_i \langle g\vert_i$, the occupation number operator $\hat{n}_i = \frac{1}{2} \left( \hat{\sigma}_{i} + \mathbb{1} \right) =  \vert r\rangle_i \langle r \vert_i$ and $\hat{\sigma}_{i} = \vert r \rangle_i \langle r \vert_i - \vert g \rangle_i \langle g \vert_i$.
+
+Each Rydberg atom array in this dataset is identified by a set of parameters $R_b$, $\delta$, $\beta$, and $L$ that define the array shape and dictate the interactions between the atoms. For each set of parameter values, the dataset contains samples of projective occupation measurements obtained via quantum Monte Carlo simulation. Measurements of the energy and magnetization are also included. These measurements are available for all possible points in the parameter space. Specifically there is one set of measurements for all combinations of the following values:
+$$R_b \in {1.05, 1.15, 1.30}$$
+$$\delta \in {-0.36, -0.13, 0.93, 1.05, 1.17, 1.29, 1.52, 1.76, 2.94, 3.17}$$
+$$\beta \in {0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0, 48.0, 64.0}$$
+$$L \in {5, 6, 11, 12, 15, 16}$$
 
 **Additional details**
 
-- The size of dataset.npy changes for different values of L ; ranging from
-2.5 MB for L = 5 (the smallest system size) to 25 MB for L = 16 (thelargest system size).
-- config.json is the same size for all parameter directories, at 100 bytes.
-- graph.json ranges from 18 kB to 2.1 MB across system sizes.
-- For all datapoints in L ∈ [5, 6, 11, 12, 15, 16] , the current total disk space
-required (uncompressed) is 23.1 GB.
-- The most natural way to partition the data is by system size, L . Total disk
-space for L = 5 (smallest system) is 679 MB, total disk space for L = 16 is
-7.5 GB.
-- Within that, we can also break down by the other three parameters, for
-more fine-tuned control over which parameter datasets are
-requested/downloaded.
-
 - Since every Rydberg atom array is square, the number of atoms for an array is the linear system size (length on a side), squared: $L^2$
-- The Rabi frequency, $omega$ for all lattices is $1$.
-- 
+- The Rabi frequency is fixed to $\Omega=1$ for all lattices.
 
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="rydberggpt")
+import pennylane as qml
+import networkx as nx
 
-@qml.qnode(qml.device('default.qubit'))
-def circuit(training_circuit):
+# Creating a networkx graph using the dataset
 
-    for op in ds.circuits[0]:
-        qml.apply(op)
+[ds] = qml.data.load('other', name='rydberggpt')
 
-    return qml.expval(qml.PauliZ(wires=3)) #measurement on wire 3
+new_graph = nx.Graph()
 
-circuit(0) # output: tensor(0.04148455, requires_grad=True)
+for i in range(len(ds.interaction_graphs[0])):
+    for j in range(len(ds.interaction_graphs[0])):
+        if ds.interaction_graphs[0][i][j] != 0: 
+            new_graph.add_edge(i, j, weight=ds.interaction_graphs[0][i][j])
+
+print(ds.interaction_graphs[0][4][5]) # output: 0.0002035416242621616
+print(new_graph.get_edge_data(4,5)) # output: {'weight': 0.0002035416242621616}
 ```

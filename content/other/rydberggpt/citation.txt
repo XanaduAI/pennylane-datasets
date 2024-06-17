@@ -1,3 +1,10 @@
+@misc{fitzek2024rydberggptdata,
+    title={PennyLane Datasets for RydbergGPT}, 
+    author={Fitzek, David and Teoh, Yi Hong and Fung, Hin Pok and Dagnew, Gebremedhin A and Merali, Ejaaz and Moss, M Schuyler and MacLellan, Benjamin and Melko, Roger G},
+    howpublished = {\url{https://pennylane.ai/datasets/other/rydberggpt}}
+    year={2024}
+}
+
 @article{fitzek2024rydberggpt,
     title={RydbergGPT},
     author={Fitzek, David and Teoh, Yi Hong and Fung, Hin Pok and Dagnew, Gebremedhin A and Merali, Ejaaz and Moss, M Schuyler and MacLellan, Benjamin and Melko, Roger G},
