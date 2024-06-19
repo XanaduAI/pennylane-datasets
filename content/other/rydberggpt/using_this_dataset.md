@@ -29,7 +29,8 @@ where $\hat{\sigma}^{x}_{i} = \vert g \rangle_i \langle r\vert_i + \vert r \rang
 - $\beta$ = inverse temperature
 - $L$ = linear system size, for a total number of atoms $N= L^2$
 
-Each Rydberg atom array in this dataset is identified by a set of parameters $R_b$, $\delta$, $\beta$, and $L$ that define the array shape and dictate the interactions between the atoms. For each set of parameter values, the dataset contains samples of projective occupation measurements obtained via quantum Monte Carlo simulation. Measurements of the energy and magnetization are also included. These measurements are available for all possible points in the parameter space. Specifically, there is one set of measurements for all combinations of the following values:
+Each Rydberg atom array in this dataset is identified by a set of parameters $R_b$, $\delta$, $\beta$, and $L$ that define the array shape and dictate the interactions between the atoms. For each set of parameter values, the dataset contains samples of projective occupation measurements obtained via quantum Monte Carlo simulation. Measurements of the energy, x-magnetization, and staggered-magnetization are also included. These measurements are available for all possible points in the parameter space. Specifically, there are 100000 atom array measurement outcomes for all combinations of the following values:
+
 $$
 R_b \in \{1.05, 1.15, 1.30\}
 $$
@@ -49,8 +50,8 @@ $$
 **Additional details**
 
 - Since every Rydberg atom array is square, the number of atoms for an array is the linear system size (length on a side), squared: $L^2$
-- The Rabi frequency is fixed to $\Omega=1$ for all lattices.
 - The Hamiltonian is represented by the interaction graph (adjacency matrix) between atoms in the array.
+- All datapoints are in scaled, non-dimensional units $R_b / a$, $\delta/\Omega$, and  $\beta \Omega$, with the Rabi frequency and lattice spacing fixed to $\Omega= 1$ and $a=1$ for all lattices.
 
 **Example usage**
 
