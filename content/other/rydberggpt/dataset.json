@@ -1,0 +1,75 @@
+{
+  "slug": "rydberggpt",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "name": "rydberggpt"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "rydberggpt",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "extraAttributes": [
+      {
+        "name": "Rbs",
+        "pythonType": "list[float]",
+        "doc": "Blockade radii in units of the lattice spacing.",
+        "optional": false
+      },
+      {
+        "name": "deltas",
+        "pythonType": "list[float]",
+        "doc": "Detuning from resonance.",
+        "optional": false
+      },
+      {
+        "name": "betas",
+        "pythonType": "list[float]",
+        "doc": "Inverse temperatures.",
+        "optional": false
+      },
+      {
+        "name": "Ls",
+        "pythonType": "list[int]",
+        "doc": "Linear system size, for a total number of atoms $N = L^2$.",
+        "optional": false
+      },
+      {
+        "name": "interaction_graphs",
+        "pythonType": "list[object]",
+        "doc": "The interaction graphs for the corresponding parameters.",
+        "optional": false
+      },
+      {
+        "name": "samples",
+        "pythonType": "list[array]",
+        "doc": "The QMC samples as a $N_s × L × L$ binary array, where $N_s$ is the number of uncorrelated samples and is fixed at $N_s = 100000$.",
+        "optional": false
+      },
+      {
+        "name": "observables",
+        "pythonType": "list[dict]",
+        "doc": "Observable values of the finite-size system computed from QMC data. The observables include energy, x-magnetization, and staggered magnetization, as well as the associated variances and standard errors.",
+        "optional": false
+      }
+    ]
+  }
+}
