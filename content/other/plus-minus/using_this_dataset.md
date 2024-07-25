@@ -2,13 +2,13 @@ This dataset contains grayscale images from [A Comparative Analysis of Adversari
 
 ## Description of the dataset
 
-The train (test) dataset consists of 1000 (200) images split into four classes. Each image contains 16x16 pixels showing either a minus sign, a plus sign, or a right (left) half-plus. Gaussian noise and random rotations (up to 10°) are applied to make the dataset more diverse. The idea of the dataset is to define regions in the input that bear (or lack) semantic meaning, e.g. to differentiate between a right half-plus and a plus, the model needs to attend to the absence of high pixel value in the left part of the image. In contrast to this (for the same example), the region on the top and bottom of the image are the same for both classes and should be irrelevant for successful classification. This lets us evaluate models in their ability to recognize important features as done in above paper.
+The train (test) dataset consists of 1000 (200) images split into four classes. Each image contains 16x16 pixels showing either a minus sign, a plus sign, or a right (left) half-plus. Gaussian noise and random rotations (up to 10°) are applied to make the dataset more diverse. The idea of the dataset is to define regions in the input that bear (or lack) semantic meaning, e.g. to differentiate between a right half-plus and a plus, the model needs to attend to the absence of high pixel value in the left part of the image. In contrast to this (for the same example), the regions on the top and bottom of the image are the same for both classes and should be irrelevant for successful classification. This lets us evaluate models in their ability to recognize important features as done in the paper above.
 
 ## Additional details
 
 + The classes of the dataset are balanced, i.e. each class contains 250 train samples and 50 test samples.
 + The value of each pixel is normalized to lie in the domain [0,1].
-+ for an extended dataset or different image resolutions, feel free to contact the authors.
++ For an extended dataset or different image resolutions, feel free to contact the authors.
 
 ## Example usage
 
