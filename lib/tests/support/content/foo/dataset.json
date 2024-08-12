@@ -3,6 +3,9 @@
     "class": {
       "$path": "class.json"
     },
+    "collection": {
+      "$path": "collection.json"
+    },
     "downloadName": "foo",
     "meta": {
       "$path": "meta.json"
