@@ -3,6 +3,9 @@
   "class": {
     "$path": "/qchem/_meta/class.json"
   },
+  "collection": {
+    "$path": "/qchem/_meta/collection.json"
+  },
   "data": [
     {
       "dataUrl": null,
