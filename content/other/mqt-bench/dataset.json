@@ -5,7 +5,7 @@
   },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/MqtBench/MqtBench_MqtBench.h5",
       "parameters": {
         "name": "mqt-bench"
       },

@@ -5,7 +5,7 @@
   },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Rydberggpt/Rydberggpt_Rydberggpt.h5",
       "parameters": {
         "name": "rydberggpt"
       },
@@ -61,7 +61,7 @@
       {
         "name": "samples",
         "pythonType": "list[array]",
-        "doc": "The QMC samples as a $N_s × L × L$ binary array, where $N_s$ is the number of uncorrelated samples and is fixed at $N_s = 100000$.",
+        "doc": "The QMC samples as a $N_s \u00d7 L \u00d7 L$ binary array, where $N_s$ is the number of uncorrelated samples and is fixed at $N_s = 100000$.",
         "optional": false
       },
       {

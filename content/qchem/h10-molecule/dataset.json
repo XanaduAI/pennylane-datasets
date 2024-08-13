@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/H10/STO-3G/1.0/H10_STO-3G_1.0.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",

@@ -3,6 +3,9 @@
   "class": {
     "$path": "/qspin/_meta/class.json"
   },
+  "collection": {
+    "$path": "/qspin/_meta/collection.json"
+  },
   "data": [
     {
       "dataUrl": null,

@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/HamlibMaxcut/HamlibMaxcut_HamlibMaxcut.h5",
       "parameters": {
         "name": "hamlib-maxcut"
       },

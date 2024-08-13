@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/HamlibTsp/HamlibTsp_HamlibTsp.h5",
       "parameters": {
         "name": "hamlib-travelling-salesperson-problem"
       },

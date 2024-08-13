@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.54/HEH+_6-31G_0.54.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -20,7 +20,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.54/HEH+_STO-3G_0.54.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.58/HEH+_6-31G_0.58.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.58/HEH+_STO-3G_0.58.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.5/HEH+_6-31G_0.5.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -68,7 +68,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/0.5/HEH+_CC-PVDZ_0.5.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.5/HEH+_STO-3G_0.5.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -92,7 +92,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.62/HEH+_6-31G_0.62.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.62/HEH+_STO-3G_0.62.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -116,7 +116,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.66/HEH+_6-31G_0.66.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.66/HEH+_STO-3G_0.66.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -140,7 +140,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.74/HEH+_6-31G_0.74.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -152,7 +152,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.74/HEH+_STO-3G_0.74.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.775/HEH+_6-31G_0.775.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -176,7 +176,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/0.775/HEH+_CC-PVDZ_0.775.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -188,7 +188,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.775/HEH+_STO-3G_0.775.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -200,7 +200,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.78/HEH+_6-31G_0.78.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -212,7 +212,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.78/HEH+_STO-3G_0.78.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.7/HEH+_6-31G_0.7.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -236,7 +236,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/0.7/HEH+_CC-PVDZ_0.7.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -248,7 +248,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.7/HEH+_STO-3G_0.7.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -260,7 +260,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.82/HEH+_6-31G_0.82.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -272,7 +272,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.82/HEH+_STO-3G_0.82.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.86/HEH+_6-31G_0.86.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -296,7 +296,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.86/HEH+_STO-3G_0.86.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -308,7 +308,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.94/HEH+_6-31G_0.94.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -320,7 +320,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.94/HEH+_STO-3G_0.94.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -332,7 +332,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.98/HEH+_6-31G_0.98.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.98/HEH+_STO-3G_0.98.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -356,7 +356,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/0.9/HEH+_6-31G_0.9.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -368,7 +368,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/0.9/HEH+_CC-PVDZ_0.9.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -380,7 +380,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/0.9/HEH+_STO-3G_0.9.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -392,7 +392,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.02/HEH+_6-31G_1.02.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.02/HEH+_STO-3G_1.02.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -416,7 +416,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.06/HEH+_6-31G_1.06.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -428,7 +428,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.06/HEH+_STO-3G_1.06.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -440,7 +440,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.14/HEH+_6-31G_1.14.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -452,7 +452,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.14/HEH+_STO-3G_1.14.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.18/HEH+_6-31G_1.18.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -476,7 +476,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.18/HEH+_STO-3G_1.18.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -488,7 +488,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.1/HEH+_6-31G_1.1.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -500,7 +500,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/1.1/HEH+_CC-PVDZ_1.1.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -512,7 +512,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.1/HEH+_STO-3G_1.1.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.22/HEH+_6-31G_1.22.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -536,7 +536,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.22/HEH+_STO-3G_1.22.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -548,7 +548,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.26/HEH+_6-31G_1.26.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -560,7 +560,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.26/HEH+_STO-3G_1.26.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -572,7 +572,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.34/HEH+_6-31G_1.34.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.34/HEH+_STO-3G_1.34.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -596,7 +596,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.38/HEH+_6-31G_1.38.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -608,7 +608,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.38/HEH+_STO-3G_1.38.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -620,7 +620,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.3/HEH+_6-31G_1.3.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -632,7 +632,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/1.3/HEH+_CC-PVDZ_1.3.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.3/HEH+_STO-3G_1.3.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -656,7 +656,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.42/HEH+_6-31G_1.42.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -668,7 +668,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.42/HEH+_STO-3G_1.42.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -680,7 +680,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.46/HEH+_6-31G_1.46.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -692,7 +692,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.46/HEH+_STO-3G_1.46.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.54/HEH+_6-31G_1.54.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -716,7 +716,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.54/HEH+_STO-3G_1.54.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -728,7 +728,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.58/HEH+_6-31G_1.58.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -740,7 +740,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.58/HEH+_STO-3G_1.58.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -752,7 +752,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.5/HEH+_6-31G_1.5.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/1.5/HEH+_CC-PVDZ_1.5.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -776,7 +776,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.5/HEH+_STO-3G_1.5.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -788,7 +788,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.62/HEH+_6-31G_1.62.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -800,7 +800,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.62/HEH+_STO-3G_1.62.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -812,7 +812,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.66/HEH+_6-31G_1.66.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.66/HEH+_STO-3G_1.66.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -836,7 +836,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.74/HEH+_6-31G_1.74.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -848,7 +848,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.74/HEH+_STO-3G_1.74.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -860,7 +860,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.78/HEH+_6-31G_1.78.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -872,7 +872,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.78/HEH+_STO-3G_1.78.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.7/HEH+_6-31G_1.7.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -896,7 +896,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/1.7/HEH+_CC-PVDZ_1.7.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -908,7 +908,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.7/HEH+_STO-3G_1.7.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -920,7 +920,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.82/HEH+_6-31G_1.82.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -932,7 +932,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.82/HEH+_STO-3G_1.82.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.86/HEH+_6-31G_1.86.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -956,7 +956,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.86/HEH+_STO-3G_1.86.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -968,7 +968,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.94/HEH+_6-31G_1.94.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -980,7 +980,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.94/HEH+_STO-3G_1.94.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -992,7 +992,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.98/HEH+_6-31G_1.98.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.98/HEH+_STO-3G_1.98.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -1016,7 +1016,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/1.9/HEH+_6-31G_1.9.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -1028,7 +1028,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/1.9/HEH+_CC-PVDZ_1.9.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -1040,7 +1040,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/1.9/HEH+_STO-3G_1.9.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -1052,7 +1052,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/2.02/HEH+_6-31G_2.02.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/2.02/HEH+_STO-3G_2.02.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -1076,7 +1076,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/2.06/HEH+_6-31G_2.06.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -1088,7 +1088,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/2.06/HEH+_STO-3G_2.06.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -1100,7 +1100,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/6-31G/2.1/HEH+_6-31G_2.1.h5",
       "parameters": {
         "basis": "6-31G",
         "bond_angle": "N/A",
@@ -1112,7 +1112,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/2.1/HEH+_CC-PVDZ_2.1.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/STO-3G/2.1/HEH+_STO-3G_2.1.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "N/A",
@@ -1136,7 +1136,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/2.3/HEH+_CC-PVDZ_2.3.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",
@@ -1148,7 +1148,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HEH+/CC-PVDZ/2.5/HEH+_CC-PVDZ_2.5.h5",
       "parameters": {
         "basis": "CC-PVDZ",
         "bond_angle": "N/A",

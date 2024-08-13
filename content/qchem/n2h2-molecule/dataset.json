@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/N2H2/STO-3G/1.247/N2H2_STO-3G_1.247.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "\u2221 NNH = 106.9\u00b0",
