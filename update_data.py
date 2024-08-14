@@ -7,23 +7,38 @@ def camel_case(string):
    camel_case_string = words[0].lower() + ''.join(word.title() for word in words[1:])
    return camel_case_string[:1].upper() + camel_case_string[1:]
 
-for dataset_json_path in Path("content/qchem/").rglob("*/dataset.json"):
+for dataset_json_path in Path("content/qspin/").rglob("*/dataset.json"):
     with open(dataset_json_path, "rb") as f:
         data = json.load(f)
 
     s3_url = "https://datasets.cloud.pennylane.ai/datasets/h5"
 
     ### QChem
-    molecule = data['downloadName']
+    # molecule = data['downloadName']
+
+    # for block in data['data']:
+    #     basis = block['parameters']['basis']
+    #     bond_len = block['parameters']['bond_length']
+
+    #     filename = molecule + "_" + basis + "_" + bond_len + ".h5"
+    #     data_url = s3_url + "/qchem/" + molecule + "/" + basis + "/" + bond_len + "/" + filename
+
+    #     block["dataUrl"] = data_url
+
+    ### QSpin
+
+    system = data['downloadName']
 
     for block in data['data']:
-        basis = block['parameters']['basis']
-        bond_len = block['parameters']['bond_length']
+        periodicity = block['parameters']['periodicity']
+        lattice = block['parameters']['lattice']
+        layout = block['parameters']['layout']
 
-        filename = molecule + "_" + basis + "_" + bond_len + ".h5"
-        data_url = s3_url + "/qchem/" + molecule + "/" + basis + "/" + bond_len + "/" + filename
+        filename = system + "_" + periodicity + "_" + lattice + "_" + layout + ".h5"
+        data_url = s3_url + "/qspin/" + system + "/" + periodicity + "/" + lattice + "/" + layout + "/" + filename
 
         block["dataUrl"] = data_url
+
 
     # ### Other
 

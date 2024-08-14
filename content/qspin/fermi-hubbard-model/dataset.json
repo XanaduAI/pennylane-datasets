@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/closed/chain/1x4/FermiHubbard_closed_chain_1x4.h5",
       "parameters": {
         "layout": "1x4",
         "lattice": "chain",
@@ -19,7 +19,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/closed/chain/1x8/FermiHubbard_closed_chain_1x8.h5",
       "parameters": {
         "layout": "1x8",
         "lattice": "chain",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/closed/rectangular/2x2/FermiHubbard_closed_rectangular_2x2.h5",
       "parameters": {
         "layout": "2x2",
         "lattice": "rectangular",
@@ -41,7 +41,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/closed/rectangular/2x4/FermiHubbard_closed_rectangular_2x4.h5",
       "parameters": {
         "layout": "2x4",
         "lattice": "rectangular",
@@ -52,7 +52,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/open/chain/1x4/FermiHubbard_open_chain_1x4.h5",
       "parameters": {
         "layout": "1x4",
         "lattice": "chain",
@@ -63,7 +63,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/open/chain/1x8/FermiHubbard_open_chain_1x8.h5",
       "parameters": {
         "layout": "1x8",
         "lattice": "chain",
@@ -74,7 +74,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/open/rectangular/2x2/FermiHubbard_open_rectangular_2x2.h5",
       "parameters": {
         "layout": "2x2",
         "lattice": "rectangular",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/open/rectangular/2x4/FermiHubbard_open_rectangular_2x4.h5",
       "parameters": {
         "layout": "2x4",
         "lattice": "rectangular",
