@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/HamlibMax3Sat/HamlibMax3Sat_HamlibMax3Sat.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Max3Sat/Max3Sat_Max3Sat.h5",
       "parameters": {
         "name": "hamlib-max-3-sat"
       },

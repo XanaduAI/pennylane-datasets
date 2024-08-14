@@ -5,7 +5,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/MnistPca/MnistPca_MnistPca.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/MNISTPCA/MNISTPCA_MNISTPCA.h5",
       "parameters": {
         "name": "downscaled-mnist"
       },

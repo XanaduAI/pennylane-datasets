@@ -5,7 +5,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Rydberggpt/Rydberggpt_Rydberggpt.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/RydbergGPT/RydbergGPT_RydbergGPT.h5",
       "parameters": {
         "name": "rydberggpt"
       },

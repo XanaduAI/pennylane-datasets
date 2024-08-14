@@ -5,7 +5,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Ketgpt/Ketgpt_Ketgpt.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/KetGPT/KetGPT_KetGPT.h5",
       "parameters": {
         "name": "ketgpt"
       },
