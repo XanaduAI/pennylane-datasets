@@ -3,9 +3,12 @@
   "class": {
     "$path": "/qspin/_meta/class.json"
   },
+  "collection": {
+    "$path": "/qspin/_meta/collection.json"
+  },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/closed/chain/1x16/Heisenberg_closed_chain_1x16.h5",
       "parameters": {
         "layout": "1x16",
         "lattice": "chain",
@@ -16,7 +19,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/closed/chain/1x4/Heisenberg_closed_chain_1x4.h5",
       "parameters": {
         "layout": "1x4",
         "lattice": "chain",
@@ -27,7 +30,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/closed/chain/1x8/Heisenberg_closed_chain_1x8.h5",
       "parameters": {
         "layout": "1x8",
         "lattice": "chain",
@@ -38,7 +41,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/closed/rectangular/2x2/Heisenberg_closed_rectangular_2x2.h5",
       "parameters": {
         "layout": "2x2",
         "lattice": "rectangular",
@@ -49,7 +52,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/closed/rectangular/2x4/Heisenberg_closed_rectangular_2x4.h5",
       "parameters": {
         "layout": "2x4",
         "lattice": "rectangular",
@@ -60,7 +63,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/closed/rectangular/2x8/Heisenberg_closed_rectangular_2x8.h5",
       "parameters": {
         "layout": "2x8",
         "lattice": "rectangular",
@@ -71,7 +74,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/closed/rectangular/4x4/Heisenberg_closed_rectangular_4x4.h5",
       "parameters": {
         "layout": "4x4",
         "lattice": "rectangular",
@@ -82,7 +85,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/open/chain/1x16/Heisenberg_open_chain_1x16.h5",
       "parameters": {
         "layout": "1x16",
         "lattice": "chain",
@@ -93,7 +96,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/open/chain/1x4/Heisenberg_open_chain_1x4.h5",
       "parameters": {
         "layout": "1x4",
         "lattice": "chain",
@@ -104,7 +107,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/open/chain/1x8/Heisenberg_open_chain_1x8.h5",
       "parameters": {
         "layout": "1x8",
         "lattice": "chain",
@@ -115,7 +118,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/open/rectangular/2x2/Heisenberg_open_rectangular_2x2.h5",
       "parameters": {
         "layout": "2x2",
         "lattice": "rectangular",
@@ -126,7 +129,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/open/rectangular/2x4/Heisenberg_open_rectangular_2x4.h5",
       "parameters": {
         "layout": "2x4",
         "lattice": "rectangular",
@@ -137,7 +140,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/open/rectangular/2x8/Heisenberg_open_rectangular_2x8.h5",
       "parameters": {
         "layout": "2x8",
         "lattice": "rectangular",
@@ -148,7 +151,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/Heisenberg/open/rectangular/4x4/Heisenberg_open_rectangular_4x4.h5",
       "parameters": {
         "layout": "4x4",
         "lattice": "rectangular",

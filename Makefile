@@ -31,7 +31,7 @@ test:
 
 .PHONY: fmt
 fmt:
-	$(.POETRY) run ruff --fix lib
+	$(.POETRY) run ruff check --fix lib
 	$(.POETRY) run ruff format lib
 
 

@@ -3,9 +3,12 @@
   "class": {
     "$path": "/qchem/_meta/class.json"
   },
+  "collection": {
+    "$path": "/qchem/_meta/collection.json"
+  },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/C2H4/STO-3G/1.339/C2H4_STO-3G_1.339.h5",
       "parameters": {
         "basis": "STO-3G",
         "bond_angle": "\u2221 CCH = 121.2\u00b0, \u2221 HCH = 117.6\u00b0",

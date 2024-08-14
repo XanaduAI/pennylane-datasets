@@ -3,9 +3,12 @@
   "class": {
     "$path": "/qspin/_meta/class.json"
   },
+  "collection": {
+    "$path": "/qspin/_meta/collection.json"
+  },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/BoseHubbard/closed/chain/1x4/BoseHubbard_closed_chain_1x4.h5",
       "parameters": {
         "layout": "1x4",
         "lattice": "chain",
@@ -16,7 +19,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/BoseHubbard/closed/chain/1x8/BoseHubbard_closed_chain_1x8.h5",
       "parameters": {
         "layout": "1x8",
         "lattice": "chain",
@@ -27,7 +30,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/BoseHubbard/closed/rectangular/2x2/BoseHubbard_closed_rectangular_2x2.h5",
       "parameters": {
         "layout": "2x2",
         "lattice": "rectangular",
@@ -38,7 +41,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/BoseHubbard/closed/rectangular/2x4/BoseHubbard_closed_rectangular_2x4.h5",
       "parameters": {
         "layout": "2x4",
         "lattice": "rectangular",
@@ -49,7 +52,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/BoseHubbard/open/chain/1x4/BoseHubbard_open_chain_1x4.h5",
       "parameters": {
         "layout": "1x4",
         "lattice": "chain",
@@ -60,7 +63,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/BoseHubbard/open/chain/1x8/BoseHubbard_open_chain_1x8.h5",
       "parameters": {
         "layout": "1x8",
         "lattice": "chain",
@@ -71,7 +74,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/BoseHubbard/open/rectangular/2x2/BoseHubbard_open_rectangular_2x2.h5",
       "parameters": {
         "layout": "2x2",
         "lattice": "rectangular",
@@ -82,7 +85,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/BoseHubbard/open/rectangular/2x4/BoseHubbard_open_rectangular_2x4.h5",
       "parameters": {
         "layout": "2x4",
         "lattice": "rectangular",

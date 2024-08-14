@@ -7,6 +7,7 @@ from dsets.lib.pydantic_util import CamelCaseMixin
 
 from .dataset import Dataset
 from .dataset_class import DatasetClass
+from .dataset_collection import DatasetCollection
 from .fields import BibtexStr, Slug
 
 
@@ -78,6 +79,7 @@ class DatasetFamily(Document, CamelCaseMixin):
     slug: Slug
 
     class_: Annotated[Ref[DatasetClass], Field(alias="class")]
+    collection: Ref[DatasetCollection] | None = None
     data: list[Dataset] = []
     download_name: str
     features: list[DatasetFeature] = []

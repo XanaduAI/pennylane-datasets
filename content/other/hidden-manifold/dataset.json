@@ -5,7 +5,7 @@
   },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/HiddenManifold/HiddenManifold_HiddenManifold.h5",
       "parameters": {
         "name": "hidden-manifold"
       },

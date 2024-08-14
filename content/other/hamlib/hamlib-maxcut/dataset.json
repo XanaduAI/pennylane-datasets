@@ -3,9 +3,12 @@
   "class": {
     "$path": "/other/_meta/class.json"
   },
+  "collection": {
+    "$path": "/other/hamlib/_meta/collection.json"
+  },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/MaxCut/MaxCut_MaxCut.h5",
       "parameters": {
         "name": "hamlib-maxcut"
       },
