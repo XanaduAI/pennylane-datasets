@@ -8,7 +8,9 @@
   "citation": {
     "$path": "citation.txt"
   },
-  "changelog": [],
+  "changelog": [
+    "version 0.1 : initial public release"
+  ],
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
   "sourceCodeUrl": null,
   "tags": ["Other"],
