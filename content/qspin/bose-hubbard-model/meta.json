@@ -8,11 +8,7 @@
   },
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)",
   "sourceCodeUrl": null,
-  "tags": [
-    "Spin Systems",
-    "Xanadu",
-    "Samples Available"
-  ],
+  "tags": null,
   "title": "Bose Hubbard model",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"

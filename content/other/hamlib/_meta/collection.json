@@ -1,6 +1,6 @@
 {
     "slug": "hamlib",
-    "title": "Hamlib",
-    "about": "{about}",
-    "thumbnail": "https://placehold.co/542x334?text=Hamlib"
+    "title": "HamLib",
+    "about": "This collection contains portions of [HamLib](https://arxiv.org/abs/2306.13126): a library of Hamiltonians for benchmarking quantum algorithms and hardware. We currently support Hamiltonians for several optimization problems.",
+    "thumbnail": "DatasetCollections_HamLib_Thumb.png"
 }
