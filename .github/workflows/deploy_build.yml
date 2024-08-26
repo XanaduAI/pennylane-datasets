@@ -31,6 +31,7 @@ jobs:
             PYTHONPATH: "lib/:${PYTHONPATH}"
             BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
             BUCKET_PUBLIC_DOMAIN: ${{ secrets.BUCKET_PUBLIC_DOMAIN }}
+            DATASETS_ADMIN_API_URL: ${{ secrets.DATASETS_ADMIN_API_URL }}
     
         steps:
             - name: Checkout code

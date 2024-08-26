@@ -8,7 +8,7 @@ import typer
 from pennylane.data import Dataset
 
 from dsets import schemas
-from dsets.lib import bibtex, doctree, json_fmt, markdown, msg, progress, s3
+from dsets.lib import bibtex, deploy, doctree, json_fmt, markdown, msg, progress, s3
 from dsets.schemas import fields
 from dsets.settings import CLIContext
 
@@ -311,11 +311,25 @@ def deploy_build(
     if (short_sha := ctx.commit_sha(short=True)) not in tagset:
         tagset.add(short_sha)
 
+    build_path = ctx.build_dir / "datasets-build.json"
     bucket = ctx.settings.bucket_name
     build_key_prefix = ctx.settings.bucket_prefix_build
     build_file_key = str(build_key_prefix / "datasets-build.json")
 
     metadata = {"commit_sha": ctx.commit_sha(), "env": "env", "tags": list(tagset)}
+
+    if ctx.settings.datasets_admin_api_url is not None:
+        deploy.deploy_datasets_build(
+            ctx.settings.datasets_admin_api_url,
+            build_path,
+            ctx.commit_sha(),
+            tags=list(tagset),
+        )
+    else:
+        msg.structured_print(
+            "Environment variable 'DATASETS_ADMIN_API_URL' is unset,"
+            " skipping deployment to new datasets service"
+        )
 
     ctx.s3_client.upload_file(
         Bucket=bucket,
