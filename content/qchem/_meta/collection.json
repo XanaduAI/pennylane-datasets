@@ -1,6 +1,6 @@
 {
     "slug": "qchem",
-    "title": "PennyLane Qchem",
+    "title": "PennyLane Molecules",
     "about": "This collection includes quantum properties for a variety of molecules with different basis states and bond lengths. For each molecule we provide descriptive information such as the Hamiltonian and calculated values such as the ground state energy.",
     "thumbnail": "DatasetCollections_QChem_Thumb.png"
 }
