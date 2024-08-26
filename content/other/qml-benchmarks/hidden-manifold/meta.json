@@ -13,7 +13,9 @@
   ],
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
   "sourceCodeUrl": "https://github.com/XanaduAI/qml-benchmarks",
-  "tags": null,
+  "tags": [
+    "Other"
+  ],
   "title": "Hidden Manifold",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
