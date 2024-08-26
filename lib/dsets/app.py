@@ -325,6 +325,7 @@ def deploy_build(
             ctx.commit_sha(),
             tags=list(tagset),
         )
+        msg.structured("Deployed build to new datasets service")
     else:
         msg.structured_print(
             "Environment variable 'DATASETS_ADMIN_API_URL' is unset,"
