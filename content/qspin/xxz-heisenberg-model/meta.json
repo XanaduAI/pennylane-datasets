@@ -9,7 +9,11 @@
   },
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)",
   "sourceCodeUrl": null,
-  "tags": null,
+  "tags": [
+    "Spin Systems",
+    "Xanadu",
+    "Samples Available"
+  ],
   "title": "XXZ-Heisenberg model",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
