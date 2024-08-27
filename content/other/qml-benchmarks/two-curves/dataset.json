@@ -3,6 +3,9 @@
   "class": {
     "$path": "/other/_meta/class.json"
   },
+  "collection": {
+    "$path": "/other/qml-benchmarks/_meta/collection.json"
+  },
   "data": [
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/TwoCurves/TwoCurves_TwoCurves.h5",
