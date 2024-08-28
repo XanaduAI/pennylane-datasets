@@ -1,7 +1,7 @@
 import json
 import logging
 from pathlib import Path
-from typing import Annotated, Optional
+from typing import Annotated
 
 import inflection
 import typer
@@ -294,58 +294,24 @@ def upload_assets():
 
 
 @app.command(name="deploy-build")
-def deploy_build(
-    env: str,
-    tags: Annotated[Optional[list[str]], typer.Argument(help="Extra tags")] = None,
-):
-    """Deploy datasets-build.json to S3. Targets the old datasets service.
-    Args:
-        env: Targeted environment, e.g 'dev', 'staging', 'prod'.
-        tags: Extra tags for deployment
-    """
+def deploy_build():
+    """Deploy datasets-build.json to the datasets service."""
     ctx = CLIContext()
-    env = env.strip()
-    tagset: set[str] = set(tag.strip() for tag in tags) if tags else set()
-    tagset.add(ctx.commit_sha(short=True))
-
-    if (short_sha := ctx.commit_sha(short=True)) not in tagset:
-        tagset.add(short_sha)
-
+    short_sha = ctx.commit_sha(short=True)
     build_path = ctx.build_dir / "datasets-build.json"
-    bucket = ctx.settings.bucket_name
-    build_key_prefix = ctx.settings.bucket_prefix_build
-    build_file_key = str(build_key_prefix / "datasets-build.json")
-
-    metadata = {"commit_sha": ctx.commit_sha(), "env": "env", "tags": list(tagset)}
-
-    ctx.s3_client.upload_file(
-        Bucket=bucket,
-        Key=build_file_key,
-        Filename=str(ctx.build_dir / "datasets-build.json"),
-        ExtraArgs={
-            "ContentType": "application/json",
-            "Metadata": {
-                ctx.settings.datasets_build_s3_metadata_key: json.dumps(metadata)
-            },
-        },
-    )
-
-    msg.structured_print(
-        "Deployed build", bucket=bucket, key=build_file_key, tags=tagset
-    )
 
     if (admin_url := ctx.settings.datasets_admin_api_url) is not None:
         deploy.deploy_datasets_build(admin_url, build_path, commit_sha=short_sha)
-        msg.structured(
+        msg.structured_print(
             "Deployed build to new datasets service",
             commmit_sha=short_sha,
             url=admin_url,
         )
     else:
         msg.structured_print(
-            "Environment variable 'DATASETS_ADMIN_API_URL' is unset,"
-            " skipping deployment to new datasets service"
+            "Environment variable 'DATASETS_ADMIN_API_URL' is unset," " cannot deploy."
         )
+        typer.Exit(1)
 
 
 @app.command(name="format")

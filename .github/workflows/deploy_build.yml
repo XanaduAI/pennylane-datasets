@@ -59,5 +59,4 @@ jobs:
               run: .venv/bin/python3 -m dsets upload-assets
 
             - name: Deploy build
-              run: .venv/bin/python3 -m dsets deploy-build \
-                ${{ inputs.environment }} ${{ inputs.ref }}
+              run: .venv/bin/python3 -m dsets deploy-build
