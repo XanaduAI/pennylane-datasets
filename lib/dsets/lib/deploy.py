@@ -7,7 +7,7 @@ from requests_auth_aws_sigv4 import AWSSigV4
 
 
 def deploy_datasets_build(
-    datasets_admin_api_url: str, build_path: Path, commit_sha: str, tags: list[str]
+    datasets_admin_api_url: str, build_path: Path, commit_sha: str
 ) -> None:
     """Deploy datasets build to new datasets service using the admin endpoint.
 
@@ -28,7 +28,9 @@ def deploy_datasets_build(
 
     resp = requests.put(
         f"{datasets_admin_api_url}/build",
-        json={"commitSha": commit_sha, "build": build, "tags": tags},
+        json={"commitSha": commit_sha, "build": build},
         auth=auth,
     )
+    if resp.status_code != 200:
+        raise ValueError(resp.content)
     resp.raise_for_status()

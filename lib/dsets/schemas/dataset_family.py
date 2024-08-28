@@ -8,6 +8,7 @@ from dsets.lib.pydantic_util import CamelCaseMixin
 from .dataset import Dataset
 from .dataset_class import DatasetClass
 from .dataset_collection import DatasetCollection
+from .dataset_tags import Tag
 from .fields import BibtexStr, Slug
 
 
@@ -52,7 +53,7 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     changelog: list[str] = []
     license: str
     source_code_url: str | None = None
-    tags: list[str] = []
+    tags: list[str | Tag] = []
     title: str
     using_this_dataset: Ref[str]
 

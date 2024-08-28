@@ -298,7 +298,7 @@ def deploy_build(
     env: str,
     tags: Annotated[Optional[list[str]], typer.Argument(help="Extra tags")] = None,
 ):
-    """Deploy datasets-build.json to S3.
+    """Deploy datasets-build.json to S3. Targets the old datasets service.
     Args:
         env: Targeted environment, e.g 'dev', 'staging', 'prod'.
         tags: Extra tags for deployment
@@ -318,20 +318,6 @@ def deploy_build(
 
     metadata = {"commit_sha": ctx.commit_sha(), "env": "env", "tags": list(tagset)}
 
-    if ctx.settings.datasets_admin_api_url is not None:
-        deploy.deploy_datasets_build(
-            ctx.settings.datasets_admin_api_url,
-            build_path,
-            ctx.commit_sha(),
-            tags=list(tagset),
-        )
-        msg.structured("Deployed build to new datasets service")
-    else:
-        msg.structured_print(
-            "Environment variable 'DATASETS_ADMIN_API_URL' is unset,"
-            " skipping deployment to new datasets service"
-        )
-
     ctx.s3_client.upload_file(
         Bucket=bucket,
         Key=build_file_key,
@@ -347,6 +333,19 @@ def deploy_build(
     msg.structured_print(
         "Deployed build", bucket=bucket, key=build_file_key, tags=tagset
     )
+
+    if (admin_url := ctx.settings.datasets_admin_api_url) is not None:
+        deploy.deploy_datasets_build(admin_url, build_path, commit_sha=short_sha)
+        msg.structured(
+            "Deployed build to new datasets service",
+            commmit_sha=short_sha,
+            url=admin_url,
+        )
+    else:
+        msg.structured_print(
+            "Environment variable 'DATASETS_ADMIN_API_URL' is unset,"
+            " skipping deployment to new datasets service"
+        )
 
 
 @app.command(name="format")

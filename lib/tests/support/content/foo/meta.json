@@ -1,9 +1,12 @@
 {
     "title": "Bar",
     "tags": [
-      "big_data",
-      "machine_learning",
-      "algorithms"
+      "algorithms",
+      {
+        "slug": "big-data",
+        "title": "Big Data"
+      },
+      "Machine Learning"
     ],
     "abstract": "Data",
     "citation": {

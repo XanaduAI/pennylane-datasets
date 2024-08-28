@@ -47,7 +47,9 @@ BibtexStr = Annotated[str, AfterValidator(_bibtex_str_validator)]
 
 """Field type for a 'slug'. Must be 'kabob-case', and contain only
 lowercase ASCII letters and numbers."""
-Slug = TypeAliasType("Slug", Annotated[str, Field(pattern=r"^[a-z0-9]+(-[a-z0-9]+)*$")])
+Slug = TypeAliasType(
+    "Slug", Annotated[str, Field(pattern=r"^[a-z0-9<>]+(-[a-z0-9<>]+)*$")]
+)
 
 
 T = TypeVar("T")
