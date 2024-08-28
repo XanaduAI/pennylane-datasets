@@ -55,8 +55,8 @@
     "license": "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
     "sourceCodeUrl": null,
     "tags": [
-      ">16 Qubits",
-      ">20 Qubits",
+      {"slug": "gt-16-qubits", "title": ">16 Qubits"},
+      {"slug": "gt-20-qubits", "title": ">20 Qubits"},
       "Other"
     ],
     "title": "HamLib: Max-3-SAT",
