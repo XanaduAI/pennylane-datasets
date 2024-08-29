@@ -1,18 +1,21 @@
 {
-  "slug": "hyperplanes",
+  "slug": "linearly-separable",
   "class": {
     "$path": "/other/_meta/class.json"
   },
+  "collection": {
+    "$path": "/other/qml-benchmarks/_meta/collection.json"
+  },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Hyperplanes/Hyperplanes_Hyperplanes.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/LinearlySeparable/LinearlySeparable_LinearlySeparable.h5",
       "parameters": {
-        "name": "hyperplanes"
+        "name": "linearly-separable"
       },
       "extra": {}
     }
   ],
-  "downloadName": "hyperplanes",
+  "downloadName": "linearly-separable",
   "features": [
     {
       "slug": "dataset-attributes",
@@ -41,28 +44,28 @@
     "tags": [
       "Other"
     ],
-    "title": "Hyperplanes",
+    "title": "Linearly Separable",
     "usingThisDataset": {
       "$path": "using_this_dataset.md"
     },
     "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
-    "thumbnail": "Dataset_Thumb_IntersectingHyperplanes.png",
+    "thumbnail": "Dataset_Thumb_LinearlySeparable.png",
     "extra": {}
   },
   "extra": {
     "defaultParameters": {
-      "name": "hyperplanes"
+      "name": "linearly-separable"
     },
     "extraAttributes": [
       {
-        "name": "diff_train",
+        "name": "train",
         "pythonType": "dict",
-        "doc": "Diff training sets. These are provided as a dictionary with form ``diff_train[n_hyperplanes]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each number of hyperplanes (n_hyperplanes) between 2 and 20."
+        "doc": "Training sets. These are provided as a dictionary with form ``train[dimension]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each dimension between 2 and 20."
       },
       {
-        "name": "diff_test",
+        "name": "test",
         "pythonType": "dict",
-        "doc": "Diff test sets. These are provided as a dictionary with form ``diff_test[n_hyperplanes]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each number of hyperplanes (n_hyperplanes) between 2 and 20."
+        "doc": "Test sets. These are provided as a dictionary with form ``test[dimension]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each dimension between 2 and 20."
       }
     ]
   }

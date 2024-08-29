@@ -53,7 +53,7 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     changelog: list[str] = []
     license: str
     source_code_url: str | None = None
-    tags: list[str]
+    tags: list[str] = []
     title: str
     using_this_dataset: Ref[str]
 

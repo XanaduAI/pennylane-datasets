@@ -1,6 +1,6 @@
 {
     "slug": "qspin",
-    "title": "Qspin",
-    "about": "{about}",
-    "thumbnail": "https://placehold.co/542x334?text=Qspin"
+    "title": "PennyLane Spin Systems",
+    "about": "This collection includes quantum properties for a variety of different spin systems. For varying onsite interaction values, we provide descriptive information such as the system Hamiltonian and calculated values such as measurements of an order parameter.",
+    "thumbnail": "DatasetCollections_QSpin_Thumb.png"
 }
