@@ -7,14 +7,7 @@ from pydantic import BaseModel
 
 from dsets.lib.doctree import Asset, Doctree
 from dsets.lib.pydantic_util import CamelCaseMixin
-from dsets.lib.slugs import slugify
-from dsets.schemas import (
-    DatasetClass,
-    DatasetCollection,
-    DatasetFamily,
-    DatasetFamilyMeta,
-    Tag,
-)
+from dsets.schemas import DatasetClass, DatasetCollection, DatasetFamily
 
 from .assets import AssetLoader
 
@@ -27,10 +20,10 @@ class DatasetBuild(BaseModel, CamelCaseMixin):
     """
 
     assets: set[Asset]
-    tags: dict[str, Tag]
     dataset_classes: dict[str, DatasetClass]
     dataset_families: dict[str, DatasetFamily]
     dataset_collections: dict[str, DatasetCollection]
+    tags: list[str]
 
 
 def compile_dataset_build(
@@ -58,7 +51,7 @@ def compile_dataset_build(
     dataset_classes: dict[str, DatasetClass] = {}
     dataset_families: dict[str, DatasetFamily] = {}
     dataset_collections: dict[str, DatasetCollection] = {}
-    tags: dict[str, Tag] = {}
+    tagset = set()
 
     for dataset_json_path in content_dir.rglob("**/dataset.json"):
         family = DatasetFamily.from_os_path(
@@ -69,6 +62,9 @@ def compile_dataset_build(
             raise RuntimeError(
                 f"DatasetFamily with slug '{family.slug}' already exists"
             )
+
+        for tag in family.meta.tags:
+            tagset.add(tag)
 
         class_ = typing.cast(DatasetClass, family.class_)
         if not (existing_type := dataset_classes.get(class_.slug)):
@@ -90,17 +86,6 @@ def compile_dataset_build(
                     f"Duplicate 'DatasetCollection' definition on family '{family.slug}'"
                 )
 
-        meta = typing.cast(DatasetFamilyMeta, family.meta)
-        for i, tag in enumerate(meta.tags):
-            if isinstance(tag, str):
-                tag = Tag(slug=slugify(tag), title=tag)
-                meta.tags[i] = tag
-
-            if existing_tag := tags.get(tag.slug):
-                meta.tags[i] = existing_tag
-            else:
-                tags[tag.slug] = tag
-
         dataset_families[family.slug] = family
 
     asset_loader = AssetLoader(build_dir, asset_destination_url_prefix)
@@ -112,7 +97,7 @@ def compile_dataset_build(
         dataset_classes=dataset_classes,
         dataset_families=dataset_families,
         dataset_collections=dataset_collections,
-        tags=tags,
+        tags=sorted(tagset),
     ).model_dump(
         mode="json",
         by_alias=True,

@@ -16,8 +16,8 @@
   "sourceCodeUrl": null,
   "tags": [
     "Other",
-    {"slug": "gt-16-qubits", "title": ">16 Qubits"},
-    {"slug": "gt-20-qubits", "title": ">20 Qubits"}
+    ">16 Qubits",
+    ">20 Qubits"
   ],
   "title": "KetGPT",
   "usingThisDataset": {

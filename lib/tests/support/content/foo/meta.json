@@ -1,11 +1,8 @@
 {
     "title": "Bar",
     "tags": [
-      "algorithms",
-      {
-        "slug": "big-data",
-        "title": "Big Data"
-      },
+      "Algorithms",
+      "Big Data",
       "Machine Learning"
     ],
     "abstract": "Data",
