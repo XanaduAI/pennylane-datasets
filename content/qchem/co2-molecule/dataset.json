@@ -10,9 +10,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/CO2/STO-3G/1.162/CO2_STO-3G_1.162.h5",
       "parameters": {
+        "molname": "CO2",
         "basis": "STO-3G",
-        "bond_angle": "\u2221 OCO = 180.0\u00b0",
-        "bond_length": "1.162",
+        "bondlength": "1.162",
+        "bondangle": "\u2221 OCO = 180.0\u00b0",
         "number_of_spin_orbitals": "30"
       },
       "extra": {
@@ -97,6 +98,19 @@
       "bond_angle": "\u2221 OCO = 180.0\u00b0",
       "bond_length": "1.162",
       "number_of_spin_orbitals": "30"
+    }
+  },
+  "parameterTree": {
+    "next": {
+      "CO2": {
+        "default": "STO-3G",
+        "next": {
+          "STO-3G": {
+            "default": "1.162",
+            "next": {}
+          }
+        }
+      }
     }
   }
 }

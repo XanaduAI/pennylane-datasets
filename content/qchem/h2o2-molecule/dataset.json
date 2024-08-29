@@ -10,9 +10,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/H2O2/STO-3G/1.475/H2O2_STO-3G_1.475.h5",
       "parameters": {
+        "molname": "H2O2",
         "basis": "STO-3G",
-        "bond_angle": "\u2221 OOH = 94.8",
-        "bond_length": "1.475",
+        "bondlength": "1.475",
+        "bondangle": "\u2221 OOH = 94.8",
         "number_of_spin_orbitals": "24"
       },
       "extra": {
@@ -97,6 +98,19 @@
       "bond_angle": "\u2221 OOH = 94.8",
       "bond_length": "1.475",
       "number_of_spin_orbitals": "24"
+    }
+  },
+  "parameterTree": {
+    "next": {
+      "H2O2": {
+        "default": "STO-3G",
+        "next": {
+          "STO-3G": {
+            "default": "1.475",
+            "next": {}
+          }
+        }
+      }
     }
   }
 }
