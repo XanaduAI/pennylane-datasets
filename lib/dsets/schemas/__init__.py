@@ -7,7 +7,6 @@ from .dataset_family import (
     DatasetFeature,
     DatasetParameterNode,
 )
-from .dataset_tags import Tag
 
 __all__ = [
     "Dataset",
@@ -19,5 +18,4 @@ __all__ = [
     "DatasetFamily",
     "DatasetFamilyMeta",
     "DatasetFeature",
-    "Tag",
 ]

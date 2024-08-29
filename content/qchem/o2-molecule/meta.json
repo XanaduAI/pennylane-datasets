@@ -13,7 +13,7 @@
     "Samples Available",
     "Quantum Chemistry",
     "VQE Data Available",
-    {"slug": "gt-16-qubits", "title": ">16 Qubits"}
+    ">16 Qubits"
   ],
   "title": "O2 Molecule",
   "usingThisDataset": {
