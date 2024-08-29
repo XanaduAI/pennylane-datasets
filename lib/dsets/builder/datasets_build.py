@@ -17,6 +17,7 @@ from dsets.schemas import (
 )
 
 from .assets import AssetLoader
+from .parameters import build_parameter_tree
 
 
 class DatasetBuild(BaseModel, CamelCaseMixin):
@@ -100,6 +101,8 @@ def compile_dataset_build(
                 meta.tags[i] = existing_tag
             else:
                 tags[tag.slug] = tag
+
+        family.parameter_tree = build_parameter_tree(family)
 
         dataset_families[family.slug] = family
 

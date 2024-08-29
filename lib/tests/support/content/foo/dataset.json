@@ -26,7 +26,10 @@
     ],
     "data": [
       {
-        "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/foo/thing.h5"
+        "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/foo/thing.h5",
+        "parameters": {
+          "number": "2"
+        }
       }
     ]
   }
