@@ -1,4 +1,4 @@
-from typing import Annotated, Any, Literal
+from typing import Annotated, Any, Literal, TypedDict
 
 from pydantic import Field
 
@@ -63,6 +63,16 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     extra: dict[str, Any] = {}
 
 
+class DatasetParameterNode(TypedDict, total=False):
+    """Model for the parameter defaults map of a dataset class."""
+
+    default: str
+    next_: "DatasetParameterTree"
+
+
+DatasetParameterTree = dict[str, DatasetParameterNode | None]
+
+
 class DatasetFamily(Document, CamelCaseMixin):
     """Model for dataset family, which may include one or more
     Pennylane dataset files.
@@ -85,5 +95,18 @@ class DatasetFamily(Document, CamelCaseMixin):
     download_name: str
     features: list[DatasetFeature] = []
     meta: Ref[DatasetFamilyMeta]
+    parameter_tree: DatasetParameterTree = {}
 
     extra: dict[str, Any] = {}
+
+
+def insert_parameters(dataset: Dataset, partial: DatasetParameterTree):
+    for value in dataset.parameters.values():
+        ...
+
+
+def build_parameter_tree(family: DatasetFamily):
+    partial = family.parameter_tree
+
+    for dataset in family.data:
+        insert_parameters(dataset, partial)
