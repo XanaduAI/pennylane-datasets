@@ -1,0 +1,6 @@
+@misc{Korbinian Kottmann2024benchmarkcircuitscliffordt,
+    title={BenchmarkCircuitsCliffordT},
+    author={Korbinian Kottmann},
+    howpublished={\urlhttps://pennylane.ai/datasets/other/benchmarkcircuitscliffordt},
+    year={2024}
+}

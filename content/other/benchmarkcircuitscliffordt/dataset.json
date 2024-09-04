@@ -1,0 +1,31 @@
+{
+  "slug": "benchmarkcircuitscliffordt",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "collection": null,
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {
+        "name": "BenchmarkCircuitsCliffordT"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "BenchmarkCircuitsCliffordT",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {}
+}
