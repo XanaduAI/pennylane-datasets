@@ -3,21 +3,20 @@
   "class": {
     "$path": "/other/_meta/class.json"
   },
-  "collection": null,
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BenchmarkCircuitsCliffordT/BenchmarkCircuitsCliffordT.h5",
       "parameters": {
-        "name": "BenchmarkCircuitsCliffordT"
+        "name": "benchmarkcircuitscliffordt"
       },
       "extra": {}
     }
   ],
-  "downloadName": "BenchmarkCircuitsCliffordT",
+  "downloadName": "benchmarkcircuitscliffordt",
   "features": [
     {
-      "slug": "example-feature",
-      "title": "Example Feature",
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
       "type": "DATA",
       "content": {
         "$path": "features/dataset-attributes.md"
@@ -25,7 +24,53 @@
     }
   ],
   "meta": {
-    "$path": "meta.json"
+    "abstract": null,
+    "authors": [
+      "Korbinian Kottmann"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "version 0.1 : initial public release"
+    ],
+    "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+    "tags": [
+      "Other"
+    ],
+    "title": "Benchmark Circuits for Clifford + T optimizations",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
+    "thumbnail": "Dataset_Thumb_BarsAndStripes.png",
+    "extra": {}
   },
-  "extra": {}
+  "extra": {
+    "defaultParameters": {
+      "name": "benchmarkcircuitscliffordt"
+    },
+    "extraAttributes": [
+      {
+        "name": "circuits",
+        "pythonType": "List[QuantumScript]",
+        "doc": "Ordered list of the respective quantum circuits."
+      },
+      {
+        "name": "circuit_names",
+        "pythonType": "List[string]",
+        "doc": "Ordered list of the names of the benchmark quantum circuits."
+      },
+      {
+        "name": "n_wires",
+        "pythonType": "List[int]",
+        "doc": "Ordered list of qubit counts for the respective quantum circuits."
+      },
+      {
+        "name": "wires",
+        "pythonType": "List[List[int]]",
+        "doc": "Ordered list of wires for the respective quantum circuits."
+      }
+    ]
+  }
 }
