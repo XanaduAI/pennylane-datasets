@@ -10,11 +10,11 @@
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
   "sourceCodeUrl": null,
   "tags": [],
-  "title": "BenchmarkCircuitsCliffordT",
+  "title": "Benchmark circuits for Clifford + T optimizations",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": null,
-  "thumbnail": null,
+  "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
+  "thumbnail": "Dataset_Thumb_BarsAndStripes.png",
   "extra": {}
 }
