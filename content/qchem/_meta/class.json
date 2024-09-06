@@ -161,6 +161,12 @@
   ],
   "parameterList": [
     {
+      "name": "molname",
+      "title": "Molecule Name",
+      "description": null,
+      "optional": false
+    },
+    {
       "name": "basis",
       "title": "Basis",
       "description": null,

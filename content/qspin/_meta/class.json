@@ -59,6 +59,12 @@
   ],
   "parameterList": [
     {
+      "name": "sysname",
+      "title": "System Name",
+      "description": null,
+      "optional": false
+    },
+    {
       "name": "layout",
       "title": "Layout",
       "description": null,
