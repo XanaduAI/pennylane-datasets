@@ -7,7 +7,7 @@ from pydantic import BaseModel
 
 from dsets.lib.doctree import Asset, Doctree
 from dsets.lib.pydantic_util import CamelCaseMixin
-from dsets.schemas import DatasetClass, DatasetFamily
+from dsets.schemas import DatasetClass, DatasetCollection, DatasetFamily
 
 from .assets import AssetLoader
 
@@ -22,6 +22,7 @@ class DatasetBuild(BaseModel, CamelCaseMixin):
     assets: set[Asset]
     dataset_classes: dict[str, DatasetClass]
     dataset_families: dict[str, DatasetFamily]
+    dataset_collections: dict[str, DatasetCollection]
 
 
 def compile_dataset_build(
@@ -48,6 +49,7 @@ def compile_dataset_build(
 
     dataset_classes: dict[str, DatasetClass] = {}
     dataset_families: dict[str, DatasetFamily] = {}
+    dataset_collections: dict[str, DatasetCollection] = {}
 
     for dataset_json_path in content_dir.rglob("**/dataset.json"):
         family = DatasetFamily.from_os_path(
@@ -64,8 +66,20 @@ def compile_dataset_build(
             dataset_classes[class_.slug] = class_
         elif existing_type.document_context.os_path != class_.document_context.os_path:
             raise RuntimeError(
-                f"Duplicate 'DatasetType' definition on family '{family.slug}'"
+                f"Duplicate 'DatasetClass' definition on family '{family.slug}'"
             )
+
+        collection = typing.cast(DatasetCollection | None, family.collection)
+        if collection:
+            existing = existing = dataset_collections.get(collection.slug)
+            if not existing:
+                dataset_collections[collection.slug] = collection
+            elif (
+                existing.document_context.os_path != collection.document_context.os_path
+            ):
+                raise RuntimeError(
+                    f"Duplicate 'DatasetCollection' definition on family '{family.slug}'"
+                )
 
         dataset_families[family.slug] = family
 
@@ -77,6 +91,7 @@ def compile_dataset_build(
         assets=doctree.get_objects(Asset),
         dataset_classes=dataset_classes,
         dataset_families=dataset_families,
+        dataset_collections=dataset_collections,
     ).model_dump(
         mode="json",
         by_alias=True,

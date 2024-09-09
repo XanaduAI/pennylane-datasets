@@ -3,9 +3,12 @@
   "class": {
     "$path": "/other/_meta/class.json"
   },
+  "collection": {
+    "$path": "/other/qml-benchmarks/_meta/collection.json"
+  },
   "data": [
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Hyperplanes/Hyperplanes_Hyperplanes.h5",
       "parameters": {
         "name": "hyperplanes"
       },
