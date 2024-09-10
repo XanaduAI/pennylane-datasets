@@ -1,0 +1,76 @@
+{
+  "slug": "t-optimize",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BenchmarkCircuitsCliffordT/BenchmarkCircuitsCliffordT.h5",
+      "parameters": {
+        "name": "t-optimize"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "t-optimize",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Korbinian Kottmann"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "version 0.1 : initial public release"
+    ],
+    "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+    "tags": [
+      "Other"
+    ],
+    "title": "T-gate optimization",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
+    "thumbnail": "Dataset_Thumb_BarsAndStripes.png",
+    "extra": {}
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "t-optimize"
+    },
+    "extraAttributes": [
+      {
+        "name": "circuits",
+        "pythonType": "List[QuantumScript]",
+        "doc": "Ordered list of the respective quantum circuits."
+      },
+      {
+        "name": "circuit_names",
+        "pythonType": "List[string]",
+        "doc": "Ordered list of the names of the benchmark quantum circuits."
+      },
+      {
+        "name": "n_wires",
+        "pythonType": "List[int]",
+        "doc": "Ordered list of qubit counts for the respective quantum circuits."
+      },
+      {
+        "name": "wires",
+        "pythonType": "List[List[int]]",
+        "doc": "Ordered list of wires for the respective quantum circuits."
+      }
+    ]
+  }
+}
