@@ -1,6 +1,0 @@
-@misc{Korbinian Kottmann2024t-optimize,
-    title={t-optimize},
-    author={Korbinian Kottmann},
-    howpublished={\urlhttps://pennylane.ai/datasets/other/t-optimize},
-    year={2024}
-}
