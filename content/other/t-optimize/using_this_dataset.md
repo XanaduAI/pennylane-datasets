@@ -16,7 +16,7 @@ Some examples
 Basic properties of the dataset:
 
 ```python
->>> [ds] = qml.data.load("other", name="t-optimize")
+>>> [ds] = qml.data.load("other", name="opTimize")
 
 >>> # ordered list of circuits as QuantumScript objects
 >>> ds.circuits
