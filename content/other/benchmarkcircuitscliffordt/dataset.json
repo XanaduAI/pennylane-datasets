@@ -1,5 +1,5 @@
 {
-  "slug": "benchmarkcircuitscliffordt",
+  "slug": "t-optimize",
   "class": {
     "$path": "/other/_meta/class.json"
   },
@@ -7,12 +7,12 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BenchmarkCircuitsCliffordT/BenchmarkCircuitsCliffordT.h5",
       "parameters": {
-        "name": "benchmarkcircuitscliffordt"
+        "name": "t-optimize"
       },
       "extra": {}
     }
   ],
-  "downloadName": "benchmarkcircuitscliffordt",
+  "downloadName": "t-optimize",
   "features": [
     {
       "slug": "dataset-attributes",
@@ -48,7 +48,7 @@
   },
   "extra": {
     "defaultParameters": {
-      "name": "benchmarkcircuitscliffordt"
+      "name": "t-optimize"
     },
     "extraAttributes": [
       {
