@@ -24,27 +24,7 @@
     }
   ],
   "meta": {
-    "abstract": null,
-    "authors": [
-      "Korbinian Kottmann"
-    ],
-    "citation": {
-      "$path": "citation.txt"
-    },
-    "changelog": [
-      "version 0.1 : initial public release"
-    ],
-    "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
-    "tags": [
-      "Other"
-    ],
-    "title": "T-gate optimization",
-    "usingThisDataset": {
-      "$path": "using_this_dataset.md"
-    },
-    "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
-    "thumbnail": "Dataset_Thumb_BarsAndStripes.png",
-    "extra": {}
+    "$path": "meta.json"
   },
   "extra": {
     "defaultParameters": {

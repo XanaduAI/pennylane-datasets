@@ -9,12 +9,14 @@
   "changelog": [],
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
   "sourceCodeUrl": null,
-  "tags": [],
+  "tags": [
+      "Other"
+    ],
   "title": "T-gate optimization",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
-  "thumbnail": "Dataset_Thumb_BarsAndStripes.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_Generic.png",
   "extra": {}
 }
