@@ -76,7 +76,7 @@ Retrieve gates in circuits:
 ]
 ```
 
-Manipulate circuit using a [transform](https://docs.pennylane.ai/en/stable/code/qml_transforms.html)
+Manipulate circuit using a [transform](https://docs.pennylane.ai/en/stable/code/qml_transforms.html).
 
 ```python
 >>> [new_qscript], _ = qml.transforms.single_qubit_fusion(qscript)
@@ -92,4 +92,12 @@ Manipulate circuit using a [transform](https://docs.pennylane.ai/en/stable/code/
 ───────│───────│───────│───────────────│───────│───────╰●──────│───────╰●─╭●────Rot─╭●─│──╰●─┤  
 ───────│───────╰●──Rot─│──╭X────Rot─╭X─╰●──────│───────────────│──────────│─────────│──│─────┤  
 ───────╰●──────────────╰●─╰●────Rot─╰●─────────╰●──────────────╰●──Rot────╰X────Rot─╰X─╰●────┤  
+```
+
+If you want to obtain only a specific sub-set of circuits by their name, you can create a ``dict`` to call them by name.
+
+```python
+>>> circuits_dict = {name : circuit for name, circuit in zip(ds.circuit_names, ds.circuits)}
+>>> circuits_dict["gf2^4_mult"]
+<QuantumScript: wires=[8, 9, 10, 5, 3, 6, 2, 7, 1, 11, 4, 0], params=0>
 ```
