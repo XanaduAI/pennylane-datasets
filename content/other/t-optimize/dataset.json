@@ -7,12 +7,12 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BenchmarkCircuitsCliffordT/BenchmarkCircuitsCliffordT.h5",
       "parameters": {
-        "name": "opTimize"
+        "name": "op-T-mize"
       },
       "extra": {}
     }
   ],
-  "downloadName": "opTimize",
+  "downloadName": "op-T-mize",
   "features": [
     {
       "slug": "dataset-attributes",
@@ -28,7 +28,7 @@
   },
   "extra": {
     "defaultParameters": {
-      "name": "opTimize"
+      "name": "op-T-mize"
     },
     "extraAttributes": [
       {

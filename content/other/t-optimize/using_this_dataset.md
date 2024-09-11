@@ -1,9 +1,9 @@
-Benchmark circuits for T-gate optimization
+Benchmark circuits for T-gate optimization: op-T-mize
 
 **Description of the dataset**
 
 A collection of circuits typically encountered in literature for methods that aim at optimizing the T-gate count.
-Some examples
+Some prominent examples
 
 - "Polynomial-time T-depth Optimization of Clifford+T circuits via Matroid Partitioning", Matthew Amy, Dmitri Maslov, Michele Mosca, [arXiv:1303.2042](https://arxiv.org/abs/1303.2042), 2013
 - "An Efficient Quantum Compiler that reduces T count", Luke Heyfron, Earl T. Campbell, [arXiv:1712.01557](https://arxiv.org/abs/1712.01557), 2017
@@ -16,7 +16,7 @@ Some examples
 Basic properties of the dataset:
 
 ```python
->>> [ds] = qml.data.load("other", name="opTimize")
+>>> [ds] = qml.data.load("other", name="op-T-mize")
 
 >>> # ordered list of circuits as QuantumScript objects
 >>> ds.circuits
