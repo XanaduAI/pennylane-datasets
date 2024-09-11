@@ -10,6 +10,7 @@ from dsets.lib.pydantic_util import CamelCaseMixin
 from dsets.schemas import DatasetClass, DatasetCollection, DatasetFamily
 
 from .assets import AssetLoader
+from .parameters import build_parameter_tree
 
 
 class DatasetBuild(BaseModel, CamelCaseMixin):
@@ -86,6 +87,7 @@ def compile_dataset_build(
                     f"Duplicate 'DatasetCollection' definition on family '{family.slug}'"
                 )
 
+        family.parameter_tree = build_parameter_tree(family)
         dataset_families[family.slug] = family
 
     asset_loader = AssetLoader(build_dir, asset_destination_url_prefix)

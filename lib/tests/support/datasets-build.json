@@ -84,7 +84,9 @@
       "data": [
         {
           "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/foo/thing.h5",
-          "parameters": {},
+          "parameters": {
+            "number": "2"
+          },
           "extra": {}
         }
       ],
@@ -103,6 +105,11 @@
         }
       ],
       "extra": {},
+      "parameterTree": {
+        "next": {
+          "2": null
+        }
+      },
       "meta": {
         "abstract": "Data",
         "authors": [

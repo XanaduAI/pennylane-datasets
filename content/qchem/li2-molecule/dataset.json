@@ -10,9 +10,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/1.5/LI2_STO-3G_1.5.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.5",
+        "bondlength": "1.5",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -22,9 +23,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/1.7/LI2_STO-3G_1.7.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.7",
+        "bondlength": "1.7",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -34,9 +36,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/1.9/LI2_STO-3G_1.9.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.9",
+        "bondlength": "1.9",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -46,9 +49,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/2.1/LI2_STO-3G_2.1.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "2.1",
+        "bondlength": "2.1",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -58,9 +62,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/2.3/LI2_STO-3G_2.3.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "2.3",
+        "bondlength": "2.3",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -70,9 +75,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/2.5/LI2_STO-3G_2.5.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "2.5",
+        "bondlength": "2.5",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -82,9 +88,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/2.679/LI2_STO-3G_2.679.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "2.679",
+        "bondlength": "2.679",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -94,9 +101,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/2.7/LI2_STO-3G_2.7.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "2.7",
+        "bondlength": "2.7",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -106,9 +114,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/2.9/LI2_STO-3G_2.9.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "2.9",
+        "bondlength": "2.9",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -118,9 +127,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/3.1/LI2_STO-3G_3.1.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "3.1",
+        "bondlength": "3.1",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -130,9 +140,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/3.3/LI2_STO-3G_3.3.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "3.3",
+        "bondlength": "3.3",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -142,9 +153,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/LI2/STO-3G/3.5/LI2_STO-3G_3.5.h5",
       "parameters": {
+        "molname": "Li2",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "3.5",
+        "bondlength": "3.5",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -213,6 +225,19 @@
       "bond_angle": "N/A",
       "bond_length": "2.679",
       "number_of_spin_orbitals": "20"
+    }
+  },
+  "parameterTree": {
+    "next": {
+      "Li2": {
+        "default": "STO-3G",
+        "next": {
+          "STO-3G": {
+            "default": "2.679",
+            "next": {}
+          }
+        }
+      }
     }
   }
 }

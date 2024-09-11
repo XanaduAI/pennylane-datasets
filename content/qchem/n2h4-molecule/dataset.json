@@ -10,9 +10,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/N2H4/STO-3G/1.446/N2H4_STO-3G_1.446.h5",
       "parameters": {
+        "molname": "N2H4",
         "basis": "STO-3G",
-        "bond_angle": "\u2221 NNH = 108.9\u00b0, \u2221 HNH = 106.0\u00b0",
-        "bond_length": "1.446",
+        "bondlength": "1.446",
+        "bondangle": "\u2221 NNH = 108.9\u00b0, \u2221 HNH = 106.0\u00b0",
         "number_of_spin_orbitals": "28"
       },
       "extra": {
@@ -81,6 +82,19 @@
       "bond_angle": "\u2221 NNH = 108.9\u00b0, \u2221 HNH = 106.0\u00b0",
       "bond_length": "1.446",
       "number_of_spin_orbitals": "28"
+    }
+  },
+  "parameterTree": {
+    "next": {
+      "N2H4": {
+        "default": "STO-3G",
+        "next": {
+          "STO-3G": {
+            "default": "1.446",
+            "next": {}
+          }
+        }
+      }
     }
   }
 }

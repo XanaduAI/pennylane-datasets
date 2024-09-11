@@ -10,9 +10,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/H10/STO-3G/1.0/H10_STO-3G_1.0.h5",
       "parameters": {
+        "molname": "H10",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.0",
+        "bondlength": "1.0",
+        "bondangle": "N/A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -97,6 +98,19 @@
       "bond_angle": "N/A",
       "bond_length": "1",
       "number_of_spin_orbitals": "20"
+    }
+  },
+  "parameterTree": {
+    "next": {
+      "H10": {
+        "default": "STO-3G",
+        "next": {
+          "STO-3G": {
+            "default": "1.0",
+            "next": {}
+          }
+        }
+      }
     }
   }
 }
