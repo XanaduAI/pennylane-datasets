@@ -193,6 +193,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
             "Enter title", default=inflection.humanize(family_slug.replace("-", "_"))
         )
         download_name = typer.prompt("Enter download name", default="name")
+        description = typer.prompt("Enter description", default="description")
 
         family = schemas.DatasetFamily(
             slug=family_slug,
@@ -221,6 +222,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
 
         meta = schemas.DatasetFamilyMeta(
             title=family_title,
+            description=description,
             citation=doctree.Reference[fields.BibtexStr](path="citation.txt"),
             using_this_dataset=doctree.Reference[str](path="using_this_dataset.md"),
             license="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
