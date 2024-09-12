@@ -34,7 +34,9 @@ class TestDatasetFamily:
         "usingThisDataset": {
           "$path": "about.md"
         },
-        "license": "GPL"
+        "license": "GPL",
+        "modifiedAt": "2024-09-12",
+        "publishedAt": "2024-09-12"
       },
       "class": {
         "slug": "qchem",
