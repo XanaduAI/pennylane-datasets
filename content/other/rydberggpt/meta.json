@@ -22,6 +22,7 @@
     "Other"
   ],
   "title": "RydbergGPT",
+  "description": "This dataset contains various quantum properties that represent and describe the RydbergGPT under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

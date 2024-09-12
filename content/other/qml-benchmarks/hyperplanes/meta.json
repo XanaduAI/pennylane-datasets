@@ -17,6 +17,7 @@
     "Other"
   ],
   "title": "Hyperplanes",
+  "description": "This dataset contains various quantum properties that represent and describe the Hyperplanes under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

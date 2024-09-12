@@ -20,6 +20,7 @@
     ">20 Qubits"
   ],
   "title": "KetGPT",
+  "description": "This dataset contains various quantum properties that represent and describe the KetGPT under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

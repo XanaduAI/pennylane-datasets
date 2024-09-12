@@ -16,6 +16,7 @@
     ">16 Qubits"
   ],
   "title": "CO Molecule",
+  "description": "This dataset contains various quantum properties that represent and describe the CO Molecule under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

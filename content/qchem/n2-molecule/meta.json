@@ -16,6 +16,7 @@
     ">16 Qubits"
   ],
   "title": "N2 Molecule",
+  "description": "This dataset contains various quantum properties that represent and describe the N2 Molecule under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

@@ -17,6 +17,7 @@
     "Other"
   ],
   "title": "Hidden Manifold",
+  "description": "This dataset contains various quantum properties that represent and describe the Hidden Manifold under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

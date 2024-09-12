@@ -17,6 +17,7 @@
     "Other"
   ],
   "title": "Bars and Stripes",
+  "description": "This dataset contains various quantum properties that represent and describe the Bars and Stripes under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

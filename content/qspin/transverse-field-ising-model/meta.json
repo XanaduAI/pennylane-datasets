@@ -15,6 +15,7 @@
     "Samples Available"
   ],
   "title": "Transverse-field Ising model",
+  "description": "This dataset contains various quantum properties that represent and describe the Transverse-field Ising model under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

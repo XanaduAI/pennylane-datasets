@@ -15,6 +15,7 @@
     "VQE Data Available"
   ],
   "title": "NH3 Molecule",
+  "description": "This dataset contains various quantum properties that represent and describe the NH3 Molecule under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

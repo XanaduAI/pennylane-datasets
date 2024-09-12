@@ -15,6 +15,7 @@
     ">20 Qubits"
   ],
   "title": "N2H4 Molecule",
+  "description": "This dataset contains various quantum properties that represent and describe the N2H4 Molecule under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

@@ -15,6 +15,7 @@
     "Samples Available"
   ],
   "title": "XXZ-Heisenberg model",
+  "description": "This dataset contains various quantum properties that represent and describe the XXZ-Heisenberg model under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

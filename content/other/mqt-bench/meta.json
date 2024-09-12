@@ -19,6 +19,7 @@
     "Other"
   ],
   "title": "MQT Bench",
+  "description": "This dataset contains various quantum properties that represent and describe the MQT Bench under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

@@ -17,6 +17,7 @@
     "Other"
   ],
   "title": "Linearly Separable",
+  "description": "This dataset contains various quantum properties that represent and describe the Linearly Separable under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

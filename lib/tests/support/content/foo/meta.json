@@ -1,20 +1,21 @@
 {
-    "title": "Bar",
-    "tags": [
-      "big_data",
-      "machine_learning",
-      "algorithms"
-    ],
-    "abstract": "Data",
-    "citation": {
-      "$path": "./citation.txt"
-    },
-    "usingThisDataset": {
-      "$path": "./using_this_dataset.md"
-    },
-    "authors": ["Author 1"],
-    "license": "GPL",
-    "changelog": ["Initial release"],
-    "heroImage": "hero_image.jpg",
-    "thumbnail": "/images/thumbnail.png"
-  }
+  "title": "Bar",
+  "description": "This dataset contains various quantum properties that represent and describe the Bar under specified system parameters.",
+  "tags": [
+    "big_data",
+    "machine_learning",
+    "algorithms"
+  ],
+  "abstract": "Data",
+  "citation": {
+    "$path": "./citation.txt"
+  },
+  "usingThisDataset": {
+    "$path": "./using_this_dataset.md"
+  },
+  "authors": ["Author 1"],
+  "license": "GPL",
+  "changelog": ["Initial release"],
+  "heroImage": "hero_image.jpg",
+  "thumbnail": "/images/thumbnail.png"
+}
