@@ -19,6 +19,7 @@ class TestDatasetFamily:
       "downloadName": "H2",
       "meta": {
         "title": "H2 Molecule",
+        "description": "Description for H2 Molecule.",
         "tags": [
           "qchem"
         ],

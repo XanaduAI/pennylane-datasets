@@ -100,6 +100,7 @@
       "extra": {},
       "meta": {
         "abstract": "Data",
+        "description": "Description.",
         "authors": [
           "Author 1"
         ],
