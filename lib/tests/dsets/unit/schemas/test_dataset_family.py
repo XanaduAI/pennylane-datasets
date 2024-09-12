@@ -36,7 +36,7 @@ class TestDatasetFamily:
         },
         "license": "GPL",
         "modifiedAt": "2024-09-12",
-        "publishedAt": "2024-09-12"
+        "publishedAt": "2024-09-11"
       },
       "class": {
         "slug": "qchem",
@@ -125,11 +125,14 @@ class TestDatasetFamily:
             )
         ]
         meta = family.meta
+        assert meta.description == "Description for H2 Molecule."
         assert meta.title == "H2 Molecule"
         assert meta.authors == ["Author 1"]
         assert meta.abstract == "Abstract..."
         assert meta.using_this_dataset == Reference(path="about.md")
         assert meta.citation == Reference(path="citation.txt")
+        assert meta.modified_at == "2024-09-12"
+        assert meta.published_at == "2024-09-11"
 
     def test_model_dump_round_trip(self):
         """Test that data is preserved when loading and dumping from
