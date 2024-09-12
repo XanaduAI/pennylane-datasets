@@ -28,5 +28,7 @@
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_RydbergGPT.png",
-  "extra": {}
+  "extra": {},
+  "modified_at": "2024-09-12",
+  "published_at": "2024-09-12"
 }

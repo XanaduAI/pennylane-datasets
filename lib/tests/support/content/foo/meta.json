@@ -17,5 +17,7 @@
   "license": "GPL",
   "changelog": ["Initial release"],
   "heroImage": "hero_image.jpg",
-  "thumbnail": "/images/thumbnail.png"
+  "thumbnail": "/images/thumbnail.png",
+  "modified_at": "2024-09-12",
+  "published_at": "2024-09-12"
 }

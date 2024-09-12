@@ -119,7 +119,9 @@
         "usingThisDataset": "# Using this dataset\nThis data can be used for computations.\n",
         "heroImage": "https://test.datasets.com/assets/hero_image-b7b71997d36675a0c3fc760efa0d63b20b122e98.jpg",
         "thumbnail": "https://test.datasets.com/assets/thumbnail-7e1d89704a12580e4c592a473e1af7a96ed79503.png",
-        "extra": {}
+        "extra": {},
+        "modified_at": "2024-09-12",
+        "published_at": "2024-09-12"
       }
     }
   }
