@@ -35,6 +35,7 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
         abstract: Short, 1-paragraph description of the dataset
         authors: List of authors
         citation: Citation, in Bibtex format
+        description: Short, 1-2 sentence description of the dataset
         license: License information
         source_code_url: Link to source code for reproducing the
             dataset
@@ -50,6 +51,7 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     authors: list[str]
     citation: Ref[BibtexStr]
     changelog: list[str] = []
+    description: str
     license: str
     source_code_url: str | None = None
     tags: list[str] = []
