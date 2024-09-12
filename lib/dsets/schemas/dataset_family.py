@@ -37,6 +37,8 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
         citation: Citation, in Bibtex format
         description: Short, 1-2 sentence description of the dataset
         license: License information
+        modified_at: Date, in ISO 8601 format, when the dataset was last modified
+        published_at: Date, in ISO 8601 format, when the dataset was first published
         source_code_url: Link to source code for reproducing the
             dataset
         tags: List of tags
@@ -53,6 +55,8 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     changelog: list[str] = []
     description: str
     license: str
+    modified_at: str
+    published_at: str
     source_code_url: str | None = None
     tags: list[str] = []
     title: str
