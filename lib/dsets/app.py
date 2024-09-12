@@ -1,5 +1,6 @@
 import json
 import logging
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Annotated, Optional
 
@@ -185,8 +186,11 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
     fields.validate(fields.Slug, family_slug)
     family_doc = ctx.content_dir / class_slug / family_slug / "dataset.json"
 
+    now = datetime.now(tz=timezone.utc).isoformat()
+
     if family_doc.exists():
         family = schemas.DatasetFamily.from_os_path(content_doctree, family_doc)
+        family.modified_at = now
     else:
         print(f"Creating new family with slug {repr(family_slug)}")
         family_title = typer.prompt(
@@ -227,6 +231,8 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
             using_this_dataset=doctree.Reference[str](path="using_this_dataset.md"),
             license="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
             authors=authors,
+            modified_at=now,
+            published_at=now,
         )
         family_doc.parent.mkdir(parents=True, exist_ok=True)
 
