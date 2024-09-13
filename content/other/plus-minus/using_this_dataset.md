@@ -15,6 +15,7 @@ the investigation by Wendlinger et al., see the
 - For an extended dataset or different image resolutions, feel free to contact the authors.
 
 **Example usage**
+
 ```python
 [ds] = qml.data.load("other", name="plus-minus")
 
