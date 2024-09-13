@@ -36,8 +36,8 @@ class TestDatasetFamily:
           "$path": "about.md"
         },
         "license": "GPL",
-        "modifiedAt": "2024-09-12",
-        "publishedAt": "2024-09-11"
+        "dateOfLastModification": "2024-09-12",
+        "dateOfPublication": "2024-09-11"
       },
       "class": {
         "slug": "qchem",
@@ -132,8 +132,8 @@ class TestDatasetFamily:
         assert meta.abstract == "Abstract..."
         assert meta.using_this_dataset == Reference(path="about.md")
         assert meta.citation == Reference(path="citation.txt")
-        assert meta.modified_at == date(year=2024, month=9, day=12)
-        assert meta.published_at == date(year=2024, month=9, day=11)
+        assert meta.date_of_last_modification == date(year=2024, month=9, day=12)
+        assert meta.date_of_publication == date(year=2024, month=9, day=11)
 
     def test_model_dump_round_trip(self):
         """Test that data is preserved when loading and dumping from

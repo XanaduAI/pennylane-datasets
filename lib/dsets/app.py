@@ -190,7 +190,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
 
     if family_doc.exists():
         family = schemas.DatasetFamily.from_os_path(content_doctree, family_doc)
-        family.modified_at = today
+        family.date_of_last_modification = today
     else:
         print(f"Creating new family with slug {repr(family_slug)}")
         family_title = typer.prompt(
@@ -231,8 +231,8 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
             using_this_dataset=doctree.Reference[str](path="using_this_dataset.md"),
             license="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
             authors=authors,
-            modified_at=today,
-            published_at=today,
+            date_of_last_modification=today,
+            date_of_publication=today,
         )
         family_doc.parent.mkdir(parents=True, exist_ok=True)
 
