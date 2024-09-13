@@ -1,4 +1,5 @@
 import json
+from datetime import date
 
 from dsets.lib.doctree import Reference
 from dsets.schemas import (
@@ -131,8 +132,8 @@ class TestDatasetFamily:
         assert meta.abstract == "Abstract..."
         assert meta.using_this_dataset == Reference(path="about.md")
         assert meta.citation == Reference(path="citation.txt")
-        assert meta.modified_at == "2024-09-12"
-        assert meta.published_at == "2024-09-11"
+        assert meta.modified_at == date(year=2024, month=9, day=12)
+        assert meta.published_at == date(year=2024, month=9, day=11)
 
     def test_model_dump_round_trip(self):
         """Test that data is preserved when loading and dumping from

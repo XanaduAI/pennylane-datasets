@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Annotated, Any, Literal
 
 from pydantic import Field
@@ -55,8 +56,8 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     changelog: list[str] = []
     description: str
     license: str
-    modified_at: str
-    published_at: str
+    modified_at: date
+    published_at: date
     source_code_url: str | None = None
     tags: list[str] = []
     title: str
