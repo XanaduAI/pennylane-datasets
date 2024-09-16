@@ -1,0 +1,24 @@
+{
+  "abstract": null,
+  "authors": [
+    "Maximilian Wendlinger",
+    "Kilian Tscharke",
+    "Pascal Debus"
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [
+    "version 0.1 : initial public release"
+  ],
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "sourceCodeUrl": null,
+  "tags": ["Other"],
+  "title": "Plus Minus",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
+  "thumbnail": "Dataset_AdversarialRobustness_Thumb.png",
+  "extra": {}
+}
