@@ -25,7 +25,7 @@ class DatasetFeature(Document, CamelCaseMixin):
 
     slug: Slug
     title: str
-    type_: Annotated[Literal["DATA", "SAMPLES"], Field(alias="type")] = "DATA"
+    type: Literal["DATA", "SAMPLES"] = "DATA"
     content: Ref[str]
 
 
