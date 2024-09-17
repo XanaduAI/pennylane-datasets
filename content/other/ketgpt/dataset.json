@@ -1,7 +1,28 @@
 {
   "slug": "ketgpt",
   "class": {
-    "$path": "/other/_meta/class.json"
+    "slug": "ketgpt",
+    "name": "Ketgpt",
+    "attributes": [
+      {
+        "name": "circuits",
+        "pythonType": "list",
+        "doc": "Circuits produced by applying KetGPT to existing circuits. No measurements included.",
+        "optional": false
+      },
+      {
+        "name": "n_gates",
+        "pythonType": "list[int]",
+        "doc": "Number of gates used in the circuits above.",
+        "optional": false
+      },
+      {
+        "name": "n_qubits",
+        "pythonType": "list[int]",
+        "doc": "Number of qubits used in the circuits above.",
+        "optional": false
+      }
+    ]
   },
   "data": [
     {
@@ -26,26 +47,5 @@
   "meta": {
     "$path": "meta.json"
   },
-  "extra": {
-    "extraAttributes": [
-      {
-        "name": "circuits",
-        "pythonType": "list",
-        "doc": "Circuits produced by applying KetGPT to existing circuits. No measurements included.",
-        "optional": false
-      },
-      {
-        "name": "n_gates",
-        "pythonType": "list[int]",
-        "doc": "Number of gates used in the circuits above.",
-        "optional": false
-      },
-      {
-        "name": "n_qubits",
-        "pythonType": "list[int]",
-        "doc": "Number of qubits used in the circuits above.",
-        "optional": false
-      }
-    ]
-  }
+  "extra": {}
 }

@@ -1,33 +1,9 @@
 {
   "slug": "rydberggpt",
   "class": {
-    "$path": "/other/_meta/class.json"
-  },
-  "data": [
-    {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/RydbergGPT/RydbergGPT_RydbergGPT.h5",
-      "parameters": {
-        "name": "rydberggpt"
-      },
-      "extra": {}
-    }
-  ],
-  "downloadName": "rydberggpt",
-  "features": [
-    {
-      "slug": "dataset-attributes",
-      "title": "Dataset Attributes",
-      "type": "DATA",
-      "content": {
-        "$path": "features/dataset-attributes.md"
-      }
-    }
-  ],
-  "meta": {
-    "$path": "meta.json"
-  },
-  "extra": {
-    "extraAttributes": [
+    "slug": "rydberggpt",
+    "name": "Rydberggpt",
+    "attributes": [
       {
         "name": "Rbs",
         "pythonType": "list[float]",
@@ -71,5 +47,29 @@
         "optional": false
       }
     ]
-  }
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/RydbergGPT/RydbergGPT_RydbergGPT.h5",
+      "parameters": {
+        "name": "rydberggpt"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "rydberggpt",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {}
 }
