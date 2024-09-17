@@ -121,3 +121,34 @@ assets (e.g images) to `_build/assets`.
 
 To deploy the build, open a pull request on https://github.com/XanaduAI/pennylane-datasets.
 
+## Login
+
+To login to your `pennylane.ai` account via the CLI, please run the following command:
+ ```bash
+(.venv) pennylane-datasets $ dsets login
+Checking credentials...
+```
+
+This will run a check that searches for a valid authorization token on your local machine. If this is the first time using 
+the CLI login function, or if an existing token has expired, the login flow will be triggered. This will direct you to a  `pennylane.ai` login webpage in your browser. In this window you can enter your associated email and password. If successful
+the corresponding CLI output will look like:
+
+```bash
+Checking credentials...
+No valid credentials found.
+Starting login to 'https://xanadu-swc.us.auth0.com/oauth'
+Getting device code from 'https://xanadu-swc.us.auth0.com/oauth/device/code'
+User code is 'ABCD-EFGH'
+Go to 'https://xanadu-swc.us.auth0.com/activate' to complete authentication.
+Successfully saved new token.
+You are logged into your pennylane.ai account.
+```
+
+where a new token has been saved to your machine. Alternatively, if you already have a valid token on your machine, the login
+flow will not be triggered and the CLI output will look like:
+
+```bash
+Checking credentials...
+Found a valid token
+You are logged into your pennylane.ai account.
+```

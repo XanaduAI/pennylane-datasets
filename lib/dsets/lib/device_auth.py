@@ -1,0 +1,169 @@
+import http.client
+import json
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+from collections.abc import Iterable, Mapping
+from typing import TypedDict
+
+
+class DeviceCodeData(TypedDict):
+    device_code: str
+    expires_at: float
+    expires_in: int
+    interval: int
+    user_code: str
+    verification_uri: str
+    verification_uri_complete: str
+
+
+class TokenData(TypedDict):
+    access_token: str
+    expires_at: float
+    expires_in: int
+    token_type: str
+
+
+class OAuthTokenError(TypedDict):
+    error: str
+    description: str
+
+
+class OAuthDeviceCodeGrant:
+    """Example usage:
+
+    AUTH_URL = "https://xanadu-swc-dev.us.auth0.com/oauth"
+    CLIENT_ID = "lyqp1dz8xUk4dYxxyM4U1S7m4ZZYEiW2"
+    oauth = OAuthDeviceCodeGrant(AUTH_URL, CLIENT_ID)
+
+    print(f"Starting login to '{AUTH_URL}'")
+
+    grant = OAuthDeviceCodeGrant(oauth_base_url=AUTH_URL, client_id=CLIENT_ID)
+
+    print(f"Getting device code from '{grant.device_code_url}'")
+
+    device_code = grant.get_device_code()
+
+    print(f"User code is '{device_code['user_code']}'")
+    print(f"Go to '{device_code['verification_uri']}' to complete authentication.")
+
+    webbrowser.open(device_code['verification_uri_complete'])
+
+    token = grant.poll_for_token()
+
+    """
+
+    def __init__(
+        self,
+        oauth_base_url: str,
+        client_id: str,
+        *,
+        audience: str | None = None,
+        headers: Mapping[str, str] | None = None,
+        scopes: Iterable[str] | None = None,
+    ) -> None:
+        self.oauth_base_url = oauth_base_url.rstrip("/")
+        self.client_id = client_id
+
+        self.audience = audience
+        self.headers = {"Content-Type": "application/x-www-form-urlencoded"}
+        if headers:
+            self.headers.update(headers)
+
+        self.scopes = set(scopes) if scopes else None
+
+        self._device_code_data: DeviceCodeData | None = None
+        self._token_data: TokenData | None = None
+
+    @property
+    def device_code_url(self) -> str:
+        return f"{self.oauth_base_url}/device/code"
+
+    @property
+    def token_url(self) -> str:
+        return f"{self.oauth_base_url}/token"
+
+    def get_device_code(self) -> DeviceCodeData:
+        if (data := self._device_code_data) is not None:
+            if data["expires_at"] <= time.time():
+                self._device_code_data = None
+
+                return self.get_device_code()
+
+            return data
+
+        ts = time.time()
+        resp: http.client.HTTPResponse = urllib.request.urlopen(
+            urllib.request.Request(
+                self.device_code_url,
+                data=urllib.parse.urlencode({"client_id": self.client_id}).encode(
+                    "ascii"
+                ),
+                headers=self.headers,
+            )
+        )
+
+        device_code_data: DeviceCodeData = json.loads(resp.read())
+        device_code_data["expires_at"] = ts + device_code_data["expires_in"]
+
+        self._device_code_data = device_code_data
+
+        return device_code_data
+
+    def poll_for_token(self) -> TokenData:
+        device_code_data = self.get_device_code()
+        polling_interval = device_code_data["interval"]
+
+        data = {
+            "client_id": self.client_id,
+            "device_code": device_code_data["device_code"],
+            "grant_type": "urn:ietf:params:oauth:grant-type:device_code",
+        }
+
+        if self.audience is not None:
+            data["audience"] = self.audience
+
+        if self.scopes is not None:
+            data["scopes"] = " ".join(self.scopes)
+
+        req = urllib.request.Request(
+            url=self.token_url,
+            headers=self.headers,
+            data=urllib.parse.urlencode(data).encode("ascii"),
+        )
+
+        while True:
+            ts = time.time()
+            token_data, error = self._do_token_request(req)
+            if error is not None:
+                if error["error"] == "slow_down":
+                    polling_interval += 1
+                elif error["error"] == "expired_token":
+                    raise TimeoutError("Authorization timed out")
+                elif error["error"] != "authorization_pending":
+                    raise RuntimeError(
+                        f"Authorization endpoint {self.token_url} returned error: {json.dumps(error)}"
+                    )
+
+                time.sleep(polling_interval)
+
+            elif token_data is not None:
+                token_data["expires_at"] = ts + token_data["expires_in"]
+                self._token_data = token_data
+                return token_data
+
+    def _do_token_request(
+        self, req: urllib.request.Request
+    ) -> tuple[TokenData, None] | tuple[None, OAuthTokenError]:
+        try:
+            resp: http.client.HTTPResponse = urllib.request.urlopen(req)
+        except urllib.error.HTTPError as exc:
+            try:
+                error_body: OAuthTokenError = json.loads(exc.read())
+                return (None, error_body)
+            except json.JSONDecodeError:
+                raise exc
+
+        token_data: TokenData = json.loads(resp.read())
+        return (token_data, None)

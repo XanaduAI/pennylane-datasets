@@ -53,6 +53,10 @@ class CLIContext:
     def build_dir(self) -> Path:
         return self.repo_root / "_build"
 
+    @property
+    def auth_dir(self) -> Path:
+        return self.repo_root / ".auth"
+
     @cached_property
     def repo(self) -> Repo:
         """dulwich ``Repo`` object for the pennylane-datasets

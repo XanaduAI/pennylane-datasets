@@ -1,5 +1,6 @@
 import json
 import logging
+import webbrowser
 from pathlib import Path
 from typing import Annotated, Optional
 
@@ -8,11 +9,25 @@ import typer
 from pennylane.data import Dataset
 
 from dsets import schemas
-from dsets.lib import bibtex, doctree, json_fmt, markdown, msg, progress, s3
+from dsets.lib import (
+    auth,
+    bibtex,
+    device_auth,
+    doctree,
+    json_fmt,
+    markdown,
+    msg,
+    progress,
+    s3,
+    time,
+)
 from dsets.schemas import fields
 from dsets.settings import CLIContext
 
 from .builder import AssetLoader, compile_dataset_build
+
+AUTH_URL = "https://xanadu-swc.us.auth0.com/oauth"
+CLIENT_ID = "<prod client id>"
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -357,6 +372,45 @@ def format(check: bool = False):
 
     if changed:
         print(f"{changed} file(s) reformatted.")
+
+
+@app.command(name="login")
+def login():
+    """Login to pennylane.ai account."""
+    ctx = CLIContext()
+    auth_path = ctx.auth_dir
+
+    print("Checking credentials...")
+    if auth.check_local_token(auth_path):
+        print("Found a valid token")
+        print("You are logged into your pennylane.ai account.")
+        return
+
+    if not auth_path.exists():
+        auth_path.mkdir()
+
+    print("No valid credentials found.")
+    print(f"Starting login to '{AUTH_URL}'")
+    grant = device_auth.OAuthDeviceCodeGrant(
+        oauth_base_url=AUTH_URL, client_id=CLIENT_ID
+    )
+    print(f"Getting device code from '{grant.device_code_url}'")
+
+    device_code = grant.get_device_code()
+
+    print(f"User code is '{device_code['user_code']}'")
+    print(f"Go to '{device_code['verification_uri']}' to complete authentication.")
+
+    webbrowser.open(device_code["verification_uri_complete"])
+
+    token = grant.poll_for_token()
+
+    timestamp = time.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    with open(auth_path / f"token_{timestamp}.json", "w", encoding="utf-8") as f:
+        json.dump(token, f, indent=2)
+
+    print("Successfully saved new token.")
+    print("You are logged into your pennylane.ai account.")
 
 
 def configure_logging(level=logging.INFO):
