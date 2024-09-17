@@ -1,8 +1,12 @@
 {
   "abstract": null,
   "authors": [
-    "Diego Guala",
-    "Utkarsh Azad"
+    {
+      "name": "Diego Guala"
+    },
+    {
+      "name": "Utkarsh Azad"
+    }
   ],
   "citation": {
     "$path": "citation.txt"

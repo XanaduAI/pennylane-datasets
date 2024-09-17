@@ -1,9 +1,15 @@
 {
   "abstract": null,
   "authors": [
-    "Joseph Bowles",
-    "Shahnawaz Ahmed",
-    "Maria Schuld"
+    {
+      "name": "Joseph Bowles"
+    },
+    {
+      "name": "Shahnawaz Ahmed"
+    },
+    {
+      "name": "Maria Schuld"
+    }
   ],
   "citation": {
     "$path": "citation.txt"

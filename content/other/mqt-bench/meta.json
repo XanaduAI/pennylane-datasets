@@ -1,9 +1,15 @@
 {
   "abstract": null,
   "authors": [
-    "Nils Quetschlich",
-    "Lukas Burgholzer",
-    "Robert Wille"
+    {
+      "name": "Nils Quetschlich"
+    },
+    {
+      "name": "Lukas Burgholzer"
+    },
+    {
+      "name": "Robert Wille"
+    }
   ],
   "citation": {
     "$path": "citation.txt"

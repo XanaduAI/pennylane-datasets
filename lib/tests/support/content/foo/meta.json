@@ -13,7 +13,10 @@
   "usingThisDataset": {
     "$path": "./using_this_dataset.md"
   },
-  "authors": ["Author 1"],
+  "authors": [
+    {"name": "Author 1"},
+    {"username": "author2"}
+  ],
   "license": "GPL",
   "changelog": ["Initial release"],
   "heroImage": "hero_image.jpg",

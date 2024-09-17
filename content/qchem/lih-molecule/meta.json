@@ -1,7 +1,9 @@
 {
   "abstract": null,
   "authors": [
-    "Utkarsh Azad"
+    {
+      "name": "Utkarsh Azad"
+    }
   ],
   "citation": {
     "$path": "citation.txt"
