@@ -1,7 +1,20 @@
 {
   "slug": "linearly-separable",
   "class": {
-    "$path": "/other/_meta/class.json"
+    "slug": "linearly-separable",
+    "name": "LinearlySeparable",
+    "attributes": [
+      {
+        "name": "train",
+        "pythonType": "dict",
+        "doc": "Training sets. These are provided as a dictionary with form ``train[dimension]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each dimension between 2 and 20."
+      },
+      {
+        "name": "test",
+        "pythonType": "dict",
+        "doc": "Test sets. These are provided as a dictionary with form ``test[dimension]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each dimension between 2 and 20."
+      }
+    ]
   },
   "collection": {
     "$path": "/other/qml-benchmarks/_meta/collection.json"
@@ -55,18 +68,6 @@
   "extra": {
     "defaultParameters": {
       "name": "linearly-separable"
-    },
-    "extraAttributes": [
-      {
-        "name": "train",
-        "pythonType": "dict",
-        "doc": "Training sets. These are provided as a dictionary with form ``train[dimension]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each dimension between 2 and 20."
-      },
-      {
-        "name": "test",
-        "pythonType": "dict",
-        "doc": "Test sets. These are provided as a dictionary with form ``test[dimension]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each dimension between 2 and 20."
-      }
-    ]
+    }
   }
 }

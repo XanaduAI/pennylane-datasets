@@ -1,61 +1,9 @@
 {
   "slug": "mqt-bench",
   "class": {
-    "$path": "/other/_meta/class.json"
-  },
-  "data": [
-    {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/MQTBench/MQTBench_MQTBench.h5",
-      "parameters": {
-        "name": "mqt-bench"
-      },
-      "extra": {}
-    }
-  ],
-  "downloadName": "mqt-bench",
-  "features": [
-    {
-      "slug": "dataset-attributes",
-      "title": "Dataset Attributes",
-      "type": "DATA",
-      "content": {
-        "$path": "features/dataset-attributes.md"
-      }
-    }
-  ],
-  "meta": {
-    "abstract": null,
-    "authors": [
-      "Nils Quetschlich",
-      "Lukas Burgholzer",
-      "Robert Wille"
-    ],
-    "citation": {
-      "$path": "citation.txt"
-    },
-    "changelog": [
-      "version 0.1 : initial public release"
-    ],
-    "license": "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
-    "sourceCodeUrl": null,
-    "tags": [
-      ">16 Qubits",
-      ">20 Qubits",
-      "Other"
-    ],
-    "title": "MQT Bench",
-    "usingThisDataset": {
-      "$path": "using_this_dataset.md"
-    },
-    "heroImage": "Datasets_GenericHero_MQTBench.png",
-    "thumbnail": "Dataset_Thumb_MQTBenchCircuits.png",
-    "extra": {}
-  },
-  "extra": {
-    "defaultParameters": {
-      "name": "mqt-bench"
-    },
-    "extraAttributes": [
+    "slug": "mqt-bench",
+    "name": "MqtBench",
+    "attributes": [
       {
         "name": "ae",
         "pythonType": "dict",
@@ -197,5 +145,58 @@
         "doc": "W-State preparation circuits. The W state is an entangled quantum state with a certain type of entanglement. These circuits are given as a dictionary of form `wstate['n_qubits']`."
       }
     ]
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/MQTBench/MQTBench_MQTBench.h5",
+      "parameters": {
+        "name": "mqt-bench"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "mqt-bench",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "abstract": null,
+    "authors": [
+      "Nils Quetschlich",
+      "Lukas Burgholzer",
+      "Robert Wille"
+    ],
+    "citation": {
+      "$path": "citation.txt"
+    },
+    "changelog": [
+      "version 0.1 : initial public release"
+    ],
+    "license": "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
+    "sourceCodeUrl": null,
+    "tags": [
+      ">16 Qubits",
+      ">20 Qubits",
+      "Other"
+    ],
+    "title": "MQT Bench",
+    "usingThisDataset": {
+      "$path": "using_this_dataset.md"
+    },
+    "heroImage": "Datasets_GenericHero_MQTBench.png",
+    "thumbnail": "Dataset_Thumb_MQTBenchCircuits.png",
+    "extra": {}
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "mqt-bench"
+    }
   }
 }
