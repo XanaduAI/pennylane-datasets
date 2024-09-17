@@ -180,11 +180,12 @@
   "features": [
     {
       "slug": "classical-shadow-data",
-      "title": "Classical shadow data",
+      "title": "Classical Shadow Data",
       "type_": "DATA",
       "content": {
         "$path": "/qspin/_meta/features/classical-shadow-data.md"
-      }
+      },
+      "type": "SAMPLES"
     },
     {
       "slug": "hamiltonian-and-ground-state-data",
