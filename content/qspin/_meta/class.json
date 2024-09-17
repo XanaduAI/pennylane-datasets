@@ -65,12 +65,6 @@
       "optional": false
     },
     {
-      "name": "layout",
-      "title": "Layout",
-      "description": null,
-      "optional": false
-    },
-    {
       "name": "periodicity",
       "title": "Periodicity",
       "description": null,
@@ -79,6 +73,12 @@
     {
       "name": "lattice",
       "title": "Lattice",
+      "description": null,
+      "optional": false
+    },
+    {
+      "name": "layout",
+      "title": "Layout",
       "description": null,
       "optional": false
     }
