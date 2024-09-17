@@ -1,0 +1,15 @@
+@misc{wendlinger2024plusminus,
+    title={Plus Minus},
+    author={Maximilian Wendlinger and Kilian Tscharke and Pascal Debus},
+    howpublished={\url{https://pennylane.ai/datasets/other/plus-minus}},
+    year={2024}
+}
+
+@misc{wendlinger2024comparative,
+      title={A Comparative Analysis of Adversarial Robustness for Quantum and Classical Machine Learning Models}, 
+      author={Maximilian Wendlinger and Kilian Tscharke and Pascal Debus},
+      year={2024},
+      eprint={2404.16154},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}

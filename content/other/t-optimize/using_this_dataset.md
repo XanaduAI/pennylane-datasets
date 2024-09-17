@@ -1,9 +1,10 @@
-Benchmark circuits for T-gate optimization: op-T-mize
+The op-T-mize dataset contains quantum circuits that are commonly used to benchmark T-gate optimization techniques.
 
 **Description of the dataset**
 
-A collection of circuits typically encountered in literature for methods that aim at optimizing the T-gate count.
-Some prominent examples
+This dataset contains 31 quantum circuits that implement standard quantum circuits, including algorithms for arithmetic operations, multi-controlled Toffoli gate decompositions, and specific problems. The qubit counts for these circuits vary between 5 and 768 while the pre-compilation gate counts vary between 45 and 853,755. 
+
+These circuits are commonly encountered in literature as a test-bed for techniques that optimize the T-gate count. Some prominent examples include:
 
 - "Polynomial-time T-depth Optimization of Clifford+T circuits via Matroid Partitioning", Matthew Amy, Dmitri Maslov, Michele Mosca, [arXiv:1303.2042](https://arxiv.org/abs/1303.2042), 2013
 - "An Efficient Quantum Compiler that reduces T count", Luke Heyfron, Earl T. Campbell, [arXiv:1712.01557](https://arxiv.org/abs/1712.01557), 2017
