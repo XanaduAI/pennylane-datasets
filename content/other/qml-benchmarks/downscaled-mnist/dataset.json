@@ -40,30 +40,7 @@
     }
   ],
   "meta": {
-    "abstract": null,
-    "authors": [
-      "Joseph Bowles",
-      "Shahnawaz Ahmed",
-      "Maria Schuld"
-    ],
-    "citation": {
-      "$path": "citation.txt"
-    },
-    "changelog": [
-      "{\"version 0.1 : initial public release\"}"
-    ],
-    "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
-    "sourceCodeUrl": "https://github.com/XanaduAI/qml-benchmarks",
-    "tags": [
-      "Other"
-    ],
-    "title": "Downscaled MNIST",
-    "usingThisDataset": {
-      "$path": "using_this_dataset.md"
-    },
-    "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
-    "thumbnail": "Dataset_Thumb_MNIST.png",
-    "extra": {}
+    "$path": "meta.json"
   },
   "extra": {
     "defaultParameters": {

@@ -1,20 +1,24 @@
 {
-    "title": "Bar",
-    "tags": [
-      "Algorithms",
-      "Big Data",
-      "Machine Learning"
-    ],
-    "abstract": "Data",
-    "citation": {
-      "$path": "./citation.txt"
-    },
-    "usingThisDataset": {
-      "$path": "./using_this_dataset.md"
-    },
-    "authors": ["Author 1"],
-    "license": "GPL",
-    "changelog": ["Initial release"],
-    "heroImage": "hero_image.jpg",
-    "thumbnail": "/images/thumbnail.png"
-  }
+  "title": "Bar",
+  "description": "Description.",
+  "tags": [
+    "Algorithms",
+    "Big Data",
+    "Machine Learning"
+  ],
+  "abstract": "Data",
+  "citation": {
+    "$path": "./citation.txt"
+  },
+  "usingThisDataset": {
+    "$path": "./using_this_dataset.md"
+  },
+  "authors": ["Author 1"],
+  "license": "GPL",
+  "changelog": ["Initial release"],
+  "heroImage": "hero_image.jpg",
+  "thumbnail": "/images/thumbnail.png",
+  "dateOfLastModification": "2024-09-12",
+  "dateOfPublication": "2024-09-11"
+}
+

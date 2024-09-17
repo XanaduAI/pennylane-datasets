@@ -47,34 +47,7 @@
     }
   ],
   "meta": {
-    "abstract": null,
-    "authors": [
-      "Leonardo Placidi",
-      "Ryuichiro Hataya",
-      "Toshio Mori",
-      "Koki Aoyama",
-      "Hayata Morisaki",
-      "Kosuke Mitarai",
-      "Keisuke Fujii"
-    ],
-    "citation": {
-      "$path": "citation.txt"
-    },
-    "changelog": [
-      "{\"version 0.1 : initial public release\"}"
-    ],
-    "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
-    "sourceCodeUrl": "https://github.com/FujiiLabCollaboration/MNISQ-quantum-circuit-dataset/tree/main",
-    "tags": [
-      "Other"
-    ],
-    "title": "MNISQ",
-    "usingThisDataset": {
-      "$path": "using_this_dataset.md"
-    },
-    "heroImage": "Circuit_01.png",
-    "thumbnail": "Dataset_Thumb_Generic_MNISQ.png",
-    "extra": {}
+    "$path": "meta.json"
   },
   "extra": {
     "defaultParameters": {

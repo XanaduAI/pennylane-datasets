@@ -1,4 +1,5 @@
 import json
+from datetime import date
 
 from dsets.lib.doctree import Reference
 from dsets.schemas import (
@@ -19,6 +20,7 @@ class TestDatasetFamily:
       "downloadName": "H2",
       "meta": {
         "title": "H2 Molecule",
+        "description": "Description for H2 Molecule.",
         "tags": [
           "qchem"
         ],
@@ -33,7 +35,9 @@ class TestDatasetFamily:
         "usingThisDataset": {
           "$path": "about.md"
         },
-        "license": "GPL"
+        "license": "GPL",
+        "dateOfLastModification": "2024-09-12",
+        "dateOfPublication": "2024-09-11"
       },
       "class": {
         "slug": "qchem",
@@ -122,11 +126,14 @@ class TestDatasetFamily:
             )
         ]
         meta = family.meta
+        assert meta.description == "Description for H2 Molecule."
         assert meta.title == "H2 Molecule"
         assert meta.authors == ["Author 1"]
         assert meta.abstract == "Abstract..."
         assert meta.using_this_dataset == Reference(path="about.md")
         assert meta.citation == Reference(path="citation.txt")
+        assert meta.date_of_last_modification == date(year=2024, month=9, day=12)
+        assert meta.date_of_publication == date(year=2024, month=9, day=11)
 
     def test_model_dump_round_trip(self):
         """Test that data is preserved when loading and dumping from

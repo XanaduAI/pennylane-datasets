@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Annotated, Any, Literal
 
 from pydantic import Field
@@ -36,7 +37,10 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
         abstract: Short, 1-paragraph description of the dataset
         authors: List of authors
         citation: Citation, in Bibtex format
+        description: Short, 1-2 sentence description of the dataset
         license: License information
+        date_of_last_modification: Date (ISO 8601) when the dataset was last modified
+        date_of_publication: Date (ISO 8601) when the dataset was first published
         source_code_url: Link to source code for reproducing the
             dataset
         tags: List of tags
@@ -51,7 +55,10 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     authors: list[str]
     citation: Ref[BibtexStr]
     changelog: list[str] = []
+    description: str
     license: str
+    date_of_last_modification: date
+    date_of_publication: date
     source_code_url: str | None = None
     tags: list[str] = []
     title: str

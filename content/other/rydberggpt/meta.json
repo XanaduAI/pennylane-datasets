@@ -22,10 +22,13 @@
     "Other"
   ],
   "title": "RydbergGPT",
+  "description": "This dataset contains various quantum properties that represent and describe the RydbergGPT under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_RydbergGPT.png",
-  "extra": {}
+  "extra": {},
+  "dateOfLastModification": "2024-09-12",
+  "dateOfPublication": "2024-09-11"
 }
