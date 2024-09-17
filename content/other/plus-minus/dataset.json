@@ -44,12 +44,12 @@
       {
         "name": "labels_test",
         "pythonType": "numpy.ndarray",
-        "doc": "Labels corresponding to the images in img_test. 0 corresponds to '-', 1 corresponds to '+', 2 corresponds to '⊢' and 3 corresponds to '⊣'."
+        "doc": "Labels corresponding to the images in img_test. 0 corresponds to '-', 1 corresponds to '+', 2 corresponds to '\u22a2' and 3 corresponds to '\u22a3'."
       },
       {
         "name": "labels_train",
         "pythonType": "numpy.ndarray",
-        "doc": "Labels corresponding to the images in img_train. 0 corresponds to '-', 1 corresponds to '+', 2 corresponds to '⊢' and 3 corresponds to '⊣'"
+        "doc": "Labels corresponding to the images in img_train. 0 corresponds to '-', 1 corresponds to '+', 2 corresponds to '\u22a2' and 3 corresponds to '\u22a3'"
       }
     ]
   }
