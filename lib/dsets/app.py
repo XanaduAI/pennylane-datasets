@@ -10,7 +10,7 @@ from pennylane.data import Dataset
 
 from dsets import schemas
 from dsets.lib import bibtex, doctree, json_fmt, markdown, msg, progress, s3
-from dsets.schemas import fields
+from dsets.schemas import AuthorName, fields
 from dsets.settings import CLIContext
 
 from .builder import AssetLoader, compile_dataset_build
@@ -186,7 +186,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
     fields.validate(fields.Slug, family_slug)
     family_doc = ctx.content_dir / class_slug / family_slug / "dataset.json"
 
-    today = str(datetime.now().date())
+    today = datetime.now().date()
 
     if family_doc.exists():
         family = schemas.DatasetFamily.from_os_path(content_doctree, family_doc)
@@ -230,7 +230,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
             citation=doctree.Reference[fields.BibtexStr](path="citation.txt"),
             using_this_dataset=doctree.Reference[str](path="using_this_dataset.md"),
             license="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
-            authors=authors,
+            authors=[AuthorName(name=name) for name in authors],
             date_of_last_modification=today,
             date_of_publication=today,
         )

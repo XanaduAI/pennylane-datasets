@@ -6,6 +6,7 @@ from pydantic import Field
 from dsets.lib.doctree import Asset, Document, Ref
 from dsets.lib.pydantic_util import CamelCaseMixin
 
+from .author import Author
 from .dataset import Dataset
 from .dataset_class import DatasetClass
 from .dataset_collection import DatasetCollection
@@ -51,7 +52,7 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     """
 
     abstract: Ref[str] | None = None
-    authors: list[str]
+    authors: list[Author]
     citation: Ref[BibtexStr]
     changelog: list[str] = []
     description: str

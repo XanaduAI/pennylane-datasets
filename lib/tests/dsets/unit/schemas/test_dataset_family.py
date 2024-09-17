@@ -3,6 +3,8 @@ from datetime import date
 
 from dsets.lib.doctree import Reference
 from dsets.schemas import (
+    AuthorHandle,
+    AuthorName,
     Dataset,
     DatasetAttribute,
     DatasetClass,
@@ -25,7 +27,8 @@ class TestDatasetFamily:
           "qchem"
         ],
         "authors": [
-          "Author 1"
+          {"name": "Author 1"},
+          {"username": "author2"}
         ],
         "changelog": ["Initial release"],
         "abstract": "Abstract...",
@@ -128,7 +131,8 @@ class TestDatasetFamily:
         meta = family.meta
         assert meta.description == "Description for H2 Molecule."
         assert meta.title == "H2 Molecule"
-        assert meta.authors == ["Author 1"]
+        assert meta.authors[0] == AuthorName(name="Author 1")
+        assert meta.authors[1] == AuthorHandle(username="author2")
         assert meta.abstract == "Abstract..."
         assert meta.using_this_dataset == Reference(path="about.md")
         assert meta.citation == Reference(path="citation.txt")
