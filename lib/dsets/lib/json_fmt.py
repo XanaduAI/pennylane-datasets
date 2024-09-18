@@ -17,7 +17,7 @@ def format(path: Path | str, check: bool, *, indent: int = 2) -> bool:
     with open(path, "r", encoding="utf-8") as f:
         raw_before = f.read()
 
-    raw_after = json.dumps(json.loads(raw_before), indent=indent)
+    raw_after = json.dumps(json.loads(raw_before), indent=indent) + "\n"
     if raw_before == raw_after:
         return False
 

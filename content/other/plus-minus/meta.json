@@ -13,12 +13,17 @@
   ],
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
   "sourceCodeUrl": null,
-  "tags": ["Other"],
+  "tags": [
+    "Other"
+  ],
   "title": "Plus Minus",
+  "description": "This dataset contains various quantum properties that represent and describe the Plus Minus under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "Dataset_AdversarialRobustness_Thumb.png",
-  "extra": {}
+  "extra": {},
+  "dateOfLastModification": "2024-09-16",
+  "dateOfPublication": "2024-09-16"
 }
