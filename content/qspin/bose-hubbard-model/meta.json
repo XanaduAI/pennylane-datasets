@@ -14,6 +14,7 @@
     "Samples Available"
   ],
   "title": "Bose Hubbard model",
+  "description": "This dataset contains various quantum properties that represent and describe the Bose Hubbard model under specified system parameters.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
@@ -22,5 +23,7 @@
   "extra": {},
   "changelog": [
     "version 0.1 : initial public release"
-  ]
+  ],
+  "dateOfLastModification": "2024-09-12",
+  "dateOfPublication": "2024-09-11"
 }
