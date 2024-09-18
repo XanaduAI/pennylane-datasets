@@ -6,15 +6,22 @@ def build_parameter_tree(family: DatasetFamily):
     if partial is None:
         partial = DatasetParameterNode(next={})
 
+    if not family.class_.parameter_list:
+        return partial
+
+    parameter_names = [parameter.name for parameter in family.class_.parameter_list]
+
     for dataset in family.data:
-        _build_parameter_tree_dataset(dataset, partial)
+        _build_parameter_tree_dataset(parameter_names, dataset, partial)
 
     return partial
 
 
-def _build_parameter_tree_dataset(dataset: Dataset, root: DatasetParameterNode):
+def _build_parameter_tree_dataset(
+    parameter_names: list[str], dataset: Dataset, root: DatasetParameterNode
+):
     curr = root
-    values = list(dataset.parameters.values())
+    values = [dataset.parameters[name] for name in parameter_names]
 
     for value in values[:-1]:
         if (next := curr["next"].get(value)) is None:
