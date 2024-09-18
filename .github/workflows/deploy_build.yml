@@ -39,10 +39,12 @@ jobs:
               with:
                 ref: ${{ inputs.ref || github.ref_name }}
           
-            - name: Setup virtualenv 
-              uses: ./.github/actions/setup-venv
-              with:
-                venv-path: .venv
+            - name: Setup virtualenv
+              shell: bash
+              run: |
+                python3 -m venv .venv
+                .venv/bin/pip install "poetry>=1.8.2<2"
+                .venv/bin/poetry install --with dev --no-root
             
             - name: Run build
               shell: bash
