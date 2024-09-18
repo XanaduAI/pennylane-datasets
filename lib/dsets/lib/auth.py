@@ -6,7 +6,7 @@ from .time import utcnow
 
 
 def check_local_token(auth_path: Path) -> bool:
-    """Returns True if valid token found in `.auth/` local dir."""
+    """Returns True if valid token found in `auth_path` local dir."""
     files = auth_path.glob("*.json")
 
     for file in files:
