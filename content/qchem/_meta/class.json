@@ -173,13 +173,13 @@
       "optional": false
     },
     {
-      "name": "bond_length",
+      "name": "bondlength",
       "title": "Bond length",
       "description": null,
       "optional": true
     },
     {
-      "name": "bond_angle",
+      "name": "bondangle",
       "title": "Bond angle",
       "description": null,
       "optional": true

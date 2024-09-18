@@ -628,8 +628,8 @@
     "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",
     "defaultParameters": {
       "basis": "STO-3G",
-      "bond_angle": "\u2221 HOH = 104.5\u00b0",
-      "bond_length": "0.958",
+      "bondangle": "\u2221 HOH = 104.5\u00b0",
+      "bondlength": "0.958",
       "number_of_spin_orbitals": "14"
     }
   },
