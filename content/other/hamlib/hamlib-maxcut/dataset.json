@@ -3,7 +3,7 @@
   "class": {
     "slug": "hamlib-maxcut",
     "name": "HamlibMaxcut",
-    "attributes": [
+    "attributeList": [
       {
         "name": "hamiltonians",
         "pythonType": "list[Hamiltonian]",

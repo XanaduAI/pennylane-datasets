@@ -3,7 +3,7 @@
   "class": {
     "slug": "hidden-manifold",
     "name": "HiddenManifold",
-    "attributes": [
+    "attributeList": [
       {
         "name": "train",
         "pythonType": "dict",

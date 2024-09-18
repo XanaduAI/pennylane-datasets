@@ -3,7 +3,7 @@
   "class": {
     "slug": "hamlib-max-3-sat",
     "name": "HamlibMax3Sat",
-    "attributes": [
+    "attributeList": [
       {
         "name": "clauses",
         "pythonType": "list[tuple[int, int, int]]",

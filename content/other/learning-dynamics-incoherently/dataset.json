@@ -3,7 +3,7 @@
   "class": {
     "slug": "learning-dynamics-incoherently",
     "name": "LearningDynamicsIncoherently",
-    "attributes": [
+    "attributeList": [
       {
         "name": "shadow_meas",
         "pythonType": "list",

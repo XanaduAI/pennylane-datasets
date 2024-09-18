@@ -3,7 +3,7 @@
   "class": {
     "slug": "hamlib-travelling-salesperson-problem",
     "name": "HamlibTravellingSalespersonProblem",
-    "attributes": [
+    "attributeList": [
       {
         "name": "num_cities",
         "pythonType": "list[int]",

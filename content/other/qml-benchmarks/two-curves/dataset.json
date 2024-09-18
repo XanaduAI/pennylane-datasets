@@ -3,7 +3,7 @@
   "class": {
     "slug": "two-curves",
     "name": "TwoCurves",
-    "attributes": [
+    "attributeList": [
       {
         "name": "train",
         "pythonType": "dict",

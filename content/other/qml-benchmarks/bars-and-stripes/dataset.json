@@ -3,7 +3,7 @@
   "class": {
     "slug": "bars-and-stripes",
     "name": "BarsAndStripes",
-    "attributes": [
+    "attributeList": [
       {
         "name": "train",
         "pythonType": "dict",

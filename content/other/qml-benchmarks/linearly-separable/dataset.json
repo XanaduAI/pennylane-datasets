@@ -3,7 +3,7 @@
   "class": {
     "slug": "linearly-separable",
     "name": "LinearlySeparable",
-    "attributes": [
+    "attributeList": [
       {
         "name": "train",
         "pythonType": "dict",

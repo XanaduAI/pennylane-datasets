@@ -3,7 +3,7 @@
   "class": {
     "slug": "mnisq",
     "name": "Mnisq",
-    "attributes": [
+    "attributeList": [
       {
         "name": "circuits",
         "pythonType": "list",

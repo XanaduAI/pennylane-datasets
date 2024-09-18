@@ -3,7 +3,7 @@
   "class": {
     "slug": "hyperplanes",
     "name": "Hyperplanes",
-    "attributes": [
+    "attributeList": [
       {
         "name": "diff_train",
         "pythonType": "dict",

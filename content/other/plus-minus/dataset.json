@@ -3,7 +3,7 @@
   "class": {
     "slug": "plus-minus",
     "name": "PlusMinus",
-    "attributes": [
+    "attributeList": [
       {
         "name": "img_test",
         "pythonType": "pennylane.numpy.tensor.tensor",

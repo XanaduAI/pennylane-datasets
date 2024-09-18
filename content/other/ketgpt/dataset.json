@@ -3,7 +3,7 @@
   "class": {
     "slug": "ketgpt",
     "name": "Ketgpt",
-    "attributes": [
+    "attributeList": [
       {
         "name": "circuits",
         "pythonType": "list",
