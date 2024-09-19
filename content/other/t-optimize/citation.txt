@@ -1,6 +1,0 @@
-@misc{Kottmann2024_op-T-mize,
-    title={T-gate optimization},
-    author={Korbinian Kottmann},
-    howpublished={\urlhttps://pennylane.ai/datasets/other/op-T-mize},
-    year={2024}
-}
