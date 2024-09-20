@@ -1,36 +1,9 @@
 {
   "slug": "learning-dynamics-incoherently",
   "class": {
-    "$path": "/other/_meta/class.json"
-  },
-  "data": [
-    {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/LearningDynamicsIncoherently/LearningDynamicsIncoherently_LearningDynamicsIncoherently.h5",
-      "parameters": {
-        "name": "learning-dynamics-incoherently"
-      },
-      "extra": {}
-    }
-  ],
-  "downloadName": "learning-dynamics-incoherently",
-  "features": [
-    {
-      "slug": "dataset-attributes",
-      "title": "Dataset Attributes",
-      "type": "DATA",
-      "content": {
-        "$path": "features/dataset-attributes.md"
-      }
-    }
-  ],
-  "meta": {
-    "$path": "meta.json"
-  },
-  "extra": {
-    "defaultParameters": {
-      "name": "learning-dynamics-incoherently"
-    },
-    "extraAttributes": [
+    "slug": "learning-dynamics-incoherently",
+    "name": "LearningDynamicsIncoherently",
+    "attributeList": [
       {
         "name": "shadow_meas",
         "pythonType": "list",
@@ -62,5 +35,33 @@
         "doc": "Pauli bases for the classical shadow measurements. The list is organized as `shadow_bases[training_state_0_or_1][measurement_instance][qubit]`. E.g. shadow_bases[0][10][3] will tell us whether qubit 3 was measured in X, Y, or Z basis for the 10th shadow measurement applied to the 0th training state."
       }
     ]
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/LearningDynamicsIncoherently/LearningDynamicsIncoherently_LearningDynamicsIncoherently.h5",
+      "parameters": {
+        "name": "learning-dynamics-incoherently"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "learning-dynamics-incoherently",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "learning-dynamics-incoherently"
+    }
   }
 }

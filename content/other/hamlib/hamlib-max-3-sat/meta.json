@@ -54,7 +54,7 @@
     "$path": "citation.txt"
   },
   "changelog": [
-    "{\"version 0.1 : initial public release\"}"
+    "version 0.1 : initial public release"
   ],
   "license": "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
   "sourceCodeUrl": null,

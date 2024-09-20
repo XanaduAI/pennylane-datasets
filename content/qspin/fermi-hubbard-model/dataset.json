@@ -10,6 +10,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/closed/chain/1x4/FermiHubbard_closed_chain_1x4.h5",
       "parameters": {
+        "sysname": "FermiHubbard",
         "layout": "1x4",
         "lattice": "chain",
         "periodicity": "closed"
@@ -21,6 +22,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/closed/chain/1x8/FermiHubbard_closed_chain_1x8.h5",
       "parameters": {
+        "sysname": "FermiHubbard",
         "layout": "1x8",
         "lattice": "chain",
         "periodicity": "closed"
@@ -32,6 +34,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/closed/rectangular/2x2/FermiHubbard_closed_rectangular_2x2.h5",
       "parameters": {
+        "sysname": "FermiHubbard",
         "layout": "2x2",
         "lattice": "rectangular",
         "periodicity": "closed"
@@ -43,6 +46,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/closed/rectangular/2x4/FermiHubbard_closed_rectangular_2x4.h5",
       "parameters": {
+        "sysname": "FermiHubbard",
         "layout": "2x4",
         "lattice": "rectangular",
         "periodicity": "closed"
@@ -54,6 +58,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/open/chain/1x4/FermiHubbard_open_chain_1x4.h5",
       "parameters": {
+        "sysname": "FermiHubbard",
         "layout": "1x4",
         "lattice": "chain",
         "periodicity": "open"
@@ -65,6 +70,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/open/chain/1x8/FermiHubbard_open_chain_1x8.h5",
       "parameters": {
+        "sysname": "FermiHubbard",
         "layout": "1x8",
         "lattice": "chain",
         "periodicity": "open"
@@ -76,6 +82,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/open/rectangular/2x2/FermiHubbard_open_rectangular_2x2.h5",
       "parameters": {
+        "sysname": "FermiHubbard",
         "layout": "2x2",
         "lattice": "rectangular",
         "periodicity": "open"
@@ -87,6 +94,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qspin/FermiHubbard/open/rectangular/2x4/FermiHubbard_open_rectangular_2x4.h5",
       "parameters": {
+        "sysname": "FermiHubbard",
         "layout": "2x4",
         "lattice": "rectangular",
         "periodicity": "open"
@@ -100,11 +108,12 @@
   "features": [
     {
       "slug": "classical-shadow-data",
-      "title": "Classical shadow data",
+      "title": "Classical Shadow Data",
       "type_": "DATA",
       "content": {
         "$path": "/qspin/_meta/features/classical-shadow-data.md"
-      }
+      },
+      "type": "SAMPLES"
     },
     {
       "slug": "hamiltonian-and-ground-state-data",
@@ -140,6 +149,41 @@
       "layout": "open",
       "lattice": "1x4",
       "periodicity": "chain"
+    }
+  },
+  "parameterTree": {
+    "next": {
+      "FermiHubbard": {
+        "default": "open",
+        "next": {
+          "closed": {
+            "default": "chain",
+            "next": {
+              "chain": {
+                "default": "1x4",
+                "next": {}
+              },
+              "rectangular": {
+                "default": "2x2",
+                "next": {}
+              }
+            }
+          },
+          "open": {
+            "default": "chain",
+            "next": {
+              "chain": {
+                "default": "1x4",
+                "next": {}
+              },
+              "rectangular": {
+                "default": "2x2",
+                "next": {}
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

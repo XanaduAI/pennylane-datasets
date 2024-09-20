@@ -17,7 +17,7 @@ the investigation by Wendlinger et al., see the
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="plus-minus")
+[ds] = qml.data.load("plus-minus")
 
 X_train, Y_train = ds.img_train, ds.labels_train
 

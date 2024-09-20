@@ -2,9 +2,9 @@
   "title": "Bar",
   "description": "Description.",
   "tags": [
-    "big_data",
-    "machine_learning",
-    "algorithms"
+    "Algorithms",
+    "Big Data",
+    "Machine Learning"
   ],
   "abstract": "Data",
   "citation": {
@@ -24,3 +24,4 @@
   "dateOfLastModification": "2024-09-12",
   "dateOfPublication": "2024-09-11"
 }
+

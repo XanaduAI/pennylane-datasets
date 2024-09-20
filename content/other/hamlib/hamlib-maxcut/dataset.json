@@ -1,7 +1,30 @@
 {
   "slug": "hamlib-maxcut",
   "class": {
-    "$path": "/other/_meta/class.json"
+    "slug": "hamlib-maxcut",
+    "name": "HamlibMaxcut",
+    "attributeList": [
+      {
+        "name": "hamiltonians",
+        "pythonType": "list[Hamiltonian]",
+        "doc": "List of hamiltonians. Each Hamiltonian corresponds to one MaxCut instance."
+      },
+      {
+        "name": "ns",
+        "pythonType": "list[int]",
+        "doc": "List containing the number of nodes for each maxcut instance."
+      },
+      {
+        "name": "ids",
+        "pythonType": "list[Any]",
+        "doc": "Describes the graph type. For circulant graphs, these describe the offset in edge connections and have form `circ_offsets-{distance to first connection}-{distance to second connection}`. For complete bipartite graphs, these describe the number of nodes in each set and have form `complbipart_a-{number of nodes in set a}_b{number of nodes in set b}`. Star graphs do not contain extra information and are labeled `star`."
+      },
+      {
+        "name": "edges",
+        "pythonType": "list[Any]",
+        "doc": "The MaxCut edges provided as tuples of form (node1, node2)."
+      }
+    ]
   },
   "collection": {
     "$path": "/other/hamlib/_meta/collection.json"
@@ -32,28 +55,6 @@
   "extra": {
     "defaultParameters": {
       "name": "hamlib-maxcut"
-    },
-    "extraAttributes": [
-      {
-        "name": "hamiltonians",
-        "pythonType": "list[Hamiltonian]",
-        "doc": "List of hamiltonians. Each Hamiltonian corresponds to one MaxCut instance."
-      },
-      {
-        "name": "ns",
-        "pythonType": "list[int]",
-        "doc": "List containing the number of nodes for each maxcut instance."
-      },
-      {
-        "name": "ids",
-        "pythonType": "list[Any]",
-        "doc": "Describes the graph type. For circulant graphs, these describe the offset in edge connections and have form `circ_offsets-{distance to first connection}-{distance to second connection}`. For complete bipartite graphs, these describe the number of nodes in each set and have form `complbipart_a-{number of nodes in set a}_b{number of nodes in set b}`. Star graphs do not contain extra information and are labeled `star`."
-      },
-      {
-        "name": "edges",
-        "pythonType": "list[Any]",
-        "doc": "The MaxCut edges provided as tuples of form (node1, node2)."
-      }
-    ]
+    }
   }
 }

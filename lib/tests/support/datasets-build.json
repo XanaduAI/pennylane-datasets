@@ -4,6 +4,11 @@
     "https://test.datasets.com/assets/hero_image-b7b71997d36675a0c3fc760efa0d63b20b122e98.jpg",
     "https://test.datasets.com/assets/thumbnail-7e1d89704a12580e4c592a473e1af7a96ed79503.png"
   ],
+  "tags": [
+    "Algorithms",
+    "Big Data",
+    "Machine Learning"
+  ],
   "datasetClasses": {
     "foo": {
       "name": "Foo",
@@ -79,7 +84,9 @@
       "data": [
         {
           "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/foo/thing.h5",
-          "parameters": {},
+          "parameters": {
+            "number": "2"
+          },
           "extra": {}
         }
       ],
@@ -98,6 +105,11 @@
         }
       ],
       "extra": {},
+      "parameterTree": {
+        "next": {
+          "2": null
+        }
+      },
       "meta": {
         "abstract": "Data",
         "description": "Description.",
@@ -108,9 +120,9 @@
         "citation": "@misc{FooData,\n  title = {Data!},  \n  author = {Author}, \n  howpublished = {\\url{https://pennylane.ai/datasets/foo/bar}}, \n  year = {2023}\n}\n",
         "sourceCodeUrl": null,
         "tags": [
-          "big_data",
-          "machine_learning",
-          "algorithms"
+          "Algorithms",
+          "Big Data",
+          "Machine Learning"
         ],
         "license": "GPL",
         "changelog": [

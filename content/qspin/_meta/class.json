@@ -59,8 +59,8 @@
   ],
   "parameterList": [
     {
-      "name": "layout",
-      "title": "Layout",
+      "name": "sysname",
+      "title": "System Name",
       "description": null,
       "optional": false
     },
@@ -73,6 +73,12 @@
     {
       "name": "lattice",
       "title": "Lattice",
+      "description": null,
+      "optional": false
+    },
+    {
+      "name": "layout",
+      "title": "Layout",
       "description": null,
       "optional": false
     }

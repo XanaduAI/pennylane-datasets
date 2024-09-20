@@ -1,7 +1,30 @@
 {
   "slug": "mnisq",
   "class": {
-    "$path": "/other/_meta/class.json"
+    "slug": "mnisq",
+    "name": "Mnisq",
+    "attributeList": [
+      {
+        "name": "circuits",
+        "pythonType": "list",
+        "doc": "Circuits defined as lists of operations. Each list is a circuit that uses Automatic Quantum Circuit Encoding to embed an image in the complex amplitudes of a quantum state."
+      },
+      {
+        "name": "target_states",
+        "pythonType": "list[np.ndarray]",
+        "doc": "A list of numpy arrays. Each numpy array defines a quantum state that exactly encodes an MNIST image."
+      },
+      {
+        "name": "labels",
+        "pythonType": "list",
+        "doc": "A list of the correct labels for each image."
+      },
+      {
+        "name": "fidelity",
+        "pythonType": "list",
+        "doc": "The fidelity between the target state and the state implemented by the circuit."
+      }
+    ]
   },
   "data": [
     {
@@ -29,28 +52,6 @@
   "extra": {
     "defaultParameters": {
       "name": "mnisq"
-    },
-    "extraAttributes": [
-      {
-        "name": "circuits",
-        "pythonType": "list",
-        "doc": "Circuits defined as lists of operations. Each list is a circuit that uses Automatic Quantum Circuit Encoding to embed an image in the complex amplitudes of a quantum state."
-      },
-      {
-        "name": "target_states",
-        "pythonType": "list[np.ndarray]",
-        "doc": "A list of numpy arrays. Each numpy array defines a quantum state that exactly encodes an MNIST image."
-      },
-      {
-        "name": "labels",
-        "pythonType": "list",
-        "doc": "A list of the correct labels for each image."
-      },
-      {
-        "name": "fidelity",
-        "pythonType": "list",
-        "doc": "The fidelity between the target state and the state implemented by the circuit."
-      }
-    ]
+    }
   }
 }

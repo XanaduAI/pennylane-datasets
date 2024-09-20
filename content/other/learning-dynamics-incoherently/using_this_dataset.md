@@ -42,7 +42,7 @@ This dataset provides the information required to reproduce the training in the 
 To create a circuit that reproduces the system measured in the paper:
 
 ```python
-[ds] = qml.data.load("other", name="learning-dynamics-incoherently")
+[ds] = qml.data.load("learning-dynamics-incoherently")
 
 @qml.qnode(qml.device('default.qubit'))
 def circuit(training_circuit):

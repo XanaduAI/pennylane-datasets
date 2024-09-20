@@ -2,6 +2,7 @@ from datetime import date
 from typing import Annotated, Any, Literal
 
 from pydantic import Field
+from typing_extensions import NotRequired, TypedDict
 
 from dsets.lib.doctree import Asset, Document, Ref
 from dsets.lib.pydantic_util import CamelCaseMixin
@@ -25,7 +26,7 @@ class DatasetFeature(Document, CamelCaseMixin):
 
     slug: Slug
     title: str
-    type_: Annotated[Literal["DATA", "SAMPLES"], Field(alias="type")] = "DATA"
+    type: Literal["DATA", "SAMPLES"] = "DATA"
     content: Ref[str]
 
 
@@ -70,6 +71,13 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     extra: dict[str, Any] = {}
 
 
+class DatasetParameterNode(TypedDict):
+    """Model for the parameter defaults map of a dataset family."""
+
+    default: NotRequired[str | None]
+    next: dict[str | None, "DatasetParameterNode | None"]
+
+
 class DatasetFamily(Document, CamelCaseMixin):
     """Model for dataset family, which may include one or more
     Pennylane dataset files.
@@ -92,5 +100,6 @@ class DatasetFamily(Document, CamelCaseMixin):
     download_name: str
     features: list[DatasetFeature] = []
     meta: Ref[DatasetFamilyMeta]
+    parameter_tree: DatasetParameterNode | None = None
 
     extra: dict[str, Any] = {}

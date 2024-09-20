@@ -33,7 +33,7 @@ please view additional files on [Kaggle](https://www.kaggle.com/datasets/boranap
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="ketgpt")
+[ds] = qml.data.load("ketgpt")
 
 @qml.qnode(qml.device('default.qubit'))
 def circuit(training_circuit):
