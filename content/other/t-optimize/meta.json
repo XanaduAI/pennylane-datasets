@@ -1,0 +1,25 @@
+{
+  "abstract": null,
+  "authors": [
+    "Korbinian Kottmann"
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "sourceCodeUrl": null,
+  "tags": [
+      "Other"
+    ],
+  "title": "op-T-mize",
+  "description": "Quantum circuits that are commonly used to benchmark T-gate optimization techniques.",
+  "dateOfLastModification": "2024-09-19",
+  "dateOfPublication": "2024-09-19",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
+  "thumbnail": "op-t-mize.png",
+  "extra": {}
+}
