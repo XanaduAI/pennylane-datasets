@@ -27,8 +27,8 @@ from dsets.settings import CLIContext
 
 from .builder import AssetLoader, compile_dataset_build
 
-AUTH_URL = "https://xanadu-swc.us.auth0.com/oauth"
-CLIENT_ID = "<prod client id>"
+AUTH_URL = "https://auth.dev.cloud.pennylane.ai/oauth"
+CLIENT_ID = "5miHebfuYvVwUW68nVoPOjdRAjioS483"
 
 app = typer.Typer(name="dsets", add_completion=True)
 
