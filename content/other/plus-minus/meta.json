@@ -1,9 +1,15 @@
 {
   "abstract": null,
   "authors": [
-    "Maximilian Wendlinger",
-    "Kilian Tscharke",
-    "Pascal Debus"
+    {
+      "name": "Maximilian Wendlinger"
+    },
+    {
+      "name": "Kilian Tscharke"
+    },
+    {
+      "name": "Pascal Debus"
+    }
   ],
   "citation": {
     "$path": "citation.txt"

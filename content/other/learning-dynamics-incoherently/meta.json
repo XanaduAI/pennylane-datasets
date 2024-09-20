@@ -1,13 +1,27 @@
 {
   "abstract": null,
   "authors": [
-    "Sofienne Jerbi",
-    "Joe Gibbs",
-    "Manuel S. Rudolph",
-    "Matthias C. Caro",
-    "Patrick J. Coles",
-    "Hsin-Yuan Huang",
-    "Zoe Holmes"
+    {
+      "name": "Sofienne Jerbi"
+    },
+    {
+      "name": "Joe Gibbs"
+    },
+    {
+      "name": "Manuel S. Rudolph"
+    },
+    {
+      "name": "Matthias C. Caro"
+    },
+    {
+      "name": "Patrick J. Coles"
+    },
+    {
+      "name": "Hsin-Yuan Huang"
+    },
+    {
+      "name": "Zoe Holmes"
+    }
   ],
   "citation": {
     "$path": "citation.txt"

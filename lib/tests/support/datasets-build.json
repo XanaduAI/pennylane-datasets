@@ -114,7 +114,8 @@
         "abstract": "Data",
         "description": "Description.",
         "authors": [
-          "Author 1"
+          {"name": "Author 1"},
+          {"username": "author2"}
         ],
         "citation": "@misc{FooData,\n  title = {Data!},  \n  author = {Author}, \n  howpublished = {\\url{https://pennylane.ai/datasets/foo/bar}}, \n  year = {2023}\n}\n",
         "sourceCodeUrl": null,

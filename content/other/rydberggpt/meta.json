@@ -1,14 +1,30 @@
 {
   "abstract": null,
   "authors": [
-    "David Fitzek",
-    "Yi Hong Teoh",
-    "Hin Pok Fung",
-    "Gebremedhin A. Dagnew",
-    "Ejaaz Merali",
-    "M. Schuyler Moss",
-    "Benjamin MacLellan",
-    "Roger G. Melko"
+    {
+      "name": "David Fitzek"
+    },
+    {
+      "name": "Yi Hong Teoh"
+    },
+    {
+      "name": "Hin Pok Fung"
+    },
+    {
+      "name": "Gebremedhin A. Dagnew"
+    },
+    {
+      "name": "Ejaaz Merali"
+    },
+    {
+      "name": "M. Schuyler Moss"
+    },
+    {
+      "name": "Benjamin MacLellan"
+    },
+    {
+      "name": "Roger G. Melko"
+    }
   ],
   "citation": {
     "$path": "citation.txt"

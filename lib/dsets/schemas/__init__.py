@@ -1,3 +1,4 @@
+from .author import Author, AuthorHandle, AuthorName
 from .dataset import Dataset
 from .dataset_class import DatasetAttribute, DatasetClass, DatasetParameter
 from .dataset_collection import DatasetCollection
@@ -9,6 +10,9 @@ from .dataset_family import (
 )
 
 __all__ = [
+    "Author",
+    "AuthorHandle",
+    "AuthorName",
     "Dataset",
     "DatasetAttribute",
     "DatasetCollection",
