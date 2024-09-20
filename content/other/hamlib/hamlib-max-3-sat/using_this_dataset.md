@@ -37,7 +37,7 @@ Each Hamiltonian acts as the cost function for its corresponding Max-3-SAT probl
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="hamlib-max3sat")
+[ds] = qml.data.load("hamlib-max3sat")
 ham = ds.hamiltonians[1320]
 
 dev = qml.device("default.qubit", wires=4)

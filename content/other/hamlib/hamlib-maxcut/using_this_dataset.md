@@ -38,7 +38,7 @@ all nodes in the other set.
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="hamlib-maxcut")
+[ds] = qml.data.load("hamlib-maxcut")
 ham = ds.hamiltonians[4]
 
 dev = qml.device("default.qubit", wires=4)

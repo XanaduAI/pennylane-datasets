@@ -27,7 +27,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pennylane as qml
 
-ds= qml.data.load("other", name="mnisq")
+ds= qml.data.load("mnisq")
 
 @qml.qnode(qml.device("default.qubit"))
 def circuit():
