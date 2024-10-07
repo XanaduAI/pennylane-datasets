@@ -22,7 +22,7 @@
     "Other"
   ],
   "title": "RydbergGPT",
-  "description": "This dataset contains various quantum properties that represent and describe the RydbergGPT under specified system parameters.",
+  "description": "This dataset contains the data used to train RydbergGPT, a generative pre-trained transformer designed to learn the measurement outcomes of a neutral atom array quantum computer.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
