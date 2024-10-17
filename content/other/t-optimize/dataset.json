@@ -28,7 +28,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BenchmarkCircuitsCliffordT/BenchmarkCircuitsCliffordT.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
       "parameters": {
         "name": "op-T-mize"
       },
