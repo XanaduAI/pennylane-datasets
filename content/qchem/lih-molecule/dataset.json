@@ -13,7 +13,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "0.9",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -26,7 +26,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "0.93",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -39,7 +39,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "0.96",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -52,7 +52,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "0.99",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -65,7 +65,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.02",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -78,7 +78,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.05",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -91,7 +91,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.08",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -104,7 +104,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.11",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -117,7 +117,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.14",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -130,7 +130,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.17",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -143,7 +143,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.2",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -156,7 +156,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.23",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -169,7 +169,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.26",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -182,7 +182,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.29",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -195,7 +195,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.32",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -208,7 +208,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.35",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -221,7 +221,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.38",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -234,7 +234,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.41",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -247,7 +247,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.44",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -260,7 +260,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.47",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -273,7 +273,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.5",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -286,7 +286,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.53",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -299,7 +299,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.56",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -312,7 +312,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.57",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -325,7 +325,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.59",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -338,7 +338,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.62",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -351,7 +351,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.65",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -364,7 +364,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.68",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -377,7 +377,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.71",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -390,7 +390,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.74",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -403,7 +403,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.77",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -416,7 +416,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.8",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -429,7 +429,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.83",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -442,7 +442,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.86",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -455,7 +455,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.89",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -468,7 +468,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.92",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -481,7 +481,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.95",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -494,7 +494,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "1.98",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -507,7 +507,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "2.01",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -520,7 +520,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "2.04",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -533,7 +533,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "2.07",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -546,7 +546,7 @@
         "molname": "LiH",
         "basis": "STO-3G",
         "bondlength": "2.1",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -628,7 +628,7 @@
     "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",
     "defaultParameters": {
       "basis": "STO-3G",
-      "bondangle": "N/A",
+      "bondangle": "N\\A",
       "bondlength": "1.57",
       "number_of_spin_orbitals": "12"
     }
