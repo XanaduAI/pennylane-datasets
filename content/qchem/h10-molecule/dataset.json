@@ -13,7 +13,7 @@
         "molname": "H10",
         "basis": "STO-3G",
         "bondlength": "1.0",
-        "bondangle": "N/A",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "20"
       },
       "extra": {
@@ -95,7 +95,7 @@
     "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",
     "defaultParameters": {
       "basis": "STO-3G",
-      "bondangle": "N/A",
+      "bondangle": "N\\A",
       "bondlength": "1",
       "number_of_spin_orbitals": "20"
     }
