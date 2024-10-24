@@ -20,7 +20,6 @@ from dsets.lib import (
     msg,
     progress,
     s3,
-    time,
 )
 from dsets.schemas import fields
 from dsets.settings import CLIContext
@@ -386,10 +385,10 @@ def format(check: bool = False):
 def login():
     """Login to pennylane.ai account."""
     ctx = CLIContext()
-    auth_path = ctx.auth_dir
+    auth_path = ctx.repo_root
 
     print("Checking credentials...")
-    if auth.check_local_token(auth_path):
+    if auth.has_valid_token(auth_path):
         print("Found a valid token")
         print("You are logged into your pennylane.ai account.")
         return
@@ -398,7 +397,10 @@ def login():
         auth_path.mkdir()
 
     grant = device_auth.OAuthDeviceCodeGrant(
-        oauth_base_url=AUTH_URL, client_id=CLIENT_ID
+        oauth_base_url=AUTH_URL,
+        client_id=CLIENT_ID,
+        audience="https://dev.cloud.pennylane.ai",
+        scopes=["profile email openid"],
     )
 
     device_code = grant.get_device_code()
@@ -410,8 +412,7 @@ def login():
 
     token = grant.poll_for_token()
 
-    timestamp = time.utcnow().strftime("%Y-%m-%d_%H-%M-%S")
-    with open(auth_path / f"token_{timestamp}.json", "w", encoding="utf-8") as f:
+    with open(f"{ctx.repo_root}/.auth.json", "w", encoding="utf-8") as f:
         json.dump(token, f, indent=2)
 
     print("You are logged into your pennylane.ai account.")

@@ -1,26 +1,64 @@
 import json
-from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any, Optional
+
+from requests import post
 
 from .device_auth import TokenData
-from .time import utcnow
 
 
-def check_local_token(auth_path: Path) -> TokenData | None:
-    """Returns the token data if valid token found in `auth_path` local dir or `None`
-    if no valid token is found."""
+GRAPHQL_URL = "https://dev.cloud.pennylane.ai/graphql"  # TODO: Update to prod
+
+
+def get_graphql(
+    url: str,
+    query: str,
+    variables: Optional[dict[str, Any]] = None,
+    headers=dict[str, str],
+):
+    """
+    Args:
+        url: The URL to send a query to.
+        query: The main body of the query to be sent.
+        variables: Additional input variables to the query body.
+        headers: Headers for the query.
+    Returns:
+        string: json response.
+    """
+
+    json = {"query": query}
+
+    if variables:
+        json["variables"] = variables
+
+    response = post(url=url, json=json, timeout=10, headers=headers)
+    return response
+
+
+def has_valid_token(auth_path: Path) -> TokenData | None:
+    """Queries the profile service using the local token as the authorization header.
+    Returns `True` if a 200 response status is received or `False` otherwise.`"""
+
+    token_data = None
     files = auth_path.glob("*.json")
-
     for file in files:
         with file.open("r") as f:
             token_data = json.load(f)
 
-        token_expires_at = datetime.fromtimestamp(
-            token_data["expires_at"], tz=timezone.utc
-        )
-        if token_expires_at < utcnow():
-            Path.unlink(file)
-        elif token_expires_at > utcnow():
-            return token_data
+    if token_data is None:
+        return False
 
-    return None
+    local_token = token_data["access_token"]
+    response = get_graphql(
+        GRAPHQL_URL,
+        """
+        query Profile($handle: String) {
+          profile(handle: $handle) {
+            id
+          }
+        }
+        """,
+        {"handle": "handle"},
+        {"content-type": "application/json", "Authorization": f"Bearer {local_token}"},
+    )
+    return response.status_code == 200

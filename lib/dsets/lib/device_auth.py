@@ -1,11 +1,10 @@
 import http.client
 import json
 import time
-import urllib.error
-import urllib.parse
-import urllib.request
 from collections.abc import Iterable, Mapping
 from typing import TypedDict
+
+import requests
 
 
 class DeviceCodeData(TypedDict):
@@ -69,26 +68,20 @@ class OAuthDeviceCodeGrant:
 
     def get_device_code(self) -> DeviceCodeData:
         """Gets device code data from ``device_code_url()``"""
-        if (data := self._device_code_data) is not None:
-            if data["expires_at"] <= time.time():
-                self._device_code_data = None
-
-                return self.get_device_code()
-
+        if (data := self._device_code_data) and data["expires_at"] > time.time():
             return data
 
         ts = time.time()
-        resp: http.client.HTTPResponse = urllib.request.urlopen(
-            urllib.request.Request(
-                self.device_code_url,
-                data=urllib.parse.urlencode({"client_id": self.client_id}).encode(
-                    "ascii"
-                ),
-                headers=self.headers,
-            )
+        resp: http.client.HTTPResponse = requests.post(
+            self.device_code_url,
+            data={
+                "client_id": self.client_id,
+                "audience": "https://dev.cloud.pennylane.ai",
+            },
+            headers=self.headers,
         )
 
-        device_code_data: DeviceCodeData = json.loads(resp.read())
+        device_code_data: DeviceCodeData = resp.json()
         device_code_data["expires_at"] = ts + device_code_data["expires_in"]
 
         self._device_code_data = device_code_data
@@ -112,13 +105,13 @@ class OAuthDeviceCodeGrant:
             data["audience"] = self.audience
 
         if self.scopes is not None:
-            data["scopes"] = " ".join(self.scopes)
+            data["scope"] = " ".join(self.scopes)
 
-        req = urllib.request.Request(
-            url=self.token_url,
-            headers=self.headers,
-            data=urllib.parse.urlencode(data).encode("ascii"),
-        )
+        req = {
+            "url": self.token_url,
+            "headers": self.headers,
+            "data": data,
+        }
 
         while True:
             ts = time.time()
@@ -141,17 +134,22 @@ class OAuthDeviceCodeGrant:
                 return token_data
 
     def _do_token_request(
-        self, req: urllib.request.Request
+        self, req: dict
     ) -> tuple[TokenData, None] | tuple[None, OAuthTokenError]:
         """Internal function to make requests to retrieve token data."""
+        url = req["url"]
+        headers = req["headers"]
+        data = req["data"]
+
         try:
-            resp: http.client.HTTPResponse = urllib.request.urlopen(req)
-        except urllib.error.HTTPError as exc:
+            resp: requests.Response = requests.post(url=url, data=data, headers=headers)
+            resp.raise_for_status()
+        except requests.exceptions.HTTPError as exc:
             try:
-                error_body: OAuthTokenError = json.loads(exc.read())
+                error_body: OAuthTokenError = resp.json()
                 return (None, error_body)
             except json.JSONDecodeError:
                 raise exc
 
-        token_data: TokenData = json.loads(resp.read())
+        token_data: TokenData = resp.json()
         return (token_data, None)
