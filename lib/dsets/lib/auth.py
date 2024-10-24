@@ -2,8 +2,8 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .time import utcnow
 from .device_auth import TokenData
+from .time import utcnow
 
 
 def check_local_token(auth_path: Path) -> TokenData | None:
