@@ -1,6 +1,6 @@
 @misc{Utkarsh2023Spin,
 &nbsp;title = {PennyLane Spin Datasets},
 &nbsp;author = {Utkarsh Azad},
-&nbsp;howpublished = {\url{https://pennylane.ai/datasets/qspin/bose-hubbard-model}},
+&nbsp;howpublished = {\url{https://pennylane.ai/datasets/bose-hubbard-model}},
 &nbsp;year = {2023}
 }
