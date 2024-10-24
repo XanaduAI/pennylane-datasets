@@ -1,7 +1,7 @@
 @misc{bowles2024subtledata,
     title={PennyLane Datasets for Better than classical? The subtle art of benchmarking quantum machine learning models}, 
     author={Joseph Bowles and Shahnawaz Ahmed and Maria Schuld},
-    howpublished = {\url{https://pennylane.ai/datasets/other/linearly-separable}}
+    howpublished = {\url{https://pennylane.ai/datasets/linearly-separable}}
     year={2024}}
     
 @misc{bowles2024subtle,
