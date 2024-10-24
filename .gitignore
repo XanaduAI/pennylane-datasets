@@ -9,3 +9,6 @@ __pycache__
 *.pyc
 *.ruff_cache
 .venv
+
+# auth
+.auth.json
