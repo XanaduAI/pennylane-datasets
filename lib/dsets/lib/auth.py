@@ -6,7 +6,6 @@ from requests import post
 
 from .device_auth import TokenData
 
-
 GRAPHQL_URL = "https://dev.cloud.pennylane.ai/graphql"  # TODO: Update to prod
 
 
