@@ -31,27 +31,8 @@ class OAuthTokenError(TypedDict):
 
 
 class OAuthDeviceCodeGrant:
-    """Example usage:
-
-    AUTH_URL = "https://xanadu-swc-dev.us.auth0.com/oauth"
-    CLIENT_ID = "lyqp1dz8xUk4dYxxyM4U1S7m4ZZYEiW2"
-    oauth = OAuthDeviceCodeGrant(AUTH_URL, CLIENT_ID)
-
-    print(f"Starting login to '{AUTH_URL}'")
-
-    grant = OAuthDeviceCodeGrant(oauth_base_url=AUTH_URL, client_id=CLIENT_ID)
-
-    print(f"Getting device code from '{grant.device_code_url}'")
-
-    device_code = grant.get_device_code()
-
-    print(f"User code is '{device_code['user_code']}'")
-    print(f"Go to '{device_code['verification_uri']}' to complete authentication.")
-
-    webbrowser.open(device_code['verification_uri_complete'])
-
-    token = grant.poll_for_token()
-
+    """
+    Manages the device authorization flow for pennylane.ai accounts.
     """
 
     def __init__(
@@ -78,13 +59,16 @@ class OAuthDeviceCodeGrant:
 
     @property
     def device_code_url(self) -> str:
+        """Returns the Auth0 authorization server endpoint"""
         return f"{self.oauth_base_url}/device/code"
 
     @property
     def token_url(self) -> str:
+        """Returns the Auth0 authorization token endpoint"""
         return f"{self.oauth_base_url}/token"
 
     def get_device_code(self) -> DeviceCodeData:
+        """Gets device code data from ``device_code_url()``"""
         if (data := self._device_code_data) is not None:
             if data["expires_at"] <= time.time():
                 self._device_code_data = None
@@ -112,6 +96,9 @@ class OAuthDeviceCodeGrant:
         return device_code_data
 
     def poll_for_token(self) -> TokenData:
+        """Uses device code data to periodically attempt to retrieve token data from the
+        Auth0 authorization token endpoint.
+        """
         device_code_data = self.get_device_code()
         polling_interval = device_code_data["interval"]
 
@@ -156,6 +143,7 @@ class OAuthDeviceCodeGrant:
     def _do_token_request(
         self, req: urllib.request.Request
     ) -> tuple[TokenData, None] | tuple[None, OAuthTokenError]:
+        """Internal function to make requests to retrieve token data."""
         try:
             resp: http.client.HTTPResponse = urllib.request.urlopen(req)
         except urllib.error.HTTPError as exc:

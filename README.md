@@ -137,7 +137,6 @@ the corresponding CLI output will look like:
 Checking credentials...
 No valid credentials found.
 Starting login to 'https://xanadu-swc.us.auth0.com/oauth'
-Getting device code from 'https://xanadu-swc.us.auth0.com/oauth/device/code'
 User code is 'ABCD-EFGH'
 Go to 'https://xanadu-swc.us.auth0.com/activate' to complete authentication.
 Successfully saved new token.

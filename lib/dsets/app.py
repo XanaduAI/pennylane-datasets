@@ -397,12 +397,9 @@ def login():
     if not auth_path.exists():
         auth_path.mkdir()
 
-    print("No valid credentials found.")
-    print(f"Starting login to '{AUTH_URL}'")
     grant = device_auth.OAuthDeviceCodeGrant(
         oauth_base_url=AUTH_URL, client_id=CLIENT_ID
     )
-    print(f"Getting device code from '{grant.device_code_url}'")
 
     device_code = grant.get_device_code()
 
@@ -413,11 +410,10 @@ def login():
 
     token = grant.poll_for_token()
 
-    timestamp = time.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    timestamp = time.utcnow().strftime("%Y-%m-%d_%H-%M-%S")
     with open(auth_path / f"token_{timestamp}.json", "w", encoding="utf-8") as f:
         json.dump(token, f, indent=2)
 
-    print("Successfully saved new token.")
     print("You are logged into your pennylane.ai account.")
 
 
