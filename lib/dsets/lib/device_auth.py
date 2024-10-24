@@ -76,7 +76,7 @@ class OAuthDeviceCodeGrant:
             self.device_code_url,
             data={
                 "client_id": self.client_id,
-                "audience": "https://dev.cloud.pennylane.ai",
+                "audience": self.audience,
             },
             headers=self.headers,
         )

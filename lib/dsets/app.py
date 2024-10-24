@@ -399,8 +399,7 @@ def login():
     grant = device_auth.OAuthDeviceCodeGrant(
         oauth_base_url=AUTH_URL,
         client_id=CLIENT_ID,
-        audience="https://dev.cloud.pennylane.ai",
-        scopes=["profile email openid"],
+        audience="https://dev.cloud.pennylane.ai",  # TODO: Update to prod
     )
 
     device_code = grant.get_device_code()
