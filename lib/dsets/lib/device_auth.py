@@ -1,10 +1,10 @@
-import http.client
 import json
 import time
 from collections.abc import Iterable, Mapping
 from typing import TypedDict
 
-import requests
+from requests import Response, post
+from requests.exceptions import HTTPError
 
 
 class DeviceCodeData(TypedDict):
@@ -67,12 +67,13 @@ class OAuthDeviceCodeGrant:
         return f"{self.oauth_base_url}/token"
 
     def get_device_code(self) -> DeviceCodeData:
-        """Gets device code data from ``device_code_url()``"""
+        """Gets device code data from ``device_code_url()`` if no device code data has
+        been cached."""
         if (data := self._device_code_data) and data["expires_at"] > time.time():
             return data
 
         ts = time.time()
-        resp: http.client.HTTPResponse = requests.post(
+        resp: Response = post(
             self.device_code_url,
             data={
                 "client_id": self.client_id,
@@ -137,14 +138,13 @@ class OAuthDeviceCodeGrant:
         self, req: dict
     ) -> tuple[TokenData, None] | tuple[None, OAuthTokenError]:
         """Internal function to make requests to retrieve token data."""
-        url = req["url"]
-        headers = req["headers"]
-        data = req["data"]
 
         try:
-            resp: requests.Response = requests.post(url=url, data=data, headers=headers)
+            resp: Response = post(
+                url=req["url"], data=req["data"], headers=req["headers"]
+            )
             resp.raise_for_status()
-        except requests.exceptions.HTTPError as exc:
+        except HTTPError as exc:
             try:
                 error_body: OAuthTokenError = resp.json()
                 return (None, error_body)

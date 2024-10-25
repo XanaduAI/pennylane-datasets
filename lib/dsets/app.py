@@ -385,16 +385,13 @@ def format(check: bool = False):
 def login():
     """Login to pennylane.ai account."""
     ctx = CLIContext()
-    auth_path = ctx.repo_root
+    auth_path = ctx.repo_root / ".auth.json"
 
     print("Checking credentials...")
     if auth.has_valid_token(auth_path):
         print("Found a valid token")
         print("You are logged into your pennylane.ai account.")
         return
-
-    if not auth_path.exists():
-        auth_path.mkdir()
 
     grant = device_auth.OAuthDeviceCodeGrant(
         oauth_base_url=AUTH_URL,
