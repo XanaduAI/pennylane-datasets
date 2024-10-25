@@ -1,7 +1,7 @@
 @misc{wendlinger2024plusminus,
     title={Plus Minus},
     author={Maximilian Wendlinger and Kilian Tscharke and Pascal Debus},
-    howpublished={\url{https://pennylane.ai/datasets/other/plus-minus}},
+    howpublished={\url{https://pennylane.ai/datasets/single-dataset/plus-minus}},
     year={2024}
 }
 

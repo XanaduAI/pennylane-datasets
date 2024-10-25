@@ -9,5 +9,5 @@
 @misc{jerbi2024learning,
   title = {Learning Dynamics Incoherently},  
   author = {Sofiene Jerbi and Joe Gibbs and Manuel S. Rudolph and Matthias C. Caro and Patrick J. Coles and Hsin-Yuan Huang and Zoë Holmes}, 
-  howpublished = {\url{https://pennylane.ai/datasets/other/learning-dynamics-incoherently}}, 
+  howpublished = {\url{https://pennylane.ai/datasets/single-dataset/learning-dynamics-incoherently}}, 
   year = {2024}}
