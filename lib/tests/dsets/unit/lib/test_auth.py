@@ -5,7 +5,6 @@ import dsets
 from dsets.lib.auth import has_valid_token
 
 
-# pylint:disable=unused-argument
 def post_mock(url, json, timeout, headers):
     """Returns a response with 200 status code."""
     resp = MagicMock(ok=True)

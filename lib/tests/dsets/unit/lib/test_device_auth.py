@@ -21,7 +21,6 @@ mock_access_token = {
 }
 
 
-# pylint:disable=unused-argument
 def post_mock(url, data, headers):
     """Returns a mock device code data."""
     resp = MagicMock(ok=True)
@@ -29,7 +28,6 @@ def post_mock(url, data, headers):
     return resp
 
 
-# pylint:disable=unused-argument
 def token_request_mock(self, req):
     """Returns mocked access token and `None`."""
     return (mock_access_token, None)
