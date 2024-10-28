@@ -35,7 +35,7 @@
     "Other"
   ],
   "title": "Learning Dynamics Incoherently",
-  "description": "This dataset contains various quantum properties that represent and describe the Learning Dynamics Incoherently under specified system parameters.",
+  "description": "This dataset contains initial states, Hamiltonians, and classical shadow measurements used in the paper: The power and limitations of learning quantum dynamics incoherently.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

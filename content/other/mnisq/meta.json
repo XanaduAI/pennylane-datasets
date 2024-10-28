@@ -35,7 +35,7 @@
     "Other"
   ],
   "title": "MNISQ",
-  "description": "This dataset contains various quantum properties that represent and describe the MNISQ under specified system parameters.",
+  "description": "This dataset contains a portion of MNISQ: a dataset of quantum circuits that encode data from MNIST, Fashion-MNIST, and Kuzushiji-MNIST.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

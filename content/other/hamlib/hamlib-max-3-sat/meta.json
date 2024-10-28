@@ -64,7 +64,7 @@
     "Other"
   ],
   "title": "HamLib: Max-3-SAT",
-  "description": "This dataset contains various quantum properties that represent and describe the HamLib: Max-3-SAT under specified system parameters.",
+  "description": "This dataset contains part of the Max-3-SAT problems found in HamLib: a library of Hamiltonians for benchmarking quantum algorithms and hardware.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

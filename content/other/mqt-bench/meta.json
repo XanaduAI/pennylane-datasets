@@ -25,7 +25,7 @@
     "Other"
   ],
   "title": "MQT Bench",
-  "description": "This dataset contains various quantum properties that represent and describe the MQT Bench under specified system parameters.",
+  "description": "This dataset contains over 1000 quantum circuits for benchmarking quantum software tools.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
