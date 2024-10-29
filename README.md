@@ -149,5 +149,5 @@ flow will not be triggered and the CLI output will look like:
 ```bash
 Checking credentials...
 Found a valid token
-You are logged into your pennylane.ai account.
+You are logged into your PennyLane account.
 ```

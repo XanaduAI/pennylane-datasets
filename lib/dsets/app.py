@@ -387,7 +387,7 @@ def login():
     print("Checking credentials...")
     if auth.has_valid_token(auth_path):
         print("Found a valid token")
-        print("You are logged into your pennylane.ai account.")
+        print("You are logged into your PennyLane account.")
         return
 
     settings = Settings()
@@ -409,7 +409,7 @@ def login():
     with open(f"{ctx.repo_root}/.auth.json", "w", encoding="utf-8") as f:
         json.dump(token, f, indent=2)
 
-    print("You are logged into your pennylane.ai account.")
+    print("You are logged into your PennyLane account.")
 
 
 def configure_logging(level=logging.INFO):
