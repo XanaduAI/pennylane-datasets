@@ -22,12 +22,9 @@ from dsets.lib import (
     s3,
 )
 from dsets.schemas import fields
-from dsets.settings import CLIContext
+from dsets.settings import CLIContext, Settings
 
 from .builder import AssetLoader, compile_dataset_build
-
-AUTH_URL = "https://auth.dev.cloud.pennylane.ai/oauth"
-CLIENT_ID = "5miHebfuYvVwUW68nVoPOjdRAjioS483"
 
 app = typer.Typer(name="dsets", add_completion=True)
 
@@ -393,10 +390,11 @@ def login():
         print("You are logged into your pennylane.ai account.")
         return
 
+    settings = Settings()
     grant = device_auth.OAuthDeviceCodeGrant(
-        oauth_base_url=AUTH_URL,
-        client_id=CLIENT_ID,
-        audience="https://dev.cloud.pennylane.ai",  # TODO: Update to prod
+        oauth_base_url=settings.auth_url,
+        client_id=settings.client_id,
+        audience=settings.audience_url,
     )
 
     device_code = grant.get_device_code()

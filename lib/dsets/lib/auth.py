@@ -3,7 +3,7 @@ from pathlib import Path
 
 from requests import post
 
-GRAPHQL_URL = "https://dev.cloud.pennylane.ai/graphql"  # TODO: Update to prod
+from dsets.settings import Settings
 
 
 def has_valid_token(auth_path: Path) -> bool:
@@ -18,6 +18,7 @@ def has_valid_token(auth_path: Path) -> bool:
 
     local_token = token_data["access_token"]
 
+    # Any valid query would be sufficient here to obtain a 200 response if the auth token is valid.
     query = """
         query Profile($handle: String) {
           profile(handle: $handle) {
@@ -30,5 +31,7 @@ def has_valid_token(auth_path: Path) -> bool:
         "content-type": "application/json",
         "Authorization": f"Bearer {local_token}",
     }
-    response = post(url=GRAPHQL_URL, json=json_body, timeout=10, headers=headers)
+    response = post(
+        url=Settings().graphql_url, json=json_body, timeout=10, headers=headers
+    )
     return response.status_code == 200

@@ -3,7 +3,7 @@ from unittest.mock import MagicMock, patch
 
 import dsets
 import pytest
-from dsets.lib.device_auth import OAuthDeviceCodeGrant
+from dsets.lib.device_auth import OAuthDeviceCodeGrant, OAuthTokenError
 
 mock_device_code_data = {
     "device_code": "mock_device_code",
@@ -29,18 +29,22 @@ def post_mock(url, data, headers):
 
 
 def token_request_mock(self, req):
-    """Returns mocked access token and `None`."""
-    return (mock_access_token, None)
+    """Returns mocked access token."""
+    return mock_access_token
 
 
 def token_request_expired_token_mock(self, req):
-    """Returns an expired token error."""
-    return (None, {"error": "expired_token"})
+    """Raise an expired token error."""
+    error = OAuthTokenError()
+    error.args = ({"error": "expired_token"},)
+    raise error
 
 
 def token_request_unexpected_error_mock(self, req):
-    """Returns an unexpected error."""
-    return (None, {"error": "An unexpected error ocurred."})
+    """Raise an unexpected error."""
+    error = OAuthTokenError()
+    error.args = ({"error": "An unexpected error ocurred."},)
+    raise error
 
 
 class TestOAuthDeviceCodeGrant:
@@ -52,8 +56,7 @@ class TestOAuthDeviceCodeGrant:
     def test_get_device_code(self):
         """Tests that the ``get_device_code()`` method responds with the expected data."""
         device_code = self.grant.get_device_code()
-        for k, v in mock_device_code_data.items():
-            assert device_code[k] == v
+        assert self.grant.get_device_code() == mock_device_code_data
 
         assert "expires_at" in list(device_code.keys())
 
@@ -80,8 +83,7 @@ class TestOAuthDeviceCodeGrant:
     def test_poll_for_token_success(self):
         """Tests that the ``poll_for_token`` method returns the expected data."""
         token_data = self.grant.poll_for_token()
-        for k, v in mock_access_token.items():
-            assert token_data[k] == v
+        assert token_data == mock_access_token
         assert "expires_at" in list(token_data.keys())
 
     @patch.object(dsets.lib.device_auth, "post", post_mock)
@@ -104,6 +106,6 @@ class TestOAuthDeviceCodeGrant:
     )
     def test_poll_for_token_unexpected_error(self):
         """Tests that the ``poll_for_token`` method raises the expected error for"""
-        msg = 'Authorization endpoint test/url/token returned error: {"error": "An unexpected error ocurred."}'
+        msg = "Authorization endpoint test/url/token returned error: {'error': 'An unexpected error ocurred.'}"
         with pytest.raises(RuntimeError, match=msg):
             self.grant.poll_for_token()

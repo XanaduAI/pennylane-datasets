@@ -24,9 +24,8 @@ class TokenData(TypedDict):
     token_type: str
 
 
-class OAuthTokenError(TypedDict):
-    error: str
-    description: str
+class OAuthTokenError(Exception):
+    pass
 
 
 class OAuthDeviceCodeGrant:
@@ -116,27 +115,25 @@ class OAuthDeviceCodeGrant:
 
         while True:
             ts = time.time()
-            token_data, error = self._do_token_request(req)
-            if error is not None:
-                if error["error"] == "slow_down":
+            try:
+                token_data = self._do_token_request(req)
+                token_data["expires_at"] = ts + token_data["expires_in"]
+                self._token_data = token_data
+                return token_data
+            except OAuthTokenError as error:
+                error_type = error.args[0]["error"]
+                if error_type == "slow_down":
                     polling_interval += 1
-                elif error["error"] == "expired_token":
+                elif error_type == "expired_token":
                     raise TimeoutError("Authorization timed out")
-                elif error["error"] != "authorization_pending":
+                elif error_type != "authorization_pending":
                     raise RuntimeError(
-                        f"Authorization endpoint {self.token_url} returned error: {json.dumps(error)}"
+                        f"Authorization endpoint {self.token_url} returned error: {error}"
                     )
 
                 time.sleep(polling_interval)
 
-            elif token_data is not None:
-                token_data["expires_at"] = ts + token_data["expires_in"]
-                self._token_data = token_data
-                return token_data
-
-    def _do_token_request(
-        self, req: dict
-    ) -> tuple[TokenData, None] | tuple[None, OAuthTokenError]:
+    def _do_token_request(self, req: dict) -> TokenData:
         """Internal function to make requests to retrieve token data."""
 
         try:
@@ -146,10 +143,10 @@ class OAuthDeviceCodeGrant:
             resp.raise_for_status()
         except HTTPError as exc:
             try:
-                error_body: OAuthTokenError = resp.json()
-                return (None, error_body)
+                error_body = OAuthTokenError(resp.json())
+                raise error_body
             except json.JSONDecodeError:
                 raise exc
 
         token_data: TokenData = resp.json()
-        return (token_data, None)
+        return token_data

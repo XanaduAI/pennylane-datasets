@@ -123,7 +123,7 @@ To deploy the build, open a pull request on https://github.com/XanaduAI/pennylan
 
 ## Login
 
-To login to your `pennylane.ai` account via the CLI, please run the following command:
+To log in to your `pennylane.ai` account via the CLI, please run the following command:
  ```bash
 (.venv) pennylane-datasets $ dsets login
 Checking credentials...
@@ -136,11 +136,11 @@ the corresponding CLI output will look like:
 ```bash
 Checking credentials...
 No valid credentials found.
-Starting login to 'https://xanadu-swc.us.auth0.com/oauth'
+Starting login to 'https://auth.cloud.pennylane.ai/oauth'
 User code is 'ABCD-EFGH'
-Go to 'https://xanadu-swc.us.auth0.com/activate' to complete authentication.
+Go to 'https://auth.cloud.pennylane.ai/activate' to complete authentication.
 Successfully saved new token.
-You are logged into your pennylane.ai account.
+You are logged into your PennyLane account.
 ```
 
 where a new token has been saved to your machine. Alternatively, if you already have a valid token on your machine, the login
