@@ -1,5 +1,6 @@
 import json
 import logging
+import webbrowser
 from datetime import datetime
 from pathlib import Path
 from typing import Annotated, Optional
@@ -9,9 +10,19 @@ import typer
 from pennylane.data import Dataset
 
 from dsets import schemas
-from dsets.lib import bibtex, doctree, json_fmt, markdown, msg, progress, s3
+from dsets.lib import (
+    auth,
+    bibtex,
+    device_auth,
+    doctree,
+    json_fmt,
+    markdown,
+    msg,
+    progress,
+    s3,
+)
 from dsets.schemas import fields
-from dsets.settings import CLIContext
+from dsets.settings import CLIContext, Settings
 
 from .builder import AssetLoader, compile_dataset_build
 
@@ -365,6 +376,40 @@ def format(check: bool = False):
 
     if changed:
         print(f"{changed} file(s) reformatted.")
+
+
+@app.command(name="login")
+def login():
+    """Login to PennyLane account."""
+    ctx = CLIContext()
+    auth_path = ctx.repo_root / ".auth.json"
+
+    print("Checking credentials...")
+    if auth.has_valid_token(auth_path):
+        print("Found a valid token.")
+        print("You are logged into your PennyLane account.")
+        return
+
+    settings = Settings()
+    grant = device_auth.OAuthDeviceCodeGrant(
+        oauth_base_url=settings.auth_url,
+        client_id=settings.client_id,
+        audience=settings.audience_url,
+    )
+
+    device_code = grant.get_device_code()
+
+    print(f"User code is '{device_code['user_code']}.'")
+    print(f"Go to '{device_code['verification_uri']}' to complete authentication.")
+
+    webbrowser.open(device_code["verification_uri_complete"])
+
+    token = grant.poll_for_token()
+
+    with open(f"{ctx.repo_root}/.auth.json", "w", encoding="utf-8") as f:
+        json.dump(token, f, indent=2)
+
+    print("You are logged into your PennyLane account.")
 
 
 def configure_logging(level=logging.INFO):

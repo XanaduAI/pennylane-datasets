@@ -21,6 +21,11 @@ class Settings(BaseSettings):
 
     datasets_build_s3_metadata_key: ClassVar[str] = "x-amz-meta-context"
 
+    audience_url: str = "https://cloud.pennylane.ai"
+    auth_url: str = "https://auth.cloud.pennylane.ai/oauth"
+    graphql_url: str = "https://cloud.pennylane.ai/graphql"
+    client_id: str = "MkuZM5qKutufNBkHorThEKv6s9W5p7Fq"
+
     @property
     def url_prefix_assets(self) -> str:
         return f"https://{self.bucket_public_domain}/{self.bucket_prefix_assets}"
