@@ -116,6 +116,6 @@ class TestOAuthDeviceCodeGrant:
         """Tests that the ``poll_for_token`` method raises the expected error for"""
         add_response(mock_device_code_data, "https://test/url/device/code")
 
-        msg = "Authorization endpoint https://test/url/token returned error: {'error': 'An unexpected error ocurred.'}"
+        msg = r"Authorization endpoint https://test/url/token returned error: {'error': 'An unexpected error ocurred.'}"
         with pytest.raises(RuntimeError, match=msg):
             self.grant.poll_for_token()

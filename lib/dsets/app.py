@@ -380,13 +380,13 @@ def format(check: bool = False):
 
 @app.command(name="login")
 def login():
-    """Login to pennylane.ai account."""
+    """Login to PennyLane account."""
     ctx = CLIContext()
     auth_path = ctx.repo_root / ".auth.json"
 
     print("Checking credentials...")
     if auth.has_valid_token(auth_path):
-        print("Found a valid token")
+        print("Found a valid token.")
         print("You are logged into your PennyLane account.")
         return
 
@@ -399,7 +399,7 @@ def login():
 
     device_code = grant.get_device_code()
 
-    print(f"User code is '{device_code['user_code']}'")
+    print(f"User code is '{device_code['user_code']}.'")
     print(f"Go to '{device_code['verification_uri']}' to complete authentication.")
 
     webbrowser.open(device_code["verification_uri_complete"])

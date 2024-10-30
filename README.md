@@ -123,14 +123,14 @@ To deploy the build, open a pull request on https://github.com/XanaduAI/pennylan
 
 ## Login
 
-To log in to your `pennylane.ai` account via the CLI, please run the following command:
+To log in to your PennyLane account via the CLI, please run the following command:
  ```bash
 (.venv) pennylane-datasets $ dsets login
 Checking credentials...
 ```
 
 This will run a check that searches for a valid authorization token on your local machine. If this is the first time using 
-the CLI login function, or if an existing token has expired, the login flow will be triggered. This will direct you to a  `pennylane.ai` login webpage in your browser. In this window you can enter your associated email and password. If successful
+the CLI login function, or if an existing token has expired, the login flow will be triggered. This will direct you to a PennyLane login webpage in your browser. In this window you can enter your associated email and password. If successful
 the corresponding CLI output will look like:
 
 ```bash
