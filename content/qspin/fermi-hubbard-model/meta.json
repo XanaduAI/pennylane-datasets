@@ -16,7 +16,7 @@
     "Samples Available"
   ],
   "title": "Fermi Hubbard model",
-  "description": "This dataset contains various quantum properties that represent and describe the Fermi Hubbard model under specified system parameters.",
+  "description": "This dataset contains Hamiltonians, ground states, and phase data for the Fermi Hubbard spin system with varying onsite interaction values, periodicities, and lattice layouts",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

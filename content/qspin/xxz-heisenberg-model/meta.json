@@ -19,7 +19,7 @@
     "Samples Available"
   ],
   "title": "XXZ-Heisenberg model",
-  "description": "This dataset contains various quantum properties that represent and describe the XXZ-Heisenberg model under specified system parameters.",
+  "description": "This dataset contains Hamiltonians, ground states, and phase data for the XXZ Heisenberg spin system with varying onsite interaction values, periodicities, and lattice layouts.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
