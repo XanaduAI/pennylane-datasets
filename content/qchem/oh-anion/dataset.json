@@ -10,9 +10,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.54/OH-_STO-3G_0.54.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.54",
+        "bondlength": "0.54",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -22,9 +23,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.58/OH-_STO-3G_0.58.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.58",
+        "bondlength": "0.58",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -34,9 +36,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.5/OH-_STO-3G_0.5.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.5",
+        "bondlength": "0.5",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -46,9 +49,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.62/OH-_STO-3G_0.62.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.62",
+        "bondlength": "0.62",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -58,9 +62,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.66/OH-_STO-3G_0.66.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.66",
+        "bondlength": "0.66",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -70,9 +75,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.74/OH-_STO-3G_0.74.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.74",
+        "bondlength": "0.74",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -82,9 +88,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.78/OH-_STO-3G_0.78.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.78",
+        "bondlength": "0.78",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -94,9 +101,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.7/OH-_STO-3G_0.7.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.7",
+        "bondlength": "0.7",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -106,9 +114,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.82/OH-_STO-3G_0.82.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.82",
+        "bondlength": "0.82",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -118,9 +127,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.86/OH-_STO-3G_0.86.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.86",
+        "bondlength": "0.86",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -130,9 +140,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.94/OH-_STO-3G_0.94.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.94",
+        "bondlength": "0.94",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -142,9 +153,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.964/OH-_STO-3G_0.964.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.964",
+        "bondlength": "0.964",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -154,9 +166,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.98/OH-_STO-3G_0.98.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.98",
+        "bondlength": "0.98",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -166,9 +179,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/0.9/OH-_STO-3G_0.9.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "0.9",
+        "bondlength": "0.9",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -178,9 +192,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.02/OH-_STO-3G_1.02.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.02",
+        "bondlength": "1.02",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -190,9 +205,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.06/OH-_STO-3G_1.06.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.06",
+        "bondlength": "1.06",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -202,9 +218,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.14/OH-_STO-3G_1.14.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.14",
+        "bondlength": "1.14",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -214,9 +231,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.18/OH-_STO-3G_1.18.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.18",
+        "bondlength": "1.18",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -226,9 +244,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.1/OH-_STO-3G_1.1.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.1",
+        "bondlength": "1.1",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -238,9 +257,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.22/OH-_STO-3G_1.22.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.22",
+        "bondlength": "1.22",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -250,9 +270,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.26/OH-_STO-3G_1.26.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.26",
+        "bondlength": "1.26",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -262,9 +283,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.34/OH-_STO-3G_1.34.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.34",
+        "bondlength": "1.34",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -274,9 +296,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.38/OH-_STO-3G_1.38.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.38",
+        "bondlength": "1.38",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -286,9 +309,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.3/OH-_STO-3G_1.3.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.3",
+        "bondlength": "1.3",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -298,9 +322,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.42/OH-_STO-3G_1.42.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.42",
+        "bondlength": "1.42",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -310,9 +335,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.46/OH-_STO-3G_1.46.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.46",
+        "bondlength": "1.46",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -322,9 +348,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.54/OH-_STO-3G_1.54.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.54",
+        "bondlength": "1.54",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -334,9 +361,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.58/OH-_STO-3G_1.58.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.58",
+        "bondlength": "1.58",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -346,9 +374,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.5/OH-_STO-3G_1.5.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.5",
+        "bondlength": "1.5",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -358,9 +387,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.62/OH-_STO-3G_1.62.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.62",
+        "bondlength": "1.62",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -370,9 +400,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.66/OH-_STO-3G_1.66.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.66",
+        "bondlength": "1.66",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -382,9 +413,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.74/OH-_STO-3G_1.74.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.74",
+        "bondlength": "1.74",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -394,9 +426,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.78/OH-_STO-3G_1.78.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.78",
+        "bondlength": "1.78",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -406,9 +439,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.7/OH-_STO-3G_1.7.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.7",
+        "bondlength": "1.7",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -418,9 +452,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.82/OH-_STO-3G_1.82.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.82",
+        "bondlength": "1.82",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -430,9 +465,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.86/OH-_STO-3G_1.86.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.86",
+        "bondlength": "1.86",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -442,9 +478,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.94/OH-_STO-3G_1.94.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.94",
+        "bondlength": "1.94",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -454,9 +491,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.98/OH-_STO-3G_1.98.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.98",
+        "bondlength": "1.98",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -466,9 +504,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/1.9/OH-_STO-3G_1.9.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "1.9",
+        "bondlength": "1.9",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -478,9 +517,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/2.02/OH-_STO-3G_2.02.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "2.02",
+        "bondlength": "2.02",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -490,9 +530,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/2.06/OH-_STO-3G_2.06.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "2.06",
+        "bondlength": "2.06",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -502,9 +543,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/OH-/STO-3G/2.1/OH-_STO-3G_2.1.h5",
       "parameters": {
+        "molname": "OH-",
         "basis": "STO-3G",
-        "bond_angle": "N/A",
-        "bond_length": "2.1",
+        "bondlength": "2.1",
+        "bondangle": "N\\A",
         "number_of_spin_orbitals": "12"
       },
       "extra": {
@@ -548,8 +590,8 @@
     },
     {
       "slug": "samples-data",
-      "title": "Samples data",
-      "type": "DATA",
+      "title": "Measurement Samples",
+      "type": "SAMPLES",
       "content": {
         "$path": "/qchem/_meta/features/samples-data.md"
       }
@@ -586,9 +628,22 @@
     "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",
     "defaultParameters": {
       "basis": "STO-3G",
-      "bond_angle": "N/A",
-      "bond_length": "0.964",
+      "bondangle": "N\\A",
+      "bondlength": "0.964",
       "number_of_spin_orbitals": "12"
+    }
+  },
+  "parameterTree": {
+    "next": {
+      "OH-": {
+        "default": "STO-3G",
+        "next": {
+          "STO-3G": {
+            "default": "0.964",
+            "next": {}
+          }
+        }
+      }
     }
   }
 }

@@ -23,7 +23,7 @@ The overall label is determined as the parity of the individual labels.
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="hyperplanes")
+[ds] = qml.data.load("hyperplanes")
 
 ds.diff_train['4']['inputs'] # points in 10-dimensional space for 4 hyperplanes
 ds.diff_train['4']['labels'] # labels for the points above

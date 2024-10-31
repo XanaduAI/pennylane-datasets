@@ -31,6 +31,7 @@ jobs:
             PYTHONPATH: "lib/:${PYTHONPATH}"
             BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
             BUCKET_PUBLIC_DOMAIN: ${{ secrets.BUCKET_PUBLIC_DOMAIN }}
+            DATASETS_ADMIN_API_URL: ${{ secrets.DATASETS_ADMIN_API_URL }}
     
         steps:
             - name: Checkout code
@@ -58,5 +59,4 @@ jobs:
               run: .venv/bin/python3 -m dsets upload-assets
 
             - name: Deploy build
-              run: .venv/bin/python3 -m dsets deploy-build \
-                ${{ inputs.environment }} ${{ inputs.ref }}
+              run: .venv/bin/python3 -m dsets deploy-build

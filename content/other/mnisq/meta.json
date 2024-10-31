@@ -1,13 +1,27 @@
 {
   "abstract": null,
   "authors": [
-    "Leonardo Placidi",
-    "Ryuichiro Hataya",
-    "Toshio Mori",
-    "Koki Aoyama",
-    "Hayata Morisaki",
-    "Kosuke Mitarai",
-    "Keisuke Fujii"
+    {
+      "name": "Leonardo Placidi"
+    },
+    {
+      "name": "Ryuichiro Hataya"
+    },
+    {
+      "name": "Toshio Mori"
+    },
+    {
+      "name": "Koki Aoyama"
+    },
+    {
+      "name": "Hayata Morisaki"
+    },
+    {
+      "name": "Kosuke Mitarai"
+    },
+    {
+      "name": "Keisuke Fujii"
+    }
   ],
   "citation": {
     "$path": "citation.txt"

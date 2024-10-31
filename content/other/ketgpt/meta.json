@@ -1,10 +1,18 @@
 {
   "abstract": null,
   "authors": [
-    "Boran Apak",
-    "Medina Bandic",
-    "Aritra Sarkar",
-    "Sebastian Feld"
+    {
+      "name": "Boran Apak"
+    },
+    {
+      "name": "Medina Bandic"
+    },
+    {
+      "name": "Aritra Sarkar"
+    },
+    {
+      "name": "Sebastian Feld"
+    }
   ],
   "citation": {
     "$path": "citation.txt"

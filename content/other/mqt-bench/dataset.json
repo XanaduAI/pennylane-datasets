@@ -1,36 +1,9 @@
 {
   "slug": "mqt-bench",
   "class": {
-    "$path": "/other/_meta/class.json"
-  },
-  "data": [
-    {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/MQTBench/MQTBench_MQTBench.h5",
-      "parameters": {
-        "name": "mqt-bench"
-      },
-      "extra": {}
-    }
-  ],
-  "downloadName": "mqt-bench",
-  "features": [
-    {
-      "slug": "dataset-attributes",
-      "title": "Dataset Attributes",
-      "type": "DATA",
-      "content": {
-        "$path": "features/dataset-attributes.md"
-      }
-    }
-  ],
-  "meta": {
-    "$path": "meta.json"
-  },
-  "extra": {
-    "defaultParameters": {
-      "name": "mqt-bench"
-    },
-    "extraAttributes": [
+    "slug": "mqt-bench",
+    "name": "MqtBench",
+    "attributeList": [
       {
         "name": "ae",
         "pythonType": "dict",
@@ -57,12 +30,12 @@
         "doc": "Ground state preparation circuits. A famous application of quantum computing, specifically of VQE algorithms is the ground state estimation of molecules. Here, we provide two different molecules, H2 (4 qubits) and LiH (12 qubits), and estimate their ground state using VQE with a TwoLocal ansatz. These circuits are given as a dictionary of form `groundstate['n_qubits']`."
       },
       {
-        "name": "grover-noancilla",
+        "name": "grover_noancilla",
         "pythonType": "dict",
         "doc": "Grover's algorithm circuits without ancilla. One of the most famous quantum algorithms known so far, Grover's algorithm finds a certain goal quantum state determined by an oracle. In our case, the oracle is implemented by a multi-controlled Toffoli gate over all input qubits. In this no ancilla version, no ancilla qubits are used during its realization. These circuits are given as a dictionary of form `grover_noancilla['n_qubits']`."
       },
       {
-        "name": "grover-v-chain",
+        "name": "grover_v_chain",
         "pythonType": "dict",
         "doc": "Grover's algorithm circuits with v-chain ancillary mode. These circuits are given as a dictionary of form `grover_v_chain['n_qubits']`."
       },
@@ -117,12 +90,12 @@
         "doc": "Quantum Phase Estimation (QPE) inexact circuits. Similar to QPE exact, with the difference that the applied phase is not exactly representable by the number of qubits. These circuits are given as a dictionary of form `qpeinexact['n_qubits']`."
       },
       {
-        "name": "qwalk-noancilla",
+        "name": "qwalk_noancilla",
         "pythonType": "dict",
         "doc": "Quantum Walk (no ancilla) circuits. Quantum walks are the quantum equivalent of classical random walks. In this no ancilla version, no ancilla qubits are used during its realization. These circuits are given as a dictionary of form `qwalk_noancilla['n_qubits']`"
       },
       {
-        "name": "qwalk-v-chain",
+        "name": "qwalk_v_chain",
         "pythonType": "dict",
         "doc": "Quantum Walk (v-chain) circuits. Similar to the Quantum Walk (no ancilla) algorithm, with the difference that the ancillary mode is a v-chain in this algorithm. These circuits are given as a dictionary of form `qwalk_v_chain['n_qubits']`."
       },
@@ -172,5 +145,33 @@
         "doc": "W-State preparation circuits. The W state is an entangled quantum state with a certain type of entanglement. These circuits are given as a dictionary of form `wstate['n_qubits']`."
       }
     ]
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/MQTBench/MQTBench_MQTBench.h5",
+      "parameters": {
+        "name": "mqt-bench"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "mqt-bench",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "mqt-bench"
+    }
   }
 }

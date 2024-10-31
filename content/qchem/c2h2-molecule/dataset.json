@@ -10,9 +10,10 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/C2H2/STO-3G/1.203/C2H2_STO-3G_1.203.h5",
       "parameters": {
+        "molname": "C2H2",
         "basis": "STO-3G",
-        "bond_angle": "\u2221 CCH = 180.0\u00b0",
-        "bond_length": "1.203",
+        "bondlength": "1.203",
+        "bondangle": "\u2221 CCH = 180.0\u00b0",
         "number_of_spin_orbitals": "24"
       },
       "extra": {
@@ -56,8 +57,8 @@
     },
     {
       "slug": "samples-data",
-      "title": "Samples data",
-      "type": "DATA",
+      "title": "Measurement Samples",
+      "type": "SAMPLES",
       "content": {
         "$path": "/qchem/_meta/features/samples-data.md"
       }
@@ -94,9 +95,22 @@
     "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",
     "defaultParameters": {
       "basis": "STO-3G",
-      "bond_angle": "\u2221 CCH = 180.0\u00b0",
-      "bond_length": "1.203",
+      "bondangle": "\u2221 CCH = 180.0\u00b0",
+      "bondlength": "1.203",
       "number_of_spin_orbitals": "24"
+    }
+  },
+  "parameterTree": {
+    "next": {
+      "C2H2": {
+        "default": "STO-3G",
+        "next": {
+          "STO-3G": {
+            "default": "1.203",
+            "next": {}
+          }
+        }
+      }
     }
   }
 }

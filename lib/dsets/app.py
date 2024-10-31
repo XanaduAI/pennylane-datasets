@@ -3,7 +3,7 @@ import logging
 import webbrowser
 from datetime import datetime
 from pathlib import Path
-from typing import Annotated, Optional
+from typing import Annotated
 
 import inflection
 import typer
@@ -13,6 +13,7 @@ from dsets import schemas
 from dsets.lib import (
     auth,
     bibtex,
+    deploy,
     device_auth,
     doctree,
     json_fmt,
@@ -21,7 +22,7 @@ from dsets.lib import (
     progress,
     s3,
 )
-from dsets.schemas import fields
+from dsets.schemas import AuthorName, fields
 from dsets.settings import CLIContext, Settings
 
 from .builder import AssetLoader, compile_dataset_build
@@ -197,7 +198,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
     fields.validate(fields.Slug, family_slug)
     family_doc = ctx.content_dir / class_slug / family_slug / "dataset.json"
 
-    today = str(datetime.now().date())
+    today = datetime.now().date()
 
     if family_doc.exists():
         family = schemas.DatasetFamily.from_os_path(content_doctree, family_doc)
@@ -241,7 +242,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
             citation=doctree.Reference[fields.BibtexStr](path="citation.txt"),
             using_this_dataset=doctree.Reference[str](path="using_this_dataset.md"),
             license="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
-            authors=authors,
+            authors=[AuthorName(name=name) for name in authors],
             date_of_last_modification=today,
             date_of_publication=today,
         )
@@ -313,44 +314,24 @@ def upload_assets():
 
 
 @app.command(name="deploy-build")
-def deploy_build(
-    env: str,
-    tags: Annotated[Optional[list[str]], typer.Argument(help="Extra tags")] = None,
-):
-    """Deploy datasets-build.json to S3.
-    Args:
-        env: Targeted environment, e.g 'dev', 'staging', 'prod'.
-        tags: Extra tags for deployment
-    """
+def deploy_build():
+    """Deploy datasets-build.json to the datasets service."""
     ctx = CLIContext()
-    env = env.strip()
-    tagset: set[str] = set(tag.strip() for tag in tags) if tags else set()
-    tagset.add(ctx.commit_sha(short=True))
+    short_sha = ctx.commit_sha(short=True)
+    build_path = ctx.build_dir / "datasets-build.json"
 
-    if (short_sha := ctx.commit_sha(short=True)) not in tagset:
-        tagset.add(short_sha)
-
-    bucket = ctx.settings.bucket_name
-    build_key_prefix = ctx.settings.bucket_prefix_build
-    build_file_key = str(build_key_prefix / "datasets-build.json")
-
-    metadata = {"commit_sha": ctx.commit_sha(), "env": "env", "tags": list(tagset)}
-
-    ctx.s3_client.upload_file(
-        Bucket=bucket,
-        Key=build_file_key,
-        Filename=str(ctx.build_dir / "datasets-build.json"),
-        ExtraArgs={
-            "ContentType": "application/json",
-            "Metadata": {
-                ctx.settings.datasets_build_s3_metadata_key: json.dumps(metadata)
-            },
-        },
-    )
-
-    msg.structured_print(
-        "Deployed build", bucket=bucket, key=build_file_key, tags=tagset
-    )
+    if (admin_url := ctx.settings.datasets_admin_api_url) is not None:
+        deploy.deploy_datasets_build(admin_url, build_path, commit_sha=short_sha)
+        msg.structured_print(
+            "Deployed build to new datasets service",
+            commmit_sha=short_sha,
+            url=admin_url,
+        )
+    else:
+        msg.structured_print(
+            "Environment variable 'DATASETS_ADMIN_API_URL' is unset," " cannot deploy."
+        )
+        typer.Exit(1)
 
 
 @app.command(name="format")

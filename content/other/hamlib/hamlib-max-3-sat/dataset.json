@@ -1,39 +1,9 @@
 {
   "slug": "hamlib-max-3-sat",
   "class": {
-    "$path": "/other/_meta/class.json"
-  },
-  "collection": {
-    "$path": "/other/hamlib/_meta/collection.json"
-  },
-  "data": [
-    {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Max3Sat/Max3Sat_Max3Sat.h5",
-      "parameters": {
-        "name": "hamlib-max-3-sat"
-      },
-      "extra": {}
-    }
-  ],
-  "downloadName": "hamlib-max3sat",
-  "features": [
-    {
-      "slug": "dataset-attributes",
-      "title": "Dataset Attributes",
-      "type": "DATA",
-      "content": {
-        "$path": "features/dataset-attributes.md"
-      }
-    }
-  ],
-  "meta": {
-    "$path": "meta.json"
-  },
-  "extra": {
-    "defaultParameters": {
-      "name": "hamlib-max-3-sat"
-    },
-    "extraAttributes": [
+    "slug": "hamlib-max-3-sat",
+    "name": "HamlibMax3Sat",
+    "attributeList": [
       {
         "name": "clauses",
         "pythonType": "list[tuple[int, int, int]]",
@@ -65,5 +35,36 @@
         "doc": "List of clause ratios r = m/n, where m is the number of clauses and n is the number of variables."
       }
     ]
+  },
+  "collection": {
+    "$path": "/other/hamlib/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Max3Sat/Max3Sat_Max3Sat.h5",
+      "parameters": {
+        "name": "hamlib-max-3-sat"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "hamlib-max3sat",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "hamlib-max-3-sat"
+    }
   }
 }

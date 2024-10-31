@@ -1,13 +1,15 @@
 {
   "abstract": null,
   "authors": [
-    "Utkarsh Azad"
+    {
+      "name": "Utkarsh Azad"
+    }
   ],
   "citation": {
     "$path": "citation.txt"
   },
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)",
-  "sourceCodeUrl": null,
+  "sourceCodeUrl": "https://github.com/PennyLaneAI/DatasetsSource",
   "tags": [
     "Spin Systems",
     "Xanadu",

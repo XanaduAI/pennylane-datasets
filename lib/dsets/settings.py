@@ -12,6 +12,8 @@ from .lib.s3 import S3Client, S3Path
 class Settings(BaseSettings):
     """Global settings for pennylane-datasets."""
 
+    datasets_admin_api_url: str | None = None
+
     bucket_public_domain: str = "datasets.cloud.pennylane.ai"
     bucket_name: str = "swc-dev-pennylane-datasets"
 

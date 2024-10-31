@@ -2,10 +2,12 @@ from datetime import date
 from typing import Annotated, Any, Literal
 
 from pydantic import Field
+from typing_extensions import NotRequired, TypedDict
 
 from dsets.lib.doctree import Asset, Document, Ref
 from dsets.lib.pydantic_util import CamelCaseMixin
 
+from .author import Author
 from .dataset import Dataset
 from .dataset_class import DatasetClass
 from .dataset_collection import DatasetCollection
@@ -24,7 +26,7 @@ class DatasetFeature(Document, CamelCaseMixin):
 
     slug: Slug
     title: str
-    type_: Annotated[Literal["DATA", "SAMPLES"], Field(alias="type")] = "DATA"
+    type: Literal["DATA", "SAMPLES"] = "DATA"
     content: Ref[str]
 
 
@@ -51,7 +53,7 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     """
 
     abstract: Ref[str] | None = None
-    authors: list[str]
+    authors: list[Author]
     citation: Ref[BibtexStr]
     changelog: list[str] = []
     description: str
@@ -67,6 +69,13 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
     thumbnail: Asset | None = None
 
     extra: dict[str, Any] = {}
+
+
+class DatasetParameterNode(TypedDict):
+    """Model for the parameter defaults map of a dataset family."""
+
+    default: NotRequired[str | None]
+    next: dict[str | None, "DatasetParameterNode | None"]
 
 
 class DatasetFamily(Document, CamelCaseMixin):
@@ -91,5 +100,6 @@ class DatasetFamily(Document, CamelCaseMixin):
     download_name: str
     features: list[DatasetFeature] = []
     meta: Ref[DatasetFamilyMeta]
+    parameter_tree: DatasetParameterNode | None = None
 
     extra: dict[str, Any] = {}

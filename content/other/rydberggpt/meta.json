@@ -1,14 +1,30 @@
 {
   "abstract": null,
   "authors": [
-    "David Fitzek",
-    "Yi Hong Teoh",
-    "Hin Pok Fung",
-    "Gebremedhin A. Dagnew",
-    "Ejaaz Merali",
-    "M. Schuyler Moss",
-    "Benjamin MacLellan",
-    "Roger G. Melko"
+    {
+      "name": "David Fitzek"
+    },
+    {
+      "name": "Yi Hong Teoh"
+    },
+    {
+      "name": "Hin Pok Fung"
+    },
+    {
+      "name": "Gebremedhin A. Dagnew"
+    },
+    {
+      "name": "Ejaaz Merali"
+    },
+    {
+      "name": "M. Schuyler Moss"
+    },
+    {
+      "name": "Benjamin MacLellan"
+    },
+    {
+      "name": "Roger G. Melko"
+    }
   ],
   "citation": {
     "$path": "citation.txt"
@@ -22,13 +38,13 @@
     "Other"
   ],
   "title": "RydbergGPT",
-  "description": "This dataset contains various quantum properties that represent and describe the RydbergGPT under specified system parameters.",
+  "description": "This dataset contains the data used to train RydbergGPT, a generative pre-trained transformer designed to learn the measurement outcomes of a neutral atom array quantum computer.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_RydbergGPT.png",
   "extra": {},
-  "dateOfLastModification": "2024-09-12",
+  "dateOfLastModification": "2024-10-11",
   "dateOfPublication": "2024-09-11"
 }
