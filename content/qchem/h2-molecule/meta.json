@@ -18,7 +18,7 @@
     ">16 Qubits"
   ],
   "title": "H2 Molecule",
-  "description": "This dataset contains various quantum properties that represent and describe the H2 Molecule under specified system parameters.",
+  "description": "This dataset contains Hamiltonian information, molecular data, VQE data, and tapering data for the H2 Molecule for various basis sets and bondlengths.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },

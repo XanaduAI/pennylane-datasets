@@ -18,7 +18,7 @@
     ">16 Qubits"
   ],
   "title": "H10 Molecule",
-  "description": "This dataset contains various quantum properties that represent and describe the H10 Molecule under specified system parameters.",
+  "description": "This dataset contains Hamiltonian information, molecular data, VQE data, and tapering data for the H10 Molecule using the STO-3G basis set at its optimal bondlength.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
