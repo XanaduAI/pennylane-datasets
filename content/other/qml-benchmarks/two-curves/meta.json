@@ -23,7 +23,7 @@
     "Other"
   ],
   "title": "Two Curves",
-  "description": "This dataset contains various quantum properties that represent and describe the Two Curves under specified system parameters.",
+  "description": "This dataset contains labeled vectors that define points in space. The labels indicate which 1-D curve the point belongs to.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
