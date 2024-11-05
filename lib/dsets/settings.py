@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     """Global settings for pennylane-datasets."""
 
     datasets_admin_api_url: str | None = None
+    datasets_graphql_api_url: str = "https://dev.cloud.pennylane.ai/graphql"
 
     bucket_public_domain: str = "datasets.cloud.pennylane.ai"
     bucket_name: str = "swc-dev-pennylane-datasets"
@@ -23,10 +24,10 @@ class Settings(BaseSettings):
 
     datasets_build_s3_metadata_key: ClassVar[str] = "x-amz-meta-context"
 
-    audience_url: str = "https://cloud.pennylane.ai"
-    auth_url: str = "https://auth.cloud.pennylane.ai/oauth"
-    graphql_url: str = "https://cloud.pennylane.ai/graphql"
-    client_id: str = "MkuZM5qKutufNBkHorThEKv6s9W5p7Fq"
+    audience_url: str = "https://dev.cloud.pennylane.ai"
+    auth_url: str = "https://auth.dev.cloud.pennylane.ai/oauth"
+    graphql_url: str = "https://dev.cloud.pennylane.ai/graphql"
+    client_id: str = "5miHebfuYvVwUW68nVoPOjdRAjioS483"
 
     @property
     def url_prefix_assets(self) -> str:
@@ -37,6 +38,10 @@ class CLIContext:
     """Context object for CLI commands."""
 
     settings: Settings
+
+    @property
+    def auth_path(self):
+        return self.repo_root / ".auth.json"
 
     @property
     def repo_root(self) -> Path:

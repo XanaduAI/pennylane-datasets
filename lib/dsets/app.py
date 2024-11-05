@@ -1,3 +1,4 @@
+import hashlib
 import json
 import logging
 import webbrowser
@@ -16,11 +17,11 @@ from dsets.lib import (
     deploy,
     device_auth,
     doctree,
+    graphql,
     json_fmt,
     markdown,
     msg,
     progress,
-    s3,
 )
 from dsets.schemas import AuthorName, fields
 from dsets.settings import CLIContext, Settings
@@ -28,6 +29,15 @@ from dsets.settings import CLIContext, Settings
 from .builder import AssetLoader, compile_dataset_build
 
 app = typer.Typer(name="dsets", add_completion=True)
+
+
+def _get_gql_client(ctx: CLIContext) -> graphql.Client:
+    if not (token := auth.get_valid_token(ctx.auth_path)):
+        raise typer.Abort(
+            "Must be logged in to perform this action. Log in with 'dsets login'."
+        )
+
+    return graphql.client(ctx.settings.graphql_url, token)
 
 
 @app.command()
@@ -42,40 +52,39 @@ def upload(
         Path,
         typer.Argument(help="Path to dataset .h5 file", file_okay=True, dir_okay=False),
     ],
-    prefix_: Annotated[
-        str,
-        typer.Option(
-            "--prefix",
-            help="Prefix for file in data bucket",
-        ),
-    ] = "",
 ) -> None:
-    """Upload a new dataset file to the data bucket, and create an upload
-    receipt in pennylane-datasets/data.
-    """
+    """Upload a new dataset file."""
     ctx = CLIContext()
     src_file = src_file.expanduser()
-    prefix = s3.S3Path(prefix_) if prefix_ else None
+    name = src_file.name
 
-    repo = s3.S3DatasetRepo(
-        ctx.data_dir,
-        ctx.s3_client,
-        ctx.settings.bucket_name,
-        ctx.settings.bucket_prefix_data,
-    )
+    gql_client = _get_gql_client(ctx)
 
-    print(f"Uploading '{src_file.absolute()}'")
-    file_size = src_file.stat().st_size
+    size = src_file.stat().st_size
+    with open(src_file, "rb") as f:
+        digest = hashlib.file_digest(f, "sha256").digest()
 
-    with progress.IOProgressBarManager() as pbars:
-        key = repo.upload_file(
-            src_file,
-            prefix,
-            hash_progress_cb=pbars.add_bar(file_size, "Generating SHA1 hash..."),
-            upload_progress_cb=pbars.add_bar(file_size, "Uploading..."),
-        )
+    error = None
+    with open(src_file, "rb") as f, progress.IOProgressBarManager() as pbar:
+        cb = pbar.add_bar(size, f"Upload {src_file}")
+        try:
+            graphql.files.upload_file(gql_client, f, name, size, digest, callback=cb)
+        except graphql.files.APIError as exc:
+            error = exc.args[0]
 
-    print(f"File uploaded to '{key}'. Be sure to commit upload receipt!")
+    if error:
+        print(f"Error: {error}")
+        raise typer.Exit(1)
+
+
+@app.command(name="list-files")
+def list_files():
+    """List datasets files owned by the calling user."""
+    ctx = CLIContext()
+    gql_client = _get_gql_client(ctx)
+
+    files = graphql.files.get_files(gql_client)
+    print(json.dumps(files, indent=2))
 
 
 @app.command(name="build")
@@ -363,10 +372,10 @@ def format(check: bool = False):
 def login():
     """Login to PennyLane account."""
     ctx = CLIContext()
-    auth_path = ctx.repo_root / ".auth.json"
+    auth_path = ctx.auth_path
 
     print("Checking credentials...")
-    if auth.has_valid_token(auth_path):
+    if auth.get_valid_token(auth_path):
         print("Found a valid token.")
         print("You are logged into your PennyLane account.")
         return
