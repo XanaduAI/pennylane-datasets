@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     datasets_admin_api_url: str | None = None
 
     bucket_public_domain: str = "datasets.cloud.pennylane.ai"
-    bucket_name: str = "swc-dev-pennylane-datasets"
+    bucket_name: str = "swc-prod-pennylane-datasets"
 
     bucket_prefix_build: ClassVar[S3Path] = S3Path("build")
     bucket_prefix_data: ClassVar[S3Path] = S3Path("data")
@@ -23,10 +23,10 @@ class Settings(BaseSettings):
 
     datasets_build_s3_metadata_key: ClassVar[str] = "x-amz-meta-context"
 
-    audience_url: str = "https://dev.cloud.pennylane.ai"
-    auth_url: str = "https://auth.dev.cloud.pennylane.ai/oauth"
-    graphql_url: str = "https://dev.cloud.pennylane.ai/graphql"
-    client_id: str = "5miHebfuYvVwUW68nVoPOjdRAjioS483"
+    audience_url: str = "https://cloud.pennylane.ai"
+    auth_url: str = "https://auth.cloud.pennylane.ai/oauth"
+    graphql_url: str = "https://cloud.pennylane.ai/graphql"
+    client_id: str = "MkuZM5qKutufNBkHorThEKv6s9W5p7Fq"
 
     @property
     def url_prefix_assets(self) -> str:
