@@ -44,7 +44,7 @@ Upload dataset.h5 ━━━━━━━━━━━━━━━━━━━━�
 Once the upload is complete, file information (including a public
 download url) can be viewed using the `dsets list-files` command:
 ```bash
-(.venv) pennylane-datasets $ dsests list-files
+(.venv) pennylane-datasets $ dsets list-files
 [
   {
     "status": "AVAILABLE",
