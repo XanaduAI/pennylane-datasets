@@ -24,35 +24,36 @@ pennylane-datasets $ source .venv/bin/activate
 
 ## Uploading a Dataset
 
-Dataset HDF5 files can be uploaded with the `dsets upload` command. This requires write access to
-the `swc-prod-pennylane-datasets` bucket in the Software Cloud production account. If you
-need credentials, contact the Software Cloud team.
+Dataset HDF5 files can be uploaded with the `dsets` tool. This requires a [pennylane.ai](https://pennylane.ai/) account.
 
-The S3 key of the uploaded file will be in the form: `data/{filename}/{upload_timestamp}-{file_sha1_hash}`
-
-For example, the dataset file `H2_STO-3G_0.742.h5`, uploaded on midnight, will have the key:
-
-`data/H2_STO-3G_0.742.h5/2024-01-01T000000Z-e98e34a7d58e039da35f793cb6d9bd0da78847f9`
-
-This ensures that data files are uniquely identified by their content, as well as sorted
-by upload date.
-
-The upload will create a 'receipt' file in the [data/](data) directory, in the same path
-as the file was uploaded. These are used to track the contents of the data bucket with
-git, so create a new branch before uploading:
+First, authenticate with your pennylane account using the `dsets login` command. This will
+direct you to the login page:
 
 ```bash
-(.venv) pennylane-datasets $ git checkout -b upload-max3sat
+(.venv) pennylane-datasets $ dsets login
+Go to 'https://auth.cloud.pennylane.ai/activate' to complete authentication.
+You are logged into your PennyLane account.
 ```
 
-Then run `dsets upload` command:
-
+Then, upload the file using the `dsets upload` command:
 ```bash
-(.venv) pennylane-datasets $ dsets upload Max3Sat_Max3Sat.h5
-Uploading 'Max3Sat_Max3Sat.h5'
-Generating SHA1 hash.. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2 GB   1.2 GB/s 0:00:04
-Uploading...           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2 GB 11.0 MB/s 0:09:36
-File uploaded to 'data/Max3Sat_Max3Sat.h5/2024-02-27T155839Z-4a06dbb748c8ae32cf6f15b18833c467e4bb2a3b'. Be sure to commit upload receipt!
+(.venv) pennylane-datasets $ dsets upload 
+Upload dataset.h5 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.5 MB ? 0:00:02
+```
+
+Once the upload is complete, file information (including a public
+download url) can be viewed using the `dsets list-files` command:
+```bash
+(.venv) pennylane-datasets $ dsests list-files
+[
+  {
+    "status": "AVAILABLE",
+    "size": 15530645,
+    "name": "dataset.h5",
+    "downloadUrl": "https://datasets.cloud.pennylane.ai/user/05bf5f40-5d95-4a19-9589-d2cb236ac9d0",
+    "checksumSha256": "a5dab437a18d6448712550d474b05771aeb190c40492f1ffcc6f662c7c86a04d"
+  }
+]
 ```
 
 ## Adding new dataset content
