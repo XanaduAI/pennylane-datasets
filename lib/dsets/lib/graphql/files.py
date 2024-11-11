@@ -100,7 +100,13 @@ def upload_file(
                 callback(end - start)
 
     if not (file := get_file(client, name)):
-        raise APIError("Upload file", "Something went wrong - please contact support.")
+        raise APIError(
+            "Upload file",
+            (
+                "Something went wrong - please try again and"
+                " contact support if the issue persists."
+            ),
+        )
 
     return file
 

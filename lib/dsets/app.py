@@ -32,6 +32,8 @@ app = typer.Typer(name="dsets", add_completion=True)
 
 
 def _get_gql_client(ctx: CLIContext) -> graphql.Client:
+    """Get a GraphQL client for the datasets API, with the user's
+    authentication token."""
     if not (token := auth.get_valid_token(ctx.auth_path)):
         raise typer.Abort(
             "Must be logged in to perform this action. Log in with 'dsets login'."
