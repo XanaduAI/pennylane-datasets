@@ -26,7 +26,7 @@ pennylane-datasets $ source .venv/bin/activate
 
 Dataset HDF5 files can be uploaded with the `dsets` tool. This requires a [pennylane.ai](https://pennylane.ai/) account.
 
-First, authenticate with your pennylane account using the `dsets login` command. This will
+First, authenticate with your pennylane account using the `dsets login` command (see below for more details). This will
 direct you to the login page:
 
 ```bash
