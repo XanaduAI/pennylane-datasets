@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     datasets_admin_api_url: str | None = None
 
     bucket_public_domain: str = "datasets.cloud.pennylane.ai"
-    bucket_name: str = "swc-dev-pennylane-datasets"
+    bucket_name: str = "swc-prod-pennylane-datasets"
 
     bucket_prefix_build: ClassVar[S3Path] = S3Path("build")
     bucket_prefix_data: ClassVar[S3Path] = S3Path("data")
@@ -37,6 +37,10 @@ class CLIContext:
     """Context object for CLI commands."""
 
     settings: Settings
+
+    @property
+    def auth_path(self):
+        return self.repo_root / ".auth.json"
 
     @property
     def repo_root(self) -> Path:
