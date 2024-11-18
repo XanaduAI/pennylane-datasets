@@ -1,0 +1,25 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Diego"
+    }
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "This dataset is used to test upload via notebook to qcaas",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2024-11-18",
+  "dateOfPublication": "2024-11-18",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "QCaaS Test",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": null,
+  "thumbnail": null,
+  "extra": {}
+}
