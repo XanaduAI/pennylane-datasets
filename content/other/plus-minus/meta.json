@@ -23,13 +23,13 @@
     "Other"
   ],
   "title": "Plus Minus",
-  "description": "This dataset contains various quantum properties that represent and describe the Plus Minus under specified system parameters.",
+  "description": "This dataset contains labeled 16x16-pixel grayscale images of minus signs, plus signs, and right/left half-plus signs.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "Dataset_AdversarialRobustness_Thumb.png",
   "extra": {},
-  "dateOfLastModification": "2024-09-16",
+  "dateoflastmodification": "2024-11-11",
   "dateOfPublication": "2024-09-16"
 }

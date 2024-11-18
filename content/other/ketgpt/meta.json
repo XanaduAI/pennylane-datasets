@@ -28,13 +28,13 @@
     ">20 Qubits"
   ],
   "title": "KetGPT",
-  "description": "This dataset contains various quantum properties that represent and describe the KetGPT under specified system parameters.",
+  "description": "This dataset contains 1000 quantum circuits generated with the transformer model described in KetGPT - Dataset Augmentation of Quantum Circuits using Transformers.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_KetGPT.png",
   "extra": {},
-  "dateOfLastModification": "2024-09-12",
+  "dateoflastmodification": "2024-11-11",
   "dateOfPublication": "2024-09-11"
 }

@@ -64,13 +64,13 @@
     "Other"
   ],
   "title": "HamLib: Travelling Salesperson Problem",
-  "description": "This dataset contains various quantum properties that represent and describe the HamLib: Travelling Salesperson Problem under specified system parameters.",
+  "description": "This dataset contains part of the Travelling Salesperson problems found in HamLib: a library of Hamiltonians for benchmarking quantum algorithms and hardware.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
   "heroImage": "Circuit_01.png",
   "thumbnail": "Dataset_Thumb_Generic_HamlibTravellingSalesman.png",
   "extra": {},
-  "dateOfLastModification": "2024-09-12",
+  "dateoflastmodification": "2024-11-11",
   "dateOfPublication": "2024-09-11"
 }
