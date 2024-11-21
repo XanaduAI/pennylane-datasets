@@ -1,0 +1,13 @@
+{
+  "slug": "qcaastest",
+  "name": "QCaaSTest",
+  "attributeList": [
+    {
+      "name": "data_1",
+      "pythonType": "list",
+      "doc": "",
+      "optional": false
+    }
+  ],
+  "parameterList": []
+}

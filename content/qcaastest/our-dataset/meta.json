@@ -1,0 +1,28 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Me"
+    },
+    {
+      "name": "You"
+    }
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "A dataset we created for this demo",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2024-11-21",
+  "dateOfPublication": "2024-11-21",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "Our Dataset",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": null,
+  "thumbnail": null,
+  "extra": {}
+}
