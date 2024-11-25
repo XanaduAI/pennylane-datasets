@@ -1,0 +1,20 @@
+{
+  "slug": "other",
+  "name": "Other",
+  "attributeList": [
+    {
+      "name": "data_1",
+      "pythonType": "list",
+      "doc": "",
+      "optional": false
+    }
+  ],
+  "parameterList": [
+    {
+      "name": "name",
+      "title": "Name",
+      "description": "The name of the dataset",
+      "optional": false
+    }
+  ]
+}
