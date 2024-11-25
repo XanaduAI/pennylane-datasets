@@ -1,0 +1,25 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "me and you"
+    }
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "A dataset for testing the qcaas workflow",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2024-11-25",
+  "dateOfPublication": "2024-11-25",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "QCaaS Test Dataset",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_RydbergGPT.png",
+  "extra": {}
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "qcaastest",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "collection": null,
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/2c9b8d9e-818b-4a10-a1fb-54bf86da0cf8",
+      "parameters": {
+        "name": "our_dataset"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "our_dataset",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}
