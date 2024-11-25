@@ -54,6 +54,7 @@ class DatasetFamilyMeta(Document, CamelCaseMixin):
 
     abstract: Ref[str] | None = None
     authors: list[Author]
+    based_on_papers: bool = False
     citation: Ref[BibtexStr]
     changelog: list[str] = []
     description: str

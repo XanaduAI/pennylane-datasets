@@ -112,6 +112,7 @@
       },
       "meta": {
         "abstract": "Data",
+        "basedOnPapers": false,
         "description": "Description.",
         "authors": [
           {"name": "Author 1"},
