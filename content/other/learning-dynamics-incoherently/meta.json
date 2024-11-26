@@ -23,6 +23,7 @@
       "name": "Zoe Holmes"
     }
   ],
+  "based_on_papers": true,
   "citation": {
     "$path": "citation.txt"
   },

@@ -5,6 +5,7 @@
       "name": "Korbinian Kottmann"
     }
   ],
+  "based_on_papers": true,
   "citation": {
     "$path": "citation.txt"
   },

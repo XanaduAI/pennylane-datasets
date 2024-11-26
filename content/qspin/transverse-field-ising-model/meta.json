@@ -8,6 +8,7 @@
       "name": "Utkarsh Azad"
     }
   ],
+  "based_on_papers": false,
   "citation": {
     "$path": "citation.txt"
   },
