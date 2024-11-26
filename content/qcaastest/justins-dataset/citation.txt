@@ -1,0 +1,6 @@
+@misc{Justin2024justinsdataset,
+    title={Justins Dataset},
+    author={Justin and Lebron James},
+    howpublished={\urlhttps://pennylane.ai/datasets/qcaastest/justins-dataset},
+    year={2024}
+}

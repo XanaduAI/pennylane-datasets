@@ -1,0 +1,30 @@
+{
+  "slug": "justins-dataset",
+  "class": {
+    "$path": "/qcaastest/_meta/class.json"
+  },
+  "collection": null,
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {},
+      "extra": {}
+    }
+  ],
+  "downloadName": "justins-dataset",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

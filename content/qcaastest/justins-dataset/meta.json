@@ -1,0 +1,28 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Justin"
+    },
+    {
+      "name": "Lebron James"
+    }
+  ],
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "A dataset description from Justin",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2024-11-26",
+  "dateOfPublication": "2024-11-26",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "Justins Dataset",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": null,
+  "thumbnail": null,
+  "extra": {}
+}
