@@ -28,7 +28,7 @@ There are two different dataset collections in this task:
 **Example usage**
 
 ```python
-[ds] = qml.data.load("hidden-manifold")
+[ds] = qml.data.load("other", name="hidden-manifold")
 
 ds.train['4']['inputs'] # points in 4-dimensional space
 ds.train['4']['labels'] # labels for the points above
