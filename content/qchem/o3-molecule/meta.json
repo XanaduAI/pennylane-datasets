@@ -17,7 +17,7 @@
     ">20 Qubits"
   ],
   "title": "O3 Molecule",
-  "description": "This dataset contains various quantum properties that represent and describe the O3 Molecule under specified system parameters.",
+  "description": "This dataset contains Hamiltonian information, molecular data, VQE data, and tapering data for the O3 Molecule using the STO-3G basis set at its optimal bondlength.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
@@ -27,6 +27,6 @@
   "changelog": [
     "version 0.1 : initial public release"
   ],
-  "dateOfLastModification": "2024-09-12",
+  "dateOfLastModification": "2024-11-21",
   "dateOfPublication": "2024-09-11"
 }
