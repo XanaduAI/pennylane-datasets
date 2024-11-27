@@ -16,8 +16,8 @@
     ">16 Qubits",
     ">20 Qubits"
   ],
-  "title": "HCOH Molecule",
-  "description": "This dataset contains Hamiltonian information, molecular data, VQE data, and tapering data for the HCOH Molecule using the STO-3G basis set at its optimal bondlength.",
+  "title": "CH2O Molecule",
+  "description": "This dataset contains Hamiltonian information, molecular data, VQE data, and tapering data for the CH2O Molecule using the STO-3G basis set at its optimal bondlength.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
