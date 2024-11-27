@@ -1,0 +1,6 @@
+@misc{Paul2024dress,
+    title={Dress},
+    author={Paul and Jack and Justin and Josh and and Diego},
+    howpublished={\urlhttps://pennylane.ai/datasets/dressrehearsal/dress},
+    year={2024}
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "dress",
+  "class": {
+    "$path": "/dressrehearsal/_meta/class.json"
+  },
+  "collection": null,
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/e1e08a06-b102-4610-a875-3ae60fc88a46",
+      "parameters": {},
+      "extra": {}
+    }
+  ],
+  "downloadName": "dressrehearsal",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}
