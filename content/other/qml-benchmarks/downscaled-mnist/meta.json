@@ -24,13 +24,13 @@
     "Other"
   ],
   "title": "Downscaled MNIST",
-  "description": "This dataset contains various quantum properties that represent and describe the Downscaled MNIST under specified system parameters.",
+  "description": "This dataset contains a simplified version of the famous MNIST handwritten digits dataset. This version involves distinguishing between digits 3 and 5 rather than the full range 0-9.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
   "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
   "thumbnail": "Dataset_Thumb_MNIST.png",
   "extra": {},
-  "dateOfLastModification": "2024-09-12",
+  "dateOfLastModification": "2024-11-21",
   "dateOfPublication": "2024-09-11"
 }

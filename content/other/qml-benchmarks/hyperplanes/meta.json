@@ -24,13 +24,13 @@
     "Other"
   ],
   "title": "Hyperplanes",
-  "description": "This dataset contains various quantum properties that represent and describe the Hyperplanes under specified system parameters.",
+  "description": "This dataset contains labeled vectors that define points in space. The labels indicate whether the points lie on the “positive side” of an even number of hyperplanes.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
   "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
   "thumbnail": "Dataset_Thumb_IntersectingHyperplanes.png",
   "extra": {},
-  "dateOfLastModification": "2024-09-12",
+  "dateOfLastModification": "2024-11-21",
   "dateOfPublication": "2024-09-11"
 }
