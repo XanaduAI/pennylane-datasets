@@ -1,4 +1,4 @@
-This dataset contains various quantum properties that represent and describe the HCOH molecule with a specific [bond length](https://en.wikipedia.org/wiki/Bond_length).
+This dataset contains various quantum properties that represent and describe the CH2O molecule with a specific [bond length](https://en.wikipedia.org/wiki/Bond_length).
 
 Key features include:
 
