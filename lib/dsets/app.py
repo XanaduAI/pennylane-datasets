@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Annotated
 
 import inflection
+import rich
 import typer
 from pennylane.data import Dataset
 
@@ -35,9 +36,11 @@ def _get_gql_client(ctx: CLIContext) -> graphql.Client:
     """Get a GraphQL client for the datasets API, with the user's
     authentication token."""
     if not (token := auth.get_valid_token(ctx.auth_path)):
-        raise typer.Abort(
-            "Must be logged in to perform this action. Log in with 'dsets login'."
+        rich.print(
+            "You must be logged in to your pennylane.ai account to perform this action.\n"
+            "Login in with: [bold]dsets login[/bold]."
         )
+        raise typer.Exit(1)
 
     return graphql.client(ctx.settings.graphql_url, token)
 
@@ -379,7 +382,9 @@ def login():
     print("Checking credentials...")
     if auth.get_valid_token(auth_path):
         print("Found a valid token.")
-        print("You are logged into your PennyLane account.")
+        rich.print(
+            "[bold green]You are logged into your PennyLane account.[/bold green]"
+        )
         return
 
     settings = Settings()
@@ -391,8 +396,10 @@ def login():
 
     device_code = grant.get_device_code()
 
-    print(f"User code is '{device_code['user_code']}.'")
-    print(f"Go to '{device_code['verification_uri']}' to complete authentication.")
+    rich.print(f"User code is [bold]{device_code['user_code']}[/bold]")
+    rich.print(
+        f"Go to [bold]{device_code['verification_uri_complete']}[/bold] to complete authentication."
+    )
 
     webbrowser.open(device_code["verification_uri_complete"])
 
@@ -401,7 +408,7 @@ def login():
     with open(f"{ctx.repo_root}/.auth.json", "w", encoding="utf-8") as f:
         json.dump(token, f, indent=2)
 
-    print("You are logged into your PennyLane account.")
+    rich.print("[bold green]You are logged into your PennyLane account[/bold green].")
 
 
 def configure_logging(level=logging.INFO):
