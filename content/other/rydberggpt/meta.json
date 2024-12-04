@@ -26,6 +26,7 @@
       "name": "Roger G. Melko"
     }
   ],
+  "based_on_papers": true,
   "citation": {
     "$path": "citation.txt"
   },
@@ -45,6 +46,6 @@
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_RydbergGPT.png",
   "extra": {},
-  "dateOfLastModification": "2024-10-11",
+  "dateOfLastModification": "2024-12-05",
   "dateOfPublication": "2024-09-11"
 }

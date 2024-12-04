@@ -11,6 +11,7 @@
       "name": "Maria Schuld"
     }
   ],
+  "based_on_papers": true,
   "citation": {
     "$path": "citation.txt"
   },
@@ -30,6 +31,6 @@
   "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
   "thumbnail": "Dataset_Thumb_MNIST.png",
   "extra": {},
-  "dateOfLastModification": "2024-11-21",
+  "dateOfLastModification": "2024-12-05",
   "dateOfPublication": "2024-09-11"
 }
