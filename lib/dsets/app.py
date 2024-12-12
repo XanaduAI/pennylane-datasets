@@ -139,10 +139,10 @@ def add(dataset_file: Path):
     content_doctree = doctree.Doctree(ctx.content_dir)
 
     rich.print(
-        "A dataset's [bold]class[/bold] defines its a attributes and parameters."
+        "A dataset's [bold]class[/bold] defines its [bold]attributes[/bold] and parameters."
     )
     class_slug = typer.prompt(
-        "Choose an existing class [qchem, qspin], or enter a new class name:\n"
+        "Choose an existing class [qchem, qspin], or enter a new class name"
     )
 
     fields.validate(fields.Slug, class_slug)
@@ -277,10 +277,10 @@ def add(dataset_file: Path):
         ]
         family_doc.parent.mkdir(parents=True, exist_ok=True)
         hero_image = _prompt_for_image(
-            "Choose a banner image (leave blank to continue): ", family_doc.parent
+            "Enter path to banner image (leave blank to continue)", family_doc.parent
         )
         thumbnail_image = _prompt_for_image(
-            "Choose a thumbnail image (leave blank to conintue): ", family_doc.parent
+            "Enter path to thumbnail image (leave blank to conintue)", family_doc.parent
         )
 
         meta = schemas.DatasetFamilyMeta(
@@ -293,7 +293,7 @@ def add(dataset_file: Path):
             date_of_last_modification=today,
             date_of_publication=today,
             hero_image=hero_image.name if hero_image else None,
-            thumbnail=thumbnail_image if thumbnail_image else None,
+            thumbnail=thumbnail_image.name if thumbnail_image else None,
         )
 
         with open(family_doc.parent / "meta.json", "w", encoding="utf-8") as f:

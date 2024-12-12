@@ -1,7 +1,19 @@
-from pydantic import ConfigDict
+from pydantic import BaseModel, ConfigDict
 
 
-class Author:
+class AuthorHandle(BaseModel):
+    """Model for dataset authors represented by their PennyLane.ai username.
+
+    Attributes:
+        username: Username of the PennyLane.ai profile of the author
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    username: str
+
+
+class AuthorName(BaseModel):
     """Model for dataset authors represented by their name.
 
     Attributes:
@@ -11,4 +23,6 @@ class Author:
     model_config = ConfigDict(extra="forbid")
 
     name: str
-    username: str | None = None
+
+
+Author = AuthorHandle | AuthorName
