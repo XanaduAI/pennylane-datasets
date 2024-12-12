@@ -14,8 +14,7 @@
     "$path": "./using_this_dataset.md"
   },
   "authors": [
-    {"name": "Author 1"},
-    {"username": "author2"}
+    {"name": "Author Name", "username": "AuthorHandle"}
   ],
   "license": "GPL",
   "changelog": ["Initial release"],

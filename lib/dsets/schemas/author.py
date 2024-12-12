@@ -1,7 +1,7 @@
-from pydantic import ConfigDict
+from pydantic import BaseModel, ConfigDict
 
 
-class Author:
+class Author(BaseModel):
     """Model for dataset authors represented by their PennyLane.ai username.
 
     Attributes:

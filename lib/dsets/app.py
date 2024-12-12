@@ -245,16 +245,17 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
 
         authors = []
         while True:
-            name = typer.prompt("Enter author name",default="").strip()
+            name = typer.prompt("Enter author name", default="").strip()
             if not name:
                 if not authors:
                     continue
                 else:
                     break
 
-            username = typer.prompt("Enter author PennyLane profile handle", default="").strip()
+            username = typer.prompt(
+                "Enter author PennyLane profile handle", default=""
+            ).strip()
             authors.append(Author(name=name, username=username if username else None))
-
 
         meta = schemas.DatasetFamilyMeta(
             title=family_title,

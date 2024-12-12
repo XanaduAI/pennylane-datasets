@@ -115,8 +115,7 @@
         "basedOnPapers": false,
         "description": "Description.",
         "authors": [
-          {"name": "Author 1"},
-          {"username": "author2"}
+          {"name": "Author Name", "username": "AuthorHandle"}
         ],
         "citation": "@misc{FooData,\n  title = {Data!},  \n  author = {Author}, \n  howpublished = {\\url{https://pennylane.ai/datasets/foo/bar}}, \n  year = {2023}\n}\n",
         "sourceCodeUrl": null,
