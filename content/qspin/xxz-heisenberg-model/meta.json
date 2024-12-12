@@ -2,10 +2,12 @@
   "abstract": null,
   "authors": [
     {
-      "name": "Diego Guala"
+      "name": "Diego Guala",
+      "username": "Diego"
     },
     {
-      "name": "Utkarsh Azad"
+      "name": "Utkarsh Azad",
+      "username": "whatsis"
     }
   ],
   "based_on_papers": false,
