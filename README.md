@@ -1,13 +1,11 @@
 # Pennylane Datasets
 
-Repository for managing Pennylane Dataset HDF5 files and metadata for the datasets
-service.
+Repository for managing Pennylane Dataset HDF5 files and metadata for https://pennylane.ai/datasets/
 
 ## Organization
 
-- The [data/](data/) directory contains 'upload reciepts' representing data files uploaded
-to the data bucket.
 - The [lib/](lib/) directory contains the command line app for managing datasets
+- The [content/](content/) directory contains the dataset metadata and content for pennylane.ai
 
 # Usage
 
@@ -152,3 +150,33 @@ Checking credentials...
 Found a valid token
 You are logged into your PennyLane account.
 ```
+
+## Contributing to PennyLane Datasets
+
+We welcome contributions—simply fork the PennyLane Datasets repository, and then make a [pull
+request](https://help.github.com/articles/about-pull-requests/) containing your contribution.
+
+We also encourage bug reports and suggestions for new features and enhancements.
+
+## Support
+
+- **Source Code:** https://github.com/XanaduAI/pennylane-datasets
+- **Issue Tracker:** https://github.com/XanaduAI/pennylane-datasets/issues
+
+If you are having issues, please let us know by posting the issue on our GitHub issue tracker.
+
+Note that we are committed to providing a friendly, safe, and welcoming environment for all.
+Please read and respect the [Code of Conduct](.github/CODE_OF_CONDUCT.md).
+
+## Authors
+
+PennyLane is the work of [many contributors](https://github.com/XanaduAI/pennylane-datasets/graphs/contributors).
+
+If you are doing research using PennyLane, please cite [our paper](https://arxiv.org/abs/1811.04968):
+
+> Ville Bergholm et al. *PennyLane: Automatic differentiation of hybrid quantum-classical
+> computations.* 2018. arXiv:1811.04968
+
+## License
+
+PennyLane Datasets is **free** and **open source**, released under the Apache License, Version 2.0.
