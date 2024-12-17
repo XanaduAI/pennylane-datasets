@@ -99,7 +99,8 @@ Enter family slug [h2-molecule]:
 Creating new family with slug 'h2-molecule'
 Enter title [H2 Molecule]: 
 Enter download name [name]: molname
-Enter authors (author1,author2,...): Adam A, Alex B
+Enter author name: Adam A
+Enter author PennyLane profile handle: AdamA
 Wrote data to content/qchem/h2-molecule/dataset.json
 ```
 
