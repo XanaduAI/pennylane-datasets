@@ -44,7 +44,7 @@
       "title": "Hamiltonian data",
       "type": "DATA",
       "content": {
-        "$path": "/qchem/_meta/features/hamiltonian-data.md"
+        "$path": "/qchem/_meta/features/hamiltonian-data-no-fci.md"
       }
     },
     {
