@@ -25,7 +25,7 @@ from dsets.lib import (
     msg,
     progress,
 )
-from dsets.schemas import AuthorName, fields
+from dsets.schemas import Author, fields
 from dsets.settings import CLIContext, Settings
 
 from .builder import AssetLoader, compile_dataset_build
@@ -269,12 +269,20 @@ def add(dataset_file: Path):
             meta=doctree.Reference[schemas.DatasetFamilyMeta](path="meta.json"),
         )
 
-        authors = [
-            author.strip()
-            for author in typer.prompt("Enter authors (author1,author2,...)")
-            .strip()
-            .split(",")
-        ]
+        authors = []
+        while True:
+            name = typer.prompt("Enter author name", default="").strip()
+            if not name:
+                if not authors:
+                    continue
+                else:
+                    break
+
+            username = typer.prompt(
+                "Enter author PennyLane profile handle", default=""
+            ).strip()
+            authors.append(Author(name=name, username=username if username else None))
+
         family_doc.parent.mkdir(parents=True, exist_ok=True)
         hero_image = _prompt_for_image(
             "Enter path to banner image (leave blank to continue)", family_doc.parent
@@ -289,7 +297,7 @@ def add(dataset_file: Path):
             citation=doctree.Reference[fields.BibtexStr](path="citation.txt"),
             using_this_dataset=doctree.Reference[str](path="using_this_dataset.md"),
             license="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
-            authors=[AuthorName(name=name) for name in authors],
+            authors=authors,
             date_of_last_modification=today,
             date_of_publication=today,
             hero_image=hero_image.name if hero_image else None,
@@ -304,7 +312,7 @@ def add(dataset_file: Path):
                 bibtex.generate_bibtex(
                     family_slug,
                     family_title,
-                    authors=authors,
+                    authors=[author.name for author in authors],
                     publication_url=f"https://pennylane.ai/datasets/{class_slug}/{family_slug}",
                 )
             )

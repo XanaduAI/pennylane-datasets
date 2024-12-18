@@ -8,7 +8,8 @@
       "name": "Shahnawaz Ahmed"
     },
     {
-      "name": "Maria Schuld"
+      "name": "Maria Schuld",
+      "username": "mariaschuld"
     }
   ],
   "based_on_papers": true,
@@ -31,6 +32,6 @@
   "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
   "thumbnail": "Dataset_Thumb_LinearlySeparable.png",
   "extra": {},
-  "dateOfLastModification": "2024-12-05",
+  "dateOfLastModification": "2024-12-17",
   "dateOfPublication": "2024-09-11"
 }

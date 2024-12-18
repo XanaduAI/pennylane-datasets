@@ -2,7 +2,8 @@
   "abstract": null,
   "authors": [
     {
-      "name": "Utkarsh Azad"
+      "name": "Utkarsh Azad",
+      "username": "whatsis"
     }
   ],
   "based_on_papers": false,
@@ -26,6 +27,6 @@
   "changelog": [
     "version 0.1 : initial public release"
   ],
-  "dateOfLastModification": "2024-12-05",
+  "dateOfLastModification": "2024-12-17",
   "dateOfPublication": "2024-09-11"
 }
