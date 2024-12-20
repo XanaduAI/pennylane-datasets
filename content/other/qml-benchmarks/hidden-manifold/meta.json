@@ -2,10 +2,12 @@
   "abstract": null,
   "authors": [
     {
-      "name": "Joseph Bowles"
+      "name": "Joseph Bowles",
+      "username": "josephbowles"
     },
     {
-      "name": "Shahnawaz Ahmed"
+      "name": "Shahnawaz Ahmed",
+      "username": "quantshah"
     },
     {
       "name": "Maria Schuld",
@@ -32,6 +34,6 @@
   "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
   "thumbnail": "Dataset_Thumb_HiddenManifold.png",
   "extra": {},
-  "dateOfLastModification": "2024-12-17",
+  "dateOfLastModification": "2024-12-20",
   "dateOfPublication": "2024-09-11"
 }

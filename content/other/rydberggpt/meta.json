@@ -2,10 +2,12 @@
   "abstract": null,
   "authors": [
     {
-      "name": "David Fitzek"
+      "name": "David Fitzek",
+      "username": "davidos"
     },
     {
-      "name": "Yi Hong Teoh"
+      "name": "Yi Hong Teoh",
+      "username": "yhteoh"
     },
     {
       "name": "Hin Pok Fung"
@@ -17,13 +19,16 @@
       "name": "Ejaaz Merali"
     },
     {
-      "name": "M. Schuyler Moss"
+      "name": "M. Schuyler Moss",
+      "username": "mschuylerm"
     },
     {
-      "name": "Benjamin MacLellan"
+      "name": "Benjamin Maclellan",
+      "username": "benjimaclellan"
     },
     {
-      "name": "Roger G. Melko"
+      "name": "Roger G. Melko",
+      "username": "rgmelko"
     }
   ],
   "based_on_papers": true,
@@ -46,6 +51,6 @@
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_RydbergGPT.png",
   "extra": {},
-  "dateOfLastModification": "2024-12-11",
+  "dateOfLastModification": "2024-12-20",
   "dateOfPublication": "2024-07-23"
 }
