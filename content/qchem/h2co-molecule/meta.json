@@ -22,7 +22,7 @@
     "$path": "using_this_dataset.md"
   },
   "heroImage": "Dataset_ChemHero_H2CO.png",
-  "thumbnail": "Dataset_ChemThumb_H2Co.png",
+  "thumbnail": "Dataset_ChemThumb_H2CO.png",
   "extra": {},
   "changelog": [
     "version 0.1 : initial public release"
