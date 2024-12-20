@@ -1,12 +1,14 @@
 import hashlib
 import json
 import logging
+import shutil
 import webbrowser
 from datetime import datetime
 from pathlib import Path
 from typing import Annotated
 
 import inflection
+import rich
 import typer
 from pennylane.data import Dataset
 
@@ -23,7 +25,7 @@ from dsets.lib import (
     msg,
     progress,
 )
-from dsets.schemas import AuthorName, fields
+from dsets.schemas import Author, fields
 from dsets.settings import CLIContext, Settings
 
 from .builder import AssetLoader, compile_dataset_build
@@ -35,11 +37,31 @@ def _get_gql_client(ctx: CLIContext) -> graphql.Client:
     """Get a GraphQL client for the datasets API, with the user's
     authentication token."""
     if not (token := auth.get_valid_token(ctx.auth_path)):
-        raise typer.Abort(
-            "Must be logged in to perform this action. Log in with 'dsets login'."
+        rich.print(
+            "You must be logged in to your pennylane.ai account to perform this action.\n"
+            "Login in with: [bold]dsets login[/bold]."
         )
+        raise typer.Exit(1)
 
     return graphql.client(ctx.settings.graphql_url, token)
+
+
+def _prompt_for_image(prompt: str, dest_dir: Path) -> Path | None:
+    """Prompt the user for an image. And attempt to move it to directory
+    `dest`."""
+
+    src = typer.prompt(prompt).strip()
+    if not src:
+        return None
+
+    src = Path(src)
+    if not src.exists():
+        print(f"Image file does not exist: {src}")
+        return _prompt_for_image(prompt, dest_dir)
+
+    shutil.copy(src, dest_dir / src.name)
+
+    return dest_dir / src.name
 
 
 @app.command()
@@ -108,13 +130,20 @@ def build():
 
 
 @app.command(name="add")
-def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)]):
+def add(dataset_file: Path):
     """
     Add a new dataset to an existing family, or create a new one.
     """
     ctx = CLIContext()
 
     content_doctree = doctree.Doctree(ctx.content_dir)
+
+    rich.print(
+        "A dataset's [bold]class[/bold] defines its [bold]attributes[/bold] and parameters."
+    )
+    class_slug = typer.prompt(
+        "Choose an existing class [qchem, qspin], or enter a new class name"
+    )
 
     fields.validate(fields.Slug, class_slug)
 
@@ -146,7 +175,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
 
         params = []
         define_params = typer.confirm(
-            f"Define parameters for class {repr(class_slug)}?", default=True
+            f"Define parameters for class {repr(class_slug)} (Y/n)?", default=True
         )
 
         while define_params:
@@ -240,12 +269,27 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
             meta=doctree.Reference[schemas.DatasetFamilyMeta](path="meta.json"),
         )
 
-        authors = [
-            author.strip()
-            for author in typer.prompt("Enter authors (author1,author2,...)")
-            .strip()
-            .split(",")
-        ]
+        authors = []
+        while True:
+            name = typer.prompt("Enter author name", default="").strip()
+            if not name:
+                if not authors:
+                    continue
+                else:
+                    break
+
+            username = typer.prompt(
+                "Enter author PennyLane profile handle", default=""
+            ).strip()
+            authors.append(Author(name=name, username=username if username else None))
+
+        family_doc.parent.mkdir(parents=True, exist_ok=True)
+        hero_image = _prompt_for_image(
+            "Enter path to banner image (leave blank to continue)", family_doc.parent
+        )
+        thumbnail_image = _prompt_for_image(
+            "Enter path to thumbnail image (leave blank to conintue)", family_doc.parent
+        )
 
         meta = schemas.DatasetFamilyMeta(
             title=family_title,
@@ -253,11 +297,12 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
             citation=doctree.Reference[fields.BibtexStr](path="citation.txt"),
             using_this_dataset=doctree.Reference[str](path="using_this_dataset.md"),
             license="[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
-            authors=[AuthorName(name=name) for name in authors],
+            authors=authors,
             date_of_last_modification=today,
             date_of_publication=today,
+            hero_image=hero_image.name if hero_image else None,
+            thumbnail=thumbnail_image.name if thumbnail_image else None,
         )
-        family_doc.parent.mkdir(parents=True, exist_ok=True)
 
         with open(family_doc.parent / "meta.json", "w", encoding="utf-8") as f:
             f.write(meta.model_dump_json(indent=2, by_alias=True))
@@ -267,7 +312,7 @@ def add(dataset_file: Path, class_slug: Annotated[str, typer.Option(prompt=True)
                 bibtex.generate_bibtex(
                     family_slug,
                     family_title,
-                    authors=authors,
+                    authors=[author.name for author in authors],
                     publication_url=f"https://pennylane.ai/datasets/{class_slug}/{family_slug}",
                 )
             )
@@ -379,7 +424,9 @@ def login():
     print("Checking credentials...")
     if auth.get_valid_token(auth_path):
         print("Found a valid token.")
-        print("You are logged into your PennyLane account.")
+        rich.print(
+            "[bold green]You are logged into your PennyLane account.[/bold green]"
+        )
         return
 
     settings = Settings()
@@ -391,8 +438,10 @@ def login():
 
     device_code = grant.get_device_code()
 
-    print(f"User code is '{device_code['user_code']}.'")
-    print(f"Go to '{device_code['verification_uri']}' to complete authentication.")
+    rich.print(f"User code is [bold]{device_code['user_code']}[/bold]")
+    rich.print(
+        f"Go to [bold]{device_code['verification_uri_complete']}[/bold] to complete authentication."
+    )
 
     webbrowser.open(device_code["verification_uri_complete"])
 
@@ -401,7 +450,7 @@ def login():
     with open(f"{ctx.repo_root}/.auth.json", "w", encoding="utf-8") as f:
         json.dump(token, f, indent=2)
 
-    print("You are logged into your PennyLane account.")
+    rich.print("[bold green]You are logged into your PennyLane account[/bold green].")
 
 
 def configure_logging(level=logging.INFO):

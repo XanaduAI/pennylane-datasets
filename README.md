@@ -1,13 +1,11 @@
 # Pennylane Datasets
 
-Repository for managing Pennylane Dataset HDF5 files and metadata for the datasets
-service.
+Repository for managing Pennylane Dataset HDF5 files and metadata for https://pennylane.ai/datasets/
 
 ## Organization
 
-- The [data/](data/) directory contains 'upload reciepts' representing data files uploaded
-to the data bucket.
 - The [lib/](lib/) directory contains the command line app for managing datasets
+- The [content/](content/) directory contains the dataset metadata and content for pennylane.ai
 
 # Usage
 
@@ -101,7 +99,8 @@ Enter family slug [h2-molecule]:
 Creating new family with slug 'h2-molecule'
 Enter title [H2 Molecule]: 
 Enter download name [name]: molname
-Enter authors (author1,author2,...): Adam A, Alex B
+Enter author name: Adam A
+Enter author PennyLane profile handle: AdamA
 Wrote data to content/qchem/h2-molecule/dataset.json
 ```
 
@@ -152,3 +151,24 @@ Checking credentials...
 Found a valid token
 You are logged into your PennyLane account.
 ```
+
+## Contributing to PennyLane Datasets
+
+We welcome contributions—simply fork the PennyLane Datasets repository, and then make a [pull
+request](https://help.github.com/articles/about-pull-requests/) containing your contribution.
+
+We also encourage bug reports and suggestions for new features and enhancements.
+
+## Support
+
+- **Source Code:** https://github.com/XanaduAI/pennylane-datasets
+- **Issue Tracker:** https://github.com/XanaduAI/pennylane-datasets/issues
+
+If you are having issues, please let us know by posting the issue on our GitHub issue tracker.
+
+Note that we are committed to providing a friendly, safe, and welcoming environment for all.
+Please read and respect the [Code of Conduct](.github/CODE_OF_CONDUCT.md).
+
+## License
+
+PennyLane Datasets is **free** and **open source**, released under the Apache License, Version 2.0.

@@ -8,7 +8,8 @@
       "name": "Joe Gibbs"
     },
     {
-      "name": "Manuel S. Rudolph"
+      "name": "Manuel S. Rudolph",
+      "username": "QuantumManuel"
     },
     {
       "name": "Matthias C. Caro"
@@ -23,6 +24,7 @@
       "name": "Zoe Holmes"
     }
   ],
+  "based_on_papers": true,
   "citation": {
     "$path": "citation.txt"
   },
@@ -42,6 +44,6 @@
   "heroImage": "Datasets_GenericHero_2.png",
   "thumbnail": "Dataset_Thumb_LearningDynamicsIncoherently.png",
   "extra": {},
-  "dateOfLastModification": "2024-11-21",
+  "dateOfLastModification": "2024-12-20",
   "dateOfPublication": "2024-09-11"
 }
