@@ -192,7 +192,7 @@
       "title": "Hamiltonian and ground-state data",
       "type_": "DATA",
       "content": {
-        "$path": "/qspin/_meta/features/hamiltonian-and-ground-state-data.md"
+        "$path": "/qspin/xxz-heisenberg-model/hamiltonian-and-ground-state-data.md"
       }
     },
     {
