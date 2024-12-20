@@ -60,19 +60,6 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HCN/STO-3G/1.156/HCN_STO-3G_1.156.h5",
-      "parameters": {
-        "molname": "HCN",
-        "basis": "STO-3G",
-        "bondlength": "1.156",
-        "bondangle": "1.156",
-        "number_of_spin_orbitals": "22"
-      },
-      "extra": {
-        "hamiltonianTerms": "  (-56.74255741932006) [I0]\n+ (0.48218824431314133) [Z18]\n+ (0.48218824431314133) [Z19]\n+ (0.5298105337663765) [Z21]\n+ (0.5298105337663767) [Z20]\n+ (0.8323305840630314) [Z16]\n+ (0.832330584063032) [Z17]\n+ (0.8323305840630335) [Z15]\n+ (0.8323305840630336) [Z14]\n+ (0.8512681878749588) [Z7]"
-      }
-    },
-    {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HCN/STO-3G/1.257/HCN_STO-3G_1.257.h5",
       "parameters": {
         "molname": "HCN",
@@ -222,7 +209,7 @@
     "hamiltonianEquation": "$H = \\sum_{p,q}h_{pq}c^\\dagger_pc_q + \\frac{1}{2}\\sum_{p,q,r,s}h_{pqrs}c^\\dagger_pc^\\dagger_qc_rc_s$",
     "defaultParameters": {
       "basis": "STO-3G",
-      "bondangle": "1.156",
+      "bondangle": "3.142",
       "bondlength": "3.142",
       "number_of_spin_orbitals": "22"
     }
@@ -233,7 +220,7 @@
         "default": "STO-3G",
         "next": {
           "STO-3G": {
-            "default": "1.156",
+            "default": "3.142",
             "next": {}
           }
         }

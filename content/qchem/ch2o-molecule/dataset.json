@@ -1,5 +1,5 @@
 {
-  "slug": "hcoh-molecule",
+  "slug": "ch2o-molecule",
   "class": {
     "$path": "/qchem/_meta/class.json"
   },
@@ -8,9 +8,9 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HCOH/STO-3G/0.917/HCOH_STO-3G_0.917.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/CH2O/STO-3G/0.917/CH2O_STO-3G_0.917.h5",
       "parameters": {
-        "molname": "HCOH",
+        "molname": "CH2O",
         "basis": "STO-3G",
         "bondlength": "0.917",
         "bondangle": "\u2221 OCH = 102.3\u00b0",
@@ -21,7 +21,7 @@
       }
     }
   ],
-  "downloadName": "HCOH",
+  "downloadName": "CH2O",
   "features": [
     {
       "slug": "auxiliary-observables",
@@ -44,7 +44,7 @@
       "title": "Hamiltonian data",
       "type": "DATA",
       "content": {
-        "$path": "/qchem/_meta/features/hamiltonian-data.md"
+        "$path": "/qchem/_meta/features/hamiltonian-data-no-fci.md"
       }
     },
     {
@@ -102,7 +102,7 @@
   },
   "parameterTree": {
     "next": {
-      "HCOH": {
+      "CH2O": {
         "default": "STO-3G",
         "next": {
           "STO-3G": {
