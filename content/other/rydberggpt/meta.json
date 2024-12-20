@@ -2,10 +2,12 @@
   "abstract": null,
   "authors": [
     {
-      "name": "David Fitzek"
+      "name": "David Fitzek",
+      "username": "davidos"
     },
     {
-      "name": "Yi Hong Teoh"
+      "name": "Yi Hong Teoh",
+      "username": "yhteoh"
     },
     {
       "name": "Hin Pok Fung"
@@ -17,13 +19,16 @@
       "name": "Ejaaz Merali"
     },
     {
-      "name": "M. Schuyler Moss"
+      "name": "M. Schuyler Moss",
+      "username": "mschuylerm"
     },
     {
-      "name": "Benjamin MacLellan"
+      "name": "Benjamin Maclellan",
+      "username": "benjimaclellan"
     },
     {
-      "name": "Roger G. Melko"
+      "name": "Roger G. Melko",
+      "username": "rgmelko"
     }
   ],
   "based_on_papers": true,

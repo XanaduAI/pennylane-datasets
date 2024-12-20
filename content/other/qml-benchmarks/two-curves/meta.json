@@ -2,10 +2,12 @@
   "abstract": null,
   "authors": [
     {
-      "name": "Joseph Bowles"
+      "name": "Joseph Bowles",
+      "username": "josephbowles"
     },
     {
-      "name": "Shahnawaz Ahmed"
+      "name": "Shahnawaz Ahmed",
+      "username": "quantshah"
     },
     {
       "name": "Maria Schuld",

@@ -2,10 +2,12 @@
   "abstract": null,
   "authors": [
     {
-      "name": "Maximilian Wendlinger"
+      "name": "Maximilian Wendlinger",
+      "username": "mxw"
     },
     {
-      "name": "Kilian Tscharke"
+      "name": "Kilian Tscharke",
+      "username": "kil"
     },
     {
       "name": "Pascal Debus"
