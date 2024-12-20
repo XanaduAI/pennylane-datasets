@@ -1,4 +1,6 @@
-$$J\sum_{\langle i,j\rangle} \sigma_i^z\sigma_j^z + h\sum_i \sigma_i^x$$
+$$
+J\sum_{\langle i,j\rangle} \sigma_i^z\sigma_j^z + h\sum_i \sigma_i^x
+$$
 
 Hamiltonians for the spin systems (under the Jordan-Wigner transformation for the Fermi Hubbard model and [Binary Bosonic mapping](https://arxiv.org/abs/2105.12563) for the Bose Hubbard Model).
 

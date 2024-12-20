@@ -1,4 +1,6 @@
-$$-t ( \sum_{\langle i, j\rangle} \hat{b}^\dagger_i\hat{b}_j + h.c.) + U \sum_i \hat{n}_{i}\hat{n}_{i}$$
+$$
+-t ( \sum_{\langle i, j\rangle} \hat{b}^\dagger_i\hat{b}_j + h.c.) + U \sum_i \hat{n}_{i}\hat{n}_{i}
+$$
 
 Hamiltonians for the spin systems (under the Jordan-Wigner transformation for the Fermi Hubbard model and [Binary Bosonic mapping](https://arxiv.org/abs/2105.12563) for the Bose Hubbard Model).
 
