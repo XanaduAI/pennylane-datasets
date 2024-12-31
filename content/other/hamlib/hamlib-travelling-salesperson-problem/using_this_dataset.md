@@ -1,4 +1,4 @@
-This dataset contains a portion of [HamLib](https://arxiv.org/abs/2306.13126): a library of Hamiltonians for benchmarking quantum algorithms and hardware.
+This dataset contains a portion of [HamLib](https://quantum-journal.org/papers/q-2024-12-11-1559/): a library of Hamiltonians for benchmarking quantum algorithms and hardware.
 Here, we have included several examples of the travelling salesperson problem for 4 to 10 cities, adapted to facilitate use with PennyLane.
 The original data can be downloaded from the [authors' source](https://portal.nersc.gov/cfs/m888/dcamps/hamlib/discreteoptimization/tsp/).
 
