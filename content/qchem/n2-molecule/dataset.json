@@ -125,6 +125,19 @@
       }
     },
     {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/N2/STO-3G/2.1/N2_STO-3G_2.1.h5",
+      "parameters": {
+        "molname": "N2",
+        "basis": "STO-3G",
+        "bondlength": "2.1",
+        "bondangle": "N\\A",
+        "number_of_spin_orbitals": "20"
+      },
+      "extra": {
+        "hamiltonianTerms": "N/A"
+      }
+    },
+    {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/N2/STO-3G/2.3/N2_STO-3G_2.3.h5",
       "parameters": {
         "molname": "N2",
