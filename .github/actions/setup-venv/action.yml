@@ -17,5 +17,5 @@ runs:
       shell: bash
       run: |
         python3 -m venv .venv
-        .venv/bin/pip install "poetry>=1.8.2<2"
+        .venv/bin/pip install "poetry>=1.8.2,<2"
         .venv/bin/poetry install --with dev --no-root
