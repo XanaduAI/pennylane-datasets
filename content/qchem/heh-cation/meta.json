@@ -4,6 +4,10 @@
     {
       "name": "Utkarsh Azad",
       "username": "whatsis"
+    },
+    {
+      "name": "Stepan Fomichev",
+      "username": "chiffa"
     }
   ],
   "based_on_papers": false,
@@ -20,7 +24,7 @@
     ">16 Qubits"
   ],
   "title": "HeH+ Molecule",
-  "description": "This dataset contains Hamiltonian information, molecular data, VQE data, and tapering data for the HeH+ Molecule for various basis sets and bondlengths.",
+  "description": "This dataset contains Hamiltonian information, molecular data, VQE data, initial states, and tapering data for the HeH+ Molecule for various basis sets and bondlengths.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
@@ -30,6 +34,6 @@
   "changelog": [
     "version 0.1 : initial public release"
   ],
-  "dateOfLastModification": "2024-12-17",
+  "dateOfLastModification": "2025-02-01",
   "dateOfPublication": "2024-09-11"
 }
