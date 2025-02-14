@@ -1,7 +1,7 @@
 {
   "slug": "nh3-molecule",
   "class": {
-    "$path": "/qchem/_meta/class.json"
+    "$path": "/qchem/_meta/class_with_initial_states.json"
   },
   "collection": {
     "$path": "/qchem/_meta/collection.json"
