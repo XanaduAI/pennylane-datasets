@@ -385,7 +385,7 @@ def deploy_build():
         )
     else:
         msg.structured_print(
-            "Environment variable 'DATASETS_ADMIN_API_URL' is unset," " cannot deploy."
+            "Environment variable 'DATASETS_ADMIN_API_URL' is unset, cannot deploy."
         )
         typer.Exit(1)
 

@@ -2,7 +2,7 @@ from gql import gql
 
 UPLOAD_CREATE = gql(
     """
-mutation CreateUpload($name: String!, $checksum_sha256: String!, $size: Int!) {
+mutation CreateUpload($name: String!, $checksum_sha256: String!, $size: StrInt!) {
   datasetFileUploadCreate(
     name: $name
     checksumSha256: $checksum_sha256
