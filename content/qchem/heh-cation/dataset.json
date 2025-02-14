@@ -398,7 +398,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/0.9/HeH%2B_CC-PVDZ_0.9.h5",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",

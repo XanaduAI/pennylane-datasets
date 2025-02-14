@@ -177,7 +177,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/NH3/STO-3G/0.89/NH3_STO-3G_0.89.h5",
       "parameters": {
         "molname": "NH3",
         "basis": "STO-3G",
