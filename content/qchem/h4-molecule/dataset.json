@@ -572,7 +572,7 @@
       "title": "Molecular data",
       "type": "DATA",
       "content": {
-        "$path": "/qchem/_meta/features/molecular-data.md"
+        "$path": "/qchem/_meta/features/molecular-data-initial-states.md"
       }
     },
     {
