@@ -1,7 +1,7 @@
 {
   "slug": "li2-molecule",
   "class": {
-    "$path": "class_with_initial_states.json"
+    "$path": "/qchem/_meta/class_with_initial_states.json"
   },
   "collection": {
     "$path": "/qchem/_meta/collection.json"
