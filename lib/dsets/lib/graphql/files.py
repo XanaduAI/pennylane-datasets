@@ -20,7 +20,7 @@ class File(TypedDict):
 
     name: str
     status: str
-    size: int
+    size: str
     downloadUrl: str
     checksumSha256: str
 
@@ -29,8 +29,8 @@ class FileUploadPart(TypedDict):
     """Part of a ``FileUpload``."""
 
     url: str
-    bytesStart: int
-    bytesEnd: int
+    bytesStart: str
+    bytesEnd: str
 
 
 class FileUpload(TypedDict):
@@ -47,7 +47,7 @@ def _create_file_upload(
     """Create a new file upload."""
     resp = client.execute(
         queries.UPLOAD_CREATE,
-        {"name": name, "size": size, "checksum_sha256": checksum_sha256.hex()},
+        {"name": name, "size": str(size), "checksum_sha256": checksum_sha256.hex()},
         parse_result=True,
     )["datasetFileUploadCreate"]
     if resp.get("userError"):
@@ -92,7 +92,7 @@ def upload_file(
 
     while (upload := _get_file_upload(client, name)) is not None:
         for part in upload["uploadParts"]:
-            start, end = part["bytesStart"], part["bytesEnd"]
+            start, end = int(part["bytesStart"]), int(part["bytesEnd"])
             stream.seek(start)
 
             requests.put(part["url"], data=stream.read(end - start)).raise_for_status()
