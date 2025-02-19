@@ -93,11 +93,11 @@ def upload_file(
     while (upload := _get_file_upload(client, name)) is not None:
         for part in upload["uploadParts"]:
             start, end = part["bytesStart"], part["bytesEnd"]
-            stream.seek(start)
+            stream.seek(int(start))
 
-            requests.put(part["url"], data=stream.read(end - start)).raise_for_status()
+            requests.put(part["url"], data=stream.read(int(end) - int(start))).raise_for_status()
             if callback:
-                callback(end - start)
+                callback(int(end) - int(start))
 
     if not (file := get_file(client, name)):
         raise APIError(

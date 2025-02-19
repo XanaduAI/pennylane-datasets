@@ -90,7 +90,7 @@ def upload(
 
     error = None
     with open(src_file, "rb") as f, progress.IOProgressBarManager() as pbar:
-        cb = pbar.add_bar(size, f"Upload {src_file}")
+        cb = pbar.add_bar(int(size), f"Upload {src_file}")
         try:
             graphql.files.upload_file(gql_client, f, name, size, digest, callback=cb)
         except graphql.files.APIError as exc:
