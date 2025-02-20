@@ -50,7 +50,7 @@ def _prompt_for_image(prompt: str, dest_dir: Path) -> Path | None:
     """Prompt the user for an image. And attempt to move it to directory
     `dest`."""
 
-    src = typer.prompt(prompt).strip()
+    src = typer.prompt(prompt, default="").strip()
     if not src:
         return None
 
