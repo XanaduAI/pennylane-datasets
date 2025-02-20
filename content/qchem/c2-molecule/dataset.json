@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/C2/STO-3G/0.5/C2_STO-3G_0.5.h5",
+      "dataUrl": null,
       "parameters": {
         "molname": "C2",
         "basis": "STO-3G",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/C2/STO-3G/0.7/C2_STO-3G_0.7.h5",
+      "dataUrl": null,
       "parameters": {
         "molname": "C2",
         "basis": "STO-3G",
@@ -34,7 +34,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/C2/STO-3G/0.9/C2_STO-3G_0.9.h5",
+      "dataUrl": null,
       "parameters": {
         "molname": "C2",
         "basis": "STO-3G",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/C2/STO-3G/1.1/C2_STO-3G_1.1.h5",
+      "dataUrl": null,
       "parameters": {
         "molname": "C2",
         "basis": "STO-3G",
@@ -60,7 +60,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/C2/STO-3G/1.246/C2_STO-3G_1.246.h5",
+      "dataUrl": null,
       "parameters": {
         "molname": "C2",
         "basis": "STO-3G",

@@ -45,6 +45,18 @@
       "optional": false
     },
     {
+      "name": "initial_state_dets",
+      "pythonType": "dict",
+      "doc": "Slater determinants for initial states of varying quality",
+      "optional": false
+    },
+    {
+      "name": "initial_state_coeffs",
+      "pythonType": "dict",
+      "doc": "Coefficients of Slater determinants for initial states of varying quality",
+      "optional": false
+    },
+    {
       "name": "molecule",
       "pythonType": "[Molecule](https://docs.pennylane.ai/en/stable/code/api/pennylane.qchem.Molecule.html)",
       "doc": "PennyLane Molecule object containing description for the system and basis set",
