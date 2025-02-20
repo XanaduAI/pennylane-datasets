@@ -125,6 +125,19 @@
       }
     },
     {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/N2/STO-3G/2.1/N2_STO-3G_2.1.h5",
+      "parameters": {
+        "molname": "N2",
+        "basis": "STO-3G",
+        "bondlength": "2.1",
+        "bondangle": "N\\A",
+        "number_of_spin_orbitals": "20"
+      },
+      "extra": {
+        "hamiltonianTerms": " (-68.51349338846843) [I(0)]\n+ (9.403334679882079) [Z(0)]\n+ (9.403334679882077) [Z(1)]\n+ (9.403369535931052) [Z(2)]\n+ (9.403369535931052) [Z(3)]\n+ (1.3429597554834152) [Z(4)]\n+ (1.3429597554834152) [Z(5)]\n+ (1.2979141751327261) [Z(6)]\n+ (1.2979141751327257) [Z(7)]\n+ (1.0921321972879119) [Z(8)]"
+      }
+    },
+    {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/N2/STO-3G/2.3/N2_STO-3G_2.3.h5",
       "parameters": {
         "molname": "N2",
