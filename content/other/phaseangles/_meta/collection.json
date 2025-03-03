@@ -1,0 +1,6 @@
+{
+  "slug": "phaseangles",
+  "title": "Phase Angles",
+  "about": "This collection contains phase angles for a variety of functions, allowing their usage with algorithms like QSVT, QSP, and GQSP.",
+  "thumbnail": "DatasetCollections_Angles.png"
+}

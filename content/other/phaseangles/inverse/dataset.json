@@ -1,0 +1,60 @@
+{
+  "slug": "inverse",
+  "class": {
+    "slug": "angles",
+    "name": "",
+    "attributeList": [
+      {
+        "name": "angles",
+        "pythonType": "dict",
+        "doc": "Specific angles which apply the polynomial transformation for a specific routine."
+      },
+      {
+        "name": "epsilons",
+        "pythonType": "list",
+        "doc": "Maximum approximation error epsilon between the polynomial P(x) and the function f(x) over the chosen interval. Possible values: {0.1, 0.01, 0.001}."
+      },
+      {
+        "name": "kappas",
+        "pythonType": "list",
+        "doc": "Set of possible values for kappa, which determines the interval for function approximation. Possible values: {1, 5, 50, 100, 250, 500, 1000, 1500}."
+      },
+      {
+        "name": "routines",
+        "pythonType": "dict",
+        "doc": "Specifies the target subroutines (“qsp” or “qsvt”) where the phase angles to implement the polynomial transformation P(x) will be used."
+      },
+      {
+        "name": "poly",
+        "pythonType": "dict",
+        "doc": "Coefficients of the polynomial P(x) that approximates the function f(x)"
+      }
+    ]
+  },
+  "collection": "/phaseangles/_meta/collection.json",
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/phaseangles/inverse/dataset_1_over_x.h5",
+      "parameters": {
+        "function": "inverse"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "inverse",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

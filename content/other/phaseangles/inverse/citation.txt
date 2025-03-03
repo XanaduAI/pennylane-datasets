@@ -1,0 +1,6 @@
+@misc{Guillermo Alonso20251overx,
+    title={1/X},
+    author={Guillermo Alonso},
+    howpublished={\urlhttps://pennylane.ai/datasets/qsvt/1overx},
+    year={2025}
+}
