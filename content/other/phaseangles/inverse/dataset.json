@@ -2,7 +2,7 @@
   "slug": "inverse",
   "class": {
     "slug": "angles",
-    "name": "1/X Phase Angles",
+    "name": "Inverse",
     "attributeList": [
       {
         "name": "angles",
