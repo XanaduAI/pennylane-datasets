@@ -38,7 +38,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/phaseangles/inverse/dataset_1_over_x.h5",
       "parameters": {
-        "function": "inverse"
+        "name": "inverse"
       },
       "extra": {}
     }
