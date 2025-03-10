@@ -9,7 +9,7 @@
     "$path": "citation.txt"
   },
   "changelog": [],
-  "description": "Dataset of phase angles to implement 1/x using qsp",
+  "description": "Dataset of phase angles to implement 1/x using qsp or qsvt",
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
   "dateOfLastModification": "2025-02-27",
   "dateOfPublication": "2025-02-27",

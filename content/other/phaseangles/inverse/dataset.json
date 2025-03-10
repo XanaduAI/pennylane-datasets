@@ -12,7 +12,7 @@
       {
         "name": "epsilons",
         "pythonType": "list",
-        "doc": "Maximum approximation error epsilon between the polynomial P(x) and the function f(x) over the chosen interval. Possible values: {0.1, 0.01, 0.001}."
+        "doc": "Set of possible values for epsilon, the maximum approximation error between the polynomial P(x) and the function f(x) over the chosen interval. Possible values: {0.1, 0.01, 0.001}."
       },
       {
         "name": "kappas",
