@@ -31,7 +31,9 @@
       }
     ]
   },
-  "collection": "/other/phaseangles/_meta/collection.json",
+  "collection": {
+    "$path": "/other/phaseangles/_meta/collection.json"
+  },
   "data": [
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/phaseangles/inverse/dataset_1_over_x.h5",
