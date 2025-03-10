@@ -7,7 +7,7 @@
       {
         "name": "angles",
         "pythonType": "dict",
-        "doc": "Specific angles which apply the polynomial transformation for a specific routine."
+        "doc": "Specific angles which apply the polynomial transformation for a specific routine. This is provided as a dictionary of form `angles[routine][epsilon][kappa]`."
       },
       {
         "name": "epsilons",
