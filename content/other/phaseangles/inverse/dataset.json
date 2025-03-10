@@ -1,7 +1,7 @@
 {
   "slug": "inverse",
   "class": {
-    "slug": "angles",
+    "slug": "inverse",
     "name": "Inverse",
     "attributeList": [
       {
@@ -46,8 +46,8 @@
   "downloadName": "inverse",
   "features": [
     {
-      "slug": "example-feature",
-      "title": "Example Feature",
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
       "type": "DATA",
       "content": {
         "$path": "features/dataset-attributes.md"

@@ -20,7 +20,7 @@ On the other hand, the dataset provides the phase angles required for the QSP (o
 
 The following figure illustrates the polynomial approximation of $ f(x) = \frac{\kappa}{2x} $ with $ \kappa = 250 $ and $ \epsilon = 0.01 $:
 
-![Polynomial Approximation](imagen.png)
+![Polynomial Approximation](./imagen.png)
 
 The blue line represents the polynomial approximation, the orange dashed line corresponds to $ f(x) $, and the red dashed lines mark $ x = \pm 1/\kappa $. 
 
@@ -48,7 +48,7 @@ for x in points:
 
     # Encode x in the top left of the matrix
     block_encoding = qml.RX(2 * np.arccos(x), wires=0)
-    projectors = [qml.PCPhase(angle, dim=1, wires=0) for angle in qsvt_angles]
+    projectors = [qml.PCPhase(angle, dim=1, wires=0) for angle in angles_qsvt]
 
     @qml.qnode(qml.device("default.qubit"))
     def circuit_qsvt():
