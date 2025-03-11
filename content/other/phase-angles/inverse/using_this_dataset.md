@@ -20,7 +20,7 @@ On the other hand, the dataset provides the phase angles required for the QSP (o
 
 The following figure illustrates the polynomial approximation of $ f(x) = \frac{1}{2\kappa x} $ with $ \kappa = 250 $ and $ \epsilon = 0.01 $:
 
-![Polynomial Approximation](https://assets.cloud.pennylane.ai/datasets/generic/using_this_dataset/phase-angles-inverse.png)
+<p style="text-align: center"><img src="https://assets.cloud.pennylane.ai/datasets/generic/using_this_dataset/phase-angles-inverse.png" alt="drawing" width="70%"/></p>
 
 The blue line represents the polynomial approximation, the orange dashed line corresponds to $ f(x) $, and the red dashed lines mark $ x = \pm 1/\kappa $. 
 
