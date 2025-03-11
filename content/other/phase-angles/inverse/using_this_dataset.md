@@ -1,8 +1,8 @@
-This dataset contains phase angles that can be used to approximate the function 1/x via [Quantum Signal Processing (QSP)](https://pennylane.ai/qml/demos/function_fitting_qsp) and [Quantum Singular Value Transformation (QSVT)](https://pennylane.ai/qml/demos/tutorial_intro_qsvt), making it easy to implement polynomial transformations without additional calculations.
+This dataset contains phase angles to approximate the function $1/x$ via [Quantum Signal Processing (QSP)](https://pennylane.ai/qml/demos/function_fitting_qsp) and [Quantum Singular Value Transformation (QSVT)](https://pennylane.ai/qml/demos/tutorial_intro_qsvt).
 
 **Description of the dataset**
 
-QSVT and QSP can be used to implement polynomial transformations in quantum algorithms. This dataset provides phase angles to implement QSVT and QSP for an approximation of the inverse, $1/x$.
+QSVT and QSP are powerful quantum algorithms that implement a large class of polynomial transformations. However, many of the operators in these algorithms depend on a series of phase angles that correspond to the desired polynomial. While calculating these angles can be done efficiently in practice, it is not always straightforward. This dataset provides phase angles to implement QSVT and QSP for an approximation of $1/x$, making it easy to implement this polynomial without additional calculations.
 
 More specifically, we approximate  $f(x) = \frac{1}{2\kappa x}$ with a [Chebyshev polynomial](https://en.wikipedia.org/wiki/Chebyshev_polynomials), $P(x)$. The values $\kappa$ and $\epsilon$ define the approximation:
 - **Kappa** is a scaling factor in $f(x)$ and determines in which interval the function is approximated.
@@ -10,9 +10,9 @@ More specifically, we approximate  $f(x) = \frac{1}{2\kappa x}$ with a [Chebyshe
 
 **Additional Details**
 
-* The Chebysev polynomial $P(x)$ approximates the function $f(x) = \frac{1}{2\kappa x}$ over the interval $[-1, -1/\kappa) \cup (1/\kappa, 1]$ with a maximum error of $\epsilon$. 
-* $\kappa$ can take values from the set $\{1, 5, 50, 100, 250, 500, 1000, 1500\}$, and its choice depends on the specific interval in which we aim to approximate the function. 
-* The Chebyshev polynomial, $P(x)$ can be accessed via `dataset.poly[epsilon][kappa]`. This returns an array where, for example, $[1, 0, 2]$ corresponds to the polynomial $ 1 \cdot T_0(x) + 0 \cdot T_1(x) + 2 \cdot T_2(x) $, where $T_n(x)$ denotes the $n$-th Chebyshev polynomial. These can be easily implemented using [NumPy's Chebyshev polynomial class](https://numpy.org/doc/stable/reference/generated/numpy.polynomial.chebyshev.Chebyshev.html#).
+* The Chebysev polynomials $P(x)$ in this dataset approximate the function $f(x) = \frac{1}{2\kappa x}$ over the interval $[-1, -1/\kappa) \cup (1/\kappa, 1]$ with a maximum error of $\epsilon$. 
+* $\kappa$ can take values from the set $\{1, 5, 50, 100, 250, 500, 1000, 1500\}$, and its choice depends on the specific interval where we aim to approximate the function. 
+* The Chebyshev polynomial, $P(x)$ can be accessed via `dataset.poly[epsilon][kappa]`. This returns an array where, for example, $[1, 0, 2]$ corresponds to the polynomial $ 1 \cdot T_0(x) + 0 \cdot T_1(x) + 2 \cdot T_2(x) $, where $T_n(x)$ denotes the $n$-th Chebyshev polynomial. These can be implemented using [NumPy's Chebyshev polynomial class](https://numpy.org/doc/stable/reference/generated/numpy.polynomial.chebyshev.Chebyshev.html#).
 * Phase angles to implement these Chebyshev polynomials via QSP (or QSVT) can be accessed using  `dataset.angles[routine][epsilon][kappa]`
 * This dataset was generated using numerical optimization techniques to find optimal phase angles that minimize the error in the polynomial approximation.
 
@@ -26,7 +26,7 @@ The blue line represents the polynomial approximation, the orange dashed line co
 
 **Example usage**
 
-The following example shows how to plot the output of the qsvt algorithm and compare to the original Chebyshev approximation.
+The following example shows how to plot the output of the QSVT algorithm and compare to the original Chebyshev approximation.
 
 ```python
 import pennylane as qml
