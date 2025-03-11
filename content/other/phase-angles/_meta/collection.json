@@ -1,5 +1,5 @@
 {
-  "slug": "phaseangles",
+  "slug": "phase-angles",
   "title": "Phase Angles",
   "about": "This collection contains sets of phase angles to implement polynomials via QSVT, QSP, and GQSP.",
   "thumbnail": "DatasetCollections_Angles.png"
