@@ -1,4 +1,4 @@
-@misc{Guillermo Alonso2025inverse,
+@misc{Alonso2025inverse,
     title={1/X},
     author={Guillermo Alonso},
     howpublished={\urlhttps://pennylane.ai/datasets/inverse},

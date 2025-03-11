@@ -12,7 +12,7 @@ More specifically, we approximate  $f(x) = \frac{1}{2\kappa x}$ with a [Chebyshe
 
 * The Chebysev polynomials $P(x)$ in this dataset approximate the function $f(x) = \frac{1}{2\kappa x}$ over the interval $[-1, -1/\kappa) \cup (1/\kappa, 1]$ with a maximum error of $\epsilon$. 
 * $\kappa$ can take values from the set $\{1, 5, 50, 100, 250, 500, 1000, 1500\}$, and its choice depends on the specific interval where we aim to approximate the function. 
-* The Chebyshev polynomial, $P(x)$ can be accessed via `dataset.poly[epsilon][kappa]`. This returns an array where, for example, $[1, 0, 2]$ corresponds to the polynomial $ 1 \cdot T_0(x) + 0 \cdot T_1(x) + 2 \cdot T_2(x) $, where $T_n(x)$ denotes the $n$-th Chebyshev polynomial. These can be implemented using [NumPy's Chebyshev polynomial class](https://numpy.org/doc/stable/reference/generated/numpy.polynomial.chebyshev.Chebyshev.html#).
+* The Chebyshev polynomial, $P(x)$ can be accessed via `dataset.poly[epsilon][kappa]`. This returns an array where, for example, $[1, 0, 2]$ corresponds to the polynomial $ 1 \cdot T_0(x) + 0 \cdot T_1(x) + 2 \cdot T_2(x) $, where $T_n(x)$ denotes the $n$-th Chebyshev polynomial.
 * Phase angles to implement these Chebyshev polynomials via QSP (or QSVT) can be accessed using  `dataset.angles[routine][epsilon][kappa]`
 * This dataset was generated using numerical optimization techniques to find optimal phase angles that minimize the error in the polynomial approximation.
 
