@@ -13,4 +13,4 @@ It can be used to:
 - Explore and develop new quantum chemistry algorithms 
 - Benchmark or test number of resources and accuracy
 - Quantum machine learning applications
-- Investigate dependence of algorithm performance on initial state quality
+- Investigate the dependence of algorithm performance on initial state quality
