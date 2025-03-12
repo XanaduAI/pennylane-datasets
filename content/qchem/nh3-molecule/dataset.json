@@ -177,7 +177,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/6b6c7c53-3ff4-4a5f-84b4-8b2beda44eb8",
       "parameters": {
         "molname": "NH3",
         "basis": "STO-3G",
