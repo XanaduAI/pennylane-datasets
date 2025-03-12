@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/H2/6-31G/0.54/H2_6-31G_0.54.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f54b27bc-dd3a-4d90-87fa-55d56f4f5880",
       "parameters": {
         "molname": "H2",
         "basis": "6-31G",
