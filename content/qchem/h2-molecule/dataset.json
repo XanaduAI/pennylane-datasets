@@ -21,7 +21,7 @@
       }
     },
     {
-      "dataUrl": null,
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/cbaf7323-44a3-4ff5-b9f4-9eef0faef6a5",
       "parameters": {
         "molname": "H2",
         "basis": "6-31G",
