@@ -1,8 +1,8 @@
 {
-  "slug": "fashinablemnist",
+  "slug": "fashionmnist",
   "class": {
-    "slug": "fashinablemnist",
-    "name": "fashinablemnist",
+    "slug": "fashionmnist",
+    "name": "fashionmnist",
     "attributeList": [
       {
         "name": "circuits_d4",
@@ -45,7 +45,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/PlusMinus/PlusMinus_PlusMinus.h5",
       "parameters": {
-        "compression": "0.1"
+        "compression": "0.2"
       },
       "extra": {}
     }
