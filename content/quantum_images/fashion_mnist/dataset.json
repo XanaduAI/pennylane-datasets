@@ -1,8 +1,8 @@
 {
-  "slug": "fashionmnist",
+  "slug": "fashinablemnist",
   "class": {
-    "slug": "fashionmnist",
-    "name": "fashionmnist",
+    "slug": "fashinablemnist",
+    "name": "fashinablemnist",
     "attributeList": [
       {
         "name": "circuits_d4",
