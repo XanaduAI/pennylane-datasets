@@ -24,7 +24,15 @@
         "pythonType": "list",
         "doc": "A list of the correct labels for each image."
       }
-    ]
+    ],
+    "parameterList": [
+    {
+      "name": "quality",
+      "title": "Quality",
+      "description": "the quality of the compression/approximation",
+      "optional": false
+    }
+  ]
   },
   "data": [
     {
