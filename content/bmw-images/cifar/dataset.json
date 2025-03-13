@@ -19,7 +19,7 @@
     }]
   },
   "collection": {
-    "$path": "/other/bmw-images/_meta/collection.json"
+    "$path": "/bmw-images/_meta/collection.json"
   },
   "data": [
     {
@@ -30,7 +30,7 @@
       "extra": {}
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Max3Sat/Max3Sat_Max3Sat.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
       "parameters": {
         "quality": "0.2"
       },

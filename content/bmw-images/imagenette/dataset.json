@@ -19,7 +19,7 @@
     }]
   },
   "collection": {
-    "$path": "/other/bmw-images/_meta/collection.json"
+    "$path": "/bmw-images/_meta/collection.json"
   },
   "data": [
     {
