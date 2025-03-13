@@ -1,8 +1,8 @@
 {
-  "slug": "cifar_10",
+  "slug": "cifar-10",
   "class": {
-    "slug": "cifar_10",
-    "name": "CIFAR-10",
+    "slug": "cifar-10",
+    "name": "cifar10",
     "attributeList": [
       {
         "name": "circuits_d4",
@@ -36,9 +36,16 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/quantum_images/cifar_10.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
       "parameters": {
-        "name": "cifar_10"
+        "quality": "0.1"
+      },
+      "extra": {}
+    },
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/PlusMinus/PlusMinus_PlusMinus.h5",
+      "parameters": {
+        "quality": "0.2"
       },
       "extra": {}
     }

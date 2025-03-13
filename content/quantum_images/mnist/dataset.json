@@ -2,7 +2,7 @@
   "slug": "mnist",
   "class": {
     "slug": "mnist",
-    "name": "MNIST",
+    "name": "mnist",
     "attributeList": [
       {
         "name": "circuits_d4",

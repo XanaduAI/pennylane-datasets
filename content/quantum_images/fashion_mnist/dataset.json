@@ -1,8 +1,8 @@
 {
-  "slug": "fashion_mnist",
+  "slug": "fashion-mnist",
   "class": {
-    "slug": "fashion_mnist",
-    "name": "Fashion-MNIST",
+    "slug": "fashionmnist",
+    "name": "fashionmnist",
     "attributeList": [
       {
         "name": "circuits_d4",
@@ -38,14 +38,14 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
       "parameters": {
-        "compression": "fashion_mnist"
+        "compression": "0.1"
       },
       "extra": {}
     },
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/PlusMinus/PlusMinus_PlusMinus.h5",
       "parameters": {
-        "compression": "fashion_mnist"
+        "compression": "0.1"
       },
       "extra": {}
     }
