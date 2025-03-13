@@ -1,0 +1,39 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Florian Kiwit",
+      "username": "flokiwit"
+    },
+    {
+      "name": "Bernhard Jobst",
+      "username": "[TODO]"
+    },
+    {
+      "name": "Carlos Riofrío",
+      "username": "[TODO]"
+    }
+  ],
+  "based_on_papers": true,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [
+    "version 0.1 : initial public release"
+  ],
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "sourceCodeUrl": "https://github.com[.......]]",
+  "tags": [
+    "Other"
+  ],
+  "title": "CIFAR-10",
+  "description": "This dataset contains images from the CIFAR-10 dataset encoded as quantum states.",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "[ADD].png",
+  "thumbnail": "[ADD].png",
+  "extra": {},
+  "dateOfLastModification": "2025-03-15",
+  "dateOfPublication": "2025-03-15"
+}
