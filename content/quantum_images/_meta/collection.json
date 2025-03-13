@@ -1,0 +1,6 @@
+{
+  "slug": "quantum_iamges",
+  "title": "Quantum Images",
+  "about": "This collection contains datasets from [CITE]. These datasets encode the MNIST, Fashion-MNIST, CIFAR-10 and Imagenette datasets as quantum states and can be used for benchmarking supervised quantum machine learning models.",
+  "thumbnail": "DatasetCollections_QuantumImages.png"
+}

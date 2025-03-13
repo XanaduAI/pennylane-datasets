@@ -1,0 +1,72 @@
+{
+  "slug": "cifar-10",
+  "class": {
+    "slug": "cifar-10",
+    "name": "cifar10",
+    "attributeList": [
+      {
+        "name": "circuits_d4",
+        "pythonType": "list",
+        "doc": "Circuits defined as lists of operations with a circuit depth of four. Each list is a circuit that approximates the multi-channel representation for images on quantum computers."
+      },
+      {
+        "name": "circuits_d8",
+        "pythonType": "list",
+        "doc": "Circuits defined as lists of operations with a circuit depth of eight. Each list is a circuit that approximates the multi-channel representation for images on quantum computers."
+      },
+      {
+        "name": "target_states",
+        "pythonType": "list[np.ndarray]",
+        "doc": "A list of numpy arrays. Each numpy array defines a quantum state that exactly encodes an CIFAR-10 image."
+      },
+      {
+        "name": "labels",
+        "pythonType": "list",
+        "doc": "A list of the correct labels for each image."
+      }
+    ],
+    "parameterList": [
+    {
+      "name": "quality",
+      "title": "Quality",
+      "description": "the quality of the compression/approximation",
+      "optional": false
+    }
+  ]
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
+      "parameters": {
+        "quality": "0.1"
+      },
+      "extra": {}
+    },
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/PlusMinus/PlusMinus_PlusMinus.h5",
+      "parameters": {
+        "quality": "0.2"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "cifar_10",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "cifar_10"
+    }
+  }
+}
