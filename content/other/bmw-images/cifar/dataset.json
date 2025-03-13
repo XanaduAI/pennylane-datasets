@@ -2,7 +2,7 @@
   "slug": "bmwimages",
   "class": {
     "slug": "bmwcifar",
-    "name": "BMW Cifar",
+    "name": "BMWCifar",
     "attributeList": [
       {
         "name": "clauses",
