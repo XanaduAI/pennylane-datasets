@@ -1,0 +1,52 @@
+{
+  "slug": "bmwimagenette",
+  "class": {
+    "slug": "bmwimagenette",
+    "name": "BMW Imagenette",
+    "attributeList": [
+      {
+        "name": "clauses",
+        "pythonType": "list[tuple[int, int, int]]",
+        "doc": "Lists of clauses for each Max-3-SAT problem. Each clause is a list of three numbers. A value of n means that this refers to the nth variable. A positive value means that the variable must be true to satisfy the clause while a negative value means that variable must be false to satisfy the clause."
+      }
+    ],
+    "parameterList": [
+    {
+      "name": "quality",
+      "title": "Compression Quality",
+      "description": null,
+      "optional": false
+    }]
+  },
+  "collection": {
+    "$path": "/other/bmw-images/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/Max3Sat/Max3Sat_Max3Sat.h5",
+      "parameters": {
+        "quality": "0.1"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "bmwimagenette",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "hamlib-max-3-sat"
+    }
+  }
+}
