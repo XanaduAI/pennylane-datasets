@@ -36,9 +36,16 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/quantum_images/mnist.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
       "parameters": {
-        "name": "mnist"
+        "quality": "0.1"
+      },
+      "extra": {}
+    },
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/PlusMinus/PlusMinus_PlusMinus.h5",
+      "parameters": {
+        "quality": "0.2"
       },
       "extra": {}
     }

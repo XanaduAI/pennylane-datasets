@@ -27,7 +27,7 @@
     ],
     "parameterList": [
     {
-      "name": "quality",
+      "name": "compression",
       "title": "Quality",
       "description": "the quality of the compression/approximation",
       "optional": false
@@ -36,9 +36,16 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/quantum_images/fashion_mnist.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
       "parameters": {
-        "name": "fashion_mnist"
+        "compression": "fashion_mnist"
+      },
+      "extra": {}
+    },
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/PlusMinus/PlusMinus_PlusMinus.h5",
+      "parameters": {
+        "compression": "fashion_mnist"
       },
       "extra": {}
     }
