@@ -25,7 +25,6 @@
   ],
   "title": "HeH+ Molecule",
   "description": "This dataset contains Hamiltonian information, molecular data, VQE data, initial states, and tapering data for the HeH+ Molecule for various basis sets and bondlengths.",
-  "description": "This dataset contains Hamiltonian information, molecular data, VQE data, initial states, and tapering data for the HeH+ Molecule for various basis sets and bondlengths.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
