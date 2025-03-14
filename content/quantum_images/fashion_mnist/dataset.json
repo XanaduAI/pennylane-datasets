@@ -34,6 +34,9 @@
     }
   ]
   },
+  "collection": {
+    "$path": "/qspin/_meta/collection.json"
+  },
   "data": [
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
