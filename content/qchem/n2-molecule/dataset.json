@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/2e7d6737-edcc-4eb8-90bc-1d5721c9db21",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/49b51fd6-2565-4344-95ce-6a0eb94d3587",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/c3d99c12-7c66-4a40-a0f8-0e6fa4d787cd",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/1a033ec7-f1bf-463d-a91b-d840092462ed",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -34,7 +34,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/d055da6c-e9fe-472d-9dd5-70ae5f91fe44",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/2950d9e1-6922-4eba-842e-418fd578af69",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/e96539cb-35b5-4f47-99fa-64506c560356",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/55556b56-9737-4b04-883d-295fc158dfca",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -60,7 +60,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/6c3b2717-3d08-479f-8969-2dea808f850e",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/0a6f83bf-5ecb-4366-8206-052a1c1baa59",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -73,7 +73,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/0d9b8af7-ebc5-4ef3-99e0-9acc607b2261",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/98275873-51bc-4197-bc7a-d099f3bb1844",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/47d5df44-8c31-4d77-93b0-76f97735682c",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/845264e6-f33f-4c56-922e-d39de379144e",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -99,7 +99,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/cbdbe535-22f3-4d94-bde6-3e3a9040079c",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/cdfbdc3e-0f89-40c7-a4b3-bf3442f9374c",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -112,7 +112,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/7d317cf7-8a6d-4a61-8d6b-f0ec85b9f76b",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/7ad77cf7-2764-4dee-b92f-5a4fe1a06415",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -125,7 +125,20 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/29ddf798-2a92-49ba-8a04-4989119dc02f",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/9ec1b4f7-1603-4aa8-a205-3428822b1469",
+      "parameters": {
+        "molname": "N2",
+        "basis": "STO-3G",
+        "bondlength": "2.1",
+        "bondangle": "N\\A",
+        "number_of_spin_orbitals": "20"
+      },
+      "extra": {
+        "hamiltonianTerms": "  (-68.6145025194121) [I0]\n+ (1.036615258614554) [Z17]\n+ (1.0366152586145543) [Z16]\n+ (1.0366152586145545) [Z15]\n+ (1.0366152586145547) [Z14]\n+ (1.0435339845562288) [Z13]\n+ (1.0435339845562295) [Z10]\n+ (1.0435339845562295) [Z12]\n+ (1.0435339845562297) [Z11]\n+ (1.0441692985808613) [Z18]"
+      }
+    },
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/d605092b-7148-4c15-8565-54038925307f",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",
@@ -138,7 +151,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/1afb21aa-30c4-42cf-a765-5693fcafc995",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/d28888a2-4671-4c4c-93db-266ec9214f3a",
       "parameters": {
         "molname": "N2",
         "basis": "STO-3G",

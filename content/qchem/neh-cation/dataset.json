@@ -138,7 +138,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f1b8595d-4689-41db-8dd0-1167c51b40dc",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/80db885b-d034-40b6-83d8-599e86d61326",
       "parameters": {
         "molname": "NeH+",
         "basis": "STO-3G",
@@ -151,7 +151,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/42ef3f31-060d-4250-9b66-08384a31081e",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/532b7a0b-665a-44bb-809a-cbea6abd1d2f",
       "parameters": {
         "molname": "NeH+",
         "basis": "STO-3G",
