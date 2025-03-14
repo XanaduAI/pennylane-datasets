@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/C2H2/STO-3G/1.203/C2H2_STO-3G_1.203.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/8c28bc59-cc32-40d6-884a-fcdd79a6d167",
       "parameters": {
         "molname": "C2H2",
         "basis": "STO-3G",

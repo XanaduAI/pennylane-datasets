@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/CH2O/STO-3G/0.917/CH2O_STO-3G_0.917.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/6b9f0f96-919f-40f1-b24d-9993015018ce",
       "parameters": {
         "molname": "CH2O",
         "basis": "STO-3G",

@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/H2O2/STO-3G/1.475/H2O2_STO-3G_1.475.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/e068f9e3-f70a-43eb-9da9-0f62c06407cd",
       "parameters": {
         "molname": "H2O2",
         "basis": "STO-3G",

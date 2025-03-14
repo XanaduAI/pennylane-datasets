@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/CO2/STO-3G/1.162/CO2_STO-3G_1.162.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/7041885d-2d16-4645-8971-c98de7f071dc",
       "parameters": {
         "molname": "CO2",
         "basis": "STO-3G",
