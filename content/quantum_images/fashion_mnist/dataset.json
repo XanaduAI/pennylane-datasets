@@ -1,5 +1,5 @@
 {
-  "slug": "fashion-mnist",
+  "slug": "fashionmnist",
   "class": {
     "slug": "fashionmnist",
     "name": "fashionmnist",
@@ -34,6 +34,9 @@
     }
   ]
   },
+  "collection": {
+    "$path": "/qspin/_meta/collection.json"
+  },
   "data": [
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
@@ -45,7 +48,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/PlusMinus/PlusMinus_PlusMinus.h5",
       "parameters": {
-        "compression": "0.1"
+        "compression": "0.2"
       },
       "extra": {}
     }
