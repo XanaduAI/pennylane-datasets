@@ -1,0 +1,30 @@
+{
+  "slug": "scale-free",
+  "class": {
+    "$path": "/other/_meta/class.json"
+  },
+  "collection": null,
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {},
+      "extra": {}
+    }
+  ],
+  "downloadName": "scalefree",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

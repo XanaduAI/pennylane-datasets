@@ -1,0 +1,6 @@
+@misc{Joseph Bowles2025scalefree,
+    title={Scale free network},
+    author={Joseph Bowles},
+    howpublished={\urlhttps://pennylane.ai/datasets/other/scale-free},
+    year={2025}
+}
