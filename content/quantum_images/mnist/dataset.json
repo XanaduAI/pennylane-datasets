@@ -5,17 +5,27 @@
     "name": "mnist",
     "attributeList": [
       {
-        "name": "circuits_d4",
+        "name": "circuit_layout_d4",
         "pythonType": "list",
-        "doc": "Circuits defined as lists of operations with a circuit depth of four. Each list is a circuit that approximates the flexible representation of quantum images (FRQI)."
+        "doc": "Circuits layout consiting of CNOTs and RY gates defined as lists of operations and wires they act on with a circuit depth of 4."
       },
       {
-        "name": "circuits_d8",
+        "name": "circuit_layout_d8",
         "pythonType": "list",
-        "doc": "Circuits defined as lists of operations with a circuit depth of eight. Each list is a circuit that approximates the flexible representation of quantum images (FRQI)."
+        "doc": "Circuits layout consiting of CNOTs and RY gates defined as lists of operations and wires they act on with a circuit depth of 8."
       },
       {
-        "name": "target_states",
+        "name": "params_d4",
+        "pythonType": "list",
+        "doc": "Circuit parameters as list of RY angles. When plugged in to the circuit layout with a depth of 8, the circuit approximates the flexible representation of quantum images (FRQI)."
+      },
+      {
+        "name": "params_d8",
+        "pythonType": "list",
+        "doc": "Circuit parameters as list of RY angles. When plugged in to the circuit layout with a depth of 8, the circuit approximates the flexible representation of quantum images (FRQI)."
+      },
+      {
+        "name": "exact_state",
         "pythonType": "list[np.ndarray]",
         "doc": "A list of numpy arrays. Each numpy array defines a quantum state that exactly encodes an MNIST image."
       },
@@ -27,9 +37,15 @@
     ],
     "parameterList": [
     {
-      "name": "quality",
-      "title": "Quality",
-      "description": "the quality of the compression/approximation",
+      "name": "fidelities_d4",
+      "title": "Fidelity d=4",
+      "description": "The fidelity of the approximated state of the circuit with depth 4 and the exact state.",
+      "optional": false
+    },
+    {
+      "name": "fidelities_d8",
+      "title": "Fidelity d=8",
+      "description": "The fidelity of the approximated state of the circuit with depth 8 and the exact state.",
       "optional": false
     }
   ]
