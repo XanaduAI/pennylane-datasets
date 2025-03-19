@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/O3/STO-3G/1.278/O3_STO-3G_1.278.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/a55f3887-4a23-4982-ac12-bab1312dfcf1",
       "parameters": {
         "molname": "O3",
         "basis": "STO-3G",
