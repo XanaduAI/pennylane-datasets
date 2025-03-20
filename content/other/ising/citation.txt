@@ -1,0 +1,6 @@
+@misc{Joseph Bowles2025ising,
+    title={Ising},
+    author={Joseph Bowles and Shahnawaz Ahmed},
+    howpublished={\urlhttps://pennylane.ai/datasets/other/ising},
+    year={2025}
+}

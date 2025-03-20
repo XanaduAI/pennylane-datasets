@@ -1,0 +1,30 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Joseph Bowles",
+      "username": "josephbowles"
+    },
+    {
+      "name": "Shahnawaz Ahmed"
+    }
+  ],
+  "basedOnPapers": false,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "Datasets of thermal Ising distributions on 2D lattices",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2025-03-17",
+  "dateOfPublication": "2025-03-17",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "Ising",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": null,
+  "thumbnail": null,
+  "extra": {}
+}
