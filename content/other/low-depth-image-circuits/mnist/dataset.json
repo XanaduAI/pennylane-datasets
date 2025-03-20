@@ -1,8 +1,8 @@
 {
-  "slug": "mnist",
+  "slug": "low-depth-mnist",
   "class": {
-    "slug": "mnist",
-    "name": "mnist",
+    "slug": "low-depth-mnist",
+    "name": "LowDepthMNIST",
     "attributeList": [
       {
         "name": "circuit_layout_d4",
@@ -34,42 +34,21 @@
         "pythonType": "list",
         "doc": "A list of the correct labels for each image."
       }
-    ],
-    "parameterList": [
-    {
-      "name": "fidelities_d4",
-      "title": "Fidelity d=4",
-      "description": "The fidelity of the approximated state of the circuit with depth 4 and the exact state.",
-      "optional": false
-    },
-    {
-      "name": "fidelities_d8",
-      "title": "Fidelity d=8",
-      "description": "The fidelity of the approximated state of the circuit with depth 8 and the exact state.",
-      "optional": false
-    }
-  ]
+    ]
   },
   "collection": {
-    "$path": "/qspin/_meta/collection.json"
+    "$path": "/other/low-depth-image-circuits/_meta/collection.json"
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/d6ac7296-d1d7-4b39-9e39-fa191b9902ec",
       "parameters": {
-        "quality": "0.1"
-      },
-      "extra": {}
-    },
-    {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/PlusMinus/PlusMinus_PlusMinus.h5",
-      "parameters": {
-        "quality": "0.2"
+        "name": "low-depth-mnist"
       },
       "extra": {}
     }
   ],
-  "downloadName": "mnist",
+  "downloadName": "low-depth-mnist",
   "features": [
     {
       "slug": "dataset-attributes",
@@ -85,7 +64,7 @@
   },
   "extra": {
     "defaultParameters": {
-      "name": "mnist"
+      "name": "low-depth-mnist"
     }
   }
 }

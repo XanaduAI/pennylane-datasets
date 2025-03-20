@@ -1,17 +1,13 @@
-Data for benchmarking machine learning models, taken from
-[Efficient Quantum Image Representations and Benchmarking of Supervised Quantum Machine Learning Models](https://arxiv.org/abs/2503.xx).
-
-The [MNIST dataset](https://ieeexplore.ieee.org/document/6296535) has 28x28 grayscale images of 70,000 fashion products from 10 categories, with 7,000 images per category. We provide circuit parameters that approximates the the [Flexible Representation of Quantum Images (FRQI)](https://link.springer.com/article/10.1007/s11128-010-0177-y) of the images.
+Data for benchmarking machine learning models, found in an upcoming paper: *Typical machine learning datasets as low-depth quantum circuits*.
 
 **Description of the dataset**
 
-The labels indicate whether an image shows black vertical bars or horizontal stripes.
+The [MNIST dataset](https://ieeexplore.ieee.org/document/6296535) has 28x28 grayscale images of 70,000 hand-drawn digits from 0 to 9, totalling 10 categories, with 7,000 images per category. Here, we provide circuit parameters that approximate the [Flexible Representation of Quantum Images (FRQI)](https://link.springer.com/article/10.1007/s11128-010-0177-y) of each image in the MNIST dataset.
 
 **Additional details**
 
 - The class labels are integers from 0 to 9.
-- Implementing this circuit and obtaining the final state with PennyLane outputs a state vector.
-- Check the demo ... [TODO]
+- Implementing the circuits in this dataset and obtaining the final state with PennyLane's `qml.state()` outputs a state vector. This state vector must be processed to recover the original image.
 - The dataset contains two circuits per image: those with a depth of four, which are shallower, and those with a depth of eight, which provide more accurate approximations of the exact state.
 
 **Example usage**
@@ -20,7 +16,7 @@ The labels indicate whether an image shows black vertical bars or horizontal str
 import pennylane as qml
 import jax
 
-ds= qml.data.load("mnist")
+ds= qml.data.load("low-depth-mnist")
 
 def get_circuit(circuit_layout):
     dev = qml.device("default.qubit", wires=11)
