@@ -24,12 +24,12 @@
   "tags": [
     "Other"
   ],
-  "title": "MNIST",
+  "title": "Low-Depth MNIST",
   "description": "This dataset contains images from the MINST dataset encoded as quantum states.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "Dataset_MNIST_thumb.png",
   "extra": {},
   "dateOfLastModification": "2025-03-19",
