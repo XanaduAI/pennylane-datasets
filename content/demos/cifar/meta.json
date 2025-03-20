@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Florian Kiwit",
+      "username": "@Florian"
+    },
+    {
+      "name": "Carlos Riofrio",
+      "username": "@Carlos"
+    }
+  ],
+  "basedOnPapers": false,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "This is the cifar dataset",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2025-02-19",
+  "dateOfPublication": "2025-02-19",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "Cifar",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "Datasets_SpinHero_BoseHubbard.png",
+  "thumbnail": "Datasets_SpinHero_BoseHubbard.png",
+  "extra": {}
+}

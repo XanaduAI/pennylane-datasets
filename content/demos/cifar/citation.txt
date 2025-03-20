@@ -1,0 +1,6 @@
+@misc{Florian Kiwit2025cifar,
+    title={Cifar},
+    author={Florian Kiwit and Carlos Riofrio},
+    howpublished={\urlhttps://pennylane.ai/datasets/demos/cifar},
+    year={2025}
+}
