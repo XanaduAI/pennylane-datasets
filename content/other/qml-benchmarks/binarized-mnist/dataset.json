@@ -21,16 +21,18 @@
   },
   "data": [
     {
-      "dataUrl": null,
-      "parameters": {},
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BarsAndStripes/BarsAndStripes_BarsAndStripes.h5",
+      "parameters": {
+        "name": "binarized-mnist"
+      },
       "extra": {}
     }
   ],
-  "downloadName": "binarizedmnist",
+  "downloadName": "binarized-mnist",
   "features": [
     {
-      "slug": "example-feature",
-      "title": "Example Feature",
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
       "type": "DATA",
       "content": {
         "$path": "features/dataset-attributes.md"
