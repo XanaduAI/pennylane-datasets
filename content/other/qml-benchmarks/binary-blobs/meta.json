@@ -1,0 +1,30 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Joseph Bowles",
+      "username": "josephbowles"
+    },
+    {
+      "name": "Shahnawaz Ahmed"
+    }
+  ],
+  "basedOnPapers": false,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "Binary blobs dataset",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2025-03-24",
+  "dateOfPublication": "2025-03-24",
+  "sourceCodeUrl": "https://github.com/XanaduAI/scaling-gqml",
+  "tags": [],
+  "title": "Binary blobs",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "https://datasets.cloud.pennylane.ai/assets/Datasets_GenericHero_SubtleArtOfBenchmarking-a3e899372f4c590a1f336a6da066016e3f2e42ec.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_Generic.png",
+  "extra": {}
+}

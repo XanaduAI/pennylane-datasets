@@ -1,0 +1,45 @@
+{
+  "slug": "genomic",
+  "class": {
+    "slug": "genomic",
+    "name": "Genomic",
+    "attributeList": [
+      {
+        "name": "train",
+        "pythonType": "dict",
+        "doc": "BO Train input data and labels. Each input is a binary array of shape (16,) that when reshaped to shape (4,4) gives a 2D image corresponding to one of the 8 patterns. Labels are integers from 0 to 7 specifying the pattern of the corresponding input."
+      },
+      {
+        "name": "test",
+        "pythonType": "dict",
+        "doc": "Test input data and labels. Each input is a binary array of shape (16,) that when reshaped to shape (4,4) gives a 2D image corresponding to one of the 8 patterns. Labels are integers from 0 to 7 specifying the pattern of the corresponding input."
+      }
+    ]
+  },
+  "collection": {
+    "$path": "/other/qml-benchmarks/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {},
+      "extra": {}
+    }
+  ],
+  "downloadName": "genomic",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

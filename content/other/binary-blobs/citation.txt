@@ -1,6 +1,0 @@
-@misc{Joseph Bowles2025binaryblobs,
-    title={Binary blobs},
-    author={Joseph Bowles and Shahnawaz Ahmed},
-    howpublished={\urlhttps://pennylane.ai/datasets/other/binary-blobs},
-    year={2025}
-}

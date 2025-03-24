@@ -1,6 +1,0 @@
-@misc{Joseph Bowles2025binarizedmnist,
-    title={Binarized MNIST},
-    author={Joseph Bowles},
-    howpublished={\urlhttps://pennylane.ai/datasets/other/binarized-mnist},
-    year={2025}
-}

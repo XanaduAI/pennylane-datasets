@@ -1,0 +1,16 @@
+@misc{recioarmengol2025trainclassicaldeployquantum,
+      title={Train on classical, deploy on quantum: scaling generative quantum machine learning to a thousand qubits}, 
+      author={Erik Recio-Armengol and Shahnawaz Ahmed and Joseph Bowles},
+      year={2025},
+      eprint={2503.02934},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph},
+      url={https://arxiv.org/abs/2503.02934}, 
+},
+
+@misc{bowles2025genomic,
+    title={Genomic},
+    author={Joseph Bowles},
+    howpublished={\urlhttps://pennylane.ai/datasets/other/genomic},
+    year={2025}
+}
