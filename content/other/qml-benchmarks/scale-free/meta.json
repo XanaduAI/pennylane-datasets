@@ -21,7 +21,7 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "https://datasets.cloud.pennylane.ai/assets/Datasets_GenericHero_SubtleArtOfBenchmarking-a3e899372f4c590a1f336a6da066016e3f2e42ec.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
   "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_Generic.png",
   "extra": {}
 }
