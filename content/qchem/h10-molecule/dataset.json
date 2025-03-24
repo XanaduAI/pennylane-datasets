@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/H10/STO-3G/1.0/H10_STO-3G_1.0.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/ccf4b2e1-e619-4845-bec3-645f47838ae4",
       "parameters": {
         "molname": "H10",
         "basis": "STO-3G",

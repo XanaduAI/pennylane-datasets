@@ -8,7 +8,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.54/HeH%2B_6-31G_0.54.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/a7dbdc8d-bca2-489a-8188-e4f6ebcc0f38",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.54/HeH%2B_STO-3G_0.54.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/ca2b4f7b-334f-4317-acbc-faa163250f2b",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -34,7 +34,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.58/HeH%2B_6-31G_0.58.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/9cde4b53-1b35-4b6a-9bd4-1adcedd6004b",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.58/HeH%2B_STO-3G_0.58.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/988d1ef4-c3c7-4c76-b3d2-09c159c564ab",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -60,7 +60,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.5/HeH%2B_6-31G_0.5.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/653d7fc0-1d62-4882-84c9-7ebe32d9cee6",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -73,7 +73,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/0.5/HeH%2B_CC-PVDZ_0.5.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f8ab8241-880f-427d-b7b9-de7c6e17d152",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.5/HeH%2B_STO-3G_0.5.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/648fb92b-8285-4f17-a7cb-89c22e17cfdd",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -99,7 +99,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.62/HeH%2B_6-31G_0.62.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/e2fe9537-80f2-47a5-9918-fa175871a572",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -112,7 +112,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.62/HeH%2B_STO-3G_0.62.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/959fa057-359a-42c5-9347-3f0e9dd27a64",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.66/HeH%2B_6-31G_0.66.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/9e09438a-1723-4828-a76c-b129fa8ddbc6",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -138,7 +138,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.66/HeH%2B_STO-3G_0.66.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f2d7323c-a40d-4423-8966-6f08f6f11f95",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -151,7 +151,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.74/HeH%2B_6-31G_0.74.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/eb707bdf-afa0-4584-9074-ae1a3a4bcc34",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.74/HeH%2B_STO-3G_0.74.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/91d58122-e63d-4d58-85b5-695e31e638da",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -177,7 +177,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.775/HeH%2B_6-31G_0.775.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/3cac3691-c356-4061-8267-acac241d93f0",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -190,7 +190,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/0.775/HeH%2B_CC-PVDZ_0.775.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/d6450521-e1a9-441a-9bc8-2a532338f9f5",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -203,7 +203,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.775/HeH%2B_STO-3G_0.775.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/d8b105c6-9231-4097-9f82-2954413d854b",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -216,7 +216,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.78/HeH%2B_6-31G_0.78.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/2138906f-9323-4fd1-8def-6528cee43350",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -229,7 +229,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.78/HeH%2B_STO-3G_0.78.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/9e5d6ce1-1b8f-45e0-a543-0850b0158276",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -242,7 +242,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.7/HeH%2B_6-31G_0.7.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/1e96acd9-1241-43f3-88fa-369215c4bc96",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -255,7 +255,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/0.7/HeH%2B_CC-PVDZ_0.7.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/16318e66-1585-4d63-bd20-78ce698e5556",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -268,7 +268,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.7/HeH%2B_STO-3G_0.7.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/43214cde-5030-4b95-ad4b-825ae2ebbbc9",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -281,7 +281,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.82/HeH%2B_6-31G_0.82.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/ed78597d-5f2f-4162-b93f-7adfbab6ec10",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -294,7 +294,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.82/HeH%2B_STO-3G_0.82.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/1745448a-719f-4f28-a403-0519601344ee",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -307,7 +307,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.86/HeH%2B_6-31G_0.86.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/360a8b45-6361-4305-b9d2-b1d517f89ed8",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -320,7 +320,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.86/HeH%2B_STO-3G_0.86.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/094db892-63d2-4872-bdb4-3dae46d06993",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -333,7 +333,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.94/HeH%2B_6-31G_0.94.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/d74311df-474d-4165-9a9c-8aa26de671d2",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -346,7 +346,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.94/HeH%2B_STO-3G_0.94.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/5e30661c-bfa7-455e-bc05-cca8a436cb24",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -359,7 +359,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.98/HeH%2B_6-31G_0.98.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/6eae814b-7147-4d9e-9a50-656515ca0136",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -372,7 +372,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.98/HeH%2B_STO-3G_0.98.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/d9aa386e-08fa-4f6c-acac-a067fedda488",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -385,7 +385,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/0.9/HeH%2B_6-31G_0.9.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/7fd441e4-fc98-4f54-92b1-2e1d0a756063",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -398,7 +398,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/0.9/HeH%2B_CC-PVDZ_0.9.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/eb0abf8e-c26e-4879-82de-892839a414c1",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -411,7 +411,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/0.9/HeH%2B_STO-3G_0.9.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f472d395-06da-42ad-a77f-ee373919d438",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.02/HeH%2B_6-31G_1.02.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/7674637b-c281-465e-845f-0b9cc68c2f3f",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -437,7 +437,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.02/HeH%2B_STO-3G_1.02.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/9e1b7b3c-c764-4c5a-adb8-0a9292bf4cec",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -450,7 +450,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.06/HeH%2B_6-31G_1.06.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/04b132a7-72cd-4963-a95b-a5f2b342adbb",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -463,7 +463,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.06/HeH%2B_STO-3G_1.06.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/a5b09043-fc4a-4c4a-b4d2-8c676f380d1b",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -476,7 +476,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.14/HeH%2B_6-31G_1.14.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/5ba3f153-97d5-42fe-b48b-8d8d491abf74",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -489,7 +489,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.14/HeH%2B_STO-3G_1.14.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/4932ad22-2810-49ba-949d-ab33e05ecef7",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -502,7 +502,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.18/HeH%2B_6-31G_1.18.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/dc315513-5b97-4e72-8906-bbf51302d3a7",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -515,7 +515,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.18/HeH%2B_STO-3G_1.18.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f298da1a-a8bc-4041-b29a-d33ef0d273d6",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -528,7 +528,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.1/HeH%2B_6-31G_1.1.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/2da0f29f-660b-4a29-86e2-fba0c1c07e88",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -541,7 +541,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/1.1/HeH%2B_CC-PVDZ_1.1.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/5e83a596-239d-4814-b277-b9c79ed4b850",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -554,7 +554,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.1/HeH%2B_STO-3G_1.1.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/24370f0e-f8b8-41c6-a15f-9a6642c93f5e",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -567,7 +567,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.22/HeH%2B_6-31G_1.22.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f00857ad-8947-4a69-a275-46ca689d64b3",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -580,7 +580,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.22/HeH%2B_STO-3G_1.22.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/eff7c990-c0d0-4105-ba3e-b76c0484b963",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -593,7 +593,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.26/HeH%2B_6-31G_1.26.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/7c029614-5f13-4d41-8708-f344e00861d7",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -606,7 +606,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.26/HeH%2B_STO-3G_1.26.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/5f5ff45c-3f41-48ce-9117-b703d89f7a59",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -619,7 +619,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.34/HeH%2B_6-31G_1.34.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/efd4fad3-b361-42bd-9b8b-0e184efd71b3",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -632,7 +632,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.34/HeH%2B_STO-3G_1.34.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/93bfd3f7-7050-4a1e-b4b6-914f377c1b19",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -645,7 +645,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.38/HeH%2B_6-31G_1.38.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/ceed36c1-5471-4f90-a0ed-97f87d5afae1",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -658,7 +658,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.38/HeH%2B_STO-3G_1.38.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/c2e4e252-db55-4915-8b8b-e11fe375f9c8",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -671,7 +671,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.3/HeH%2B_6-31G_1.3.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/2b4829d4-f4c1-422c-82fc-264909cd5fe2",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/1.3/HeH%2B_CC-PVDZ_1.3.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/789a8ff4-da28-40ff-9a72-9cfef1e44863",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -697,7 +697,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.3/HeH%2B_STO-3G_1.3.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/cd5fc9dc-d75b-4f95-a150-3207dc0f9160",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -710,7 +710,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.42/HeH%2B_6-31G_1.42.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/15fc2367-1aa6-4371-af89-f923d2492c77",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -723,7 +723,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.42/HeH%2B_STO-3G_1.42.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/54701cad-7e04-4ab3-81cf-2bd7d5e9bd2d",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -736,7 +736,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.46/HeH%2B_6-31G_1.46.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/80c33c8e-10c8-4c00-90a2-e7a8e554e3c0",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -749,7 +749,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.46/HeH%2B_STO-3G_1.46.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/e4aec170-82cb-4bf2-8d6b-0d9d7a199442",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -762,7 +762,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.54/HeH%2B_6-31G_1.54.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/ffee2a45-8670-4412-a98e-6f45aedbe639",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -775,7 +775,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.54/HeH%2B_STO-3G_1.54.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/150b63e5-c767-4146-9e17-3c7627784bdd",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -788,7 +788,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.58/HeH%2B_6-31G_1.58.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/a5cc7953-d516-4a6f-b534-548cbe0d7c81",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -801,7 +801,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.58/HeH%2B_STO-3G_1.58.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/0511a2d1-6310-4ae3-80f1-eb42bb0bc400",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -814,7 +814,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.5/HeH%2B_6-31G_1.5.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/8227076e-c80b-4744-8963-102681fd7be1",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -827,7 +827,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/1.5/HeH%2B_CC-PVDZ_1.5.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/47167b91-a590-4afe-a1ec-7b493a0d5664",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -840,7 +840,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.5/HeH%2B_STO-3G_1.5.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/df95a165-c4e3-41e7-bbd6-a15a4e18e359",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -853,7 +853,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.62/HeH%2B_6-31G_1.62.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f8800c64-63bb-4d63-8a27-2d30d4135d1d",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -866,7 +866,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.62/HeH%2B_STO-3G_1.62.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/a5007599-1052-43bf-ac46-5ff0776ebfc3",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -879,7 +879,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.66/HeH%2B_6-31G_1.66.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/ff13ec56-bb6a-4f41-ab2b-3d81e2a82d10",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -892,7 +892,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.66/HeH%2B_STO-3G_1.66.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/2e93f044-1880-4014-a712-4168f933b330",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -905,7 +905,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.74/HeH%2B_6-31G_1.74.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/32e323b4-915a-4439-b41f-0c371c2c383b",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -918,7 +918,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.74/HeH%2B_STO-3G_1.74.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/b3d2794c-1a01-4200-8c88-c10b30c2e3c1",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -931,7 +931,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.78/HeH%2B_6-31G_1.78.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/b5c49b1a-72a0-4d8a-8b7e-fce6088057db",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.78/HeH%2B_STO-3G_1.78.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/56ee0942-6f5f-4731-aafa-66afb3b68c98",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -957,7 +957,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.7/HeH%2B_6-31G_1.7.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f2c9feb3-526b-4457-b13a-c165cce1100a",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -970,7 +970,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/1.7/HeH%2B_CC-PVDZ_1.7.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/9a725795-8ab3-4770-a9f8-2fb00c4e85cc",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -983,7 +983,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.7/HeH%2B_STO-3G_1.7.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/32f59bc6-cb70-4275-9253-7c2b8e6e8f3b",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -996,7 +996,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.82/HeH%2B_6-31G_1.82.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/4044ad21-1b01-4892-bd3c-0873bdd833a8",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -1009,7 +1009,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.82/HeH%2B_STO-3G_1.82.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f5fde26e-2be6-48ac-ae1d-d59c70d46cb1",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -1022,7 +1022,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.86/HeH%2B_6-31G_1.86.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/8e6d3a5a-5157-4db5-a33f-8eaef8f683aa",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -1035,7 +1035,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.86/HeH%2B_STO-3G_1.86.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/867afc05-7034-4274-aa3d-dcbf4c11551d",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -1048,7 +1048,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.94/HeH%2B_6-31G_1.94.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/836e2516-1683-479c-a176-3c290e55815e",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -1061,7 +1061,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.94/HeH%2B_STO-3G_1.94.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/a69afdbc-4628-4f55-8129-0fe9a2720a79",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -1074,7 +1074,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.98/HeH%2B_6-31G_1.98.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/8eb8ac64-d483-44c2-81b1-49fc0135ceaa",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -1087,7 +1087,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.98/HeH%2B_STO-3G_1.98.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/847a8ff5-4513-4fd9-8108-bcf0dadf47d2",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -1100,7 +1100,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/1.9/HeH%2B_6-31G_1.9.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/fb06b547-4aae-43e8-b2c4-9fa600686678",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -1113,7 +1113,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/1.9/HeH%2B_CC-PVDZ_1.9.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/481e6702-d248-4197-a5fc-261d3727a5f2",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -1126,7 +1126,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/1.9/HeH%2B_STO-3G_1.9.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/7f08736d-5abe-4e9d-8bc5-7a5e9e559770",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -1139,7 +1139,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/2.02/HeH%2B_6-31G_2.02.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/4c5c75de-8900-4f65-8d11-48ae6fa166ba",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -1152,7 +1152,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/2.02/HeH%2B_STO-3G_2.02.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/a2aed488-9abc-466b-b772-1c265857aab1",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -1165,7 +1165,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/2.06/HeH%2B_6-31G_2.06.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/9a6c6316-0af8-4b4c-af25-a5e2dd655db5",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -1178,7 +1178,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/2.06/HeH%2B_STO-3G_2.06.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/14f82654-77b1-4589-821c-f0eb8873667e",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -1191,7 +1191,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/6-31G/2.1/HeH%2B_6-31G_2.1.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/80f89bde-af3c-4ade-848b-ab07b30a250b",
       "parameters": {
         "molname": "HeH+",
         "basis": "6-31G",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/2.1/HeH%2B_CC-PVDZ_2.1.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/45e7f614-16c6-48ee-bcf8-dc5753ef4913",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -1217,7 +1217,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/STO-3G/2.1/HeH%2B_STO-3G_2.1.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/ed25e8e8-2747-4d90-bed6-a93cce43f1af",
       "parameters": {
         "molname": "HeH+",
         "basis": "STO-3G",
@@ -1230,7 +1230,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/2.3/HeH%2B_CC-PVDZ_2.3.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/356eb7c8-809d-4291-9822-a77bd4d0d768",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
@@ -1243,7 +1243,7 @@
       }
     },
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/qchem/HeH%2B/CC-PVDZ/2.5/HeH%2B_CC-PVDZ_2.5.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/f8a54207-6478-47d0-8f58-be7a648778c5",
       "parameters": {
         "molname": "HeH+",
         "basis": "CC-PVDZ",
