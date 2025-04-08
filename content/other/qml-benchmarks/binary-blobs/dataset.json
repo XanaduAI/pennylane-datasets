@@ -21,7 +21,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BarsAndStripes/BarsAndStripes_BarsAndStripes.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/55dc7efa-2a7d-4029-b1bc-db51a20c4e90",
       "parameters": {
         "name": "binary-blobs"
       },

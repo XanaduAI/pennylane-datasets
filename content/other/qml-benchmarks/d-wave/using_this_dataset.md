@@ -17,6 +17,6 @@ Please see the ``Source code`` tab to check how the data was generated.
 ```python
 [ds] = qml.data.load("other", name="d-wave)
 
-ds.train['inputs']
-ds.test['inputs']
+ds.train
+ds.test
 ```

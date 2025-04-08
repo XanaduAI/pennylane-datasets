@@ -21,7 +21,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BarsAndStripes/BarsAndStripes_BarsAndStripes.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/73a86fb4-8b71-4af5-beef-062b02eef6f5",
       "parameters": {
         "name": "ising"
       },

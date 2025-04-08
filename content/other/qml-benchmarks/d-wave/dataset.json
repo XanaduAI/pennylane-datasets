@@ -21,7 +21,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BarsAndStripes/BarsAndStripes_BarsAndStripes.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/34c2da34-5512-41de-bb27-628b5c03e543",
       "parameters": {
         "name": "d-wave"
       },

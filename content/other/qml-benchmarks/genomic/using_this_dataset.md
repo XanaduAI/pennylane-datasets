@@ -19,6 +19,6 @@ and 1670 testing inputs.
 ```python
 [ds] = qml.data.load("other", name="genomic)
 
-ds.train['inputs']
-ds.test['inputs']
+ds.train
+ds.test
 ```

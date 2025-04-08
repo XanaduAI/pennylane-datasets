@@ -21,7 +21,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BarsAndStripes/BarsAndStripes_BarsAndStripes.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/c24ba887-9c0f-4d10-880d-3b6838a49824",
       "parameters": {
         "name": "scale-free"
       },

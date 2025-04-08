@@ -21,7 +21,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/BarsAndStripes/BarsAndStripes_BarsAndStripes.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/05b7fb8e-464b-4f6b-a0e2-c5ed4ee502cb",
       "parameters": {
         "name": "binarized-mnist"
       },
