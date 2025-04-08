@@ -1,4 +1,3 @@
-# Using this Dataset
 Data for benchmarking machine learning models, taken from
 [Train on classical, deploy on quantum: scaling generative quantum machine learning to a thousand qubits](https://arxiv.org/abs/2503.02934).
 This dataset contains bistrings that are sampled from a D-Wave advantage processor, as described in 

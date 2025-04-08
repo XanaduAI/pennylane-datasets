@@ -1,4 +1,3 @@
-# Using this Dataset
 Data for benchmarking machine learning models, taken from
 [Train on classical, deploy on quantum: scaling generative quantum machine learning to a thousand qubits](https://arxiv.org/abs/2503.02934).
 The Binary Blobs dataset can be seen as a binary version of the [Gaussian blobs](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html) 
@@ -10,7 +9,7 @@ constructed via the [qml_benchmarks](https://github.com/XanaduAI/qml-benchmarks)
 The dataset consists of bit strings of length 16. To generate samples, one of the 8 following patterns
 is selected at random (where data has been reshaped to size (4,4))
 
-![patterns](8blobs.png)
+<p style="text-align: center"><img src="https://assets.cloud.pennylane.ai/datasets/generic/using_this_dataset/8blobs.png" alt="patterns" width="70%"/></p>
 
 Each bit is then flipped with 5% probability. There are 5000 training points and 10000 test points.
 If needed, labels that correspond to the 8 patterns can also be accessed. Please see the ``Source code`` tab to check how the data was generated.
