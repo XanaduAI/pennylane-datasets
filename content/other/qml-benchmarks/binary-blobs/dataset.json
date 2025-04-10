@@ -7,7 +7,7 @@
       {
         "name": "train",
         "pythonType": "dict",
-        "doc": "BO Train input data and labels. Each input is a binary array of shape (16,) that when reshaped to shape (4,4) gives a 2D image corresponding to one of the 8 patterns. Labels are integers from 0 to 7 specifying the pattern of the corresponding input."
+        "doc": "Train input data and labels. Each input is a binary array of shape (16,) that when reshaped to shape (4,4) gives a 2D image corresponding to one of the 8 patterns. Labels are integers from 0 to 7 specifying the pattern of the corresponding input."
       },
       {
         "name": "test",
@@ -21,7 +21,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/55dc7efa-2a7d-4029-b1bc-db51a20c4e90",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/7a8439b3-4e76-4397-b25a-44bf8f0b7224",
       "parameters": {
         "name": "binary-blobs"
       },
