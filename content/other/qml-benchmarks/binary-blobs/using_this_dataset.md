@@ -16,11 +16,25 @@ If needed, labels that correspond to the 8 patterns can also be accessed. Please
 
 **Example usage**
 
-```python
-[ds] = qml.data.load("other", name="binary-blobs")
-
-ds.train['inputs']
-ds.train['labels']
-ds.test['inputs']
-ds.test['labels']
+```pycon
+>>> [ds] = qml.data.load("other", name="binary-blobs")
+>>>
+>>> blob_vector = ds.train['inputs'][0]
+>>> blob_array = np.reshape(blob_vector, (4,4))
+>>> print(blob_array)
+[[0. 0. 1. 1.]
+ [0. 0. 1. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+>>> ds.train['labels'][0]
+1
+>>> blob_vector = ds.test('inputs')[10]
+>>> blob_array = np.reshape(blob_vector, (4,4))
+>>> print(blob_array)
+[[1. 0. 1. 0.]
+ [0. 1. 0. 0.]
+ [0. 0. 1. 0.]
+ [0. 0. 0. 1.]]
+>>> ds.test['labels'][10]
+5
 ```
