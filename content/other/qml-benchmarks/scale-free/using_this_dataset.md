@@ -15,7 +15,7 @@ Markov chains, and then selecting 20000 train and test points randomly from equa
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="scale-free)
+[ds] = qml.data.load("other", name="scale-free")
 
 ds.train
 ds.test

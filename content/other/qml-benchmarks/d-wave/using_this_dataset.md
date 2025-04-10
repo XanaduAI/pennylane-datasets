@@ -14,7 +14,7 @@ Please see the ``Source code`` tab to check how the data was generated.
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="d-wave)
+[ds] = qml.data.load("other", name="d-wave")
 
 ds.train
 ds.test
