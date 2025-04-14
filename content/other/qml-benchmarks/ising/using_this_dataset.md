@@ -16,9 +16,17 @@ is then used to sample configurations from a thermal distribution with temperatu
 
 **Example usage**
 
-```python
-[ds] = qml.data.load("other", name="ising")
-
-ds.train['(3,6)']  # 3x6 lattice size
-ds.test['(3,6)']
+```pycon
+>>> [ds] = qml.data.load("other", name="ising")
+>>>
+>>> np.shape(ds.train['(3,6)']) # 3x6 lattice size
+(5000, 18)
+>>> ds.train['(3,6)']
+array([[0, 0, 0, ..., 1, 0, 0],
+       [1, 1, 0, ..., 0, 0, 0],
+       [1, 1, 1, ..., 0, 1, 1],
+       ...,
+       [1, 1, 1, ..., 1, 1, 1],
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0]], dtype=int32)
 ```

@@ -15,9 +15,11 @@ and 1670 testing inputs.
 
 **Example usage**
 
-```python
-[ds] = qml.data.load("other", name="genomic")
-
-ds.train
-ds.test
+```pycon
+>>> [ds] = qml.data.load("other", name="genomic")
+>>>
+>>> np.shape(ds.train)
+(3338, 805)
+>>> np.shape(ds.test)
+(1670, 805)
 ```

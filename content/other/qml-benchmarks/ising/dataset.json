@@ -7,12 +7,12 @@
       {
         "name": "train",
         "pythonType": "dict",
-        "doc": "BO Train input data and labels. Each input is a binary array of shape (16,) that when reshaped to shape (4,4) gives a 2D image corresponding to one of the 8 patterns. Labels are integers from 0 to 7 specifying the pattern of the corresponding input."
+        "doc": "Training data. Provided as a dictionary where each key describes the lattice shape of the associated Ising Hamiltonian and the values are sampled bitstrings from a thermal distribution of the system."
       },
       {
         "name": "test",
         "pythonType": "dict",
-        "doc": "Test input data and labels. Each input is a binary array of shape (16,) that when reshaped to shape (4,4) gives a 2D image corresponding to one of the 8 patterns. Labels are integers from 0 to 7 specifying the pattern of the corresponding input."
+        "doc": "Testing data. Provided as a dictionary where each key describes the lattice shape of the associated Ising Hamiltonian and the values are sampled bitstrings from a thermal distribution of the system."
       }
     ]
   },
