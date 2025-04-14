@@ -1,0 +1,47 @@
+{
+  "slug": "binarized-mnist",
+  "class": {
+    "slug": "binarized-mnist",
+    "name": "BinarizedMNIST",
+    "attributeList": [
+      {
+        "name": "train",
+        "pythonType": "dict",
+        "doc": "Training data `train['inputs']` and labels `train['labels']`. Each input is a binary array of shape (748,) that when reshaped to (28,28) gives a 2D image corresponding to a digit between 0 and 9. Labels are integers between 0 and 9, corresponding to the digit in the image."
+      },
+      {
+        "name": "test",
+        "pythonType": "dict",
+        "doc": "Test data `test['inputs']` and labels `test['labels']`. Each input is a binary array of shape (748,) that when reshaped to (28,28) gives a 2D image corresponding to a digit between 0 and 9. Labels are integers between 0 and 9, corresponding to the digit in the image."
+      }
+    ]
+  },
+  "collection": {
+    "$path": "/other/qml-benchmarks/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/05b7fb8e-464b-4f6b-a0e2-c5ed4ee502cb",
+      "parameters": {
+        "name": "binarized-mnist"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "binarized-mnist",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

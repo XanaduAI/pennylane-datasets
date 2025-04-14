@@ -1,0 +1,4 @@
+|Name|Type|Description|
+|-|-|-|
+|`train`|`dict`|Training data `train['inputs']` and labels `train['labels']`. Each input is a binary array of shape (748,) that when reshaped to (28,28) gives a 2D image corresponding to a digit between 0 and 9. Labels are integers between 0 and 9, corresponding to the digit in the image.|
+|`test`|`dict`|Test data `test['inputs']` and labels `test['labels']`. Each input is a binary array of shape (748,) that when reshaped to (28,28) gives a 2D image corresponding to a digit between 0 and 9. Labels are integers between 0 and 9, corresponding to the digit in the image.|

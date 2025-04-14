@@ -1,0 +1,47 @@
+{
+  "slug": "genomic",
+  "class": {
+    "slug": "genomic",
+    "name": "Genomic",
+    "attributeList": [
+      {
+        "name": "train",
+        "pythonType": "dict",
+        "doc": "Array with 3,338 bit strings of length 805. Each bit identifies the presence (bit value 1) or absence (bit value 0) of the variant allele in the corresponding individual."
+      },
+      {
+        "name": "test",
+        "pythonType": "dict",
+        "doc": "Array with 1,670 bit strings of length 805. Each bit identifies the presence (bit value 1) or absence (bit value 0) of the variant allele in the corresponding individual."
+      }
+    ]
+  },
+  "collection": {
+    "$path": "/other/qml-benchmarks/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/3342bf70-d908-4f9f-9cc7-cc7748636166",
+      "parameters": {
+        "name": "genomic"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "genomic",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "ising",
+  "class": {
+    "slug": "ising",
+    "name": "Ising",
+    "attributeList": [
+      {
+        "name": "train",
+        "pythonType": "dict",
+        "doc": "Training data. Provided as a dictionary where each key describes the lattice shape of the associated Ising Hamiltonian and the values are sampled bitstrings from a thermal distribution of the system."
+      },
+      {
+        "name": "test",
+        "pythonType": "dict",
+        "doc": "Testing data. Provided as a dictionary where each key describes the lattice shape of the associated Ising Hamiltonian and the values are sampled bitstrings from a thermal distribution of the system."
+      }
+    ]
+  },
+  "collection": {
+    "$path": "/other/qml-benchmarks/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/73a86fb4-8b71-4af5-beef-062b02eef6f5",
+      "parameters": {
+        "name": "ising"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "ising",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}
