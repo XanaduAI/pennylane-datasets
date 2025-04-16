@@ -1,0 +1,13 @@
+@misc{atchade2025title,
+    title={Title of the dataset/molecule}, 
+    author={Parfait Atchade-Adelemou and Laia Coronas},
+    howpublished = {\url{https://pennylane.ai/datasets/title_of_dataset/}}
+    year={2025}}
+    
+@misc{atchade2025title,
+    title={Title of the paper}, 
+    author={Parfait Atchade-Adelemou and Laia Coronas},
+    year={20205},
+    eprint={code e.g. 2403.07059},
+    archivePrefix={arXiv},
+    primaryClass={quant-ph}}
