@@ -1,0 +1,4 @@
+|Name|Type|Description|
+|-|-|-|
+|`test`|`dict`|Test sets. These are provided as a dictionary with form ``test[image_size]['labels' or 'inputs'][index]`` and contain 60 labeled vectors for each image size: 4x4, 8x8, 16x16, and 32x32. The vectors can be reshaped to image_size x image_size arrays to reproduce the original image.|
+|`train`|`dict`|Training sets. These are provided as a dictionary with form ``train[image_size]['labels' or 'inputs'][index]`` and contain 240 labeled vectors for each image size: 4x4, 8x8, 16x16, and 32x32. The vectors can be reshaped to image_size x image_size arrays to reproduce the original image.|
