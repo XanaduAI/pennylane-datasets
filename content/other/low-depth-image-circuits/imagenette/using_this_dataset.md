@@ -9,6 +9,7 @@ The [Imagenette dataset](https://github.com/fastai/imagenette) is a subset of [I
 - The class labels are integers from 0 to 9.
 - Implementing the circuits in this dataset and obtaining the final state with PennyLane's `qml.state()` outputs a state vector. This state vector must be processed to recover the original image.
 - The dataset contains two circuits per image: those with a depth of four, which are shallower, and those with a depth of eight, which provide more accurate approximations of the exact state.
+- The exact_state entry contains a list of numpy arrays representing MCRQI states that exactly encode Imagenette images. This significantly increases the file size and can be omitted during download if not needed.
 
 **Example usage**
 
