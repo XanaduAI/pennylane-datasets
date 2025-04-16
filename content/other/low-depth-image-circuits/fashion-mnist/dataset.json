@@ -1,0 +1,70 @@
+{
+  "slug": "low-depth-fashion-mnist",
+  "class": {
+    "slug": "low-depth-fashion-mnist",
+    "name": "LowDepthFashion-MNIST",
+    "attributeList": [
+      {
+        "name": "circuit_layout_d4",
+        "pythonType": "list",
+        "doc": "Circuits layout consiting of CNOTs and RY gates defined as lists of operations and wires they act on with a circuit depth of 4."
+      },
+      {
+        "name": "circuit_layout_d8",
+        "pythonType": "list",
+        "doc": "Circuits layout consiting of CNOTs and RY gates defined as lists of operations and wires they act on with a circuit depth of 8."
+      },
+      {
+        "name": "params_d4",
+        "pythonType": "list",
+        "doc": "Circuit parameters as list of RY angles. When plugged in to the circuit layout with a depth of 8, the circuit approximates the flexible representation of quantum images (FRQI)."
+      },
+      {
+        "name": "params_d8",
+        "pythonType": "list",
+        "doc": "Circuit parameters as list of RY angles. When plugged in to the circuit layout with a depth of 8, the circuit approximates the flexible representation of quantum images (FRQI)."
+      },
+      {
+        "name": "exact_state",
+        "pythonType": "list[np.ndarray]",
+        "doc": "A list of numpy arrays. Each numpy array defines a quantum state that exactly encodes an Fashion-MNIST image."
+      },
+      {
+        "name": "labels",
+        "pythonType": "list",
+        "doc": "A list of the correct labels for each image."
+      }
+    ]
+  },
+  "collection": {
+    "$path": "/other/low-depth-image-circuits/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/54d8b630-61c9-4e32-a0a5-2aceac9b278f",
+      "parameters": {
+        "name": "low-depth-fashion-mnist"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "low-depth-fashion-mnist",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "low-depth-fashion-mnist"
+    }
+  }
+}
