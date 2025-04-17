@@ -1,30 +1,71 @@
-A short intro sentence or two. For example: This is data taken from [paper] it can be used for [what it can be used for].
+#Reconstructing a PennyLane Hamiltonian from HDF5
 
-**Description of the dataset**
+This repository contains a Python script that **reconstructs a Hamiltonian** stored in an HDF5 file and rebuilds it using the **PennyLane quantum computing framework**.
 
-A more detailed description of the dataset. Can be several sentences.
+## 📌 Overview
 
-**Additional details**
+The script:
+- Reads Hamiltonian chunks stored in an HDF5 file
+- Parses coefficients and quantum operators
+- Reconstructs the full `qml.Hamiltonian` object
+- Prints the first terms of the Hamiltonian for validation
 
-Typically very specific details of the dataset, usually as a bulleted list. For example:
+---
 
-- The class labels are defined as -1, 1.
-- For each grid dimension, 1000 labeled points are provided for training and 200 for testing.
-- The datasets are balanced, which means that they contain the same number of samples for each class.
-- Please see the ``Source code`` tab to check how the data was generated.
+## How It Works
 
-**Example usage**
-Code examples of how to use this dataset
-
-
+### 1️⃣ **Read the HDF5 File**
+The script opens the HDF5 file and reads the stored Hamiltonian chunks:
 ```python
-[ds] = qml.data.load("other", name="leucine")
+with h5py.File(input_file, "r") as f:
+    for key in sorted(f.keys()):
+        if "hamiltonian" in key:
+            hamiltonian_chunks.append(f[key][()].decode("utf-8"))
 
-dev = qml.device('default.qubit')
-@qml.qnode(dev)
-def circuit():
-    qml.StatePrep(ds.state)
-    return qml.state()
+2️⃣ Combine and Parse Hamiltonian Chunks
+Chunks are merged into a single string and parsed line by line:
+full_hamiltonian = "\n".join(hamiltonian_chunks)
+3️⃣ Convert String Operators to PennyLane Operators
+A helper function converts each string-based operator into PennyLane operators (PauliX, PauliY, PauliZ, Identity):
+def string_to_operator(op_string):
+    # Converts strings like 'Z(0) @ X(1)' into PennyLane operators
 
-circuit()
-```
+Example Usage
+input_file = "hd5_files/gly.h5"
+hamiltonian = load_hamiltonian_from_hdf5(input_file)
+
+Sample Output
+print(hamiltonian.coeffs[:5])   # First 5 coefficients
+print(hamiltonian.ops[:5])      # First 5 operators
+print(hamiltonian[:20])         # First 20 Hamiltonian terms
+
+🛠 Requirements
+pennylane
+
+h5py
+
+Python 3.8+
+
+Install dependencies:
+pip install pennylane h5py
+
+Function Reference
+load_hamiltonian_from_hdf5(input_file)
+Description:
+Reconstructs a PennyLane Hamiltonian from an HDF5 file.
+
+Parameters:
+
+input_file (str): Path to the HDF5 file.
+
+Returns:
+
+qml.Hamiltonian: The reconstructed Hamiltonian.
+
+Authors
+Developed by Parfait Atchade and Laia Coronas Sala.
+
+Powered by: PennyLane
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
