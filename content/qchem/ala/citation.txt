@@ -1,0 +1,6 @@
+@misc{Parfait Atchade-Adelomou and Laia Coronas-Sala2025ala,
+    title={Ala},
+    author={Parfait Atchade-Adelomou and Laia Coronas-Sala},
+    howpublished={\urlhttps://pennylane.ai/datasets/qchem/ala},
+    year={2025}
+}
