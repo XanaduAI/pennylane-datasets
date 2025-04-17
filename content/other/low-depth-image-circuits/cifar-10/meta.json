@@ -30,8 +30,8 @@
   "tags": [
     "Other"
   ],
-  "title": "Low-Depth MNIST",
-  "description": "This dataset contains images from the MNIST dataset encoded as quantum states.",
+  "title": "Low-Depth CIFAR-10",
+  "description": "This dataset contains images from the CIFAR-10 dataset encoded as quantum states.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
