@@ -36,7 +36,7 @@
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
-  "thumbnail": "Dataset_CIFAR-10_thumb.png",
+  "thumbnail": "Dataset_MNIST_thumb.png",
   "extra": {},
   "dateOfLastModification": "2025-03-19",
   "dateOfPublication": "2025-03-19"
