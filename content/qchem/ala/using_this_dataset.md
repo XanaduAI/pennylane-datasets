@@ -32,7 +32,6 @@ def string_to_operator(op_string):
 
 
 
-
 Example Usage
 input_file = "hd5_files/ala.h5"
 hamiltonian = load_hamiltonian_from_hdf5(input_file)
