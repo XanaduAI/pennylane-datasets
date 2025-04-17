@@ -2,7 +2,7 @@
   "slug": "low-depth-cifar-10",
   "class": {
     "slug": "low-depth-cifar-10",
-    "name": "LowDepthCIFAR-10",
+    "name": "LowDepthCIFAR10",
     "attributeList": [
       {
         "name": "circuit_layout_d4",
