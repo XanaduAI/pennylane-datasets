@@ -2,7 +2,7 @@
   "slug": "low-depth-fashion-mnist",
   "class": {
     "slug": "low-depth-fashion-mnist",
-    "name": "LowDepthFashion-MNIST",
+    "name": "LowDepthFashionMNIST",
     "attributeList": [
       {
         "name": "circuit_layout_d4",
