@@ -2,7 +2,7 @@
 
 This repository contains a Python script that **reconstructs a Hamiltonian** stored in an HDF5 file and rebuilds it using the **PennyLane quantum computing framework**.
 
-## 📌 Overview
+## Overview
 
 The script:
 - Reads Hamiltonian chunks stored in an HDF5 file
@@ -63,9 +63,10 @@ Returns:
 qml.Hamiltonian: The reconstructed Hamiltonian.
 
 Authors
-Developed by Parfait Atchade and Laia Coronas Sala.
+Developed by Parfait Atchade-Adelomou and Laia Coronas Sala.
 
 Powered by: PennyLane
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
