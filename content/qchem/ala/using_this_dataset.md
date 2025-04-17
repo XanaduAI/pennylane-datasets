@@ -31,8 +31,9 @@ def string_to_operator(op_string):
     # Converts strings like 'Z(0) @ X(1)' into PennyLane operators
 
 Example Usage
-input_file = "hd5_files/gly.h5"
+input_file = "hd5_files/ala.h5"
 hamiltonian = load_hamiltonian_from_hdf5(input_file)
+
 
 Sample Output
 print(hamiltonian.coeffs[:5])   # First 5 coefficients
