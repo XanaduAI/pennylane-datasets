@@ -1,0 +1,35 @@
+{
+    "abstract": null,
+    "authors": [
+        {
+            "name": "Parfait Atchade-Adelemou",
+            "username": "parfait"
+        },
+        {
+            "name": "Laia Coronas",
+            "username": "laiacoronas"
+        }
+    ],
+    "based_on_papers": true,
+    "citation": {
+        "$path": "citation.txt"
+    },
+    "changelog": [
+        "version 0.1 : initial public release"
+    ],
+    "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+    "sourceCodeUrl": "",
+    "tags": [
+        "Quantum Chemistry"
+    ],
+    "title": "lysine",
+    "description": "Description of the dataset",
+    "usingThisDataset": {
+        "$path": "using_this_dataset.md"
+    },
+    "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
+    "thumbnail": "placeholder_thumbnail.png",
+    "extra": {},
+    "dateOfLastModification": "2025-04-18",
+    "dateOfPublication": "2025-04-18"
+}
