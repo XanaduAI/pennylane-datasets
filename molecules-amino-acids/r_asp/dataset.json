@@ -1,0 +1,50 @@
+{
+    "slug": "C2H3O2",
+    "class": {
+        "slug": "r_asp",
+        "name": "R_asp",
+        "attributeList": [
+            {
+                "name": "attribute1",
+                "pythonType": "type",
+                "doc": "Description of attribute1"
+            },
+            {
+                "name": "attribute2",
+                "pythonType": "type",
+                "doc": "Description of attribute2"
+            }
+        ]
+    },
+    "collection": {
+        "$path": "/other/molecules-amino-acids/_meta/collection.json"
+    },
+    "data": [
+        {
+            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/r_asp.h5",
+            "parameters": {
+                "name": "R_asp"
+            },
+            "extra": {}
+        }
+    ],
+    "downloadName": "R_asp",
+    "features": [
+        {
+            "slug": "dataset-attributes",
+            "title": "Dataset Attributes",
+            "type": "DATA",
+            "content": {
+                "$path": "features/dataset-attributes.md"
+            }
+        }
+    ],
+    "meta": {
+        "$path": "meta.json"
+    },
+    "extra": {
+        "defaultParameters": {
+            "name": "C2H3O2"
+        }
+    }
+}

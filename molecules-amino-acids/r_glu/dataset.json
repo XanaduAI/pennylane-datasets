@@ -1,0 +1,50 @@
+{
+    "slug": "C3H5O2",
+    "class": {
+        "slug": "r_glu",
+        "name": "R_glu",
+        "attributeList": [
+            {
+                "name": "attribute1",
+                "pythonType": "type",
+                "doc": "Description of attribute1"
+            },
+            {
+                "name": "attribute2",
+                "pythonType": "type",
+                "doc": "Description of attribute2"
+            }
+        ]
+    },
+    "collection": {
+        "$path": "/other/molecules-amino-acids/_meta/collection.json"
+    },
+    "data": [
+        {
+            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/r_glu.h5",
+            "parameters": {
+                "name": "R_glu"
+            },
+            "extra": {}
+        }
+    ],
+    "downloadName": "R_glu",
+    "features": [
+        {
+            "slug": "dataset-attributes",
+            "title": "Dataset Attributes",
+            "type": "DATA",
+            "content": {
+                "$path": "features/dataset-attributes.md"
+            }
+        }
+    ],
+    "meta": {
+        "$path": "meta.json"
+    },
+    "extra": {
+        "defaultParameters": {
+            "name": "C3H5O2"
+        }
+    }
+}

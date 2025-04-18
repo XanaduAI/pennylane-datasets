@@ -1,0 +1,50 @@
+{
+    "slug": "C6H14N4O2",
+    "class": {
+        "slug": "arg",
+        "name": "arginine",
+        "attributeList": [
+            {
+                "name": "attribute1",
+                "pythonType": "type",
+                "doc": "Description of attribute1"
+            },
+            {
+                "name": "attribute2",
+                "pythonType": "type",
+                "doc": "Description of attribute2"
+            }
+        ]
+    },
+    "collection": {
+        "$path": "/other/molecules-amino-acids/_meta/collection.json"
+    },
+    "data": [
+        {
+            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/arg.h5",
+            "parameters": {
+                "name": "arginine"
+            },
+            "extra": {}
+        }
+    ],
+    "downloadName": "arginine",
+    "features": [
+        {
+            "slug": "dataset-attributes",
+            "title": "Dataset Attributes",
+            "type": "DATA",
+            "content": {
+                "$path": "features/dataset-attributes.md"
+            }
+        }
+    ],
+    "meta": {
+        "$path": "meta.json"
+    },
+    "extra": {
+        "defaultParameters": {
+            "name": "C6H14N4O2"
+        }
+    }
+}
