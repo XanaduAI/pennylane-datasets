@@ -12,5 +12,5 @@ __pycache__
 .DS_Store
 # auth
 .auth.json
-.ipynb*
+.qmprot_PL.ipynb
 .QMProt.json
