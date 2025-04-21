@@ -1,0 +1,32 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Joseph Bowles",
+      "username": "josephbowles"
+    },
+    {
+      "name": "Shahnawaz Ahmed"
+    }
+  ],
+  "basedOnPapers": false,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [
+    "version 0.1 : initial public release"
+  ],
+  "description": "Dataset containing clusters (blobs) of points with binary labels.",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2025-04-21",
+  "dateOfPublication": "2025-04-14",
+  "sourceCodeUrl": "https://github.com/XanaduAI/gqml_datasets",
+  "tags": [],
+  "title": "Binary Blobs",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
+  "thumbnail": "Dataset_QML_BinaryBlobs_Thumb.png",
+  "extra": {}
+}

@@ -1,0 +1,27 @@
+@misc{recioarmengol2025trainclassicaldeployquantum,
+      title={Train on classical, deploy on quantum: scaling generative quantum machine learning to a thousand qubits}, 
+      author={Erik Recio-Armengol and Shahnawaz Ahmed and Joseph Bowles},
+      year={2025},
+      eprint={2503.02934},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph},
+      url={https://arxiv.org/abs/2503.02934}, 
+},
+
+@misc{bowles2025genomic,
+    title={Genomic},
+    author={Joseph Bowles},
+    howpublished={\urlhttps://pennylane.ai/datasets/other/genomic},
+    year={2025}
+}
+
+@article{yelmen2021creating,
+  title={Creating artificial human genomes using generative neural networks},
+  author={Yelmen, Burak and Decelle, Aur{\'e}lien and Ongaro, Linda and Marnetto, Davide and Tallec, Corentin and Montinaro, Francesco and Furtlehner, Cyril and Pagani, Luca and Jay, Flora},
+  journal={PLoS genetics},
+  volume={17},
+  number={2},
+  pages={e1009303},
+  year={2021},
+  publisher={Public Library of Science San Francisco, CA USA}
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "d-wave",
+  "class": {
+    "slug": "d-wave",
+    "name": "DWave",
+    "attributeList": [
+      {
+        "name": "train",
+        "pythonType": "dict",
+        "doc": "Array corresponding to 60,000 bit strings of length 484. Each bit string corresponds to a measurement on 484 qubits."
+      },
+      {
+        "name": "test",
+        "pythonType": "dict",
+        "doc": "Array corresponding to 10,000 bit strings of length 484. Each bit string corresponds to a measurement on 484 qubits."
+      }
+    ]
+  },
+  "collection": {
+    "$path": "/other/qml-benchmarks/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/34c2da34-5512-41de-bb27-628b5c03e543",
+      "parameters": {
+        "name": "d-wave"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "d-wave",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

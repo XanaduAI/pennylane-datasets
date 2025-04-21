@@ -1,0 +1,29 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Joseph Bowles",
+      "username": "josephbowles"
+    }
+  ],
+  "basedOnPapers": false,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [
+    "version 0.1 : initial public release"
+  ],
+  "description": "Dataset of sampled spin configuration from D-Wave advantage system",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2025-04-14",
+  "dateOfPublication": "2025-04-14",
+  "sourceCodeUrl": "https://github.com/XanaduAI/gqml_datasets",
+  "tags": [],
+  "title": "D-Wave",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
+  "thumbnail": "Dataset_QML_DWave_Thumb.png",
+  "extra": {}
+}
