@@ -1,3 +1,35 @@
+# Lysine Radical
+
+The Lysine radical (*C₄H₁₀N*), also known as its **side chain**, is a distinctive and important functional group in lysine. It consists of a **four-carbon alkyl chain** that ends with an **amino group (–NH₂)**, making it a **positively charged** and **basic** side chain at physiological pH. This side chain is highly **hydrophilic** and is involved in **ionic interactions**, **hydrogen bonding**, and **protein-protein interactions**. The positive charge of the amino group makes lysine crucial for **enzyme activity**, **nuclear localization signals**, and **protein stability**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₄H₁₀N radical forms the complete structure of lysine, allowing it to play a critical role in **protein folding**, **cell signaling**, and **DNA interaction**.
+
+## Using this dataset
+
+This dataset contains various quantum properties that represent and describe the lysine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire lysine amino acid.
+
+Key features include:
+
+- Molecular information (name, molecular formula, charge, spin, geometry etc.)
+- Resource estimation (number of atoms, electrons, orbitals, qubits and hamiltonian coefficients to represent the molecule)
+- Jordan-Wigner Hamiltonian representation
+- Approximations to the ground state energy
+
+This dataset is intended to:
+
+- Facilitate research on relevant organic molecules by providing crucial yet computationally expensive properties—such as ground state energy and the molecular Hamiltonian—thereby accelerating advancements in quantum simulations of biomolecules.
+
+- Enhance the characterization of larger biomolecular systems by bridging the gap between existing datasets, which are primarily focused on small molecules, and the needs of researchers working on peptides and proteins.
+
+- Support hybrid QM/ML approaches, allowing researchers to train models that accurately and efficiently predict the properties of larger and more complex systems.
+
+- Accelerate drug discovery and biomolecular research, as proteins are central to numerous biological and therapeutic processes.
+
+- Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
+
+### Authors
+Laia Coronas Sala and Parfait Atchade-Adelomou
+
+---
+
 # Hamiltonian Loader from HDF5
 
 ## Description

@@ -1,3 +1,35 @@
+# Carboxyl Group
+
+The carboxyl group (*–COOH*) is a fundamental functional group found in **every single amino acid** that makes up all proteins in living organisms. It is universally present as part of the **basic structure** of amino acids, along with the amino group (*–NH₂*). Classified as a **polar** and **acidic** group, the carboxyl group consists of a **carbon atom double-bonded to an oxygen** and **single-bonded to a hydroxyl group**, allowing it to **donate a proton (H⁺)** and act as a **weak acid** in solution. This property is essential for the **chemical reactivity** of amino acids, particularly in the formation of **peptide bonds** during **protein synthesis**. Beyond that, the carboxyl group contributes to the **ionization behavior**, **solubility**, and **electrostatic interactions** of amino acids, playing a central role in **protein folding**, **enzyme activity**, and **pH regulation** within biological systems.
+
+## Using this dataset
+
+This dataset contains various quantum properties that represent and describe the carboxyl group under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up larger systems such as amino acids.
+
+Key features include:
+
+- Molecular information (name, molecular formula, charge, spin, geometry etc.)
+- Resource estimation (number of atoms, electrons, orbitals, qubits and hamiltonian coefficients to represent the molecule)
+- Jordan-Wigner Hamiltonian representation
+- Approximations to the ground state energy
+
+This dataset is intended to:
+
+- Facilitate research on relevant organic molecules by providing crucial yet computationally expensive properties—such as ground state energy and the molecular Hamiltonian—thereby accelerating advancements in quantum simulations of biomolecules.
+
+- Enhance the characterization of larger biomolecular systems by bridging the gap between existing datasets, which are primarily focused on small molecules, and the needs of researchers working on peptides and proteins.
+
+- Support hybrid QM/ML approaches, allowing researchers to train models that accurately and efficiently predict the properties of larger and more complex systems.
+
+- Accelerate drug discovery and biomolecular research, as proteins are central to numerous biological and therapeutic processes.
+
+- Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
+
+### Authors
+Laia Coronas Sala and Parfait Atchade-Adelomou
+
+---
+
 # Hamiltonian Loader from HDF5
 
 ## Description

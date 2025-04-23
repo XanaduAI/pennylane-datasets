@@ -1,3 +1,35 @@
+# Leucine Radical
+
+The Leucine radical (*C₄H₉*), also known as its **side chain**, is a nonpolar, aliphatic hydrocarbon structure that distinguishes leucine from other amino acids. It consists of a **branched isobutyl group**, making it **hydrophobic** and strongly involved in the **stabilization of protein cores** through **hydrophobic interactions**. This radical does not participate in hydrogen bonding or ionic interactions, but its branched structure contributes significantly to the **tertiary structure** of proteins. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₄H₉ radical completes leucine’s structure, giving it an important role in **protein folding**, **membrane association**, and **energy metabolism**.
+
+## Using this dataset
+
+This dataset contains various quantum properties that represent and describe the leucine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire leucine amino acid.
+
+Key features include:
+
+- Molecular information (name, molecular formula, charge, spin, geometry etc.)
+- Resource estimation (number of atoms, electrons, orbitals, qubits and hamiltonian coefficients to represent the molecule)
+- Jordan-Wigner Hamiltonian representation
+- Approximations to the ground state energy
+
+This dataset is intended to:
+
+- Facilitate research on relevant organic molecules by providing crucial yet computationally expensive properties—such as ground state energy and the molecular Hamiltonian—thereby accelerating advancements in quantum simulations of biomolecules.
+
+- Enhance the characterization of larger biomolecular systems by bridging the gap between existing datasets, which are primarily focused on small molecules, and the needs of researchers working on peptides and proteins.
+
+- Support hybrid QM/ML approaches, allowing researchers to train models that accurately and efficiently predict the properties of larger and more complex systems.
+
+- Accelerate drug discovery and biomolecular research, as proteins are central to numerous biological and therapeutic processes.
+
+- Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
+
+### Authors
+Laia Coronas Sala and Parfait Atchade-Adelomou
+
+---
+
 # Hamiltonian Loader from HDF5
 
 ## Description

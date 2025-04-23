@@ -1,3 +1,35 @@
+# Glycine Radical
+
+The Glycine radical (*H*), also known as its **side chain**, is the **simplest** of all amino acid radicals, consisting of a **single hydrogen atom**. This minimal structure makes glycine **non-polar** and **achiral**, allowing it to fit into **tight spaces** within protein structures that other amino acids cannot occupy. Although chemically simple, the H radical plays a vital role in **protein folding**, **stability**, and **dynamics**. Together with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the H radical completes glycine’s structure, making it essential for **compact structural motifs** and **functional versatility** in biological systems.
+
+## Using this dataset
+
+This dataset contains various quantum properties that represent and describe the glycine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire glycine amino acid.
+
+Key features include:
+
+- Molecular information (name, molecular formula, charge, spin, geometry etc.)
+- Resource estimation (number of atoms, electrons, orbitals, qubits and hamiltonian coefficients to represent the molecule)
+- Jordan-Wigner Hamiltonian representation
+- Approximations to the ground state energy
+
+This dataset is intended to:
+
+- Facilitate research on relevant organic molecules by providing crucial yet computationally expensive properties—such as ground state energy and the molecular Hamiltonian—thereby accelerating advancements in quantum simulations of biomolecules.
+
+- Enhance the characterization of larger biomolecular systems by bridging the gap between existing datasets, which are primarily focused on small molecules, and the needs of researchers working on peptides and proteins.
+
+- Support hybrid QM/ML approaches, allowing researchers to train models that accurately and efficiently predict the properties of larger and more complex systems.
+
+- Accelerate drug discovery and biomolecular research, as proteins are central to numerous biological and therapeutic processes.
+
+- Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
+
+### Authors
+Laia Coronas Sala and Parfait Atchade-Adelomou
+
+---
+
 # Hamiltonian Loader from HDF5
 
 ## Description

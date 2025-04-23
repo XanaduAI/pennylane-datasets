@@ -1,3 +1,35 @@
+# Threonine Radical
+
+The Threonine radical (*C₂H₄O*), also known as its **side chain**, is a polar structure that plays a significant role in the function and structure of proteins. It consists of a **hydroxyl group (–OH)** attached to a **two-carbon alkyl chain**, making it **hydrophilic** and capable of forming **hydrogen bonds**. This side chain is important for **enzyme catalysis**, **protein phosphorylation**, and **maintaining protein structure** by forming **hydrogen bonds** with water molecules or other polar groups. The C₂H₄O radical also plays a role in **protein-protein interactions** and **post-translational modifications** like **phosphorylation**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₂H₄O radical completes threonine’s structure, contributing to **protein folding**, **functionality**, and its involvement in **metabolic pathways**.
+
+## Using this dataset
+
+This dataset contains various quantum properties that represent and describe the threonine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire threonine amino acid.
+
+Key features include:
+
+- Molecular information (name, molecular formula, charge, spin, geometry etc.)
+- Resource estimation (number of atoms, electrons, orbitals, qubits and hamiltonian coefficients to represent the molecule)
+- Jordan-Wigner Hamiltonian representation
+- Approximations to the ground state energy
+
+This dataset is intended to:
+
+- Facilitate research on relevant organic molecules by providing crucial yet computationally expensive properties—such as ground state energy and the molecular Hamiltonian—thereby accelerating advancements in quantum simulations of biomolecules.
+
+- Enhance the characterization of larger biomolecular systems by bridging the gap between existing datasets, which are primarily focused on small molecules, and the needs of researchers working on peptides and proteins.
+
+- Support hybrid QM/ML approaches, allowing researchers to train models that accurately and efficiently predict the properties of larger and more complex systems.
+
+- Accelerate drug discovery and biomolecular research, as proteins are central to numerous biological and therapeutic processes.
+
+- Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
+
+### Authors
+Laia Coronas Sala and Parfait Atchade-Adelomou
+
+---
+
 # Hamiltonian Loader from HDF5
 
 ## Description

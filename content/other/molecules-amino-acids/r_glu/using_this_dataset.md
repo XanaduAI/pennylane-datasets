@@ -1,3 +1,34 @@
+# Glutamine Radical
+
+The Glutamine radical (*C₃H₆NO*), also known as its **side chain**, is a **polar, uncharged** structure that contains an **amide group (–CONH₂)** attached to a **three-carbon aliphatic chain**. This configuration allows it to engage in **hydrogen bonding**, making it important in **protein folding**, **solubility**, and **stabilizing interactions** within and between proteins. Additionally, glutamine is a key nitrogen donor in **biosynthetic pathways**, including those for nucleotides and amino sugars. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₃H₆NO radical completes glutamine’s structure, contributing to its essential roles in **metabolism**, **cell proliferation**, and **molecular communication**.
+
+## Using this dataset
+
+This dataset contains various quantum properties that represent and describe the glutamine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire glutamine amino acid.
+
+Key features include:
+
+- Molecular information (name, molecular formula, charge, spin, geometry etc.)
+- Resource estimation (number of atoms, electrons, orbitals, qubits and hamiltonian coefficients to represent the molecule)
+- Jordan-Wigner Hamiltonian representation
+- Approximations to the ground state energy
+
+This dataset is intended to:
+
+- Facilitate research on relevant organic molecules by providing crucial yet computationally expensive properties—such as ground state energy and the molecular Hamiltonian—thereby accelerating advancements in quantum simulations of biomolecules.
+
+- Enhance the characterization of larger biomolecular systems by bridging the gap between existing datasets, which are primarily focused on small molecules, and the needs of researchers working on peptides and proteins.
+
+- Support hybrid QM/ML approaches, allowing researchers to train models that accurately and efficiently predict the properties of larger and more complex systems.
+
+- Accelerate drug discovery and biomolecular research, as proteins are central to numerous biological and therapeutic processes.
+
+- Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
+
+### Authors
+Laia Coronas Sala and Parfait Atchade-Adelomou
+
+---
 # Hamiltonian Loader from HDF5
 
 ## Description

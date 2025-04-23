@@ -1,3 +1,35 @@
+# Histidine Radical
+
+The Histidine radical (*C₄H₅N₂*), also known as its **side chain**, is a unique and biologically important structure that distinguishes this amino acid from the others. It consists of an **imidazole ring**, an aromatic five-membered ring containing **two nitrogen atoms**, which gives histidine its ability to act as both a **proton donor and acceptor**. This radical is **polar** and can become **positively charged** near physiological pH, making histidine highly versatile in **enzyme active sites** and **acid-base catalysis**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₄H₅N₂ radical completes histidine’s structure and endows it with the ability to **coordinate metal ions**, **stabilize transition states**, and **regulate pH** in biological environments.
+
+## Using this dataset
+
+This dataset contains various quantum properties that represent and describe the histidine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire histidine amino acid.
+
+Key features include:
+
+- Molecular information (name, molecular formula, charge, spin, geometry etc.)
+- Resource estimation (number of atoms, electrons, orbitals, qubits and hamiltonian coefficients to represent the molecule)
+- Jordan-Wigner Hamiltonian representation
+- Approximations to the ground state energy
+
+This dataset is intended to:
+
+- Facilitate research on relevant organic molecules by providing crucial yet computationally expensive properties—such as ground state energy and the molecular Hamiltonian—thereby accelerating advancements in quantum simulations of biomolecules.
+
+- Enhance the characterization of larger biomolecular systems by bridging the gap between existing datasets, which are primarily focused on small molecules, and the needs of researchers working on peptides and proteins.
+
+- Support hybrid QM/ML approaches, allowing researchers to train models that accurately and efficiently predict the properties of larger and more complex systems.
+
+- Accelerate drug discovery and biomolecular research, as proteins are central to numerous biological and therapeutic processes.
+
+- Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
+
+### Authors
+Laia Coronas Sala and Parfait Atchade-Adelomou
+
+---
+
 # Hamiltonian Loader from HDF5
 
 ## Description
