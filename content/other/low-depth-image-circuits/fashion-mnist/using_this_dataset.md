@@ -9,7 +9,7 @@ The [Fashion-MNIST dataset](https://arxiv.org/abs/1708.07747) has 28x28 grayscal
 - The class labels are integers from 0 to 9.
 - Implementing the circuits in this dataset and obtaining the final state with PennyLane's `qml.state()` outputs a state vector. This state vector must be processed to recover the original image.
 - The dataset contains two circuits per image: those with a depth of four, which are shallower, and those with a depth of eight, which provide more accurate approximations of the exact state.
-- The exact_state entry contains a list of numpy arrays representing FRQI states that exactly encode Imagenette images. This significantly increases the file size and can be omitted during download if not needed.
+- The `exact_state` entry contains a list of numpy arrays representing FRQI states that exactly encode Imagenette images. This significantly increases the file size and can be omitted during download if not needed.
 
 **Example usage**
 
@@ -17,7 +17,7 @@ The [Fashion-MNIST dataset](https://arxiv.org/abs/1708.07747) has 28x28 grayscal
 import pennylane as qml
 import jax
 
-[ds] = qml.data.load("low-depth-fashion-mnist")
+[dataset_params] = qml.data.load("low-depth-fashion-mnist")
 
 def get_circuit(circuit_layout):
     dev = qml.device("default.qubit", wires=11)
