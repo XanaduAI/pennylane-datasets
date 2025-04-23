@@ -30,8 +30,8 @@
   "tags": [
     "Other"
   ],
-  "title": "Low-Depth MNIST",
-  "description": "This dataset contains images from the MNIST dataset encoded as quantum states.",
+  "title": "Low-Depth Imagenette",
+  "description": "This dataset contains images from the Imagenette dataset encoded as quantum states.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
