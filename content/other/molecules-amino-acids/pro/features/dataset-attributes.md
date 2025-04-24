@@ -1,9 +1,10 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Water molecule.
+Basic descriptors provided to understand the Proline molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|
+| `abbreviation`  | `string`   | Common abbreviation used to refer to amino acids.                           |
 | `name`          | `string`   | Full name of the molecule.                                                 |
 | `mf`            | `string`   | Molecular formula of the compound.                                         |
 | `cid`           | `int`    | PubChem Compound ID (CID) for the molecule.                                |
