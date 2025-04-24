@@ -30,14 +30,14 @@
   "tags": [
     "Other"
   ],
-  "title": "Low-Depth MNIST",
-  "description": "This dataset contains images from the MNIST dataset encoded as quantum states.",
+  "title": "Low-Depth Fashion-MNIST",
+  "description": "This dataset contains images from the Fashion-MNIST dataset encoded as quantum states.",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
-  "thumbnail": "Dataset_MNIST_thumb.png",
+  "thumbnail": "Dataset_FashionMNIST_thumb.png",
   "extra": {},
-  "dateOfLastModification": "2025-03-19",
-  "dateOfPublication": "2025-03-19"
+  "dateOfLastModification": "2025-04-23",
+  "dateOfPublication": "2025-04-23"
 }
