@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Parfait Atchade-Adelomou",
+      "username": "parfaitatchade_pennylane_profile_handle"
+    },
+    {
+      "name": "Laia Coronas-Sala",
+      "username": "laiacoronas_pennylane_profile_handle"
+    }
+  ],
+  "basedOnPapers": false,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "Alanine (Ala, A) is a non-essential, hydrophobic amino acid with a simple structure (–CH₃ side chain). It plays a vital role in energy metabolism, particularly in the glucose-alanine cycle, where it shuttles nitrogen from muscles to the liver for detoxification (as urea) and gluconeogenesis. Its small, nonpolar nature makes it a common building block in protein α-helices. Alanine also serves as an emergency energy source during intense exercise by converting to pyruvate. Found in dietary proteins (meat, dairy, legumes) or synthesized in the body, it exemplifies metabolic versatility—from detoxification to protein structure and fuel regulation",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2025-04-16",
+  "dateOfPublication": "2025-04-16",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "Ala",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": null,
+  "thumbnail": null,
+  "extra": {}
+}

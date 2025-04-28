@@ -1,0 +1,50 @@
+{
+    "slug": "C4H8N2O3",
+    "class": {
+        "slug": "asn",
+        "name": "asparagine",
+        "attributeList": [
+            {
+                "name": "attribute1",
+                "pythonType": "type",
+                "doc": "Description of attribute1"
+            },
+            {
+                "name": "attribute2",
+                "pythonType": "type",
+                "doc": "Description of attribute2"
+            }
+        ]
+    },
+    "collection": {
+        "$path": "/other/molecules-amino-acids/_meta/collection.json"
+    },
+    "data": [
+        {
+            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/asn.h5",
+            "parameters": {
+                "name": "asparagine"
+            },
+            "extra": {}
+        }
+    ],
+    "downloadName": "asparagine",
+    "features": [
+        {
+            "slug": "dataset-attributes",
+            "title": "Dataset Attributes",
+            "type": "DATA",
+            "content": {
+                "$path": "features/dataset-attributes.md"
+            }
+        }
+    ],
+    "meta": {
+        "$path": "meta.json"
+    },
+    "extra": {
+        "defaultParameters": {
+            "name": "C4H8N2O3"
+        }
+    }
+}

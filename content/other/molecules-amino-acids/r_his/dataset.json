@@ -1,0 +1,50 @@
+{
+    "slug": "C4H5N2",
+    "class": {
+        "slug": "r_his",
+        "name": "R_his",
+        "attributeList": [
+            {
+                "name": "attribute1",
+                "pythonType": "type",
+                "doc": "Description of attribute1"
+            },
+            {
+                "name": "attribute2",
+                "pythonType": "type",
+                "doc": "Description of attribute2"
+            }
+        ]
+    },
+    "collection": {
+        "$path": "/other/molecules-amino-acids/_meta/collection.json"
+    },
+    "data": [
+        {
+            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/r_his.h5",
+            "parameters": {
+                "name": "R_his"
+            },
+            "extra": {}
+        }
+    ],
+    "downloadName": "R_his",
+    "features": [
+        {
+            "slug": "dataset-attributes",
+            "title": "Dataset Attributes",
+            "type": "DATA",
+            "content": {
+                "$path": "features/dataset-attributes.md"
+            }
+        }
+    ],
+    "meta": {
+        "$path": "meta.json"
+    },
+    "extra": {
+        "defaultParameters": {
+            "name": "C4H5N2"
+        }
+    }
+}
