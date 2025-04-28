@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Threonine molecule.
+Basic descriptors provided to understand the threonine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

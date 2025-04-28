@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Asparagine molecule.
+Basic descriptors provided to understand the asparagine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Aspartic Acid molecule.
+Basic descriptors provided to understand the aspartic acid molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

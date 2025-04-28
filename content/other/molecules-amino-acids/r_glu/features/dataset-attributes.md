@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Glutamine Radical molecule.
+Basic descriptors provided to understand the glutamic acid radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

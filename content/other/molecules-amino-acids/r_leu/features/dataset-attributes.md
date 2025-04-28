@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Leucine Radical molecule.
+Basic descriptors provided to understand the leucine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

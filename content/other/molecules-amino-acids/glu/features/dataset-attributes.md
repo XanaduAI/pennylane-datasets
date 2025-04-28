@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Glutamic Acid molecule.
+Basic descriptors provided to understand the glutamic acid molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

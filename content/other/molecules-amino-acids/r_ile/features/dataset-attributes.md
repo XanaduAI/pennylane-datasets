@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Isoleucine Radical molecule.
+Basic descriptors provided to understand the isoleucine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

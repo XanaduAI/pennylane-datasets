@@ -1,6 +1,6 @@
 # Cysteine Radical
 
-The Cysteine radical (*CH₃S*), also known as its **side chain**, is a small, polar structure that contains a **thiol group (–SH)** attached to a **methyl group (–CH₂)**. This makes it **slightly polar** and **reactive**, especially in redox conditions. The thiol group allows cysteine to form **disulfide bonds (–S–S–)** with other cysteine residues, which are essential for the **stabilization of protein tertiary and quaternary structures**. These bonds are crucial in **extracellular proteins** and **enzyme active sites**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the CH₃S radical completes cysteine’s structure, enabling its vital functions in **protein stability**, **redox balance**, and **biochemical reactivity**.
+The cysteine radical (*CH₃S*), also known as its **side chain**, is a small, polar structure that contains a **thiol group (–SH)** attached to a **methyl group (–CH₂)**. This makes it **slightly polar** and **reactive**, especially in redox conditions. The thiol group allows cysteine to form **disulfide bonds (–S–S–)** with other cysteine residues, which are essential for the **stabilization of protein tertiary and quaternary structures**. These bonds are crucial in **extracellular proteins** and **enzyme active sites**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the CH₃S radical completes cysteine’s structure, enabling its vital functions in **protein stability**, **redox balance**, and **biochemical reactivity**.
 
 ## Using this dataset
 

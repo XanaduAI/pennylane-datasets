@@ -1,6 +1,6 @@
 # Alanine Radical
 
-The Alanine radical (*CH₃*), also known as its **side chain**, consists of a **methyl group (–CH₃)**, making it **non-polar** and **hydrophobic**. This small, branched structure is often found in the **interior of proteins**, where it contributes to **protein stability** by avoiding contact with the aqueous environment. The CH₃ radical helps **minimize steric hindrance** and is important in **protein folding**, **hydrophobic interactions**, and the formation of **hydrophobic cores**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the CH₃ radical completes alanine’s structure, allowing it to play an essential role in **metabolic pathways**, **protein structure**, and **energy production**.
+The alanine radical (*CH₃*), also known as its **side chain**, consists of a **methyl group (–CH₃)**, making it **non-polar** and **hydrophobic**. This small, branched structure is often found in the **interior of proteins**, where it contributes to **protein stability** by avoiding contact with the aqueous environment. The CH₃ radical helps **minimize steric hindrance** and is important in **protein folding**, **hydrophobic interactions**, and the formation of **hydrophobic cores**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the CH₃ radical completes alanine’s structure, allowing it to play an essential role in **metabolic pathways**, **protein structure**, and **energy production**.
 
 ## Using this dataset
 

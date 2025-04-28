@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Phenylalanine Radical molecule.
+Basic descriptors provided to understand the phenylalanine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

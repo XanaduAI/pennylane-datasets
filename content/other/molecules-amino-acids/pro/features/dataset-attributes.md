@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Proline molecule.
+Basic descriptors provided to understand the proline molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

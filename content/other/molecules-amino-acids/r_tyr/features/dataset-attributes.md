@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Tyrosine Radical molecule.
+Basic descriptors provided to understand the tyrosine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

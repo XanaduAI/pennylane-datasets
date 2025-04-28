@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Glycine molecule.
+Basic descriptors provided to understand the glycine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

@@ -1,10 +1,10 @@
-# Glutamic Acid Radical
+# Glutamine Radical
 
-The Glutamic Acid radical (*C₃H₅O₂*), also known as its **side chain**, is a **polar, negatively charged** group at physiological pH. It consists of a **carboxylic acid group (–COOH)** attached to a **three-carbon aliphatic chain**, forming a **γ-carboxyl group**. Like aspartic acid, the C₃H₅O₂ radical carries a **negative charge**, allowing it to participate in **ionic interactions**, **pH regulation**, and **neurotransmitter synthesis**, particularly in the form of **glutamate** in the brain. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₃H₅O₂ radical completes glutamic acid’s structure, contributing to its involvement in **cell signaling**, **metabolism**, and **protein function**.
+The glutamine radical (*C₃H₆NO*), also known as its **side chain**, is a **polar, uncharged** structure that contains an **amide group (–CONH₂)** attached to a **three-carbon aliphatic chain**. This configuration allows it to engage in **hydrogen bonding**, making it important in **protein folding**, **solubility**, and **stabilizing interactions** within and between proteins. Additionally, glutamine is a key nitrogen donor in **biosynthetic pathways**, including those for nucleotides and amino sugars. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₃H₆NO radical completes glutamine’s structure, contributing to its essential roles in **metabolism**, **cell proliferation**, and **molecular communication**.
 
 ## Using this dataset
 
-This dataset contains various quantum properties that represent and describe the glutamic acid radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire glutamic acid amino acid.
+This dataset contains various quantum properties that represent and describe the glutamine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire glutamine amino acid.
 
 Key features include:
 
@@ -29,7 +29,6 @@ This dataset is intended to:
 Laia Coronas Sala and Parfait Atchade-Adelomou
 
 ---
-
 
 # Hamiltonian Loader from HDF5
 

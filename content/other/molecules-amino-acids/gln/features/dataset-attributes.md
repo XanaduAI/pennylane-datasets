@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Glutamine molecule.
+Basic descriptors provided to understand the glutamine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

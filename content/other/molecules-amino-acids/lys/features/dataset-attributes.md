@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Lysine molecule.
+Basic descriptors provided to understand the lysine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

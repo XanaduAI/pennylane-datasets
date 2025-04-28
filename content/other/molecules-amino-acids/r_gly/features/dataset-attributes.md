@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Glycine Radical molecule.
+Basic descriptors provided to understand the glycine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

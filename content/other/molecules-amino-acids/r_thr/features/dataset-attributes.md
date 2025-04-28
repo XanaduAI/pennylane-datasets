@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Threonine Radical molecule.
+Basic descriptors provided to understand the threonine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

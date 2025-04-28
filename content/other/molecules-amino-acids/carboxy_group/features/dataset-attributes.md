@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Carboxyl Group molecule.
+Basic descriptors provided to understand the carboxyl group molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

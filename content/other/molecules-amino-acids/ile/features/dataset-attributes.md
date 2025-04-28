@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Isoleucine molecule.
+Basic descriptors provided to understand the isoleucine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

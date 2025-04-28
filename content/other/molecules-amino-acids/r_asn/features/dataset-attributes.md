@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Asparagine Radical molecule.
+Basic descriptors provided to understand the asparagine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

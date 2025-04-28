@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Methionine Radical molecule.
+Basic descriptors provided to understand the methionine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

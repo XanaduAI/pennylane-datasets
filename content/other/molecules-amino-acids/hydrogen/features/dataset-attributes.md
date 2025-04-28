@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Hydrogen molecule.
+Basic descriptors provided to understand the hydrogen molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

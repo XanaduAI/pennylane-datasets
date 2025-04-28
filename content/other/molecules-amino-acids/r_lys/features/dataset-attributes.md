@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Lysine Radical molecule.
+Basic descriptors provided to understand the lysine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

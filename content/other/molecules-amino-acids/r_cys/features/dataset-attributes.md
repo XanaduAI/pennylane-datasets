@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Cysteine Radical molecule.
+Basic descriptors provided to understand the cysteine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

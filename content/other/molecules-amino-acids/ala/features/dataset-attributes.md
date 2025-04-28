@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Alanine molecule.
+Basic descriptors provided to understand the alanine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

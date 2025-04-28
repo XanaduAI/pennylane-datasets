@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Phenylalanine molecule.
+Basic descriptors provided to understand the phenylalanine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

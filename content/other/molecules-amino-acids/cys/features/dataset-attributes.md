@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Cysteine molecule.
+Basic descriptors provided to understand the cysteine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

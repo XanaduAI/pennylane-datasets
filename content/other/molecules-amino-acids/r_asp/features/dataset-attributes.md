@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Acid Radical molecule.
+Basic descriptors provided to understand the aspartic acid radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

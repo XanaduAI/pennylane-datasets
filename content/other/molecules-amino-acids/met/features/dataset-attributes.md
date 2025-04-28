@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Methionine molecule.
+Basic descriptors provided to understand the methionine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

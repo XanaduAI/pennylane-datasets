@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Tryptophan molecule.
+Basic descriptors provided to understand the tryptophan molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

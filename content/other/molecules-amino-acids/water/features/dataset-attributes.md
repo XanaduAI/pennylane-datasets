@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Water molecule.
+Basic descriptors provided to understand the water molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

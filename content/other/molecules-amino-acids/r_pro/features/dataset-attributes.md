@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Proline Radical molecule.
+Basic descriptors provided to understand the proline radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Serine Radical molecule.
+Basic descriptors provided to understand the serine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

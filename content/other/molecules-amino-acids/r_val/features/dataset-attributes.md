@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Valine Radical molecule.
+Basic descriptors provided to understand the valine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

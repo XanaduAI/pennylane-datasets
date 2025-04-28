@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Arginine molecule.
+Basic descriptors provided to understand the arginine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Serine molecule.
+Basic descriptors provided to understand the serine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

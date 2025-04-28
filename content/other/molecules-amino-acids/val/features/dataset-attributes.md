@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Valine molecule.
+Basic descriptors provided to understand the valine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

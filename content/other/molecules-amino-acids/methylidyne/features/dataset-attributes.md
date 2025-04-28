@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Methyldine Group molecule.
+Basic descriptors provided to understand the methyldine group molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

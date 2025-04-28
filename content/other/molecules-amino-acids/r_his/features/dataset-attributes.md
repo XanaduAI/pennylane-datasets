@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Histidine Radical molecule.
+Basic descriptors provided to understand the histidine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Tryptophan Radical molecule.
+Basic descriptors provided to understand the tryptophan radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

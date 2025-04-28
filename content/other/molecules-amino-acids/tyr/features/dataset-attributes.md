@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Tyrosine molecule.
+Basic descriptors provided to understand the tyrosine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

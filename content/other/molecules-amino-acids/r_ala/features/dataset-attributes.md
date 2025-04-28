@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Alanine Radical molecule.
+Basic descriptors provided to understand the alanine radical molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

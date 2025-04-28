@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the Amino Group molecule.
+Basic descriptors provided to understand the amino group molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|

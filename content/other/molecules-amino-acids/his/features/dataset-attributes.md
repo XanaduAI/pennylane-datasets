@@ -1,6 +1,6 @@
 ## Molecular data
 
-Basic descriptors provided to understand the molecule.
+Basic descriptors provided to understand the histidine molecule.
 
 | Name            | Type       | Description                                                                 |
 |-----------------|------------|-----------------------------------------------------------------------------|
