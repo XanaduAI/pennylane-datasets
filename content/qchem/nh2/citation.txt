@@ -1,0 +1,6 @@
+@misc{Parfait Atchade-Adelomou2025nh2,
+    title={NH2-molecule},
+    author={Parfait Atchade-Adelomou and Laia Coronas Sala},
+    howpublished={\urlhttps://pennylane.ai/datasets/qchem/nh2},
+    year={2025}
+}
