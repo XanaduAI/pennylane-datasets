@@ -1,8 +1,8 @@
 {
-    "slug": "cooh",
+    "slug": "carboxy-group",
     "class": {
-        "slug": "carboxy_group",
-        "name": "carboxy_group",
+        "slug": "carboxy-group",
+        "name": "CarboxyGroup",
         "attributeList": [
             {
                 "name": "attribute1",
@@ -23,12 +23,12 @@
         {
             "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/carboxy_group.h5",
             "parameters": {
-                "name": "carboxy_group"
+                "name": "carboxy-group"
             },
             "extra": {}
         }
     ],
-    "downloadName": "carboxy_group",
+    "downloadName": "carboxy-group",
     "features": [
         {
             "slug": "dataset-attributes",

@@ -1,7 +1,7 @@
 @misc{atchade2025title,
       title={A Comprehensive Dataset of Quantum Properties for Proteins},
       author={Laia Coronas Sala and Parfait Atchade-Adelemou},
-      howpublished = {\url{https://pennylane.ai/datasets/carboxy_group/}},
+      howpublished = {\url{https://pennylane.ai/datasets/carboxy-group/}},
       year={2025}
 }
 
