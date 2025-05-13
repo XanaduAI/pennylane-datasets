@@ -2,7 +2,7 @@ Data for benchmarking machine learning models, generated for an upcoming paper: 
 
 **Description of the dataset**
 
-The [MNIST dataset](https://ieeexplore.ieee.org/document/6296535) has 28x28 grayscale images of 70,000 hand-drawn digits from 0 to 9, totalling 10 categories, with 7,000 images per category. Here, we provide circuit parameters that approximate the [Flexible Representation of Quantum Images (FRQI)](https://link.springer.com/article/10.1007/s11128-010-0177-y) of each image in the MNIST dataset.
+The [Fashion-MNIST dataset](https://arxiv.org/abs/1708.07747) has 28x28 grayscale images of 70,000 fashion items across 10 categories (e.g., T-shirts, trousers, shoes), with 7,000 images per category. Here, we provide circuit parameters that approximate the [Flexible Representation of Quantum Images (FRQI)](https://link.springer.com/article/10.1007/s11128-010-0177-y) of each image in the Fashion-MNIST dataset.
 
 **Additional details**
 
@@ -17,7 +17,7 @@ The [MNIST dataset](https://ieeexplore.ieee.org/document/6296535) has 28x28 gray
 import pennylane as qml
 import jax
 
-[dataset_params] = qml.data.load("low-depth-mnist")
+[dataset_params] = qml.data.load("low-depth-fashion-mnist")
 
 def get_circuit(circuit_layout):
     dev = qml.device("default.qubit", wires=11)

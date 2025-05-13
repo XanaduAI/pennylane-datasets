@@ -1,0 +1,70 @@
+{
+  "slug": "low-depth-imagenette",
+  "class": {
+    "slug": "low-depth-imagenette",
+    "name": "LowDepthImagenette",
+    "attributeList": [
+      {
+        "name": "circuit_layout_d4",
+        "pythonType": "list",
+        "doc": "Circuits layout consiting of CNOTs and RY gates defined as lists of operations and wires they act on with a circuit depth of 4."
+      },
+      {
+        "name": "circuit_layout_d8",
+        "pythonType": "list",
+        "doc": "Circuits layout consiting of CNOTs and RY gates defined as lists of operations and wires they act on with a circuit depth of 8."
+      },
+      {
+        "name": "params_d4",
+        "pythonType": "list",
+        "doc": "Circuit parameters as list of RY angles. When plugged in to the circuit layout with a depth of 8, the circuit approximates the flexible representation of quantum images (FRQI)."
+      },
+      {
+        "name": "params_d8",
+        "pythonType": "list",
+        "doc": "Circuit parameters as list of RY angles. When plugged in to the circuit layout with a depth of 8, the circuit approximates the flexible representation of quantum images (FRQI)."
+      },
+      {
+        "name": "exact_state",
+        "pythonType": "list[np.ndarray]",
+        "doc": "A list of numpy arrays. Each numpy array defines a quantum state that exactly encodes an Imagenette image."
+      },
+      {
+        "name": "labels",
+        "pythonType": "list",
+        "doc": "A list of the correct labels for each image."
+      }
+    ]
+  },
+  "collection": {
+    "$path": "/other/low-depth-image-circuits/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/5d30b323-14db-46a5-8aad-b6453f7a4bf4",
+      "parameters": {
+        "name": "low-depth-imagenette"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "low-depth-imagenette",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "extra": {
+    "defaultParameters": {
+      "name": "low-depth-imagenette"
+    }
+  }
+}
