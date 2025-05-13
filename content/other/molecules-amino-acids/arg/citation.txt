@@ -1,15 +1,15 @@
 @misc{atchade2025title,
-    title={A Comprehensive Dataset of Quantum Properties for Proteins},
-    author={Laia Coronas Sala and Parfait Atchade-Adelemou},
-    howpublished = {\url{https://pennylane.ai/datasets/arg/}},
-    year={2025}
+      title={A Comprehensive Dataset of Quantum Properties for Proteins},
+      author={Laia Coronas Sala and Parfait Atchade-Adelemou},
+      howpublished = {\url{https://pennylane.ai/datasets/arg/}},
+      year={2025}
 }
 
-@misc{atchade2025title,
-    title={A Comprehensive Dataset of Quantum Properties for Proteins},
-    author={Laia Coronas Sala and Parfait Atchade-Adelemou},
-    year={2025},
-    eprint={},
-    archivePrefix={arXiv},
-    primaryClass={quant-ph}
+@misc{atchade2025qmprotpaper,
+      title={A Comprehensive Dataset of Quantum Properties for Proteins},
+      author={Laia Coronas Sala and Parfait Atchade-Adelemou},
+      year={2025},
+      eprint={},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph}
 }
