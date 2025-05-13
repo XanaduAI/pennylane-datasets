@@ -1,20 +1,100 @@
 {
-    "slug": "C5H10N2O3",
+    "slug": "c5h10n2o3",
     "class": {
         "slug": "gln",
         "name": "glutamine",
         "attributeList": [
             {
-                "name": "attribute1",
-                "pythonType": "type",
-                "doc": "Description of attribute1"
+              "name": "abbreviation",
+              "pythonType": "string",
+              "doc": "Common abbreviation used to refer to amino acids."
             },
             {
-                "name": "attribute2",
-                "pythonType": "type",
-                "doc": "Description of attribute2"
+              "name": "name",
+              "pythonType": "string",
+              "doc": "Full name of the molecule."
+            },
+            {
+              "name": "mf",
+              "pythonType": "string",
+              "doc": "Molecular formula of the compound."
+            },
+            {
+              "name": "cid",
+              "pythonType": "int",
+              "doc": "PubChem Compound ID (CID) for the molecule."
+            },
+            {
+              "name": "spin",
+              "pythonType": "int",
+              "doc": "Total spin number of the molecule."
+            },
+            {
+              "name": "multiplicity",
+              "pythonType": "int",
+              "doc": "Spin multiplicity of the molecule (M = 2S+1)."
+            },
+            {
+              "name": "charge",
+              "pythonType": "int",
+              "doc": "Electric charge of the molecule."
+            },
+            {
+              "name": "basis",
+              "pythonType": "string",
+              "doc": "Basis set used for the quantum chemistry calculations."
+            },
+            {
+              "name": "bond_length",
+              "pythonType": "float",
+              "doc": "Specific bond length set from the coordinates in Angstroms."
+            },
+            {
+              "name": "symbols",
+              "pythonType": "list[string]",
+              "doc": "List of atomic symbols (e.g., H, C, N, O) corresponding to each atom."
+            },
+            {
+              "name": "coordinates",
+              "pythonType": "list[list[float]]",
+              "doc": "List of 3D Cartesian coordinates (x, y, z) for each atom."
+            },
+            {
+              "name": "n_atoms",
+              "pythonType": "int",
+              "doc": "Total number of atoms in the molecule."
+            },
+            {
+              "name": "n_electrons",
+              "pythonType": "int",
+              "doc": "Number of electrons present in the system."
+            },
+            {
+              "name": "n_orbitals",
+              "pythonType": "int",
+              "doc": "Number of molecular orbitals used in the simulation."
+            },
+            {
+              "name": "n_qubits",
+              "pythonType": "int",
+              "doc": "Number of qubits required to simulate the system in quantum computations."
+            },
+            {
+              "name": "n_coefficients",
+              "pythonType": "int",
+              "doc": "Number of coefficients in the Hamiltonian or wavefunction representation."
+            },
+            {
+              "name": "hamiltonian_n",
+              "pythonType": "Hamiltonian",
+              "doc": "Fragment of the total Hamiltonian in the Pauli basis. Each `hamiltonian_n` corresponds to a part of the full operator, which must be concatenated in numerical order (e.g., `hamiltonian`, `hamiltonian_1`, `hamiltonian_2`, ...) to reconstruct the complete Hamiltonian. This splitting is used due to the length of the full expression."
+            },
+            {
+              "name": "energy",
+              "pythonType": "float",
+              "doc": "Ground state energy of the system in Hartrees, computed using the Self-Consistent Field (SCF) approach based on the Hartree-Fock method."
             }
-        ]
+          ]
     },
     "collection": {
         "$path": "/other/molecules-amino-acids/_meta/collection.json"
@@ -35,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "features/dataset-attributes.md"
+                "$path": "content/other/molecules-amino-acids/gln/features/dataset-attributes.md"
             }
         }
     ],
