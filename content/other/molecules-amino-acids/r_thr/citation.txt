@@ -5,11 +5,9 @@
     year={2025}
 }
 
-@misc{atchade2025title,
-    title={A Comprehensive Dataset of Quantum Properties for Proteins},
-    author={Laia Coronas Sala and Parfait Atchade-Adelemou},
-    year={2025},
-    eprint={},
-    archivePrefix={arXiv},
-    primaryClass={quant-ph}
+@article{sala2025comprenhensive,
+  title={A Comprenhensive Dataset of Quantum Properties for Proteins},
+  author={Sala, Laia Coronas and Atchade-Adelomou, Parfait},
+  journal={arXiv preprint arXiv:2505.08956},
+  year={2025}
 }
