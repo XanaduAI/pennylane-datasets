@@ -113,7 +113,7 @@ def load_hamiltonian_from_hdf5(input_file):
     return hamiltonian
 
 # Example usage
-input_file = "hd5_files/carboxy-group.h5"
+input_file = "hd5_files/carboxy_group.h5"
 hamiltonian = load_hamiltonian_from_hdf5(input_file)
 
 # Display results
