@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/asn.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/c378933f-d91f-4c75-8bd0-db78b6966de0",
             "parameters": {
                 "name": "asparagine"
             },

@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/phe.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/9f504ea8-feb2-4b9b-a9fe-15a76619b246",
             "parameters": {
                 "name": "phenylalanine"
             },

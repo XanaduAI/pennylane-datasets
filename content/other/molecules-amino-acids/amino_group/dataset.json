@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/amino_group.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/6d7018c2-40a8-44ee-9e7f-1849f1beba4e",
             "parameters": {
                 "name": "amino_group"
             },

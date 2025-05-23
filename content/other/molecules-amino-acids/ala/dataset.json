@@ -101,7 +101,7 @@
     },
     "data": [
       {
-        "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/ala.h5",
+        "dataUrl": "https://datasets.cloud.pennylane.ai/user/4d0dbbf4-c709-439e-84f5-ace550755ad8",
         "parameters": {
           "name": "alanine"
         },

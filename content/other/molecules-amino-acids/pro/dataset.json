@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/pro.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/181cbef3-1be3-41e1-bc8b-da740dad9321",
             "parameters": {
                 "name": "proline"
             },

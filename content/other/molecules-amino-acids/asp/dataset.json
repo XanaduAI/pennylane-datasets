@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/asp.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/d45b9794-760b-411c-ab94-6ac2a9f5acdc",
             "parameters": {
                 "name": "aspartic_acid"
             },

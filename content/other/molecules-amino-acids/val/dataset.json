@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/val.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/b68b0d95-add1-4451-8345-1bb6d214a753",
             "parameters": {
                 "name": "valine"
             },

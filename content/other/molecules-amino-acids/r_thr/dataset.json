@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/r_thr.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/9dbdb85d-0c66-4d4d-bb48-146e339b4b9b",
             "parameters": {
                 "name": "R_thr"
             },

@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/gly.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/c1074f25-7d7e-46b4-9918-c6cb911ff353",
             "parameters": {
                 "name": "glycine"
             },

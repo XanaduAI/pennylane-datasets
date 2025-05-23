@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/water.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/ac2ef86e-2951-4f22-9065-ffeec7ee50e3",
             "parameters": {
                 "name": "water"
             },

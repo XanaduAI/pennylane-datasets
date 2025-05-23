@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/r_glu.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/61d12d65-4943-4e85-bb3a-ac19ed484a77",
             "parameters": {
                 "name": "R_glu"
             },

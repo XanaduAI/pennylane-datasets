@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/thr.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/e4fe30ce-6284-4db1-a48c-a6bcc4b611a3",
             "parameters": {
                 "name": "threonine"
             },

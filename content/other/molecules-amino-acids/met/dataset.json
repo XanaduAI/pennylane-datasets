@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/met.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/c816056d-9124-4d52-b898-018a717bfd81",
             "parameters": {
                 "name": "methionine"
             },

@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/r_gly.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/0d6a283b-15dd-4490-a108-3aa0e6015a80",
             "parameters": {
                 "name": "R_gly"
             },

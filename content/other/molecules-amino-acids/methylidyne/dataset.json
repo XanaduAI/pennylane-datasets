@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/methylidyne.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/97da2ed5-3f74-4c68-9c86-566360a82320",
             "parameters": {
                 "name": "methylidyne"
             },

@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/r_leu.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/d4fb4f75-e6dd-4596-938a-30931a3d57a2",
             "parameters": {
                 "name": "R_leu"
             },

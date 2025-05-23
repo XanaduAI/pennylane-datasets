@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/r_arg.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/abac9bf0-fc60-4d1c-92be-58fe0339ceae",
             "parameters": {
                 "name": "R_arg"
             },

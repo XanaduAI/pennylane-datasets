@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/lys.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/1875277b-48e3-4825-92ae-ec43b33819d3",
             "parameters": {
                 "name": "lysine"
             },

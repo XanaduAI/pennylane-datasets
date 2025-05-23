@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/gln.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/fdb86b3c-00ce-4482-acc8-c8d72d4f6a19",
             "parameters": {
                 "name": "glutamine"
             },

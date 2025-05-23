@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/tyr.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/43e6b6dd-3e1b-4bda-b366-bf74f1b80ee1",
             "parameters": {
                 "name": "tyrosine"
             },

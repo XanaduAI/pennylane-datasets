@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/glu.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/688232e0-71cd-4cb9-a055-49afc253fc8a",
             "parameters": {
                 "name": "glutamic_acid"
             },

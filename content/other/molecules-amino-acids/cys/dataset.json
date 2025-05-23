@@ -101,7 +101,7 @@
     },
     "data": [
         {
-            "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/AminoAcids/cys.h5",
+            "dataUrl": "https://datasets.cloud.pennylane.ai/user/e4c811b1-252f-4ea4-9f56-0fe24aedb9cc",
             "parameters": {
                 "name": "cysteine"
             },
