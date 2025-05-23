@@ -1,5 +1,5 @@
 {
-    "slug": "ch3o",
+    "slug": "r-ser",
     "class": {
         "slug": "r-ser",
         "name": "R_ser",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/r_ser/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

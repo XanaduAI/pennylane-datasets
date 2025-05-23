@@ -1,5 +1,5 @@
 {
-    "slug": "c5h11no2s",
+    "slug": "met",
     "class": {
         "slug": "met",
         "name": "methionine",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/met/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

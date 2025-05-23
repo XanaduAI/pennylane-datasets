@@ -1,5 +1,5 @@
 {
-    "slug": "c9h11no3",
+    "slug": "tyr",
     "class": {
         "slug": "tyr",
         "name": "tyrosine",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/tyr/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

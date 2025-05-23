@@ -1,5 +1,5 @@
 {
-    "slug": "c6h14n2o2",
+    "slug": "lys",
     "class": {
         "slug": "lys",
         "name": "lysine",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/lys/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

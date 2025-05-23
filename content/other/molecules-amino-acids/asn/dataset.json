@@ -1,5 +1,5 @@
 {
-    "slug": "c4h8n2o3",
+    "slug": "asn",
     "class": {
         "slug": "asn",
         "name": "asparagine",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/asn/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

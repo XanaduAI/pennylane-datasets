@@ -1,5 +1,5 @@
 {
-    "slug": "c3h6s",
+    "slug": "r-met",
     "class": {
         "slug": "r-met",
         "name": "R_met",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/r_met/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

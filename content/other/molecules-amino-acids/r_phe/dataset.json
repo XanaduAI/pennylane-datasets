@@ -1,5 +1,5 @@
 {
-    "slug": "c7h7",
+    "slug": "r-phe",
     "class": {
         "slug": "r-phe",
         "name": "R_phe",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/r_phe/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

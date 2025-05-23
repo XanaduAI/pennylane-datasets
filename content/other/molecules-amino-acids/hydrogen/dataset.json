@@ -1,5 +1,5 @@
 {
-    "slug": "h2",
+    "slug": "hydrogen",
     "class": {
         "slug": "hydrogen",
         "name": "hydrogen",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/hydrogen/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

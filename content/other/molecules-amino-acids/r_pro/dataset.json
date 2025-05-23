@@ -1,5 +1,5 @@
 {
-    "slug": "c3h6",
+    "slug": "r-pro",
     "class": {
         "slug": "r-pro",
         "name": "R_pro",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/r_pro/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

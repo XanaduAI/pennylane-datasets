@@ -1,5 +1,5 @@
 {
-    "slug": "c2h3o2",
+    "slug": "r-asp",
     "class": {
         "slug": "r-asp",
         "name": "R_asp",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/r_asp/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

@@ -1,5 +1,5 @@
 {
-    "slug": "c6h9n3o2",
+    "slug": "his",
     "class": {
         "slug": "his",
         "name": "histidine",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/his/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

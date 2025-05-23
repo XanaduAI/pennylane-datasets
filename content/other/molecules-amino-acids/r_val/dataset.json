@@ -1,5 +1,5 @@
 {
-    "slug": "c3h7",
+    "slug": "r-val",
     "class": {
         "slug": "r-val",
         "name": "R_val",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/r_val/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

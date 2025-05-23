@@ -1,5 +1,5 @@
 {
-    "slug": "c5h9no4",
+    "slug": "glu",
     "class": {
         "slug": "glu",
         "name": "glutamic_acid",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/glu/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],

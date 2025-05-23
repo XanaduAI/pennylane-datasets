@@ -1,5 +1,5 @@
 {
-    "slug": "c6h13no2",
+    "slug": "ile",
     "class": {
         "slug": "ile",
         "name": "isoleucine",
@@ -115,7 +115,7 @@
             "title": "Dataset Attributes",
             "type": "DATA",
             "content": {
-                "$path": "content/other/molecules-amino-acids/ile/features/dataset-attributes.md"
+                "$path": "features/dataset-attributes.md"
             }
         }
     ],
