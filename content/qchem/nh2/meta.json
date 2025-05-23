@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Parfait Atchade-Adelomou",
+      "username": "parfait"
+    },
+    {
+      "name": "Laia Coronas Sala",
+      "username": null
+    }
+  ],
+  "basedOnPapers": false,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "NH2 is the chemical formula for an amino group, which is a fundamental function",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2025-04-17",
+  "dateOfPublication": "2025-04-17",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "NH2-molecule",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": null,
+  "thumbnail": null,
+  "extra": {}
+}
