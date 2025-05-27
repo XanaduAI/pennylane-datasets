@@ -2,7 +2,7 @@
   "slug": "sin",
   "class": {
     "slug": "sin",
-    "name": "Sin(X)",
+    "name": "sinx",
     "attributeList": [
       {
         "name": "angles",

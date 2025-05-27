@@ -2,7 +2,7 @@
   "slug": "cos",
   "class": {
     "slug": "cos",
-    "name": "Cos(X)",
+    "name": "cosx",
     "attributeList": [
       {
         "name": "angles",
