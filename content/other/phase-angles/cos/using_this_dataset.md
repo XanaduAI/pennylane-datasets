@@ -10,19 +10,19 @@ More specifically, we approximate  $f(x) = cos(2^k2\pi x)$ with a [Chebyshev pol
 
 **Additional Details**
 
-* The Chebysev polynomials $P(x)$ in this dataset approximate the function $f(x) = \frac{1}{2\kappa x}$ over the interval $[-1, -1/\kappa) \cup (1/\kappa, 1]$ with a maximum error of $\epsilon$. 
-* $\kappa$ can take values from the set $\{1, 5, 50, 100, 250, 500, 1000, 1500\}$, and its choice depends on the specific interval where we aim to approximate the function. 
-* The Chebyshev polynomial, $P(x)$ can be accessed via `dataset.poly[epsilon][kappa]`. This returns an array where, for example, $[1, 0, 2]$ corresponds to the polynomial $ 1 \cdot T_0(x) + 0 \cdot T_1(x) + 2 \cdot T_2(x) $, where $T_n(x)$ denotes the $n$-th Chebyshev polynomial.
-* Phase angles to implement these Chebyshev polynomials via QSP (or QSVT) can be accessed using  `dataset.angles[routine][epsilon][kappa]`
+* The Chebysev polynomials $P(x)$ in this dataset approximate the function $f(x) = cos(2^k2\pi x)$ over the interval $[-1, 1]$ with a maximum error of $\epsilon$. 
+* $k$ can take values from the set $\{0,1,2,3,4,5,6,7\}$. 
+* The Chebyshev polynomial, $P(x)$ can be accessed via `dataset.poly[epsilon][k]`. This returns an array where, for example, $[1, 0, 2]$ corresponds to the polynomial $ 1 \cdot T_0(x) + 0 \cdot T_1(x) + 2 \cdot T_2(x) $, where $T_n(x)$ denotes the $n$-th Chebyshev polynomial.
+* Phase angles to implement these Chebyshev polynomials via QSP (or QSVT) can be accessed using  `dataset.angles[routine][epsilon][k]`
 * This dataset was generated using numerical optimization techniques to find optimal phase angles that minimize the error in the polynomial approximation.
 
 **Graphical Representation**
 
-The following figure illustrates the polynomial approximation of $ f(x) = \frac{1}{2\kappa x} $ with $ \kappa = 250 $ and $ \epsilon = 0.01 $:
+The following figure illustrates the polynomial approximation of $ f(x) = \cos(2^k 2\pi x) $ with $ k = 1 $ and $ \epsilon = 0.1 $:
 
-<p style="text-align: center"><img src="https://assets.cloud.pennylane.ai/datasets/generic/using_this_dataset/phase-angles-inverse.png" alt="drawing" width="70%"/></p>
+![image_cosine.png](image_cosine.png)
 
-The blue line represents the polynomial approximation, the orange dashed line corresponds to $f(x)$, and the red dashed lines show $x = \pm 1/\kappa$. 
+The blue line represents the polynomial approximation and the orange dashed line corresponds to $f(x)$. 
 
 **Example usage**
 
@@ -34,7 +34,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 [dataset] = qml.data.load("other", name="inverse")
-angles_qsvt = dataset.angles["qsvt"]["0.01"]["100"] 
+angles_qsvt = dataset.angles["qsvt"]["0.1"]["1"] 
 
 outputs_qsvt = []
 points = np.arange(-1, 1, 1/300)
@@ -54,7 +54,7 @@ for x in points:
 
     outputs_qsvt.append(output.real)
 
-poly = np.polynomial.Chebyshev(dataset.poly['0.01']['100'])
+poly = np.polynomial.Chebyshev(dataset.poly['0.1']['1'])
 outputs_poly = [poly(point) for point in points]
 
 plt.plot(points, outputs_qsvt, '.')
