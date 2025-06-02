@@ -1,7 +1,7 @@
 {
-  "slug": "sin",
+  "slug": "sine",
   "class": {
-    "slug": "sin",
+    "slug": "sine",
     "name": "sinx",
     "attributeList": [
       {
@@ -36,7 +36,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/phaseangles/sin/sin.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/phaseangles/sine/sine.h5",
       "parameters": {
         "name": "sin"
       },

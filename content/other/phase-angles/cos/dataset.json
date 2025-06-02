@@ -1,7 +1,7 @@
 {
   "slug": "cos",
   "class": {
-    "slug": "cos",
+    "slug": "cosine",
     "name": "cosx",
     "attributeList": [
       {
@@ -36,7 +36,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/phaseangles/cos/cos.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/phaseangles/cosine/cosine.h5",
       "parameters": {
         "name": "cos"
       },
