@@ -20,7 +20,7 @@ More specifically, we approximate  $f(x) = sin(2^k2\pi x)$ with a [Chebyshev pol
 
 The following figure illustrates the polynomial approximation of $ f(x) = \sin(2^k 2\pi x) $ with $ k = 1 $ and $ \epsilon = 0.1 $:
 
-![image_sin.png](image_sin.png)
+<p style="text-align: center"><img src="https://assets.cloud.pennylane.ai/datasets/generic/using_this_dataset/phase-angles-sine.png" alt="drawing" width="70%"/></p>
 
 The blue line represents the polynomial approximation and the orange dashed line corresponds to $f(x)$. 
 
