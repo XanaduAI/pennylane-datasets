@@ -1,4 +1,3 @@
-# Proline
 
 Proline (*C₅H₉NO₂*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **non-polar** amino acid and is unique due to its **cyclic side chain**, which forms a ring structure by bonding with the amino group. This structural feature introduces **turns** in the polypeptide chain, making proline a key component in **protein folding** and the formation of **collagen**, a major structural protein in connective tissues, and playing also a critical role in the **stability of protein structures**.
 

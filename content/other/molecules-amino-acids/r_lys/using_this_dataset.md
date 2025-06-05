@@ -1,4 +1,3 @@
-# Lysine Radical
 
 The lysine radical (*C₄H₁₀N*), also known as its **side chain**, is a distinctive and important functional group in lysine. It consists of a **four-carbon alkyl chain** that ends with an **amino group (–NH₂)**, making it a **positively charged** and **basic** side chain at physiological pH. This side chain is highly **hydrophilic** and is involved in **ionic interactions**, **hydrogen bonding**, and **protein-protein interactions**. The positive charge of the amino group makes lysine crucial for **enzyme activity**, **nuclear localization signals**, and **protein stability**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₄H₁₀N radical forms the complete structure of lysine, allowing it to play a critical role in **protein folding**, **cell signaling**, and **DNA interaction**.
 

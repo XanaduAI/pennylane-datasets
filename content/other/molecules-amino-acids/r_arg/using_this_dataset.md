@@ -1,4 +1,3 @@
-# Arginine Radical
 
 The arginine radical (*C₄H₉N₃*), also known as its **side chain**, is a complex and highly polar structure that defines the unique chemical behavior of arginine. It consists of a **three-carbon aliphatic chain** ending in a **guanidinium group (–C(NH)(NH₂)₂)**, which is strongly **positively charged** at physiological pH. This makes the radical **highly hydrophilic** and capable of forming multiple **hydrogen bonds** and **ionic interactions**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₄H₉N₃ radical completes arginine’s structure, contributing to its critical roles in **metabolism**, **structural stability**, and **biological regulation**.
 

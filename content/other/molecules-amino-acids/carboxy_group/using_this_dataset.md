@@ -1,4 +1,3 @@
-# Carboxyl Group
 
 The carboxyl group (*–COOH*) is a fundamental functional group found in **every single amino acid** that makes up all proteins in living organisms. It is universally present as part of the **basic structure** of amino acids, along with the amino group (*–NH₂*). Classified as a **polar** and **acidic** group, the carboxyl group consists of a **carbon atom double-bonded to an oxygen** and **single-bonded to a hydroxyl group**, allowing it to **donate a proton (H⁺)** and act as a **weak acid** in solution. This property is essential for the **chemical reactivity** of amino acids, particularly in the formation of **peptide bonds** during **protein synthesis**. Beyond that, the carboxyl group contributes to the **ionization behavior**, **solubility**, and **electrostatic interactions** of amino acids, playing a central role in **protein folding**, **enzyme activity**, and **pH regulation** within biological systems.
 

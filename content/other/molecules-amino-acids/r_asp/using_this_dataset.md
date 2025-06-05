@@ -1,4 +1,3 @@
-# Aspartic Acid Radical
 
 The aspartic acid radical (*C₂H₃O₂*), also known as its **side chain**, is a **polar, negatively charged** group at physiological pH. It consists of a **carboxylic acid group (–COOH)** attached to a **two-carbon aliphatic chain**, forming a **β-carboxyl group**. This gives the radical a net **negative charge**, making it crucial for **ionic interactions** and **active site chemistry** in enzymes. Its presence often influences **protein conformation** and function through **electrostatic forces**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₂H₃O₂ radical completes aspartic acid’s structure, contributing significantly to **enzyme function**, **structural stability**, and **metabolic processes**.
 

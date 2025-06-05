@@ -1,4 +1,3 @@
-# Isoleucine Radical
 
 The isoleucine radical (*C₄H₉*), also known as its **side chain**, is a branched aliphatic structure that makes isoleucine distinct among the amino acids. It consists of a **branched hydrocarbon group**, which is **hydrophobic** and contributes significantly to the **stabilization of protein structures** through **hydrophobic interactions**. The side chain features a **methyl group attached to the β-carbon**, giving it a slightly different branching pattern compared to leucine, although both radicals share similar hydrophobic properties. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₄H₉ radical completes isoleucine’s structure, contributing to **protein folding**, **membrane binding**, and its role in **energy production**.
 

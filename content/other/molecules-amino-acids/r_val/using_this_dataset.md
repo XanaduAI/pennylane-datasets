@@ -1,4 +1,3 @@
-# Valine Radical
 
 The valine radical (*C₃H₇*), also known as its **side chain**, is a small, branched **aliphatic** group that defines the hydrophobic nature of valine. It consists of a **branched isopropyl group**, making it **non-polar** and strongly involved in **hydrophobic interactions**. This radical helps stabilize the **interior of protein structures**, especially in **globular proteins**, by avoiding contact with water. The compact and branched structure of the C₃H₇ radical also influences **protein folding** and **tertiary structure**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₃H₇ radical completes valine’s structure and is essential for its role in **muscle metabolism**, **energy production**, and **protein stability**.
 

@@ -1,4 +1,3 @@
-# Histidine Radical
 
 The histidine radical (*C₄H₅N₂*), also known as its **side chain**, is a unique and biologically important structure that distinguishes this amino acid from the others. It consists of an **imidazole ring**, an aromatic five-membered ring containing **two nitrogen atoms**, which gives histidine its ability to act as both a **proton donor and acceptor**. This radical is **polar** and can become **positively charged** near physiological pH, making histidine highly versatile in **enzyme active sites** and **acid-base catalysis**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₄H₅N₂ radical completes histidine’s structure and endows it with the ability to **coordinate metal ions**, **stabilize transition states**, and **regulate pH** in biological environments.
 
