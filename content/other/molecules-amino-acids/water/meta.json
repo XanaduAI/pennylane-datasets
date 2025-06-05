@@ -22,7 +22,7 @@
     "tags": [
         "Quantum Chemistry"
     ],
-    "title": "water",
+    "title": "Water",
     "description": "Description of the dataset",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"

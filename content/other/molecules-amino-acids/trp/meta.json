@@ -22,7 +22,7 @@
     "tags": [
         "Quantum Chemistry"
     ],
-    "title": "tryptophan",
+    "title": "Tryptophan",
     "description": "Description of the dataset",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"

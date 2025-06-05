@@ -22,7 +22,7 @@
     "tags": [
         "Quantum Chemistry"
     ],
-    "title": "glutamic_acid",
+    "title": "Glutamic_acid",
     "description": "Description of the dataset",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"

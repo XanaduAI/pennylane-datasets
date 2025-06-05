@@ -22,7 +22,7 @@
     "tags": [
         "Quantum Chemistry"
     ],
-    "title": "proline",
+    "title": "Proline",
     "description": "Description of the dataset",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"

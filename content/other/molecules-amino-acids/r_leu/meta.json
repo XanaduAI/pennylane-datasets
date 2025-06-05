@@ -22,7 +22,7 @@
     "tags": [
         "Quantum Chemistry"
     ],
-    "title": "R_leu",
+    "title": "Leucine Radical",
     "description": "Description of the dataset",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
