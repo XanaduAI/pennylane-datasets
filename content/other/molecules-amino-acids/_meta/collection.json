@@ -2,5 +2,5 @@
   "about": "This collection includes 45 molecules, covering the 20 essential amino acids found in the human body, along with their fundamental substructures: the amino terminal group, carboxyl terminal group, alpha carbon, and the 20 unique side chains that define them. Comprising predominantly organic molecules with up to 15 non-hydrogen atoms (C, N, O, S), QMProt provides detailed physical and chemical properties, as well as important quantum properties, including the corresponding Hamiltonian and ground state energy. A total of 45 molecules is given.",
   "slug": "molecules-amino-acids",
   "title": "QMProt",
-  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_Generic.png"
+  "thumbnail": "pennylane-datasets-qmprot-collection-thumbnail.png"
 }
