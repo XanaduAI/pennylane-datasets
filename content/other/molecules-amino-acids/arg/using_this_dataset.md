@@ -2,7 +2,7 @@
 
 Arginine (*C₆H₁₄N₄O₂*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar**, and it can be found **positively charged** due to its distinctive side chain ending in a **guanidinium group**. This group enables arginine to form multiple **hydrogen bonds** and **electrostatic interactions**, making it important in **protein binding**, **signal transduction**, and **nitric oxide synthesis**. Its strong basic character also contributes to **stabilizing protein structures** and **facilitating cellular communication**.
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the arginine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
 

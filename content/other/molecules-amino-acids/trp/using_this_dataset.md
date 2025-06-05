@@ -2,7 +2,7 @@
 
 Tryptophan (*C₁₁H₁₂N₂O₂*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **non-polar** amino acid and is characterized by its **aromatic indole ring** in its side chain. This aromatic structure allows tryptophan to participate in **hydrophobic interactions** and plays a significant role in the stability and function of proteins. Tryptophan is a precursor for several important molecules, including **serotonin**, a neurotransmitter involved in **mood regulation**, and **melatonin**, which regulates **sleep-wake cycles**. Additionally, tryptophan is involved in **protein synthesis** and plays a role in **immune response** and **antioxidant defense** due to its contribution to the production of various bioactive molecules.
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the tryptophan amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
 

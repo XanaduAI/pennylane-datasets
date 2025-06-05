@@ -2,7 +2,7 @@
 
 Isoleucine (*C₆H₁₃NO₂*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **non-polar**, **hydrophobic** amino acid due to its **branched aliphatic side chain**. Isoleucine is important for **muscle metabolism**, **energy production**, and is heavily involved in **hemoglobin synthesis**. As a branched-chain amino acid (BCAA), it also plays a key role in **tissue repair** and **regulation of blood sugar levels**, especially in muscle and liver tissues.
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the isoleucine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
 

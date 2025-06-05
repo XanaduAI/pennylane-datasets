@@ -2,7 +2,7 @@
 
 The serine radical (*CH₃O*), also known as its **side chain**, is a **small, polar** structure that includes a **hydroxymethyl group (–CH₂OH)**. This radical is capable of forming **hydrogen bonds**, making it important in **enzyme active sites**, **catalysis**, and **protein stabilization**. Its polarity also enhances **solubility** and allows serine to participate in **phosphorylation reactions**, which are central to **cell signaling** and **metabolic regulation**. The CH₃O radical is often involved in **nucleophilic attacks** and can act as a **donor or acceptor of hydrogen bonds**, especially in proteins that require high reactivity and precision. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the CH₃O radical completes serine’s structure, enabling its critical roles in **biochemistry**, **enzyme function**, and **regulatory pathways**.
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the serine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire serine amino acid.
 

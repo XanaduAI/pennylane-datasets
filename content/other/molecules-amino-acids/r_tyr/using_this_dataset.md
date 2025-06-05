@@ -2,7 +2,7 @@
 
 The tyrosine radical (*C₇H₇O*), also known as its **side chain**, is an **aromatic, polar** group consisting of a **phenyl ring** with a **hydroxyl group (–OH)** attached, forming a **para-hydroxyphenyl group**. This structure allows the radical to participate in both **hydrophobic interactions** (through the aromatic ring) and **hydrogen bonding** (through the hydroxyl group). The C₇H₇O radical plays a key role in **enzyme active sites**, **signal transduction**, and **redox reactions**, especially as a precursor in the synthesis of **neurotransmitters** like dopamine. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₇H₇O radical completes tyrosine’s structure, making it crucial for **protein function**, **structural flexibility**, and **cellular signaling**.
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the tyrosine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire tyrosine amino acid.
 

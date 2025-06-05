@@ -2,7 +2,7 @@
 
 The methionine radical (*C₃H₆S*), also known as its **side chain**, is a unique sulfur-containing structure that plays a crucial role in both the structure and function of proteins. It consists of a **methyl group (–CH₃)** attached to a **thioether group (–S–)**, making it both **hydrophobic** and **polar**. The sulfur atom provides the ability to form **disulfide bonds** and participate in **redox reactions**, contributing to the **stability** and **activity** of proteins. The C₃H₆S radical also plays an essential role in **initiating protein synthesis** due to its involvement in the first amino acid incorporated during translation, **methionine (AUG codon)**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₃H₆S radical completes methionine’s structure and gives it a central role in **protein synthesis**, **post-translational modifications**, and **cellular metabolism**.
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the methionine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire methionine amino acid.
 

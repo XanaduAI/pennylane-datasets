@@ -3,7 +3,7 @@
 Glutamine (*C₅H₁₀N₂O₃*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar**, **uncharged** amino acid due to its **amide-containing side chain**. Glutamine plays a vital role in **nitrogen transport**, **acid-base regulation**, and serves as a key fuel source for rapidly dividing cells, such as **immune cells** and **intestinal epithelial cells**. It also contributes to **protein and nucleotide biosynthesis**, making it essential for **cellular growth and repair**.
 
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the glutamine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
 

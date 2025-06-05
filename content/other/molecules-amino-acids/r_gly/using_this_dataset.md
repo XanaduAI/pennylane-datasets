@@ -2,7 +2,7 @@
 
 The glycine radical (*H*), also known as its **side chain**, is the **simplest** of all amino acid radicals, consisting of a **single hydrogen atom**. This minimal structure makes glycine **non-polar** and **achiral**, allowing it to fit into **tight spaces** within protein structures that other amino acids cannot occupy. Although chemically simple, the H radical plays a vital role in **protein folding**, **stability**, and **dynamics**. Together with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the H radical completes glycine’s structure, making it essential for **compact structural motifs** and **functional versatility** in biological systems.
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the glycine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire glycine amino acid.
 

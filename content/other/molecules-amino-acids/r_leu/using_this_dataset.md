@@ -2,7 +2,7 @@
 
 The leucine radical (*C₄H₉*), also known as its **side chain**, is a nonpolar, aliphatic hydrocarbon structure that distinguishes leucine from other amino acids. It consists of a **branched isobutyl group**, making it **hydrophobic** and strongly involved in the **stabilization of protein cores** through **hydrophobic interactions**. This radical does not participate in hydrogen bonding or ionic interactions, but its branched structure contributes significantly to the **tertiary structure** of proteins. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₄H₉ radical completes leucine’s structure, giving it an important role in **protein folding**, **membrane association**, and **energy metabolism**.
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the leucine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire leucine amino acid.
 

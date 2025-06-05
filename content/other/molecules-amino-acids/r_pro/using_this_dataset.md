@@ -2,7 +2,7 @@
 
 The proline radical (*C₃H₆*), also known as its **side chain**, is unique among the amino acids because it forms a **cyclic structure** with the **amino group**, making it a **secondary amine**. The radical consists of a **three-carbon chain** that loops back to connect with the **nitrogen atom** of the amino group, forming a **pyrrolidine ring**. The C₃H₆ radical’s structure introduces significant **rigidity** to proteins and often induces **turns** in the polypeptide chain, which is crucial for **protein folding** and **stability**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₃H₆ radical completes proline’s structure, making it essential for **protein architecture**, **collagen formation**, and **structural stability** in many proteins.
 
-## Using this dataset
+## Description of the dataset
 
 This dataset contains various quantum properties that represent and describe the proline radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire proline amino acid.
 
