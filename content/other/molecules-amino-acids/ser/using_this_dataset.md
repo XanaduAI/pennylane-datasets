@@ -1,4 +1,3 @@
-
 Serine (*C₃H₇NO₃*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar** amino acid and is characterized by its **hydroxymethyl group** in its side chain. This functional group makes serine highly reactive and capable of forming **hydrogen bonds**, which are essential for **protein-protein interactions** and **enzyme catalysis**. Serine plays a key role in **phosphorylation** processes, serving as a substrate for **kinases** that regulate many cellular functions, including **cell division**, **signal transduction**, and **metabolism**. Additionally, serine is involved in the synthesis of **glycine**, **cysteine**, and **phospholipids**, making it crucial for cellular metabolism and **membrane structure**.
 
 ## Description of the dataset

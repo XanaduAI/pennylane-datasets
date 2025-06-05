@@ -1,4 +1,3 @@
-
 Hydrogen (*H*) is one of the most fundamental elements that make up all matter in living organisms. It is classified as a **non-metal**, and it is characterized by its **single proton and single electron**, making it the **lightest and simplest** of all elements. Hydrogen plays a crucial role in **acid-base chemistry**, as it is involved in the formation of **hydrogen ions (H⁺)**, which define the **pH** of solutions. It also participates in **hydrogen bonding**, a key interaction responsible for the **structure and stability** of important biological molecules like **DNA** and **proteins**.
 
 ## Description of the dataset

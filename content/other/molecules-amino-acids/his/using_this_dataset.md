@@ -1,4 +1,3 @@
-
 Histidine (*C₆H₉N₃O₂*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar**, and it can be found **positively charged** due to its unique side chain containing an **imidazole ring**. This aromatic ring allows histidine to act as both a proton donor and acceptor, making it crucial in **enzyme active sites**, **acid-base catalysis**, and **metal ion coordination**. Its ability to shift between charged and neutral states near physiological pH also contributes to its important role in **maintaining cellular pH balance**.
 
 ## Description of the dataset

@@ -1,4 +1,3 @@
-
 Phenylalanine (*C₉H₁₁NO₂*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **non-polar** amino acid and is characterized by its **aromatic** side chain, which contains a **benzene ring**. This aromatic structure allows phenylalanine to participate in **hydrophobic interactions** and contributes to the stability and structure of proteins. Phenylalanine is a precursor to other important molecules, such as **tyrosine**, **dopamine**, and **norepinephrine**, which are involved in **neurotransmission** and **brain function**. It is also essential for maintaining **protein synthesis** and **growth**, making it an important amino acid for overall cellular function.
 
 ## Description of the dataset

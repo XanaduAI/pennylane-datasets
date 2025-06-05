@@ -1,4 +1,3 @@
-
 The amino group (*–NH₂*) is a fundamental functional group found in **every single amino acid** that makes up all proteins in living organisms. It is universally present as part of the **core structure** of amino acids, alongside the carboxyl group (*–COOH*). This group is classified as **polar** and **basic**, consisting of a **nitrogen atom bonded to two hydrogen atoms**, which allows it to **accept a proton (H⁺)** and act as a **weak base** in aqueous environments. The amino group is essential for the **formation of peptide bonds**, where it reacts with the carboxyl group of another amino acid during **protein synthesis**. In addition to its role in building proteins, the amino group contributes to the **chemical reactivity**, **ionization state**, and **charge interactions** of amino acids, making it crucial for **protein folding**, **enzyme catalysis**, and **cellular pH balance**.
 
 ## Description of the dataset

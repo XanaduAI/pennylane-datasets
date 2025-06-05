@@ -1,4 +1,3 @@
-
 The glutamic acid radical (*C₃H₅O₂*), also known as its **side chain**, is a **polar, negatively charged** group at physiological pH. It consists of a **carboxylic acid group (–COOH)** attached to a **three-carbon aliphatic chain**, forming a **γ-carboxyl group**. Like aspartic acid, the C₃H₅O₂ radical carries a **negative charge**, allowing it to participate in **ionic interactions**, **pH regulation**, and **neurotransmitter synthesis**, particularly in the form of **glutamate** in the brain. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₃H₅O₂ radical completes glutamic acid’s structure, contributing to its involvement in **cell signaling**, **metabolism**, and **protein function**.
 
 ## Description of the dataset

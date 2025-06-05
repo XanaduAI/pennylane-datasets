@@ -1,4 +1,3 @@
-
 The threonine radical (*C₂H₄O*), also known as its **side chain**, is a polar structure that plays a significant role in the function and structure of proteins. It consists of a **hydroxyl group (–OH)** attached to a **two-carbon alkyl chain**, making it **hydrophilic** and capable of forming **hydrogen bonds**. This side chain is important for **enzyme catalysis**, **protein phosphorylation**, and **maintaining protein structure** by forming **hydrogen bonds** with water molecules or other polar groups. The C₂H₄O radical also plays a role in **protein-protein interactions** and **post-translational modifications** like **phosphorylation**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₂H₄O radical completes threonine’s structure, contributing to **protein folding**, **functionality**, and its involvement in **metabolic pathways**.
 
 ## Description of the dataset

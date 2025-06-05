@@ -1,4 +1,3 @@
-
 Aspartic acid (*C₄H₇NO₄*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar**, **negatively charged** amino acid at physiological pH due to its **carboxylic acid side chain**. This acidic group enables aspartic acid to participate in **electrostatic interactions**, making it crucial in **enzyme active sites**, **protein-protein interactions**, and **energy metabolism**. It also plays a role in the **urea cycle** and the biosynthesis of other amino acids and nucleotides.
 
 ## Description of the dataset

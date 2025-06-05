@@ -1,4 +1,3 @@
-
 Tyrosine (*C₉H₁₁NO₃*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar** amino acid and is characterized by its **aromatic phenol group** in its side chain. This structure allows tyrosine to engage in **hydrophobic interactions** and play an important role in protein stability. Tyrosine is a precursor for several critical molecules, including **dopamine**, **norepinephrine**, and **epinephrine**, which are vital for **neurotransmission** and **stress response**. It also contributes to the synthesis of **thyroid hormones**, which are essential for regulating **metabolism** and **growth**.
 
 ## Description of the dataset

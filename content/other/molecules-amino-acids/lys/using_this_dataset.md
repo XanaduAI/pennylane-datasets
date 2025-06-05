@@ -1,4 +1,3 @@
-
 Lysine (*C₆H₁₄N₂O₂*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar** amino acid and is characterized by its **positively charged** side chain containing an **amino group**. This unique feature allows lysine to participate in **hydrogen bonding** and play a crucial role in **protein-protein interactions**, **enzyme catalysis**, and **metal ion coordination**. Lysine is also essential for the **formation of collagen**, a key protein in connective tissues, and is involved in **acetylation** processes that regulate gene expression and protein function. Its ability to form cross-links in proteins contributes to their structural integrity and stability. 
 
 ## Description of the dataset

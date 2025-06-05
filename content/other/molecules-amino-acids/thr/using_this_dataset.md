@@ -1,4 +1,3 @@
-
 Threonine (*C₄H₉NO₃*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar** amino acid and is characterized by its **hydroxyl group** in the side chain, which enables it to form **hydrogen bonds** and participate in **protein-protein interactions**. Threonine is important for maintaining the **structural integrity** of proteins, especially in the context of **protein folding** and **enzyme activity**. It also plays a key role in the **synthesis of glycine**, **serine**, and **phospholipids**, contributing to **cellular metabolism** and **membrane function**. Additionally, threonine is involved in the **phosphorylation** of proteins, a critical regulatory mechanism for many cellular processes such as **signal transduction** and **metabolism**.
 
 ## Description of the dataset

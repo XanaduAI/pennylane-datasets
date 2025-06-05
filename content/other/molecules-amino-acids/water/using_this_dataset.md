@@ -1,4 +1,3 @@
-
 Water (*H₂O*) is one of the most essential molecules that make up all living organisms. It is classified as a **polar** molecule and is characterized by its **bent molecular shape** and **unequal charge distribution**, leading to strong **hydrogen bonding** between molecules. This polarity allows water to act as a **universal solvent**, facilitating countless **biochemical reactions** and enabling the **transport of nutrients and waste** in cells and tissues. Water plays a critical role in **temperature regulation**, **pH balance**, and the **structural organization of biomolecules**. Additionally, it is involved in processes such as **osmosis**, **cell signaling**, and **energy production**, making it indispensable for life as we know it.
 
 ## Description of the dataset

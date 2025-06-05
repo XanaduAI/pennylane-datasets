@@ -1,4 +1,3 @@
-
 Alanine (*C₃H₇NO₂*)  is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **non-polar**, **aliphatic** amino acid due to its simple **methyl group** side chain. This minimal structure makes alanine highly versatile, contributing to the **hydrophobic core** of proteins and maintaining **structural stability**, playing a key role in **protein folding**, **glucose metabolism** (via the **alanine cycle**), and as a buffer in **energy-producing pathways**, especially during periods of **fasting or physical stress**.
 
 ## Description of the dataset
