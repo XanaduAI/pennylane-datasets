@@ -25,10 +25,6 @@ This dataset is intended to:
 
 - Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
 
-### Authors
-Laia Coronas Sala and Parfait Atchade-Adelomou
-
----
 # Hamiltonian Loader from HDF5
 
 ## Description
