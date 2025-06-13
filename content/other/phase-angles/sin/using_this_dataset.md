@@ -2,7 +2,7 @@ This dataset contains phase angles to approximate the function $sin(x)$ via [Qua
 
 **Description of the dataset**
 
-QSVT and QSP are powerful quantum algorithms that implement a large class of polynomial transformations. However, many of the operators in these algorithms depend on a series of phase angles that correspond to the desired polynomial. While calculating these angles can be done efficiently in practice, it is not always straightforward. This dataset provides phase angles to implement QSVT and QSP for an approximation of $cos(x)$, making it easy to implement this polynomial without additional calculations.
+QSVT and QSP are powerful quantum algorithms that implement a large class of polynomial transformations. However, many of the operators in these algorithms depend on a series of phase angles that correspond to the desired polynomial. While calculating these angles can be done efficiently in practice, it is not always straightforward. This dataset provides phase angles to implement QSVT and QSP for an approximation of $sin(x)$, making it easy to implement this polynomial without additional calculations.
 
 More specifically, we approximate  $f(x) = sin(2^k2\pi x)$ with a [Chebyshev polynomial](https://en.wikipedia.org/wiki/Chebyshev_polynomials), $P(x)$. The values $k$ and $\epsilon$ define the approximation:
 - **k** is a constant in $f(x)$ and determines the period of the function.
