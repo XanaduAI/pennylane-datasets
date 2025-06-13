@@ -10,7 +10,7 @@ More specifically, we approximate  $f(x) = sin(2^k2\pi x)$ with a [Chebyshev pol
 
 **Additional Details**
 
-* The Chebysev polynomials $P(x)$ in this dataset approximate the function $f(x) = sin(2^k2\pi x)$ over the interval $[-1, 1]$ with a maximum error of $\epsilon$. 
+* The Chebyshev polynomials $P(x)$ in this dataset approximate the function $f(x) = sin(2^k2\pi x)$ over the interval $[-1, 1]$ with a maximum error of $\epsilon$. 
 * $k$ can take values from the set $\{0,1,2,3,4,5,6,7\}$. 
 * The Chebyshev polynomial, $P(x)$ can be accessed via `dataset.poly[epsilon][k]`. This returns an array where, for example, $[1, 0, 2]$ corresponds to the polynomial $ 1 \cdot T_0(x) + 0 \cdot T_1(x) + 2 \cdot T_2(x) $, where $T_n(x)$ denotes the $n$-th Chebyshev polynomial.
 * Phase angles to implement these Chebyshev polynomials via QSP (or QSVT) can be accessed using  `dataset.angles[routine][epsilon][k]`
