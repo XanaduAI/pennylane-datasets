@@ -1,0 +1,62 @@
+{
+  "slug": "cos",
+  "class": {
+    "slug": "cosine",
+    "name": "cosx",
+    "attributeList": [
+      {
+        "name": "angles",
+        "pythonType": "dict",
+        "doc": "Angles that apply the polynomial transformation for a given routine. This is provided as a dictionary of lists with form `angles[routine][epsilon][k]`."
+      },
+      {
+        "name": "epsilons",
+        "pythonType": "list",
+        "doc": "Set of possible values for epsilon, the maximum approximation error between the polynomial $P(x)$ and the function f(x) over the chosen interval. Possible values: {0.1, 0.01, 0.001}."
+      },
+      {
+        "name": "k",
+        "pythonType": "list",
+        "doc": "Set of possible values for k, which determines the period of the function. Possible values: {0, 1, 2, 3, 4, 5, 6, 7}."
+      },
+      {
+        "name": "routines",
+        "pythonType": "dict",
+        "doc": "Specifies the available target subroutines (“qsp” or “qsvt”) for the phase angles."
+      },
+      {
+        "name": "poly",
+        "pythonType": "dict",
+        "doc": "Coefficients of the Chebyshev polynomial P(x) that approximates the function f(x). This is provided as a dictionary of lists, with form `poly[epsilon][k]`."
+      }
+    ]
+  },
+  "collection": {
+    "$path": "/other/phase-angles/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/phaseangles/cosine/cosine.h5",
+      "parameters": {
+        "name": "cos"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "cos",
+  "features": [
+    {
+      "slug": "dataset-attributes",
+      "title": "Dataset Attributes",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}
