@@ -69,7 +69,7 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Circuit_01.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-circuits.png",
   "thumbnail": "Dataset_Thumb_Generic_HamlibMax3SAT.png",
   "extra": {},
   "dateOfLastModification": "2024-12-05",

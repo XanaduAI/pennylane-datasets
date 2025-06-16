@@ -31,7 +31,7 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-subtle-art-of-benchmarking.png",
   "thumbnail": "Dataset_Thumb_BarsAndStripes.png",
   "extra": {},
   "dateOfLastModification": "2024-12-20",
