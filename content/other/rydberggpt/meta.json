@@ -49,7 +49,7 @@
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-generic-2.png",
-  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_RydbergGPT.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-rydberg-gpt.png",
   "extra": {},
   "dateOfLastModification": "2024-12-20",
   "dateOfPublication": "2024-07-23"
