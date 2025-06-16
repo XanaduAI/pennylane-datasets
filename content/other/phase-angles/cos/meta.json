@@ -15,10 +15,10 @@
   "description": "Dataset of phase angles to implement cos(x) using qsp or qsvt",
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
   "dateOfLastModification": "2025-06-13",
-  "dateOfPublication": "2025-06-13",
+  "dateOfPublication": "2025-06-16",
   "sourceCodeUrl": null,
   "tags": [],
-  "title": "cos(x)",
+  "title": "cos(x) QSVT/QSP Angles",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
