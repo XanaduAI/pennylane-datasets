@@ -1,0 +1,6 @@
+@misc{Alonso2025sine,
+    title={sin(x)},
+    author={Guillermo Alonso},
+    howpublished={\urlhttps://pennylane.ai/datasets/sin},
+    year={2025}
+}
