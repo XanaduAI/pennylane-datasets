@@ -38,7 +38,7 @@
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-generic-2.png",
-  "thumbnail": "pennylane-datasets-thumbnail-fashion-mnist.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-fashion-mnist.png",
   "extra": {},
   "dateOfLastModification": "2025-06-16",
   "dateOfPublication": "2025-04-23"

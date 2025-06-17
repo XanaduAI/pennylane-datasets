@@ -27,6 +27,6 @@
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-generic-2.png",
-  "thumbnail": "Dataset_QML_Ising_Thumb.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-qml-ising.png",
   "extra": {}
 }
