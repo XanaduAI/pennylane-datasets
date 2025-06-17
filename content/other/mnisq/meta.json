@@ -42,7 +42,7 @@
     "$path": "using_this_dataset.md"
   },
   "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-circuits.png",
-  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-mnisq.png.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-mnisq.png",
   "extra": {},
   "dateOfLastModification": "2025-06-16",
   "dateOfPublication": "2024-09-11"
