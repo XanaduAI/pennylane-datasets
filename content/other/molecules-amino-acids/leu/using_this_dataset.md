@@ -1,6 +1,6 @@
 Leucine (*C₆H₁₃NO₂*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **non-polar** amino acid and is characterized by its **hydrophobic** side chain containing an **isobutyl group**. This feature makes leucine an important component in the **hydrophobic core** of proteins, contributing to their stability and structure. Leucine plays a crucial role in **protein synthesis**, as it is a key regulator of the **mTOR pathway**, which controls cell growth and metabolism. It is also essential for promoting **muscle protein synthesis** and **repair**, making it a vital amino acid for muscle recovery and growth.
 
-## Description of the dataset
+**Description of the dataset**
 
 This dataset contains various quantum properties that represent and describe the leucine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
 

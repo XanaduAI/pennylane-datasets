@@ -1,8 +1,8 @@
-Alanine (*C₃H₇NO₂*)  is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **non-polar**, **aliphatic** amino acid due to its simple **methyl group** side chain. This minimal structure makes alanine highly versatile, contributing to the **hydrophobic core** of proteins and maintaining **structural stability**, playing a key role in **protein folding**, **glucose metabolism** (via the **alanine cycle**), and as a buffer in **energy-producing pathways**, especially during periods of **fasting or physical stress**.
+The arginine radical (*C₄H₉N₃*), also known as its **side chain**, is a complex and highly polar structure that defines the unique chemical behavior of arginine. It consists of a **three-carbon aliphatic chain** ending in a **guanidinium group (–C(NH)(NH₂)₂)**, which is strongly **positively charged** at physiological pH. This makes the radical **highly hydrophilic** and capable of forming multiple **hydrogen bonds** and **ionic interactions**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₄H₉N₃ radical completes arginine’s structure, contributing to its critical roles in **metabolism**, **structural stability**, and **biological regulation**.
 
 **Description of the dataset**
 
-This dataset contains various quantum properties that represent and describe the alanine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
+This dataset contains various quantum properties that represent and describe the arginine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire arginine amino acid.
 
 Key features include:
 
@@ -24,24 +24,10 @@ This dataset is intended to:
 - Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
 
 
-# Hamiltonian Loader from HDF5
+**Example Usage**
+To save space, the Hamiltonian in this dataset is broken up into parts and stored as a string. In
+the following example, we reconstruct a PennyLane Hamiltonian from these parts. 
 
-## Description
-Python script to load and reconstruct quantum Hamiltonians from HDF5 files into PennyLane Hamiltonian objects.
-
-## Features
-- 🗂️ Reads Hamiltonian data stored in HDF5 chunks  
-- 🔗 Reconstructs full Hamiltonian from multiple segments  
-- ⚛️ Converts string operators to PennyLane objects (Pauli X/Y/Z, Identity)  
-- ⊗ Handles tensor products of operators  
-- 🏗️ Builds complete PennyLane Hamiltonian objects  
-
-## Installation
-```bash
-pip install pennylane h5py
-```
-
-## Usage
 ```python
 import pennylane as qml
 import h5py
@@ -107,7 +93,7 @@ def load_hamiltonian_from_hdf5(input_file):
     return hamiltonian
 
 # Example usage
-input_file = "hd5_files/ala.h5"
+input_file = "hd5_files/r_arg.h5"
 hamiltonian = load_hamiltonian_from_hdf5(input_file)
 
 # Display results

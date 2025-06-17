@@ -1,6 +1,6 @@
 The methyldine group (*–CH*) is a central structural unit found in **every single amino acid**, where it plays a key role in connecting the **amino group (–NH₂)** and the **carboxyl group (–COOH)**. Together, these three components form the **backbone or skeleton** of all amino acids in living organisms. The methyldine group consists of a **single carbon atom bonded to one hydrogen atom**, and it serves as the **alpha carbon (Cα)** in amino acids, to which the **side chain (R group)** is also attached. Its unique bonding capacity makes it essential for the **formation of peptide bonds**, the **folding of proteins**, and the **specific function of each amino acid** within biological systems.
 
-## Description of the dataset
+**Description of the dataset**
 
 This dataset contains various quantum properties that represent and describe the methyldine molecule under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up larger systems.
 

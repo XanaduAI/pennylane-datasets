@@ -1,6 +1,6 @@
 Cysteine (*C₃H₇NO₂S*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar**, **uncharged** amino acid due to its **thiol (-SH) side chain**. This group allows cysteine to form **disulfide bonds** with other cysteine residues, which are essential for **protein folding** and maintaining **tertiary and quaternary structures**. Cysteine also plays a role in **redox reactions**, **detoxification**, and serves as a precursor for important biomolecules such as **glutathione**.
 
-## Description of the dataset
+**Description of the dataset**
 
 This dataset contains various quantum properties that represent and describe the cysteine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
 

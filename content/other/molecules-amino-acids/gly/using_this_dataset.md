@@ -1,6 +1,6 @@
 Glycine (*C₂H₅NO₂*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is the **simplest amino acid**, with a single hydrogen atom as its side chain, making it **non-polar** and **achiral**. Due to its small size and flexibility, glycine plays a crucial role in **protein folding**, particularly in **tight turns** and **collagen structure**. It also functions as an **inhibitory neurotransmitter** in the central nervous system and is involved in **biosynthetic pathways** such as heme and purine synthesis.
 
-## Description of the dataset
+**Description of the dataset**
 
 This dataset contains various quantum properties that represent and describe the glycine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
 

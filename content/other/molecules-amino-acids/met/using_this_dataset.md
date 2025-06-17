@@ -1,6 +1,6 @@
 Methionine (*C₅H₁₁NO₂S*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **non-polar** amino acid and contains a **sulfur-containing thioether group** in its side chain. This unique feature allows methionine to play a critical role in **protein synthesis** as the initiator amino acid in the formation of proteins. Methionine is also important in the **methylation** of DNA and proteins, which influences gene expression and cellular processes. Additionally, it serves as a precursor for other sulfur-containing compounds, such as **cysteine** and **SAM (S-adenosylmethionine)**, which are essential for various biochemical pathways, including **antioxidant defense** and **cellular detoxification**. 
 
-## Description of the dataset
+**Description of the dataset**
 
 This dataset contains various quantum properties that represent and describe the methionine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
 

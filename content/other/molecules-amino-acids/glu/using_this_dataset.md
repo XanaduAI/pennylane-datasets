@@ -1,6 +1,6 @@
 Glutamic acid (*C₅H₉NO₄*) is one of the 20 essential amino acids that make up all proteins in living organisms. It is classified as a **polar**, **negatively charged** amino acid at physiological pH due to its **carboxylic acid side chain**. This side chain enables glutamic acid to participate in **electrostatic interactions** and act as a **neurotransmitter** in the central nervous system. It plays essential roles in **protein structure**, **amino acid metabolism**, and serves as a precursor for the synthesis of **gamma-aminobutyric acid (GABA)**, an important inhibitory neurotransmitter.
 
-## Description of the dataset
+**Description of the dataset**
 
 This dataset contains various quantum properties that represent and describe the glutamic acid amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
 

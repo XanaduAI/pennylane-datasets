@@ -1,6 +1,6 @@
 The tryptophan radical (*C₉H₈N*), also known as its **side chain**, is a large, aromatic structure that sets tryptophan apart from other amino acids. It consists of an **indole ring**—a fused structure combining a **benzene** and a **pyrrole ring**—attached to a **methylene group (–CH₂)**. This makes the radical **hydrophobic**, **aromatic**, and capable of engaging in **pi-pi interactions**, **hydrogen bonding**, and **fluorescence**. The indole ring can absorb and emit light, which is useful in **protein structure studies**. The C₉H₈N radical plays important roles in **protein folding**, **enzyme function**, and **signaling pathways**. Along with the **amino (–NH₂)** and **carboxyl (–COOH)** groups, the C₉H₈N radical completes tryptophan’s structure, contributing to its involvement in **neurotransmitter synthesis**, and **membrane interactions**, among others.
 
-## Description of the dataset
+**Description of the dataset**
 
 This dataset contains various quantum properties that represent and describe the tryptophan radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire tryptophan amino acid.
 
