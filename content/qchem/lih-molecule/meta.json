@@ -27,8 +27,8 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Dataset_ChemHero_LiH.png",
-  "thumbnail": "Dataset_ChemThumb_LiH.png",
+  "heroImage": "pennylane-datasets-hero-lih-molecule.png",
+  "thumbnail": "pennylane-datasets-thumbnail-lih-molecule.png",
   "extra": {},
   "changelog": [
     "version 0.2 : added initial states\n",

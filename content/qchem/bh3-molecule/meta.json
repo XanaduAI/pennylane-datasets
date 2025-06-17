@@ -27,8 +27,8 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Dataset_ChemHero_BH3.png",
-  "thumbnail": "Dataset_ChemThumb_BH3.png",
+  "heroImage": "pennylane-datasets-hero-bh3-molecule.png",
+  "thumbnail": "pennylane-datasets-thumbnail-bh3-molecule.png",
   "extra": {},
   "changelog": [
     "version 0.2 : added initial states\n",
