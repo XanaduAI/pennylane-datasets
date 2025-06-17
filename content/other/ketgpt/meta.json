@@ -34,9 +34,9 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
-  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/Dataset_Thumb_KetGPT.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-generic-2.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-ket-gpt.png",
   "extra": {},
-  "dateOfLastModification": "2024-12-20",
+  "dateOfLastModification": "2025-06-16",
   "dateOfPublication": "2024-05-13"
 }

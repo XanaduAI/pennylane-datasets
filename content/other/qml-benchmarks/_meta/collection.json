@@ -2,5 +2,5 @@
   "slug": "qml-benchmarks",
   "title": "QML Benchmarks",
   "about": "This collection contains datasets from [Better than classical? The subtle art of benchmarking quantum machine learning models](https://arxiv.org/abs/2403.07059) and [Train on classical, deploy on quantum: scaling generative quantum machine learning to a thousand qubits](https://arxiv.org/abs/2503.02934). These datasets offer several classification tasks that can be used for benchmarking quantum machine learning models.",
-  "thumbnail": "DatasetCollections_Benchmarks_Thumb.png"
+  "thumbnail": "pennylane-datasets-collection-qml-benchmarks.png"
 }

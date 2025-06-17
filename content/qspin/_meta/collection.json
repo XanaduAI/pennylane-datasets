@@ -2,5 +2,5 @@
   "slug": "qspin",
   "title": "PennyLane Spin Systems",
   "about": "This collection includes quantum properties for various spin systems. For varying onsite interaction values, we provide descriptive information, including the system Hamiltonian, and calculated values, such as measurements of an order parameter.",
-  "thumbnail": "DatasetCollections_QSpin_Thumb.png"
+  "thumbnail": "pennylane-datasets-collection-qspin.png"
 }

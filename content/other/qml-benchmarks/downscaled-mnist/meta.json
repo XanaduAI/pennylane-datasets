@@ -31,9 +31,9 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Datasets_GenericHero_SubtleArtOfBenchmarking.png",
-  "thumbnail": "Dataset_Thumb_MNIST.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-subtle-art-of-benchmarking.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-downscaled-mnist.png",
   "extra": {},
-  "dateOfLastModification": "2024-12-20",
+  "dateOfLastModification": "2025-06-16",
   "dateOfPublication": "2024-09-11"
 }

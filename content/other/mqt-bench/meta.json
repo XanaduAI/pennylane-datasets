@@ -30,9 +30,9 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Datasets_GenericHero_MQTBench.png",
-  "thumbnail": "Dataset_Thumb_MQTBenchCircuits.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-mqt-bench.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-mqt-bench-circuits.png",
   "extra": {},
-  "dateOfLastModification": "2024-12-05",
+  "dateOfLastModification": "2025-06-16",
   "dateOfPublication": "2024-09-11"
 }
