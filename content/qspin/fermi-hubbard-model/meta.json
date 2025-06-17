@@ -22,8 +22,8 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Datasets_SpinHero_FermiHubbard.png",
-  "thumbnail": "Datasets_SpinThumb_FermiHubbard.png",
+  "heroImage": "pennylane-datasets-hero-fermi-hubbard-model.png",
+  "thumbnail": "pennylane-datasets-thumbnail-fermi-hubbard-model.png",
   "extra": {},
   "changelog": [
     "version 0.1 : initial public release"

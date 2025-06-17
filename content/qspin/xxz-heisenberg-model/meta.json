@@ -26,8 +26,8 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Datasets_SpinHero_Heisenberg.png",
-  "thumbnail": "Datasets_SpinThumb_Heisenberg.png",
+  "heroImage": "pennylane-datasets-hero-xxz-heisenberg-model.png",
+  "thumbnail": "pennylane-datasets-thumbnail-xxz-heisenberg-model.png",
   "extra": {},
   "changelog": [
     "version 0.1 : initial public release"
