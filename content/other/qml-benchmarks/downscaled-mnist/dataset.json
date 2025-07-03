@@ -28,7 +28,7 @@
       "extra": {}
     }
   ],
-  "downloadName": "mnist-pca",
+  "downloadName": "downscaled-mnist",
   "features": [
     {
       "slug": "dataset-attributes",
