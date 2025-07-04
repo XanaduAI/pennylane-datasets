@@ -15,7 +15,7 @@
   ],
   "description": "Samples from a Ising distributions with a scale-free graph connectivity structure",
   "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
-  "dateOfLastModification": "2025-04-14",
+  "dateOfLastModification": "2025-06-16",
   "dateOfPublication": "2025-04-14",
   "sourceCodeUrl": "https://github.com/XanaduAI/gqml_datasets",
   "tags": [],
@@ -23,7 +23,7 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
-  "thumbnail": "Dataset_QML_ScaleFree_Thumb.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-generic-2.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-scale-free.png",
   "extra": {}
 }

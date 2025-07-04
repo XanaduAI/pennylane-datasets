@@ -12,3 +12,6 @@ __pycache__
 
 # auth
 .auth.json
+
+# misc
+.DS_Store
