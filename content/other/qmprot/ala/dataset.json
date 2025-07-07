@@ -97,7 +97,7 @@
           ]
     },
     "collection": {
-      "$path": "/other/molecules-amino-acids/_meta/collection.json"
+      "$path": "/other/qmprot/_meta/collection.json"
     },
     "data": [
       {
