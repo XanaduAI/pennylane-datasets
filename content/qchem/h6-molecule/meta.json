@@ -27,13 +27,13 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Dataset_ChemHero_H6.png",
-  "thumbnail": "Dataset_ChemThumb_H6.png",
+  "heroImage": "pennylane-datasets-hero-h6-molecule.png",
+  "thumbnail": "pennylane-datasets-thumbnail-h6-molecule.png",
   "extra": {},
   "changelog": [
     "version 0.2 : added initial states\n",
     "version 0.1 : initial public release"
   ],
-  "dateOfLastModification": "2025-04-21",
+  "dateOfLastModification": "2025-06-16",
   "dateOfPublication": "2024-09-11"
 }

@@ -26,12 +26,12 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "Datasets_SpinHero_TransverseIsing.png",
-  "thumbnail": "Datasets_SpinThumb_TransverseIsing.png",
+  "heroImage": "pennylane-datasets-hero-transverse-field-ising-model.png",
+  "thumbnail": "pennylane-datasets-thumbnail-transverse-field-ising-model.png",
   "extra": {},
   "changelog": [
     "version 0.1 : initial public release"
   ],
-  "dateOfLastModification": "2024-12-17",
+  "dateOfLastModification": "2025-06-16",
   "dateOfPublication": "2024-09-11"
 }

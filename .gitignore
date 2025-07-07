@@ -1,0 +1,17 @@
+*.h5
+# Don't ignore directories with .h5
+!*.h5/
+
+# Site build dir
+_build/*
+
+__pycache__
+*.pyc
+*.ruff_cache
+.venv
+
+# auth
+.auth.json
+
+# misc
+.DS_Store

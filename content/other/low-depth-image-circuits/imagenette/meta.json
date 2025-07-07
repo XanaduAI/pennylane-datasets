@@ -37,9 +37,9 @@
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
   },
-  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Datasets_GenericHero_2.png",
-  "thumbnail": "Dataset_Imagenette_thumb.png",
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-generic-2.png",
+  "thumbnail": "https://assets.cloud.pennylane.ai/datasets/generic/thumbnail/pennylane-datasets-thumbnail-imagenette.png",
   "extra": {},
-  "dateOfLastModification": "2025-05-12",
+  "dateOfLastModification": "2025-06-16",
   "dateOfPublication": "2025-04-23"
 }
