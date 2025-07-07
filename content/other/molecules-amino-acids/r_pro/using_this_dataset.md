@@ -67,8 +67,7 @@ def string_to_operator(op_string):
     return qml.prod(*ops) if len(ops) > 1 else ops[0]  # Create composite operator if needed
 
 # Process each line of the combined Hamiltonian string
-for line in full_hamiltonian.split("
-"):
+for line in full_hamiltonian.split("\n"):
     line = line.strip()
     if not line or "Coefficient" in line or "Operators" in line:
         continue  # Skip empty lines or header lines
