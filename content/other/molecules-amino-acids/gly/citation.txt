@@ -1,4 +1,4 @@
-@misc{atchade2025title,
+@misc{atchade2025qmprotdataset,
     title={A Comprehensive Dataset of Quantum Properties for Proteins},
     author={Laia Coronas Sala and Parfait Atchade-Adelemou},
     howpublished = {\url{https://pennylane.ai/datasets/gly/}},
