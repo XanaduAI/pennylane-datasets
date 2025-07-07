@@ -2,12 +2,12 @@ Tyrosine (*C₉H₁₁NO₃*) is one of the 20 essential amino acids that make u
 
 **Description of the dataset**
 
-This dataset contains various quantum properties that represent and describe the tyrosine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up longer peptides.
+This dataset contains various quantum properties that represent and describe the tyrosine amino acid under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and build longer peptides.
 
 Key features include:
 
-- Molecular information (name, molecular formula, charge, spin, geometry etc.)
-- Resource estimation (number of atoms, electrons, orbitals, qubits and hamiltonian coefficients to represent the molecule)
+- Molecular information (name, molecular formula, charge, spin, geometry, etc.)
+- Resource estimation (number of atoms, electrons, orbitals, qubits and Hamiltonian coefficients to represent the molecule)
 - Jordan-Wigner Hamiltonian representation
 - Approximations to the ground state energy
 
@@ -25,6 +25,7 @@ This dataset is intended to:
 
 
 **Example Usage**
+
 To save space, the Hamiltonian in this dataset is broken up into parts and stored as a string. In
 the following example, we reconstruct a PennyLane Hamiltonian from these parts. 
 

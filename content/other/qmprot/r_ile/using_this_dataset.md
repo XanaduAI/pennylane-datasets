@@ -2,12 +2,12 @@ The isoleucine radical (*C₄H₉*), also known as its **side chain**, is a bran
 
 **Description of the dataset**
 
-This dataset contains various quantum properties that represent and describe the isoleucine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and to built up the entire isoleucine amino acid.
+This dataset contains various quantum properties that represent and describe the isoleucine radical under certain conditions.  The dataset includes molecular geometries, the Hamiltonian, energies, and other descriptors that can be used to analyze the molecule’s behavior and build the entire isoleucine amino acid.
 
 Key features include:
 
-- Molecular information (name, molecular formula, charge, spin, geometry etc.)
-- Resource estimation (number of atoms, electrons, orbitals, qubits and hamiltonian coefficients to represent the molecule)
+- Molecular information (name, molecular formula, charge, spin, geometry, etc.)
+- Resource estimation (number of atoms, electrons, orbitals, qubits and Hamiltonian coefficients to represent the molecule)
 - Jordan-Wigner Hamiltonian representation
 - Approximations to the ground state energy
 
@@ -24,6 +24,7 @@ This dataset is intended to:
 - Enable the study of fragmentation and reassembly techniques by proposing new chemical corrections for bond formation and ensuring accurate reconstruction of molecular properties after simulation, in line with the results obtained in our latest work.
 
 **Example Usage**
+
 To save space, the Hamiltonian in this dataset is broken up into parts and stored as a string. In
 the following example, we reconstruct a PennyLane Hamiltonian from these parts. 
 
