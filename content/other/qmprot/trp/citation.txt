@@ -1,0 +1,15 @@
+@misc{atchade2025qmprotdataset,
+    title={A Comprehensive Dataset of Quantum Properties for Proteins},
+    author={Laia Coronas Sala and Parfait Atchade-Adelemou},
+    howpublished = {\url{https://pennylane.ai/datasets/trp/}},
+    year={2025}
+}
+
+@article{corona2025qmprot,
+  title={QMProt: A Comprehensive Dataset of Quantum Properties for Proteins},
+  author={Laia Coronas Sala and Parfait Atchade-Adelomou},
+  journal={arXiv preprint arXiv:2505.08956},
+  year={2025},
+  url={https://doi.org/10.48550/arXiv.2505.08956},
+  note={Submitted on 13 May 2025}
+}
