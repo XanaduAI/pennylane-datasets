@@ -1,5 +1,3 @@
-## Resources data
-
 Features to understand the size and complexity of the molecule.
 
 | Name              | Type   | Description                                                                 |

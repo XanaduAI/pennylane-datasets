@@ -1,5 +1,3 @@
-## Molecular data
-
 Basic descriptors of the molecule.
 
 | Name            | Type       | Description                                                                 |

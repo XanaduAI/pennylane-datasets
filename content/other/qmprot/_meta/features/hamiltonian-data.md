@@ -1,5 +1,3 @@
-## Hamiltonian data
-
 Hamiltonian for the molecular system under Jordan-Wigner transformation and its properties.
 
 $$
