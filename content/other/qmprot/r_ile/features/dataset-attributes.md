@@ -16,7 +16,6 @@ Basic descriptors provided to understand the isoleucine radical molecule.
 | `coordinates`   | `list[list[float]]` | List of 3D Cartesian coordinates (x, y, z) for each atom.      |
 
 
----
 
 ## Resources data
 
@@ -30,7 +29,6 @@ Features to understand the size and complexity of the molecule.
 | `n_qubits`        | `int`  | Number of qubits required to simulate the system in quantum computations.  |
 | `n_coefficients`  | `int`  | Number of coefficients in the Hamiltonian or wavefunction representation.  |
 
----
 
 ## Hamiltonian data
 
@@ -46,5 +44,4 @@ $$
 | `energy`         | `float` | Ground state energy of the system in Hartrees, computed using the Self-Consistent Field (SCF) approach based on the Hartree-Fock method. |
 
 
----
 

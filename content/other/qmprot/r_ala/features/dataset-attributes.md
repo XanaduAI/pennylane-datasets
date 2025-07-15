@@ -16,7 +16,6 @@ Basic descriptors provided to understand the alanine radical molecule.
 | `coordinates`   | `list[list[float]]` | List of 3D Cartesian coordinates (x, y, z) for each atom.      |
 
 
----
 
 ## Resources data
 
@@ -30,7 +29,6 @@ Features to understand the size and complexity of the molecule.
 | `n_qubits`        | `int`  | Number of qubits required to simulate the system in quantum computations.  |
 | `n_coefficients`  | `int`  | Number of coefficients in the Hamiltonian or wavefunction representation.  |
 
----
 
 ## Hamiltonian data
 
@@ -45,5 +43,3 @@ $$
 | `hamiltonian_n`  | `Hamiltonian`  | Fragment of the total Hamiltonian in the Pauli basis. Each `hamiltonian_n` corresponds to a part of the full operator, which must be concatenated in numerical order (e.g., `hamiltonian`, `hamiltonian_1`, `hamiltonian_2`, ...) to reconstruct the complete Hamiltonian. This splitting is used due to the length of the full expression. |
 | `energy`         | `float` | Ground state energy of the system in Hartrees, computed using the Self-Consistent Field (SCF) approach based on the Hartree-Fock method. |
 
-
----
