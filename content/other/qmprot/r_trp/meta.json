@@ -23,7 +23,7 @@
         "Quantum Chemistry"
     ],
     "title": "Tryptophan Radical",
-    "description": "Description of the dataset",
+    "description": "This dataset contains Hamiltonian information and descriptive molecular data for the Tryptophan Radical.",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
     },

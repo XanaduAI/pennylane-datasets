@@ -23,7 +23,7 @@
         "Quantum Chemistry"
     ],
     "title": "Valine Radical",
-    "description": "Description of the dataset",
+    "description": "This dataset contains Hamiltonian information and descriptive molecular data for the Valine Radical.",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
     },

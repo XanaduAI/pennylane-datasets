@@ -23,7 +23,7 @@
         "Quantum Chemistry"
     ],
     "title": "Isoleucine",
-    "description": "Description of the dataset",
+    "description": "This dataset contains Hamiltonian information and descriptive molecular data for the Isoleucine molecule.",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
     },

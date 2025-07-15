@@ -23,7 +23,7 @@
         "Quantum Chemistry"
     ],
     "title": "Arginine",
-    "description": "Description of the dataset",
+    "description": "This dataset contains Hamiltonian information and descriptive molecular data for the Arginine molecule.",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
     },

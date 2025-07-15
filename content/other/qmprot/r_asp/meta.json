@@ -23,7 +23,7 @@
         "Quantum Chemistry"
     ],
     "title": "Aspartic Acid Radical",
-    "description": "Description of the dataset",
+    "description": "This dataset contains Hamiltonian information and descriptive molecular data for the Aspartic Acid Radical.",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
     },

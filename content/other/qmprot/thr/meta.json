@@ -23,7 +23,7 @@
         "Quantum Chemistry"
     ],
     "title": "Threonine",
-    "description": "Description of the dataset",
+    "description": "This dataset contains Hamiltonian information and descriptive molecular data for the Threonine molecule.",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
     },

@@ -23,7 +23,7 @@
         "Quantum Chemistry"
     ],
     "title": "Histidine",
-    "description": "Description of the dataset",
+    "description": "This dataset contains Hamiltonian information and descriptive molecular data for the Histidine molecule.",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
     },

@@ -23,7 +23,7 @@
         "Quantum Chemistry"
     ],
     "title": "Cysteine Radical",
-    "description": "Description of the dataset",
+    "description": "This dataset contains Hamiltonian information and descriptive molecular data for the Cysteine Radical.",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
     },
