@@ -6,7 +6,7 @@ Basic descriptors provided to understand the glutamine radical molecule.
 |-----------------|------------|-----------------------------------------------------------------------------|
 | `name`          | `string`   | Full name of the molecule.                                                 |
 | `mf`            | `string`   | Molecular formula of the compound.                                         |
-| `cid`           | `int`      | PubChem Compound ID (CID) for the molecule.                                |
+| `cid`           | `int`    | PubChem Compound ID (CID) for the molecule.                                |
 | `spin`          | `int`      | Total spin number of the molecule.                                 |
 | `multiplicity`  | `int`      | Spin multiplicity of the molecule (M = 2S+1).                                  |
 | `charge`        | `int`      | Electric charge of the molecule.
