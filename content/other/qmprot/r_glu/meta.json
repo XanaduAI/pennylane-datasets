@@ -23,13 +23,13 @@
         "Quantum Chemistry"
     ],
     "title": "Glutamic Acid Radical",
-    "description": "Description of the dataset",
+    "description": "This dataset contains Hamiltonian information and descriptive molecular data for the Glutamic Acid Radical.",
     "usingThisDataset": {
         "$path": "using_this_dataset.md"
     },
     "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/Dataset_Hero_Generic.png",
     "thumbnail": "pennylane-datasets-qchem-generic-thumbnail.png",
     "extra": {},
-    "dateOfLastModification": "2025-07-08",
+    "dateOfLastModification": "2025-07-21",
     "dateOfPublication": "2025-07-08"
 }
