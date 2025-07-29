@@ -35,7 +35,7 @@ operators = []
 hamiltonian_chunks = []
 
 # Download the dataset and retrieve the Hamiltonian chunks
-ds = qml.data.load('other', name='r-ile')
+[ds] = qml.data.load('other', name='r-ile')
 for key in ds.list_attributes():  # Sort the keys to preserve the correct sequence
     if "hamiltonian" in key:
         hamiltonian_chunks.append(getattr(ds, key))  # Decode bytes to string
