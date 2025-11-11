@@ -30,12 +30,12 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/op-T-mize/op-T-mize.h5",
       "parameters": {
-        "name": "op-T-mize"
+        "name": "op-t-mize"
       },
       "extra": {}
     }
   ],
-  "downloadName": "op-T-mize",
+  "downloadName": "op-t-mize",
   "features": [
     {
       "slug": "dataset-attributes",
@@ -51,7 +51,7 @@
   },
   "extra": {
     "defaultParameters": {
-      "name": "op-T-mize"
+      "name": "op-t-mize"
     }
   }
 }
