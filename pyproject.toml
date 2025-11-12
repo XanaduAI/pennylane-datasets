@@ -9,6 +9,7 @@ packages = [{include = "dsets", from = "lib"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 typer = "^0.9.0"
+click = "8.1.8"
 rich = "^13.7.0"
 shellingham = "^1.5.4"
 boto3 = "^1.34.48"
