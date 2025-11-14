@@ -1,0 +1,27 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Adrien Devolder",
+      "username": "Adrien Devolder"
+    }
+  ],
+  "basedOnPapers": false,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "Dataset for the qubit mapping of quantum circuit for the IBM Heron 1 architecture",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2025-11-14",
+  "dateOfPublication": "2025-11-14",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "Qubit mapping heron1",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": null,
+  "thumbnail": null,
+  "extra": {}
+}

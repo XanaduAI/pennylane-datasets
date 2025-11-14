@@ -1,0 +1,6 @@
+@misc{ADevolderQMapDataset,
+    title={QMapDataset},
+    author={Adrien Devolder},
+    howpublished={https://github.com/rscadrien/QMapDataset},
+    year={2025}
+}
