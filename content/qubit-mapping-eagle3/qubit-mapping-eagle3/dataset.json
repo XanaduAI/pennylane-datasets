@@ -1,0 +1,32 @@
+{
+  "slug": "qubit-mapping-eagle3",
+  "class": {
+    "$path": "/qubit-mapping-eagle3/_meta/class.json"
+  },
+  "collection": null,
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/52908db4-24b7-4bda-8c11-7e40e49bede9",
+      "parameters": {
+        "architecture_name": "\"Eagle 3\""
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "IBM_Eagle3_qubitmapping",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}
