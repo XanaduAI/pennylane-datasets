@@ -1,4 +1,4 @@
-Data for benchmarking machine learning models, generated for an upcoming paper: *Typical Machine Learning Datasets as Low-Depth Quantum Circuits*.
+Data for benchmarking machine learning models, as detailed in the paper: *Typical Machine Learning Datasets as Low-Depth Quantum Circuits*.
 
 **Description of the dataset**
 
