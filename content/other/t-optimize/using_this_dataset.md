@@ -17,7 +17,7 @@ These circuits are commonly encountered in literature as a test-bed for techniqu
 Basic properties of the dataset:
 
 ```python
->>> [ds] = qml.data.load("op-T-mize")
+>>> [ds] = qml.data.load("op-t-mize")
 
 >>> # ordered list of circuits as QuantumScript objects
 >>> ds.circuits

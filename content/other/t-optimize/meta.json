@@ -18,7 +18,7 @@
   ],
   "title": "op-T-mize",
   "description": "Quantum circuits that are commonly used to benchmark T-gate optimization techniques.",
-  "dateOfLastModification": "2025-06-16",
+  "dateOfLastModification": "2025-11-11",
   "dateOfPublication": "2024-09-19",
   "usingThisDataset": {
     "$path": "using_this_dataset.md"
