@@ -1,6 +1,6 @@
 {
-  "slug": "qubit-mapping-heron1",
-  "name": "QubitMappingHeron1",
+  "slug": "qubit-mapping-eagle3",
+  "name": "QubitMappingEagle3",
   "attributeList": [
       {
         "name": "n_logical_qubits",
@@ -48,11 +48,6 @@
         "doc": "List containing the readout error of each physical qubit"
       },
 	  {
-        "name": "rx_error",
-        "pythonType": "list[float]",
-        "doc": "List containing the errors of RX gate (for each physical qubit)"
-      },
-	  {
         "name": "rz_error",
         "pythonType": "list[float]",
         "doc": "List containing the errors of RZ gate (for each physical qubit)"
@@ -68,9 +63,9 @@
         "doc": "List containing the errors of X gate (for each physical qubit)"
       },
 	  {
-        "name": "cz",
+        "name": "ecr",
         "pythonType": "list[float]",
-        "doc": "List containing the errors of CZ gate (for each connected pair of physical qubits)"
+        "doc": "List containing the errors of ECR gate (for each connected pair of physical qubits)"
       },
 	  {
         "name": "n_physical_qubits",
@@ -81,15 +76,6 @@
         "name": "final_mapping",
         "pythonType": "list[int]",
         "doc": "Optimized mapping logical -> physical qubits (label for a ML model)"
-      }
-	  
-    ],
-  "parameterList": [
-    {
-      "name": "Architecture_name",
-      "title": "Architecture Name",
-      "description": "Name of IBM architecture",
-      "optional": false
-    }
-  ]
+      }	  
+    ]
 }
