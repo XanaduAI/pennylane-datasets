@@ -83,13 +83,5 @@
         "doc": "Optimized mapping logical -> physical qubits (label for a ML model)"
       }
 	  
-    ],
-  "parameterList": [
-    {
-      "name": "Architecture_name",
-      "title": "Architecture Name",
-      "description": "\"Heron 2\"",
-      "optional": false
-    }
-  ]
+    ]
 }

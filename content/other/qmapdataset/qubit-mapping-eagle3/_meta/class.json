@@ -78,13 +78,4 @@
         "doc": "Optimized mapping logical -> physical qubits (label for a ML model)"
       }	  
     ]
-  ,
-  "parameterList": [
-    {
-      "name": "architecture_name",
-      "title": "Architecture Name",
-      "description": "Name of the IBM architecture",
-      "optional": false
-    }
-  ]
 }
