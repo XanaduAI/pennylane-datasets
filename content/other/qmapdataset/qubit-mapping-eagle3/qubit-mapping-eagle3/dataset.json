@@ -10,7 +10,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/user/52908db4-24b7-4bda-8c11-7e40e49bede9",
       "parameters": {
-        "architecture_name": "\"Eagle 3\""
+        "name": "qubit-mapping-eagle3"
       },
       "extra": {}
     }

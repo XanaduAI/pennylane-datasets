@@ -10,7 +10,7 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/user/a815fe43-3906-4a4b-9770-daf7075baab9",
       "parameters": {
-        "Architecture_name": "\"Heron 2\""
+        "name": "qubit-mapping-heron2"
       },
       "extra": {}
     }
