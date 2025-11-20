@@ -3,7 +3,9 @@
   "class": {
     "$path": "/other/qmapdataset/qubit-mapping-eagle3/_meta/class.json"
   },
-  "collection": null,
+  "collection": {
+    "$path": "/other/qmapdataset/_meta/collection.json"
+  },
   "data": [
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/user/52908db4-24b7-4bda-8c11-7e40e49bede9",
