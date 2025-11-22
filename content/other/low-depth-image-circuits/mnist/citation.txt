@@ -3,3 +3,17 @@
     author={Florian Kiwit and Bernhard Jobst and Andre Luckow and Frank Pollmann and Carlos Riofrío},
     howpublished = {\url{https://pennylane.ai/datasets/low-depth-mnist}}
     year={2025}}
+
+@article{Kiwit_2025,
+doi = {10.1088/2058-9565/ae0123},
+url = {https://doi.org/10.1088/2058-9565/ae0123},
+year = {2025},
+month = {sep},
+publisher = {IOP Publishing},
+volume = {10},
+number = {4},
+pages = {045035},
+author = {Kiwit, Florian J and Jobst, Bernhard and Luckow, Andre and Pollmann, Frank and Riofrío, Carlos A},
+title = {Typical machine learning datasets as low-depth quantum circuits},
+journal = {Quantum Science and Technology},
+}
