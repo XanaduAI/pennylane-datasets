@@ -43,7 +43,7 @@
       "extra": {}
     }
   ],
-  "downloadName": "cos",
+  "downloadName": "cosine",
   "features": [
     {
       "slug": "dataset-attributes",
