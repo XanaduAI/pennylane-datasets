@@ -1,0 +1,34 @@
+{
+  "slug": "qubit-mapping-heron1",
+  "class": {
+    "$path": "/other/qmapdataset/qubit-mapping-heron1/_meta/class.json"
+  },
+  "collection": {
+    "$path": "/other/qmapdataset/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/3dfe2d9a-0f1d-453d-a6be-2237874bf9ef",
+      "parameters": {
+        "name": "qubit-mapping-heron1"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "IBM_Heron1",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

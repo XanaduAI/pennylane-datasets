@@ -1,0 +1,86 @@
+{
+  "slug": "qubit-mapping-heron1",
+  "name": "QubitMappingHeron1",
+  "attributeList": [
+      {
+        "name": "n_logical_qubits",
+        "pythonType": "int",
+        "doc": "Number of logical qubits in the quantum circuit"
+      },
+      {
+        "name": "depth",
+        "pythonType": "int",
+        "doc": "Depth of the quantum circuit"
+      },
+      {
+        "name": "single_qubit_counts",
+        "pythonType": "dict{key:str, value: list[int]}",
+        "doc": "Dictionary where the keys are the names of the single-qubit gates and the values are lists containing the counts of the single-qubit gates for each logical qubits"
+      },
+      {
+        "name": "two_qubit_counts",
+        "pythonType": "dict{key:str, value: list[int]}",
+        "doc": "Dictionary where the keys are the names of the two-qubit gates and the values are lists containing the counts of the two-qubit gates for each logical qubits"
+      },
+      {
+        "name": "basis_gates",
+        "pythonType": "list[str]",
+        "doc": "List containing the names of the gates of the universal set for the hardware"
+      },
+      {
+        "name": "coupling_map",
+        "pythonType": "list[list]",
+        "doc": "List containing the hardware connectivity"
+      },
+	  {
+        "name": "T1",
+        "pythonType": "list[float]",
+        "doc": "List containing the T1 of each physical qubit"
+      },
+	  {
+        "name": "T2",
+        "pythonType": "list[float]",
+        "doc": "List containing the T2 of each physical qubit"
+      },
+	  {
+        "name": "readout_error",
+        "pythonType": "list[float]",
+        "doc": "List containing the readout error of each physical qubit"
+      },
+	  {
+        "name": "rx_error",
+        "pythonType": "list[float]",
+        "doc": "List containing the errors of RX gate (for each physical qubit)"
+      },
+	  {
+        "name": "rz_error",
+        "pythonType": "list[float]",
+        "doc": "List containing the errors of RZ gate (for each physical qubit)"
+      },
+	  {
+        "name": "sx_error",
+        "pythonType": "list[float]",
+        "doc": "List containing the errors of SX gate (for each physical qubit)"
+      },
+	  {
+        "name": "x_error",
+        "pythonType": "list[float]",
+        "doc": "List containing the errors of X gate (for each physical qubit)"
+      },
+	  {
+        "name": "cz",
+        "pythonType": "list[float]",
+        "doc": "List containing the errors of CZ gate (for each connected pair of physical qubits)"
+      },
+	  {
+        "name": "n_physical_qubits",
+        "pythonType": "int",
+        "doc": "Number of physical qubits in the hardware"
+      },
+	  {
+        "name": "final_mapping",
+        "pythonType": "list[int]",
+        "doc": "Optimized mapping logical -> physical qubits (label for a ML model)"
+      }
+    ]
+}
