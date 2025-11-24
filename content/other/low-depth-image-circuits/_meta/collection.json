@@ -1,6 +1,6 @@
 {
   "slug": "low-depth-image-circuits",
   "title": "Low-Depth Image Circuits",
-  "about": "This collection contains datasets from an upcoming paper, Typical Machine Learning Datasets as Low-Depth Quantum Circuits. These datasets contain quantum circuits that encode images as quantum states and can be used for benchmarking supervised quantum machine learning models.",
+  "about": "This collection contains datasets from the paper, Typical Machine Learning Datasets as Low-Depth Quantum Circuits. These datasets contain quantum circuits that encode images as quantum states and can be used for benchmarking supervised quantum machine learning models.",
   "thumbnail": "pennylane-datasets-collection-low-depth-image-circuits.png"
 }
