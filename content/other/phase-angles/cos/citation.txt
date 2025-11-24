@@ -1,6 +1,6 @@
 @misc{Alonso2025cosine,
     title={cos(x)},
     author={Guillermo Alonso},
-    howpublished={\urlhttps://pennylane.ai/datasets/cos},
+    howpublished={\urlhttps://pennylane.ai/datasets/cosine},
     year={2025}
 }
