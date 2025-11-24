@@ -1,5 +1,5 @@
 {
-  "slug": "cos",
+  "slug": "cosine",
   "class": {
     "slug": "cosine",
     "name": "cosx",
@@ -38,12 +38,12 @@
     {
       "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/phaseangles/cosine/cosine.h5",
       "parameters": {
-        "name": "cos"
+        "name": "cosine"
       },
       "extra": {}
     }
   ],
-  "downloadName": "cos",
+  "downloadName": "cosine",
   "features": [
     {
       "slug": "dataset-attributes",
