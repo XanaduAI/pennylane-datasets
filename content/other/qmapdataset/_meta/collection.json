@@ -1,6 +1,6 @@
 {
   "slug": "qmapdataset",
   "title": "QMapDataset",
-  "about": "TODO",
+  "about": "This collection contains qubit mapping information for three different quantum devices.",
   "thumbnail": "pennylane-datasets-qmap-collection-thumbnail.png"
 }
