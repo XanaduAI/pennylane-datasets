@@ -1,21 +1,21 @@
 {
-  "slug": "qubit-mapping-heron2",
+  "slug": "qubit-mapping-eagle3",
   "class": {
-    "$path": "/other/qmapdataset/qubit-mapping-heron2/_meta/class.json"
+    "$path": "/other/qmapdataset/qubit-mapping-eagle3/class.json"
   },
   "collection": {
     "$path": "/other/qmapdataset/_meta/collection.json"
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/user/a815fe43-3906-4a4b-9770-daf7075baab9",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/52908db4-24b7-4bda-8c11-7e40e49bede9",
       "parameters": {
-        "name": "qubit-mapping-heron2"
+        "name": "qubit-mapping-eagle3"
       },
       "extra": {}
     }
   ],
-  "downloadName": "IBM_Heron2",
+  "downloadName": "IBM_Eagle3_qubitmapping",
   "features": [
     {
       "slug": "example-feature",
