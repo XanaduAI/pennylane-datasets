@@ -31,7 +31,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/TSP/TSP_TSP.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/tmp/TSP/TSP_TSP.h5",
       "parameters": {
         "name": "hamlib-travelling-salesperson-problem"
       },
