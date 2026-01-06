@@ -28,7 +28,7 @@
   },
   "data": [
     {
-      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/tmp/MNISQ/MNISQ_MNISQ.h5",
+      "dataUrl": "https://datasets.cloud.pennylane.ai/datasets/h5/other/MNISQ/MNISQ_MNISQ.h5",
       "parameters": {
         "name": "mnisq"
       },
