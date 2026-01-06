@@ -45,7 +45,7 @@ dev = qml.device("default.qubit", wires=4)
 
 @qml.qnode(dev)
 def circuit(basis_state):
-    qml.BasisStatePreparation(basis_state, wires=range(4))
+    qml.BasisState(basis_state, wires=range(4))
     return qml.expval(ham)
 
 # edges cut when all nodes are in the same set

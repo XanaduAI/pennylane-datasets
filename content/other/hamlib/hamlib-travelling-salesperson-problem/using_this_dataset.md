@@ -48,7 +48,7 @@ Each Hamiltonian acts as the cost function for its corresponding traveling sales
 dev = qml.device("default.qubit", wires = 8)
 @qml.qnode(dev)
 def circuit(basis_state):
-    qml.BasisStatePreparation(basis_state, wires=range(8))
+    qml.BasisState(basis_state, wires=range(8))
     return qml.expval(ds.hamiltonians[2])
 
 # go to cities in order 00 -> 01 -> 10 -> 11
