@@ -1,0 +1,8 @@
+@misc{placidi2023mnisq,
+  title={MNISQ: A Large-Scale Quantum Circuit Dataset for Machine Learning on/for Quantum Computers in the NISQ era}, 
+  author={Leonardo Placidi and Ryuichiro Hataya and Toshio Mori and Koki Aoyama and Hayata Morisaki and Kosuke Mitarai and Keisuke Fujii},
+  year={2023},
+  eprint={2306.16627},
+  archivePrefix={arXiv},
+  primaryClass={quant-ph},
+  doi = {10.48550/arXiv.2306.16627}}
