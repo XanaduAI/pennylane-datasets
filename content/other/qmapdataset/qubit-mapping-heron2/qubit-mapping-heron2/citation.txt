@@ -4,3 +4,9 @@
     howpublished={https://github.com/rscadrien/QMapDataset},
     year={2025}
 }
+
+@misc{ADevolderQMapDataset,
+  title = {QMapDataset},
+  author = {Adrien Devolder},
+  howpublished = {\url{https://pennylane.ai/datasets/qubit-mapping-heron2}}, 
+  year = {2026}}
