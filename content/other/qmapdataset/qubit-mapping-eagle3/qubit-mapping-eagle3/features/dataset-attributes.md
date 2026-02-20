@@ -1,9 +1,9 @@
 |Name|Type|Description|
 |-|-|-|
 |`n_logical_qubits`|`pennylane.data.attributes.list.DatasetList`|Number of logical qubits in the quantum circuit|
-|`depth`|`pennylane.data.attributes.list.DatasetList`|Depth of the quantum circuit|
-|`single_qubit_counts`|`pennylane.data.attributes.list.DatasetList`|Dictionary where the keys are the names of the single-qubit gates and the values are lists containing the counts of the single-qubit gates for each logical qubits|
-|`two_qubit_counts`|`pennylane.data.attributes.list.DatasetList`|Dictionary where the keys are the names of the two-qubit gates and the values are lists containing the counts of the two-qubit gates for each logical qubits|
+|`depth`|`pennylane.data.attributes.list.DatasetList`|Depth of the quantum circuit (in native gate)|
+|`single_qubit_counts`|`pennylane.data.attributes.list.DatasetList`|Dictionary where the keys are the names of the single-qubit gates and the values are lists containing the counts of the single-qubit gates for each logical qubit|
+|`two_qubit_counts`|`pennylane.data.attributes.list.DatasetList`|Dictionary where the keys are the names of the two-qubit gates and the values are lists containing the counts of the two-qubit gates for each pair of logical qubits|
 |`basis_gates`|`pennylane.data.attributes.list.DatasetList`|List containing the names of the gates of the universal set for the hardware|
 |`coupling_map`|`pennylane.data.attributes.list.DatasetList`|List containing the hardware connectivity|
 |`T1`|`pennylane.data.attributes.list.DatasetList`|List containing the T1 of each physical qubit|
