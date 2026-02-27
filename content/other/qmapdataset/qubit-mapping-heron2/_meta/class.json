@@ -1,0 +1,21 @@
+{
+  "slug": "qubit-mapping-heron2",
+  "name": "QubitMappingHeron2",
+  "attributeList": [
+      {
+        "name": "circuits",
+        "pythonType": "list",
+        "doc": "Properties of the quantum circuits executed on IBM Eagle 3"
+      },
+      {
+        "name": "mappings",
+        "pythonType": "list",
+        "doc": "Logical-to-physical qubit mapping for IBM Eagle 3 processor"
+      },
+      {
+        "name": "hardware",
+        "pythonType": "list",
+        "doc": "Hardware specifications for IBM Eagle 3 processor"
+      }
+    ]
+}

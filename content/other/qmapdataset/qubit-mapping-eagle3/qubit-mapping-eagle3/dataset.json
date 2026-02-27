@@ -1,7 +1,7 @@
 {
   "slug": "qubit-mapping-eagle3",
   "class": {
-    "$path": "/other/qmapdataset/qubit-mapping-eagle3/class.json"
+    "$path": "/other/qmapdataset/qubit-mapping-eagle3/_meta/class.json"
   },
   "collection": {
     "$path": "/other/qmapdataset/_meta/collection.json"
@@ -18,11 +18,27 @@
   "downloadName": "IBM_Eagle3_qubitmapping",
   "features": [
     {
-      "slug": "example-feature",
-      "title": "Example Feature",
+      "slug": "dataset-circuit",
+      "title": "Circuit Attribute",
       "type": "DATA",
       "content": {
-        "$path": "features/dataset-attributes.md"
+        "$path": "features/circuit-attributes.md"
+      }
+    },
+    {
+      "slug": "dataset-hardware",
+      "title": "Hardware Attribute",
+      "type": "DATA",
+      "content": {
+        "$path": "features/hardware-attributes.md"
+      }
+    },
+    {
+      "slug": "dataset-mapping",
+      "title": "Mapping Attribute",
+      "type": "DATA",
+      "content": {
+        "$path": "features/mapping-attributes.md"
       }
     }
   ],
