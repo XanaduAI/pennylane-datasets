@@ -20,3 +20,9 @@ We hope that this dataset will support the development of improved machine-learn
 If you need more data, you can generate it using the QMapDataset Python code available at: https://github.com/rscadrien/QMapDataset
 
 **Example usage**
+```python
+import pennylane as qml
+[ds] = qml.data.load("other", name="qubit-mapping-heron2")
+ds.circuits[0]["n_logical_qubits"]
+ds.mappings[0]['final_mapping']
+```
