@@ -1,0 +1,12 @@
+@misc{ADevolderQMapDataset,
+    title={QMapDataset},
+    author={Adrien Devolder},
+    howpublished={https://github.com/rscadrien/QMapDataset},
+    year={2025}
+}
+
+@misc{ADevolderQMapDataset-PL,
+  title = {PennyLane QMapDataset},  
+  author = {Adrien Devolder}, 
+  howpublished = {\url{https://pennylane.ai/datasets/qubit-mapping-eagle3}}, 
+  year = {2026}}

@@ -1,0 +1,50 @@
+{
+  "slug": "qubit-mapping-eagle3",
+  "class": {
+    "$path": "/other/qmapdataset/qubit-mapping-eagle3/_meta/class.json"
+  },
+  "collection": {
+    "$path": "/other/qmapdataset/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/451abec1-acbd-4bbb-98ce-d67627f4f1ef",
+      "parameters": {
+        "name": "qubit-mapping-eagle3"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "IBM_Eagle3_qubitmapping",
+  "features": [
+    {
+      "slug": "dataset-circuit",
+      "title": "Circuit Attribute",
+      "type": "DATA",
+      "content": {
+        "$path": "features/circuit-attributes.md"
+      }
+    },
+    {
+      "slug": "dataset-hardware",
+      "title": "Hardware Attribute",
+      "type": "DATA",
+      "content": {
+        "$path": "features/hardware-attributes.md"
+      }
+    },
+    {
+      "slug": "dataset-mapping",
+      "title": "Mapping Attribute",
+      "type": "DATA",
+      "content": {
+        "$path": "features/mapping-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

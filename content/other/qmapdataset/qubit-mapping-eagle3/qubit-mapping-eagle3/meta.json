@@ -1,0 +1,27 @@
+{
+  "abstract": null,
+  "authors": [
+    {
+      "name": "Adrien Devolder",
+      "username": "rscadrien"
+    }
+  ],
+  "basedOnPapers": false,
+  "citation": {
+    "$path": "citation.txt"
+  },
+  "changelog": [],
+  "description": "Dataset for the qubit mapping of quantum circuits for the IBM Eagle 3 architecture",
+  "license": "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)",
+  "dateOfLastModification": "2026-03-10",
+  "dateOfPublication": "2026-03-10",
+  "sourceCodeUrl": null,
+  "tags": [],
+  "title": "Qubit Mapping Eagle 3",
+  "usingThisDataset": {
+    "$path": "using_this_dataset.md"
+  },
+  "heroImage": "https://assets.cloud.pennylane.ai/datasets/generic/hero/pennylane-datasets-hero-circuits.png",
+  "thumbnail": "pennylane-datasets-eagle3-thumbnail.png",
+  "extra": {}
+}

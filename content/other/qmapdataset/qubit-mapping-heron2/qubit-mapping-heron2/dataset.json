@@ -1,0 +1,50 @@
+{
+  "slug": "qubit-mapping-heron2",
+  "class": {
+    "$path": "/other/qmapdataset/qubit-mapping-heron2/_meta/class.json"
+  },
+  "collection": {
+    "$path": "/other/qmapdataset/_meta/collection.json"
+  },
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/6fcd1680-9d95-433e-8298-1cd03c9c2503",
+      "parameters": {
+        "name": "qubit-mapping-heron2"
+      },
+      "extra": {}
+    }
+  ],
+  "downloadName": "IBM_Heron2",
+  "features": [
+    {
+      "slug": "dataset-circuit",
+      "title": "Circuit Attribute",
+      "type": "DATA",
+      "content": {
+        "$path": "features/circuit-attributes.md"
+      }
+    },
+    {
+      "slug": "dataset-hardware",
+      "title": "Hardware Attribute",
+      "type": "DATA",
+      "content": {
+        "$path": "features/hardware-attributes.md"
+      }
+    },
+    {
+      "slug": "dataset-mapping",
+      "title": "Mapping Attribute",
+      "type": "DATA",
+      "content": {
+        "$path": "features/mapping-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}
