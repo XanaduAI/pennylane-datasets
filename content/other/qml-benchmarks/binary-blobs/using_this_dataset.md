@@ -17,7 +17,7 @@ If needed, labels that correspond to the 8 patterns can also be accessed. Please
 **Example usage**
 
 ```pycon
->>> [ds] = qml.data.load("other", name="binary-blobs")
+>>> [ds] = qp.data.load("other", name="binary-blobs")
 >>>
 >>> blob_vector = ds.train['inputs'][0]
 >>> blob_array = np.reshape(blob_vector, (4,4))

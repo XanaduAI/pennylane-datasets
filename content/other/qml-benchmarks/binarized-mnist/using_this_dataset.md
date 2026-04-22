@@ -13,7 +13,7 @@ Please see the ``Source code`` tab to check how the data was generated.
 **Example usage**
 
 ```pycon
->>> [ds] = qml.data.load("other", name="binarized-mnist")
+>>> [ds] = qp.data.load("other", name="binarized-mnist")
 >>>
 >>> ds.train['inputs']
 array([[0, 0, 0, ..., 0, 0, 0],
