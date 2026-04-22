@@ -33,15 +33,15 @@ please view additional files on [Kaggle](https://www.kaggle.com/datasets/boranap
 **Example usage**
 
 ```python
-[ds] = qml.data.load("ketgpt")
+[ds] = qp.data.load("ketgpt")
 
-@qml.qnode(qml.device('default.qubit'))
+@qp.qnode(qp.device('default.qubit'))
 def circuit(training_circuit):
 
     for op in ds.circuits[0]:
-        qml.apply(op)
+        qp.apply(op)
 
-    return qml.expval(qml.PauliZ(wires=3)) #measurement on wire 3
+    return qp.expval(qp.PauliZ(wires=3)) #measurement on wire 3
 
 circuit(0) # output: tensor(0.04148455, requires_grad=True)
 ```
