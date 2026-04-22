@@ -59,15 +59,15 @@ For more information on each, please see the *Data* tab.
 **Example usage**
 
 ```python
-qml.data.load('other', name='mqt-bench')
+qp.data.load('other', name='mqt-bench')
 
-dev = qml.device('default.qubit')
+dev = qp.device('default.qubit')
 
-@qml.qnode(dev)
+@qp.qnode(dev)
 def circuit(ops):
     for op in ops:
-        qml.apply(op)
-    return qml.state()
+        qp.apply(op)
+    return qp.state()
 
 def first_10_ae_benchmark():
     for i in range(2,12):
