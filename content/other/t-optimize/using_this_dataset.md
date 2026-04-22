@@ -17,7 +17,7 @@ These circuits are commonly encountered in literature as a test-bed for techniqu
 Basic properties of the dataset:
 
 ```python
->>> [ds] = qml.data.load("op-t-mize")
+>>> [ds] = qp.data.load("op-t-mize")
 
 >>> # ordered list of circuits as QuantumScript objects
 >>> ds.circuits
@@ -47,7 +47,7 @@ gate_sizes:
 Plot the circuits:
 
 ```python
->>> print(qml.drawer.tape_text(ds.circuits[0]))
+>>> print(qp.drawer.tape_text(ds.circuits[0]))
 4: ──X──H─╭X──T†─╭X──T─╭X──T†─╭X──T────────╭X──T†─╭X──T─╭X──T†─╭X──T──H─────╭X──H─╭X──T†─╭X──T─╭X
 3: ───────╰●─────│─────╰●──T──│──╭X──T†─╭X─╰●─────│─────╰●──T──│──╭X──T†─╭X─╰●────│──────│─────│─
 0: ──────────────╰●───────────╰●─╰●──T──╰●────────│────────────│──│──────│────────│──────│─────│─
@@ -80,8 +80,8 @@ Retrieve gates in circuits:
 Manipulate circuit using a [transform](https://docs.pennylane.ai/en/stable/code/qml_transforms.html).
 
 ```python
->>> [new_qscript], _ = qml.transforms.single_qubit_fusion(qscript)
->>> print(qml.drawer.tape_text(new_qscript))
+>>> [new_qscript], _ = qp.transforms.single_qubit_fusion(qscript)
+>>> print(qp.drawer.tape_text(new_qscript))
 4: ──Rot─╭X──Rot─╭X──Rot─╭X──Rot─╭X──Rot─────────╭X──Rot─╭X──Rot─╭X──Rot─╭X──Rot─────────╭X──Rot─╭X
 3: ──────╰●──────│───────╰●──Rot─│──╭X────Rot─╭X─╰●──────│───────╰●──Rot─│──╭X────Rot─╭X─╰●──────│─
 0: ──────────────╰●──────────────╰●─╰●────Rot─╰●─────────│───────────────│──│─────────│──────────│─
