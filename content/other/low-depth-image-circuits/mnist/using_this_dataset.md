@@ -7,34 +7,34 @@ The [MNIST dataset](https://ieeexplore.ieee.org/document/6296535) has 28x28 gray
 **Additional details**
 
 - The class labels are integers from 0 to 9.
-- Implementing the circuits in this dataset and obtaining the final state with PennyLane's `qml.state()` outputs a state vector. This state vector must be processed to recover the original image.
+- Implementing the circuits in this dataset and obtaining the final state with PennyLane's `qp.state()` outputs a state vector. This state vector must be processed to recover the original image.
 - The dataset contains two circuits per image: those with a depth of four, which are shallower, and those with a depth of eight, which provide more accurate approximations of the exact state.
 - The `exact_state` entry contains a list of numpy arrays representing FRQI states that exactly encode Imagenette images. This significantly increases the file size and can be omitted during download if not needed.
 
 **Example usage**
 
 ```python
-import pennylane as qml
+import pennylane as qp
 import jax
 
-[dataset_params] = qml.data.load("low-depth-mnist")
+[dataset_params] = qp.data.load("low-depth-mnist")
 
 def get_circuit(circuit_layout):
-    dev = qml.device("default.qubit", wires=11)
+    dev = qp.device("default.qubit", wires=11)
     @jax.jit
-    @qml.qnode(dev)
+    @qp.qnode(dev)
     def circuit(params):
         counter = 0
         for gate, wire in circuit_layout:
 
             if gate == "RY":
-                qml.RY(params[counter], wire)
+                qp.RY(params[counter], wire)
                 counter += 1
 
             elif gate == "CNOT":
-                qml.CNOT(wire)
+                qp.CNOT(wire)
 
-        return qml.state()
+        return qp.state()
 
     return circuit
 
