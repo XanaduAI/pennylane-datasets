@@ -11,7 +11,7 @@
     {
       "name": "basis_rot_groupings",
       "pythonType": "tuple[list[tensor_like], list[list[[Operation](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[tensor_like]]]",
-      "doc": "List of grouped Hamiltonian terms obtained using [`qml.qchem.basis_rotation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.qchem.basis_rotation.html)",
+      "doc": "List of grouped Hamiltonian terms obtained using [`qp.qchem.basis_rotation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.qchem.basis_rotation.html)",
       "optional": false
     },
     {
@@ -83,7 +83,7 @@
     {
       "name": "qwc_groupings",
       "pythonType": "tuple[list[tensor_like], list[list[[Operation](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[tensor_like]]]",
-      "doc": "List of grouped qubit-wise commuting Hamiltonian terms obtained using [`qml.pauli.optimize_measurements`](https://docs.pennylane.ai/en/stable/code/api/pennylane.pauli.optimize_measurements.html)",
+      "doc": "List of grouped qubit-wise commuting Hamiltonian terms obtained using [`qp.pauli.optimize_measurements`](https://docs.pennylane.ai/en/stable/code/api/pennylane.pauli.optimize_measurements.html)",
       "optional": false
     },
     {

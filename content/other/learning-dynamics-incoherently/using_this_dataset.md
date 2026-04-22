@@ -42,18 +42,18 @@ This dataset provides the information required to reproduce the training in the 
 To create a circuit that reproduces the system measured in the paper:
 
 ```python
-[ds] = qml.data.load("learning-dynamics-incoherently")
+[ds] = qp.data.load("learning-dynamics-incoherently")
 
-@qml.qnode(qml.device('default.qubit'))
+@qp.qnode(qp.device('default.qubit'))
 def circuit(training_circuit):
     # apply circuit to get \psi, the state sampled from a Haar random distribution
     for operation in ds.training_circuits[0]:
-        qml.apply(operation)
+        qp.apply(operation)
 
     # apply first-order, 1-step, Trotterized hamiltonian evolution for time=0.1
-    qml.TrotterProduct(ds.hamiltonian, time=0.1, n=1,order=1)
+    qp.TrotterProduct(ds.hamiltonian, time=0.1, n=1,order=1)
 
-    return qml.expval(qml.PauliZ(wires=0))
+    return qp.expval(qp.PauliZ(wires=0))
 
 circuit(0) # output: tensor(-0.46754745, requires_grad=True)
 ```
@@ -63,7 +63,7 @@ To obtain estimated expectation values using the shadow measurements in this dat
 ```python
 bits = ds.shadow_meas[0]
 recipes = ds.shadow_bases[0]
-cs = qml.ClassicalShadow(bits, recipes)
+cs = qp.ClassicalShadow(bits, recipes)
 
-cs.expval(qml.PauliZ(wires=0)) # output: array(-0.26416043)
+cs.expval(qp.PauliZ(wires=0)) # output: array(-0.26416043)
 ```

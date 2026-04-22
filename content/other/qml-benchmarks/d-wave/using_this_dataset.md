@@ -15,7 +15,7 @@ Please see the ``Source code`` tab to check how the data was generated.
 **Example usage**
 
 ```pycon
->>> [ds] = qml.data.load("other", name="d-wave")
+>>> [ds] = qp.data.load("other", name="d-wave")
 >>>
 >>> np.shape(ds.train)
 (10000, 484)

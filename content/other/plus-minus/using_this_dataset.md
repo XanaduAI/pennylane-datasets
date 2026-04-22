@@ -17,22 +17,22 @@ the investigation by Wendlinger et al., see the
 **Example usage**
 
 ```python
-[ds] = qml.data.load("plus-minus")
+[ds] = qp.data.load("plus-minus")
 
 X_train, Y_train = ds.img_train, ds.labels_train
 
 X_test, Y_test = ds.img_test, ds.labels_test
 
-dev = qml.device('default.qubit')
+dev = qp.device('default.qubit')
 
-@qml.qnode(dev)
+@qp.qnode(dev)
 def circuit(image, params):
-    qml.AmplitudeEmbedding(image.flatten(),normalize=True, wires=range(8))
+    qp.AmplitudeEmbedding(image.flatten(),normalize=True, wires=range(8))
     for i in range(8):
-        qml.RX(params[i], wires=i)
+        qp.RX(params[i], wires=i)
     for i in range(7):
-        qml.CNOT(wires=[i,i+1])
-    return qml.expval(qml.PauliZ(wires=0))
+        qp.CNOT(wires=[i,i+1])
+    return qp.expval(qp.PauliZ(wires=0))
 
 np.random.seed(0)
 params = np.random.random(8)

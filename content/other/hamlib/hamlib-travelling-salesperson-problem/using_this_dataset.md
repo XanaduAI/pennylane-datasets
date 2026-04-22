@@ -43,13 +43,13 @@ Each Hamiltonian acts as the cost function for its corresponding traveling sales
 **Example usage**
 
 ```python
-[ds] = qml.data.load("hamlib-tsp")
+[ds] = qp.data.load("hamlib-tsp")
 
-dev = qml.device("default.qubit", wires = 8)
-@qml.qnode(dev)
+dev = qp.device("default.qubit", wires = 8)
+@qp.qnode(dev)
 def circuit(basis_state):
-    qml.BasisState(basis_state, wires=range(8))
-    return qml.expval(ds.hamiltonians[2])
+    qp.BasisState(basis_state, wires=range(8))
+    return qp.expval(ds.hamiltonians[2])
 
 # go to cities in order 00 -> 01 -> 10 -> 11
 circuit([0,0,0,1,1,0,1,1]) # output: array(7321.)

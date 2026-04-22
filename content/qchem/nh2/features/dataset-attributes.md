@@ -1,7 +1,7 @@
 |Name|Type|Description|
 |-|-|-|
 |basis_rot_samples|list[dict]|List of samples for each grouping of the basis-rotated Hamiltonian terms|
-|basis_rot_groupings|tuple[list[tensor_like], list[list[[Operation](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[tensor_like]]]|List of grouped Hamiltonian terms obtained using [`qml.qchem.basis_rotation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.qchem.basis_rotation.html)|
+|basis_rot_groupings|tuple[list[tensor_like], list[list[[Operation](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[tensor_like]]]|List of grouped Hamiltonian terms obtained using [`qp.qchem.basis_rotation`](https://docs.pennylane.ai/en/stable/code/api/pennylane.qchem.basis_rotation.html)|
 |dipole_op|[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)|Qubit dipole moment operators for the chemical system|
 |fci_energy|float|Ground state energy of the molecule obtained from exact diagonalization|
 |fci_spectrum|numpy.ndarray|First `2 × #qubits` eigenvalues obtained from exact diagonalization|
@@ -13,7 +13,7 @@
 |number_op|[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)|Qubit operator for computing total spin 𝑆<sup>2</sup> for the chemical system|
 |optimal_sector|numpy.ndarray|Eigensector of the tapered qubits that would contain the ground state|
 |paulix_ops|list[[PauliX](https://docs.pennylane.ai/en/stable/code/api/pennylane.PauliX.html#pennylane.PauliX)]|Supporting PauliX ops required to build Clifford 𝑈 for tapering|
-|qwc_groupings|tuple[list[tensor_like], list[list[[Operation](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[tensor_like]]]|List of grouped qubit-wise commuting Hamiltonian terms obtained using [`qml.pauli.optimize_measurements`](https://docs.pennylane.ai/en/stable/code/api/pennylane.pauli.optimize_measurements.html)|
+|qwc_groupings|tuple[list[tensor_like], list[list[[Operation](https://docs.pennylane.ai/en/stable/code/api/pennylane.operation.Operation.html#pennylane.operation.Operation)], list[tensor_like]]]|List of grouped qubit-wise commuting Hamiltonian terms obtained using [`qp.pauli.optimize_measurements`](https://docs.pennylane.ai/en/stable/code/api/pennylane.pauli.optimize_measurements.html)|
 |qwc_samples|list[dict]|List of samples for each grouping of the qubit-wise commuting Hamiltonian terms|
 |sparse_hamiltonian|scipy.sparse.csr_array|Sparse matrix representation of a Hamiltonian in the computational basis|
 |spin2_op|[Hamiltonian](https://docs.pennylane.ai/en/stable/code/api/pennylane.Hamiltonian.html#pennylane.Hamiltonian)|Qubit operator for computing total spin 𝑆<sup>2</sup> for the chemical system|

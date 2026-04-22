@@ -29,11 +29,11 @@ The blue line represents the polynomial approximation and the orange dashed line
 The following example shows how to plot the output of the QSVT algorithm and compare to the original Chebyshev approximation.
 
 ```python
-import pennylane as qml
+import pennylane as qp
 import numpy as np
 import matplotlib.pyplot as plt
 
-[dataset] = qml.data.load("other", name="cosine")
+[dataset] = qp.data.load("other", name="cosine")
 angles_qsvt = dataset.angles["qsvt"]["0.1"]["1"] 
 
 outputs_qsvt = []
@@ -42,15 +42,15 @@ points = np.arange(-1, 1, 1/300)
 for x in points:
 
     # Encode x in the top left of the matrix
-    block_encoding = qml.RX(2 * np.arccos(x), wires=0)
-    projectors = [qml.PCPhase(angle, dim=1, wires=0) for angle in angles_qsvt]
+    block_encoding = qp.RX(2 * np.arccos(x), wires=0)
+    projectors = [qp.PCPhase(angle, dim=1, wires=0) for angle in angles_qsvt]
 
-    @qml.qnode(qml.device("default.qubit"))
+    @qp.qnode(qp.device("default.qubit"))
     def circuit_qsvt():
-        qml.QSVT(block_encoding, projectors)
-        return qml.state()
+        qp.QSVT(block_encoding, projectors)
+        return qp.state()
 
-    output = qml.matrix(circuit_qsvt, wire_order=[0])()[0, 0]
+    output = qp.matrix(circuit_qsvt, wire_order=[0])()[0, 0]
 
     outputs_qsvt.append(output.real)
 
