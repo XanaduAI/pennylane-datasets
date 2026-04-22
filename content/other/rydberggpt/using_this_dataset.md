@@ -56,11 +56,11 @@ $$
 **Example usage**
 
 ```python
-import pennylane as qml
+import pennylane as qp
 
 # Accessing dataset contents
 
-[ds] = qml.data.load('other', name='rydberggpt')
+[ds] = qp.data.load('other', name='rydberggpt')
 
 print(ds.energies[0]) # output: {'mean': 0.15884992225163197, 'std': 0.5228880607553665, 'std_err': 0.0004985542042934183}
 print(ds.mags_x[0]) # output: 0.22723665454545455
