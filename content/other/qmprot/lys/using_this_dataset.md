@@ -29,13 +29,13 @@ To save space, the Hamiltonian in this dataset is broken up into parts and store
 the following example, we reconstruct a PennyLane Hamiltonian from these parts. 
 
 ```python
-import pennylane as qml
+import pennylane as qp
 coefficients = []
 operators = []
 hamiltonian_chunks = []
 
 # Download the dataset and retrieve the Hamiltonian chunks
-ds = qml.data.load('other', name='lys')
+ds = qp.data.load('other', name='lys')
 for key in ds.list_attributes():  # Sort the keys to preserve the correct sequence
     if "hamiltonian" in key:
         hamiltonian_chunks.append(getattr(ds, key))  # Decode bytes to string
@@ -46,7 +46,7 @@ full_hamiltonian = "".join(hamiltonian_chunks)
 # Helper function to convert a string representation into a PennyLane operator
 def string_to_operator(op_string):
     if "Identity" in op_string:
-        return qml.Identity(0)  # Identity defaults to acting on qubit 0
+        return qp.Identity(0)  # Identity defaults to acting on qubit 0
     
     terms = op_string.split(" @ ")  # Separate tensor product terms
     ops = []
@@ -56,15 +56,15 @@ def string_to_operator(op_string):
             op, wire = term.split("(")
             wire = int(wire.strip(")"))  # Extract the qubit index
             if op == "X":
-                ops.append(qml.PauliX(wire))
+                ops.append(qp.PauliX(wire))
             elif op == "Y":
-                ops.append(qml.PauliY(wire))
+                ops.append(qp.PauliY(wire))
             elif op == "Z":
-                ops.append(qml.PauliZ(wire))
+                ops.append(qp.PauliZ(wire))
         except ValueError:
             continue  # Skip malformed lines
     
-    return qml.prod(*ops) if len(ops) > 1 else ops[0]  # Create composite operator if needed
+    return qp.prod(*ops) if len(ops) > 1 else ops[0]  # Create composite operator if needed
 
 # Process each line of the combined Hamiltonian string
 for line in full_hamiltonian.split("\n"):
@@ -83,5 +83,5 @@ for line in full_hamiltonian.split("\n"):
         continue  # Gracefully handle conversion errors
 
 # Build the PennyLane Hamiltonian
-hamiltonian = qml.Hamiltonian(coefficients, operators)
+hamiltonian = qp.Hamiltonian(coefficients, operators)
 ```
