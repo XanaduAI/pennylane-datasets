@@ -21,8 +21,8 @@ If you need more data, you can generate it using the QMapDataset Python code ava
 
 **Example usage**
 ```python
-import pennylane as qml
-[ds] = qml.data.load("other", name="qubit-mapping-eagle3")
+import pennylane as qp
+[ds] = qp.data.load("other", name="qubit-mapping-eagle3")
 ds.circuits[0]["n_logical_qubits"]
 ds.mappings[0]['final_mapping']
 ```
