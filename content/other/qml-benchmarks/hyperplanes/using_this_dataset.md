@@ -23,6 +23,8 @@ The overall label is determined as the parity of the individual labels.
 **Example usage**
 
 ```python
+import pennylane as qp
+
 [ds] = qp.data.load("other", name="hyperplanes")
 
 ds.diff_train['4']['inputs'] # points in 10-dimensional space for 4 hyperplanes
