@@ -38,6 +38,8 @@ all nodes in the other set.
 **Example usage**
 
 ```python
+import pennylane as qp
+
 [ds] = qp.data.load("hamlib-maxcut")
 ham = ds.hamiltonians[4]
 
