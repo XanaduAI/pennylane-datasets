@@ -19,6 +19,10 @@ Gaussian noise with a standard deviation of 0.5 was added to each pixel to deter
 **Example usage**
 
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+import pennylane as qp
+
 [ds] = qp.data.load("other", name="bars-and-stripes")
 
 ds.train['4']['inputs'] # vector representations of 4x4 pixel images
