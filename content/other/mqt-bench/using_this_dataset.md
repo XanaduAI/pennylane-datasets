@@ -59,6 +59,8 @@ For more information on each, please see the *Data* tab.
 **Example usage**
 
 ```python
+import pennylane as qp
+
 qp.data.load('other', name='mqt-bench')
 
 dev = qp.device('default.qubit')
