@@ -25,16 +25,16 @@ where $\psi_{\text{target}}$ is a state whose amplitudes exactly encode the pixe
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-import pennylane as qml
+import pennylane as qp
 
-ds= qml.data.load("mnisq")
+ds= qp.data.load("mnisq")
 
-@qml.qnode(qml.device("default.qubit"))
+@qp.qnode(qp.device("default.qubit"))
 def circuit():
     for op in ds.circuits[0]:
-        qml.apply(op)
+        qp.apply(op)
 
-    return qml.state()
+    return qp.state()
 
 image_array = np.reshape(np.abs(circuit()[:784]), [28,28])
 #show the encoded image
