@@ -17,6 +17,9 @@ the investigation by Wendlinger et al., see the
 **Example usage**
 
 ```python
+import numpy as np
+import pennylane as qp
+
 [ds] = qp.data.load("plus-minus")
 
 X_train, Y_train = ds.img_train, ds.labels_train
