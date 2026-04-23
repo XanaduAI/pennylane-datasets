@@ -42,6 +42,8 @@ This dataset provides the information required to reproduce the training in the 
 To create a circuit that reproduces the system measured in the paper:
 
 ```python
+import pennylane as qp
+
 [ds] = qp.data.load("learning-dynamics-incoherently")
 
 @qp.qnode(qp.device('default.qubit'))
