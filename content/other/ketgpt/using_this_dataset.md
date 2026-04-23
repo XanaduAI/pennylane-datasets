@@ -33,6 +33,8 @@ please view additional files on [Kaggle](https://www.kaggle.com/datasets/boranap
 **Example usage**
 
 ```python
+import pennylane as qp
+
 [ds] = qp.data.load("ketgpt")
 
 @qp.qnode(qp.device('default.qubit'))
