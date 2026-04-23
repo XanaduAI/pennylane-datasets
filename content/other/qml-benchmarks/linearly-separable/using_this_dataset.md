@@ -28,6 +28,8 @@ $x$ fulfill $|x w| > \delta$. The size of the margin grows with the dimension as
 **Example usage**
 
 ```python
+import pennylane as qp
+
 [ds] = qp.data.load("other", name="linearly-separable")
 
 ds.train['4']['inputs'] # points in 4-dimensional space
