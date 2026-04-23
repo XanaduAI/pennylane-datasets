@@ -18,7 +18,9 @@ and using the same model to reduce the images from the test set.
 **Example usage**
 
 ```python
-[ds] = qml.data.load("other", name="downscaled-mnist")
+import pennylane as qp
+
+[ds] = qp.data.load("other", name="downscaled-mnist")
 
 ds.train['4']['inputs'] # points in 4-dimensional space
 ds.test['4']['labels'] # labels for the points above

@@ -15,7 +15,10 @@ Markov chains, and then selecting 20000 train and test points randomly from equa
 **Example usage**
 
 ```pycon
->>> [ds] = qml.data.load("other", name="scale-free")
+>>> import numpy as np
+>>> import pennylane as qp
+>>>
+>>> [ds] = qp.data.load("other", name="scale-free")
 >>>
 >>> np.shape(ds.train)
 (20000, 1000)

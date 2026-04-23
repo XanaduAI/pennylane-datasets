@@ -15,7 +15,10 @@ Please see the ``Source code`` tab to check how the data was generated.
 **Example usage**
 
 ```pycon
->>> [ds] = qml.data.load("other", name="d-wave")
+>>> import numpy as np
+>>> import pennylane as qp
+>>>
+>>> [ds] = qp.data.load("other", name="d-wave")
 >>>
 >>> np.shape(ds.train)
 (10000, 484)
