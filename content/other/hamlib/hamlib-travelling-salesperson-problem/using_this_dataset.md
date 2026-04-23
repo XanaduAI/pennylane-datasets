@@ -43,6 +43,8 @@ Each Hamiltonian acts as the cost function for its corresponding traveling sales
 **Example usage**
 
 ```python
+import pennylane as qp
+
 [ds] = qp.data.load("hamlib-tsp")
 
 dev = qp.device("default.qubit", wires = 8)
