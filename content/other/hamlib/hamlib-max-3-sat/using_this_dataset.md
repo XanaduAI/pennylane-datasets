@@ -37,15 +37,17 @@ Each Hamiltonian acts as the cost function for its corresponding Max-3-SAT probl
 **Example usage**
 
 ```python
-[ds] = qml.data.load("hamlib-max-3-sat")
+import pennylane as qp
+
+[ds] = qp.data.load("hamlib-max-3-sat")
 ham = ds.hamiltonians[1320]
 
-dev = qml.device("default.qubit", wires=4)
+dev = qp.device("default.qubit", wires=4)
 
-@qml.qnode(dev)
+@qp.qnode(dev)
 def circuit(basis_state):
-    qml.BasisState(basis_state, wires=range(4))
-    return qml.expval(ham)
+    qp.BasisState(basis_state, wires=range(4))
+    return qp.expval(ham)
 
 # clauses satisfied when all variables are false
 circuit([0,0,0,0]) # output: array(7.)

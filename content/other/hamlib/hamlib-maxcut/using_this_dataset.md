@@ -38,15 +38,17 @@ all nodes in the other set.
 **Example usage**
 
 ```python
-[ds] = qml.data.load("hamlib-maxcut")
+import pennylane as qp
+
+[ds] = qp.data.load("hamlib-maxcut")
 ham = ds.hamiltonians[4]
 
-dev = qml.device("default.qubit", wires=4)
+dev = qp.device("default.qubit", wires=4)
 
-@qml.qnode(dev)
+@qp.qnode(dev)
 def circuit(basis_state):
-    qml.BasisState(basis_state, wires=range(4))
-    return qml.expval(ham)
+    qp.BasisState(basis_state, wires=range(4))
+    return qp.expval(ham)
 
 # edges cut when all nodes are in the same set
 circuit([0,0,0,0]) # output: array(0.)
