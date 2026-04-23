@@ -37,6 +37,8 @@ Each Hamiltonian acts as the cost function for its corresponding Max-3-SAT probl
 **Example usage**
 
 ```python
+import pennylane as qp
+
 [ds] = qp.data.load("hamlib-max-3-sat")
 ham = ds.hamiltonians[1320]
 
