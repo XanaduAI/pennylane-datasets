@@ -28,6 +28,8 @@ There are two different dataset collections in this task:
 **Example usage**
 
 ```python
+import pennylane as qp
+
 [ds] = qp.data.load("other", name="two-curves")
 
 ds.train['4']['inputs'] # points in 4-dimensional space
