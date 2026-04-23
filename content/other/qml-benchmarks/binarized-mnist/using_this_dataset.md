@@ -13,6 +13,8 @@ Please see the ``Source code`` tab to check how the data was generated.
 **Example usage**
 
 ```pycon
+>>> import pennylane as qp
+>>>
 >>> [ds] = qp.data.load("other", name="binarized-mnist")
 >>>
 >>> ds.train['inputs']
