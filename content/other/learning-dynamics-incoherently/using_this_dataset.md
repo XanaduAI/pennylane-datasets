@@ -33,7 +33,7 @@ This dataset provides the information required to reproduce the training in the 
 - Classical shadow measurements are obtained from a quantum computer by applying a Trotterized
   form of the transverse-field Ising Hamiltonian to the initial states and sampling the output.
 - Classical shadow measurements were performed on the superconducting qubit IBM quantum computer ``ibmq_kolkata``.
-- Classical shadow measurements and bases use the same conventions as in [PennyLane classical shadows](https://docs.pennylane.ai/en/stable/code/qml_shadows.html). 
+- Classical shadow measurements and bases use the same conventions as in [PennyLane classical shadows](https://docs.pennylane.ai/en/stable/code/qp_shadows.html). 
   I.e., in bases, ``0`` corresponds to Pauli X, ``1`` corresponds to Pauli Y, and ``2`` corresponds to Pauli Z.
 - For details on the cost function used for training, see appendix B in [the paper](https://arxiv.org/abs/2303.12834).
 
