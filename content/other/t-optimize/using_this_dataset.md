@@ -77,7 +77,7 @@ Retrieve gates in circuits:
 ]
 ```
 
-Manipulate circuit using a [transform](https://docs.pennylane.ai/en/stable/code/qml_transforms.html).
+Manipulate circuit using a [transform](https://docs.pennylane.ai/en/stable/code/qp_transforms.html).
 
 ```python
 >>> [new_qscript], _ = qp.transforms.single_qubit_fusion(qscript)
