@@ -13,7 +13,7 @@ These questions are addressed in detail by Jerbi et al.
 They demonstrate one way to reproduce the unknown operator is to train a variational quantum circuit that learns to produce the same output.
 
 This dataset provides data used by the authors to demonstrate this method. 
-For this demonstration, two training states were drawn from the [Haar random distribution](https://pennylane.ai/qml/demos/tutorial_haar_measure/)
+For this demonstration, two training states were drawn from the [Haar random distribution](https://pennylane.ai/demos/tutorial_haar_measure/)
 as initial states. A variational quantum circuit was applied to these initial states and its parameters were optimized with respect to a cost function
 (see equation 5).
 After optimization, the output of the variational circuit approximated the output of a target Trotterized transverse-field Ising Hamiltonian.

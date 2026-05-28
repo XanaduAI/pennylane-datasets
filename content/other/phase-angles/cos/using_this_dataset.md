@@ -1,4 +1,4 @@
-This dataset contains phase angles to approximate the function $cos(x)$ via [Quantum Signal Processing (QSP)](https://pennylane.ai/qml/demos/function_fitting_qsp) and [Quantum Singular Value Transformation (QSVT)](https://pennylane.ai/qml/demos/tutorial_intro_qsvt).
+This dataset contains phase angles to approximate the function $cos(x)$ via [Quantum Signal Processing (QSP)](https://pennylane.ai/demos/function_fitting_qsp) and [Quantum Singular Value Transformation (QSVT)](https://pennylane.ai/demos/tutorial_intro_qsvt).
 
 **Description of the dataset**
 

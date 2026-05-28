@@ -6,7 +6,7 @@ The train (test) dataset consists of 1000 (200) images split into four classes. 
 
 For a detailed introduction to adversarial robustness and to reproduce some of
 the investigation by Wendlinger et al., see the
-[Adversarial attacks and robustness for quantum machine learning demo](https://pennylane.ai/qml/demos/tutorial_adversarial_attacks_QML/).
+[Adversarial attacks and robustness for quantum machine learning demo](https://pennylane.ai/demos/tutorial_adversarial_attacks_QML/).
 
 **Additional details**
 
