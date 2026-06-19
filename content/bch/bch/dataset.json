@@ -1,0 +1,30 @@
+{
+  "slug": "bch",
+  "class": {
+    "$path": "/bch/_meta/class.json"
+  },
+  "collection": null,
+  "data": [
+    {
+      "dataUrl": null,
+      "parameters": {},
+      "extra": {}
+    }
+  ],
+  "downloadName": "bch_hall_basis",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}

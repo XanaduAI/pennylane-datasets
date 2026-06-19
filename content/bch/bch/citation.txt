@@ -1,0 +1,6 @@
+@misc{William Maxwell2026bch,
+    title={BCH Hall Basis},
+    author={William Maxwell},
+    howpublished={\urlhttps://pennylane.ai/datasets/bch/bch},
+    year={2026}
+}
