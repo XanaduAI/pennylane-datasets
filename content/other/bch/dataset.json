@@ -1,7 +1,23 @@
 {
   "slug": "bch",
   "class": {
-    "$path": "/bch/_meta/class.json"
+    "slug": "bch",
+    "name": "bch",
+    "attributeList": [
+      {
+        "name": "bch",
+        "pythonType": "None",
+        "doc": "",
+        "optional": false
+      },
+      {
+        "name": "symm_bch",
+        "pythonType": "None",
+        "doc": "",
+        "optional": false
+      }
+    ],
+    "parameterList": []
   },
   "collection": null,
   "data": [
