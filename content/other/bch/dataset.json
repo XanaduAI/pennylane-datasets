@@ -1,0 +1,46 @@
+{
+  "slug": "bch",
+  "class": {
+    "slug": "bch",
+    "name": "bch",
+    "attributeList": [
+      {
+        "name": "bch",
+        "pythonType": "None",
+        "doc": "",
+        "optional": false
+      },
+      {
+        "name": "symm_bch",
+        "pythonType": "None",
+        "doc": "",
+        "optional": false
+      }
+    ],
+    "parameterList": []
+  },
+  "collection": null,
+  "data": [
+    {
+      "dataUrl": "https://datasets.cloud.pennylane.ai/user/43d1597b-7934-4ee3-9316-14b147d7ed8f",
+      "parameters": {},
+      "extra": {}
+    }
+  ],
+  "downloadName": "bch_hall_basis",
+  "features": [
+    {
+      "slug": "example-feature",
+      "title": "Example Feature",
+      "type": "DATA",
+      "content": {
+        "$path": "features/dataset-attributes.md"
+      }
+    }
+  ],
+  "meta": {
+    "$path": "meta.json"
+  },
+  "parameterTree": null,
+  "extra": {}
+}
