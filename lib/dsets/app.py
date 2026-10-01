@@ -313,7 +313,7 @@ def add(dataset_file: Path):
                     family_slug,
                     family_title,
                     authors=[author.name for author in authors],
-                    publication_url=f"https://pennylane.ai/datasets/{class_slug}/{family_slug}",
+                    publication_url=f"https://pennylane.ai/datasets/{family_slug}",
                 )
             )
 

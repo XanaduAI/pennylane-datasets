@@ -14,7 +14,7 @@ This dataset contains 1000 output circuits generated in [KetGPT - Dataset Augmen
 They can be used for benchmarking or training AI-driven quantum compilers and systems.
 
 To generate this dataset, KetGPT was trained on 1112 real algorithms.
-Circuits for these algorithms come from [MQT Bench](https://www.cda.cit.tum.de/mqtbench/) and can be obtained via the [MQT Bench dataset](https://pennylane.ai/datasets/other/mqt-bench).
+Circuits for these algorithms come from [MQT Bench](https://www.cda.cit.tum.de/mqtbench/) and can be obtained via the [MQT Bench dataset](https://pennylane.ai/datasets/mqt-bench).
 Training algorithms include: Amplitude Estimation (AE); Deutsch-Jozsa; Graph State; GHZ State; Grover's (no ancilla); Grover's (v-chain);
 Portfolio Optimization with QAOA; Portfolio Optimization with VQE; Quantum Approximation Optimization Algorithm (QAOA);
 Quantum Fourier Transformation (QFT); QFT Entangled; Quantum Neural Network (QNN); Quantum Phase Estimation (QPE) exact;

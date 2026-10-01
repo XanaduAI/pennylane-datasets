@@ -11,6 +11,6 @@
 @misc{bowles2025scalefree,
     title={Scale free network},
     author={Joseph Bowles},
-    howpublished={\urlhttps://pennylane.ai/datasets/other/scale-free},
+    howpublished={\urlhttps://pennylane.ai/datasets/scale-free},
     year={2025}
 }

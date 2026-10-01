@@ -11,6 +11,6 @@
 @misc{bowles2025dwave,
     title={D-Wave},
     author={Joseph Bowles},
-    howpublished={\urlhttps://pennylane.ai/datasets/other/d-wave},
+    howpublished={\urlhttps://pennylane.ai/datasets/d-wave},
     year={2025}
 }
