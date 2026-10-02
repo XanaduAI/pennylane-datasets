@@ -1,7 +1,7 @@
 @misc{kiwit2025efficientdata,
     title={Low-Depth MNIST}, 
     author={Florian Kiwit and Bernhard Jobst and Andre Luckow and Frank Pollmann and Carlos Riofrío},
-    howpublished = {\url{https://pennylane.ai/datasets/low-depth-mnist}}
+    howpublished = {\url{https://pennylane.ai/datasets/low-depth-fashion-mnist}}
     year={2025}}
 
 @article{Kiwit_2025,

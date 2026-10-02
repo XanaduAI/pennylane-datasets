@@ -11,7 +11,7 @@
 @misc{bowles2025genomic,
     title={Genomic},
     author={Joseph Bowles},
-    howpublished={\urlhttps://pennylane.ai/datasets/other/genomic},
+    howpublished={\urlhttps://pennylane.ai/datasets/genomic},
     year={2025}
 }
 
