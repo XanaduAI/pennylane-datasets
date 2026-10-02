@@ -8,7 +8,7 @@ on:
 
 jobs:
     push_version_tag:
-        runs-on: Linux-2-core-GitHub-hosted-runners-azure-network
+        runs-on: ubuntu-latest
         env:
             PYTHONPATH: "lib/:${PYTHONPATH}"
       
